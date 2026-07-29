@@ -1,3 +1,4 @@
+require('dotenv').config();
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Events, GatewayIntentBits, EmbedBuilder, Collection, MessageFlags, InteractionType } = require('discord.js');
@@ -5,7 +6,7 @@ const { TOKEN, TEST_TOKEN } = require('./config.json');
 const { channels, pairs, users } = require('./pairing-event.json');
 const connectToDatabase = require('./db_connect');
 
-const token = TOKEN;
+const token = process.env.TOKEN;
 
 const client = new Client({
     intents: [
