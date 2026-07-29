@@ -20,8 +20,16 @@ const client = new Client({
     ]
 });
 
-client.once(Events.ClientReady, (readyClient) => {
+client.once(Events.ClientReady, async (readyClient) => {
     console.log(`Ready! Logged in as ${readyClient.user.tag}`);
+    await client.user.setPresence({
+        activities: [
+            {
+                name: "hello, hi, mabuhay! :))"
+            }
+        ],
+        status: 'dnd'
+    });
 });
 
 client.prefix_commands = new Collection();
@@ -57,24 +65,9 @@ client.on(Events.MessageCreate, async (message) => {
 );
 
 client.on(Events.InteractionCreate, async (interaction) => {
-    /*
     let event;
     if (interaction.isButton()) event = require('./events/InteractionButton.js');
-    await event.run(client, interaction);*/
-    if (!interaction.isButton()) return;
-
-    console.log("Button clicked");
-
-    try {
-        await interaction.reply({
-            content: "Hello!",
-            flags: MessageFlags.Ephemeral,
-        });
-
-        console.log("Reply succeeded");
-    } catch (err) {
-        console.error(err);
-    }
+    await event.run(client, interaction);
 });
 
 // Log in to Discord with your client's token
