@@ -1,0 +1,596 @@
+{
+    "channels": [
+        "1525004686309200065",
+        "1525004758895689728",
+        "1525004783335903314",
+        "1525004812171870289",
+        "1525004835735339100",
+        "1525004861681172570",
+        "1525004888399020062",
+        "1525004989494329476",
+        "1525005017147506708",
+        "1525005055059693648",
+        "1525005336258547832",
+        "1525005355309076601",
+        "1525005377488420954",
+        "1525005400661823558",
+        "1525005427895435348",
+        "1525005446040129536",
+        "1525005466806259893",
+        "1525005484535451648",
+        "1525005502994583552",
+        "1525005522397429861",
+        "1525006233990332468",
+        "1525006274994114680",
+        "1525006297005559858",
+        "1525006506703978506",
+        "1525006528200048831",
+        "1525006556872314951",
+        "1525006576568635464",
+        "1525006595304460348",
+        "1525006628276146217",
+        "1525006652741259314",
+        "1525009792169414790",
+        "1525009824902021130",
+        "1525010060671979600",
+        "1525010089352761455",
+        "1525010122303213618",
+        "1525010142075027587",
+        "1525010175986241596",
+        "1525010207984586914",
+        "1525010237822734427",
+        "1525010258563563540",
+        "1525100214384590918",
+        "1525100287591845951"
+    ],
+    "users": [
+        "744733785165135873",
+        "881116317212631061",
+        "1520838353690300487",
+        "748741961086795787",
+        "598544666077560845",
+        "749645899516346464",
+        "1166021776183140492",
+        "759757708022513685",
+        "588638498823864330",
+        "752773440204963841",
+        "748539888701407332",
+        "348375867413757954",
+        "1093952204504834239",
+        "1360421566654971927",
+        "1232517194219262073",
+        "838056712908570656",
+        "764037666538651658",
+        "719107999645564988",
+        "1517244028729557236",
+        "1270747687343493252",
+        "1448374957183598725",
+        "561587120523837444",
+        "325263095595401216",
+        "295513617988845568",
+        "384299402681909248",
+        "569338918496108544",
+        "309681837238648832",
+        "742312234415554660",
+        "542703148133777412",
+        "1119162933939818536",
+        "1513949553651486772",
+        "728508571611955303",
+        "714418499375726605",
+        "630024962354184192",
+        "1280887740379955284",
+        "1456504305308663884",
+        "1121390672281342052",
+        "732239657718513665",
+        "587588139846205440",
+        "740135985991516171",
+        "762483844267769897",
+        "877167420572319804"
+    ],
+    "pairs": [
+        {
+            "room": 1,
+            "from": "1525004686309200065",
+            "to": 28,
+            "user": "744733785165135873",
+            "aboutPair": {
+                "similarity": "93.27%",
+                "ageGroup": "24-27",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "Any time of the day"
+            }
+        },
+        {
+            "room": 2,
+            "from": "1525004758895689728",
+            "to": 34,
+            "user": "881116317212631061",
+            "aboutPair": {
+                "similarity": "95.96%",
+                "ageGroup": "24-27",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "The Morning"
+            }
+        },
+        {
+            "room": 3,
+            "from": "1525004783335903314",
+            "to": 27,
+            "user": "1520838353690300487",
+            "aboutPair": {
+                "similarity": "70.03%",
+                "ageGroup": "24-27",
+                "upFor": "Something Romantic",
+                "timeslot": "Any time of the day"
+            }
+        },
+        {
+            "room": 4,
+            "from": "1525004812171870289",
+            "to": 15,
+            "user": "748741961086795787",
+            "aboutPair": {
+                "similarity": "92.26%",
+                "ageGroup": "20-23",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "Any time of the day"
+            }
+        },
+        {
+            "room": 5,
+            "from": "1525004835735339100",
+            "to": 30,
+            "user": "598544666077560845",
+            "aboutPair": {
+                "similarity": "82.15%",
+                "ageGroup": "32+",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "The Morning"
+            }
+        },
+        {
+            "room": 6,
+            "from": "1525004861681172570",
+            "to": 23,
+            "user": "749645899516346464",
+            "aboutPair": {
+                "similarity": "89.56%",
+                "ageGroup": "24-27",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "Any time of the day"
+            }
+        },
+        {
+            "room": 7,
+            "from": "1525004888399020062",
+            "to": 22,
+            "user": "1166021776183140492",
+            "aboutPair": {
+                "similarity": "84.18%",
+                "ageGroup": "24-27",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "The Night"
+            }
+        },
+        {
+            "room": 8,
+            "from": "1525004989494329476",
+            "to": 38,
+            "user": "759757708022513685",
+            "aboutPair": {
+                "similarity": "92.93%",
+                "ageGroup": "24-27",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "Any time of the day"
+            }
+        },
+        {
+            "room": 9,
+            "from": "1525005017147506708",
+            "to": 32,
+            "user": "588638498823864330",
+            "aboutPair": {
+                "similarity": "91.58%",
+                "ageGroup": "20-23",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "The Night"
+            }
+        },
+        {
+            "room": 10,
+            "from": "1525005055059693648",
+            "to": 35,
+            "user": "752773440204963841",
+            "aboutPair": {
+                "similarity": "94.28%",
+                "ageGroup": "20-23",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "The Morning"
+            }
+        },
+        {
+            "room": 11,
+            "from": "1525005336258547832",
+            "to": 21,
+            "user": "748539888701407332",
+            "aboutPair": {
+                "similarity": "84.85%",
+                "ageGroup": "20-23",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "Any time of the day"
+            }
+        },
+        {
+            "room": 12,
+            "from": "1525005355309076601",
+            "to": 20,
+            "user": "348375867413757954",
+            "aboutPair": {
+                "similarity": "86.67%",
+                "ageGroup": "24-27",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "Any time of the day"
+            }
+        },
+        {
+            "room": 13,
+            "from": "1525005377488420954",
+            "to": 14,
+            "user": "1093952204504834239",
+            "aboutPair": {
+                "similarity": "96.63%",
+                "ageGroup": "24-27",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "Any time of the day"
+            }
+        },
+        {
+            "room": 14,
+            "from": "1525005400661823558",
+            "to": 13,
+            "user": "1360421566654971927",
+            "aboutPair": {
+                "similarity": "96.63%",
+                "ageGroup": "28-31",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "Any time of the day"
+            }
+        },
+        {
+            "room": 15,
+            "from": "1525005427895435348",
+            "to": 4,
+            "user": "1232517194219262073",
+            "aboutPair": {
+                "similarity": "92.26%",
+                "ageGroup": "20-23",
+                "upFor": "Something Romantic",
+                "timeslot": "The Night"
+            }
+        },
+        {
+            "room": 16,
+            "from": "1525005446040129536",
+            "to": 36,
+            "user": "838056712908570656",
+            "aboutPair": {
+                "similarity": "88.55%",
+                "ageGroup": "20-23",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "The Night"
+            }
+        },
+        {
+            "room": 17,
+            "from": "1525005466806259893",
+            "to": 19,
+            "user": "764037666538651658",
+            "aboutPair": {
+                "similarity": "91.92%",
+                "ageGroup": "20-23",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "The Night"
+            }
+        },
+        {
+            "room": 18,
+            "from": "1525005484535451648",
+            "to": 40,
+            "user": "719107999645564988",
+            "aboutPair": {
+                "similarity": "86.20%",
+                "ageGroup": "20-23",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "The Night"
+            }
+        },
+        {
+            "room": 19,
+            "from": "1525005502994583552",
+            "to": 17,
+            "user": "1517244028729557236",
+            "aboutPair": {
+                "similarity": "91.92%",
+                "ageGroup": "20-23",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "The Night"
+            }
+        },
+        {
+            "room": 20,
+            "from": "1525005522397429861",
+            "to": 12,
+            "user": "1270747687343493252",
+            "aboutPair": {
+                "similarity": "86.67%",
+                "ageGroup": "24-27",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "Any time of the day"
+            }
+        },
+        {
+            "room": 21,
+            "from": "1525006233990332468",
+            "to": 11,
+            "user": "1448374957183598725",
+            "aboutPair": {
+                "similarity": "84.85%",
+                "ageGroup": "20-23",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "Any time of the day"
+            }
+        },
+        {
+            "room": 22,
+            "from": "1525006274994114680",
+            "to": 7,
+            "user": "561587120523837444",
+            "aboutPair": {
+                "similarity": "84.18%",
+                "ageGroup": "20-23",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "The Night"
+            }
+        },
+        {
+            "room": 23,
+            "from": "1525006297005559858",
+            "to": 6,
+            "user": "325263095595401216",
+            "aboutPair": {
+                "similarity": "89.56%",
+                "ageGroup": "24-27",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "The Morning"
+            }
+        },
+        {
+            "room": 24,
+            "from": "1525006506703978506",
+            "to": 39,
+            "user": "295513617988845568",
+            "aboutPair": {
+                "similarity": "83.84%",
+                "ageGroup": "24-27",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "Any time of the day"
+            }
+        },
+        {
+            "room": 25,
+            "from": "1525006528200048831",
+            "to": 26,
+            "user": "384299402681909248",
+            "aboutPair": {
+                "similarity": "85.52%",
+                "ageGroup": "20-23",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "The Morning"
+            }
+        },
+        {
+            "room": 26,
+            "from": "1525006556872314951",
+            "to": 25,
+            "user": "569338918496108544",
+            "aboutPair": {
+                "similarity": "85.52%",
+                "ageGroup": "20-23",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "The Morning"
+            }
+        },
+        {
+            "room": 27,
+            "from": "1525006576568635464",
+            "to": 3,
+            "user": "309681837238648832",
+            "aboutPair": {
+                "similarity": "70.03%",
+                "ageGroup": "24-27",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "The Night"
+            }
+        },
+        {
+            "room": 28,
+            "from": "1525006595304460348",
+            "to": 1,
+            "user": "742312234415554660",
+            "aboutPair": {
+                "similarity": "93.27%",
+                "ageGroup": "24-27",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "The Morning"
+            }
+        },
+        {
+            "room": 29,
+            "from": "1525006628276146217",
+            "to": 33,
+            "user": "542703148133777412",
+            "aboutPair": {
+                "similarity": "93.27%",
+                "ageGroup": "20-23",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "Any time of the day"
+            }
+        },
+        {
+            "room": 30,
+            "from": "1525006652741259314",
+            "to": 5,
+            "user": "1119162933939818536",
+            "aboutPair": {
+                "similarity": "82.15%",
+                "ageGroup": "28-31",
+                "upFor": "Something Platonic",
+                "timeslot": "The Night"
+            }
+        },
+        {
+            "room": 31,
+            "from": "1525009792169414790",
+            "to": 37,
+            "user": "1513949553651486772",
+            "aboutPair": {
+                "similarity": "89.23%",
+                "ageGroup": "24-27",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "Any time of the day"
+            }
+        },
+        {
+            "room": 32,
+            "from": "1525009824902021130",
+            "to": 9,
+            "user": "728508571611955303",
+            "aboutPair": {
+                "similarity": "91.58%",
+                "ageGroup": "20-23",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "The Night"
+            }
+        },
+        {
+            "room": 33,
+            "from": "1525010060671979600",
+            "to": 29,
+            "user": "714418499375726605",
+            "aboutPair": {
+                "similarity": "93.27%",
+                "ageGroup": "24-27",
+                "upFor": "Something Romantic",
+                "timeslot": "The Night"
+            }
+        },
+        {
+            "room": 34,
+            "from": "1525010089352761455",
+            "to": 2,
+            "user": "630024962354184192",
+            "aboutPair": {
+                "similarity": "95.96%",
+                "ageGroup": "24-27",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "Any time of the day"
+            }
+        },
+        {
+            "room": 35,
+            "from": "1525010122303213618",
+            "to": 10,
+            "user": "1280887740379955284",
+            "aboutPair": {
+                "similarity": "94.28%",
+                "ageGroup": "20-23",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "The Morning"
+            }
+        },
+        {
+            "room": 36,
+            "from": "1525010142075027587",
+            "to": 16,
+            "user": "1456504305308663884",
+            "aboutPair": {
+                "similarity": "88.55%",
+                "ageGroup": "20-23",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "Any time of the day"
+            }
+        },
+        {
+            "room": 37,
+            "from": "1525010175986241596",
+            "to": 31,
+            "user": "1121390672281342052",
+            "aboutPair": {
+                "similarity": "89.23%",
+                "ageGroup": "24-27",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "The Night"
+            }
+        },
+        {
+            "room": 38,
+            "from": "1525010207984586914",
+            "to": 8,
+            "user": "732239657718513665",
+            "aboutPair": {
+                "similarity": "92.93%",
+                "ageGroup": "20-23",
+                "upFor": "Something Romantic",
+                "timeslot": "Any time of the day"
+            }
+        },
+        {
+            "room": 39,
+            "from": "1525010237822734427",
+            "to": 24,
+            "user": "587588139846205440",
+            "aboutPair": {
+                "similarity": "83.84%",
+                "ageGroup": "24-27",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "The Morning"
+            }
+        },
+        {
+            "room": 40,
+            "from": "1525010258563563540",
+            "to": 18,
+            "user": "740135985991516171",
+            "aboutPair": {
+                "similarity": "86.20%",
+                "ageGroup": "19 or below",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "The Night"
+            }
+        },
+        {
+            "room": 41,
+            "from": "1525100214384590918",
+            "to": 42,
+            "user": "762483844267769897",
+            "aboutPair": {
+                "similarity": "98.65%",
+                "ageGroup": "24-27",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "Any time of the day"
+            }
+        },
+        {
+            "room": 42,
+            "from": "1525100287591845951",
+            "to": 41,
+            "user": "877167420572319804",
+            "aboutPair": {
+                "similarity": "98.65%",
+                "ageGroup": "24-27",
+                "upFor": "Either Platonic or Romantic",
+                "timeslot": "Any time of the day"
+            }
+        }
+    ]
+}
