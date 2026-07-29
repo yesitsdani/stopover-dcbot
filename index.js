@@ -1,4 +1,5 @@
 require('dotenv').config();
+console.log(process.env.TESTING);
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Events, GatewayIntentBits, EmbedBuilder, Collection, MessageFlags, InteractionType } = require('discord.js');
@@ -21,11 +22,6 @@ const client = new Client({
 
 client.once(Events.ClientReady, (readyClient) => {
     console.log(`Ready! Logged in as ${readyClient.user.tag}`);
-    console.log({
-        tag: client.user.tag,
-        botUserId: client.user.id,
-        applicationId: client.application.id,
-    });
 });
 
 client.prefix_commands = new Collection();
