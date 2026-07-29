@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
-const { MDB_SRV } = require('./config.json');
 
-async function connectToDatabase() {
+async function connectToDatabase(MDV_SRV) {
     try {
         await mongoose.connect(MDB_SRV);
         console.log('Connected to MongoDB');

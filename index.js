@@ -2,11 +2,11 @@ require('dotenv').config();
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Events, GatewayIntentBits, EmbedBuilder, Collection, MessageFlags, InteractionType } = require('discord.js');
-const { TOKEN, TEST_TOKEN } = require('./config.json');
 const { channels, pairs, users } = require('./pairing-event.json');
 const connectToDatabase = require('./db_connect');
 
 const token = process.env.TOKEN;
+const MDB_SRV = process.env.MDB_SRV;
 
 const client = new Client({
     intents: [
@@ -83,6 +83,6 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
 // Log in to Discord with your client's token
 (async () => {
-    //await connectToDatabase();
+    //await connectToDatabase(MDB_SRV);
     await client.login(token);
 })();
