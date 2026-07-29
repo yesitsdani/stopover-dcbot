@@ -38,6 +38,7 @@ client.once(Events.ClientReady, async (readyClient) => {
 
 client.prefix_commands = new Collection();
 client.buttons = new Collection();
+client.modals = new Collection();
 
 const foldersPath = path.join(__dirname, 'prefix_commands');
 const commandFolders = fs.readdirSync(foldersPath);
@@ -62,6 +63,13 @@ for (file of buttons) {
     client.buttons.set(buttonName, button)
 }
 
+const modals = fs.readdirSync("./modals");
+for (file of modals) {
+    const modalName = file.split(".")[0];
+    const modal = require(`./modals/${file}`);
+    client.modals.set(modalName, modal);
+}
+
 client.on(Events.MessageCreate, async (message) => {
     let event = require('./events/MessageCreate.js');
     await event.run(client, message);
@@ -71,6 +79,7 @@ client.on(Events.MessageCreate, async (message) => {
 client.on(Events.InteractionCreate, async (interaction) => {
     let event;
     if (interaction.isButton()) event = require('./events/InteractionButton.js');
+    if (interaction.isModalSubmit()) event = require('./events/ModalSubmit.js');
     await event.run(client, interaction);
 });
 

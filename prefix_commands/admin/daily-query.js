@@ -1,59 +1,46 @@
-const { PermissionFlagsBits, ContainerBuilder, SectionBuilder, ButtonBuilder, ButtonStyle, MediaGalleryBuilder, MediaGalleryItemBuilder, MessageFlags, TextDisplayBuilder } = require('discord.js');
+const { ContainerBuilder, SectionBuilder, ButtonBuilder, ButtonStyle, MessageFlags, TextDisplayBuilder, ThumbnailBuilder } = require('discord.js');
 
 module.exports = {
     name: 'dq',
     description: 'stp dq <number> <question>',
-    permissions: ['1532058049148354621', '1506448680000159784'],
+    permissions: ['1532058049148354621', '1506448680000159784', '1531987396986409011'],
     async execute(client, message, args) {
 
         const dqNum = args.shift();
         const question = args.join(" ");
 
-        const channel = message.guild.channels.cache.find(chn = chn.id == '1504325792233164821');
+        const channel = message.guild.channels.cache.find(chn => chn.id == '1504505207256780951');
+        const pingRole = '<@&1506152844003250177>';
 
-        const containerWithButton = new ContainerBuilder()
-            .setAccentColor(0xFF0800)
-            .addTextDisplayComponents(
-                new TextDisplayBuilder()
-                    .setContent(`-# <@&1506152844003250177>\n> Something's afoot in the Manor of Red, the lone home in the darkest corners of the Stopover.\n\nLet our hearts beat as one and welcome August with a whole... lot... of **LOVE**.\n# <#1505072262468862032>\n> **31st of July, 2026 (9:30 PM)** <a:stp_bluesparkles:1523665430856728697>\n> *Bring a good set of headphones*\n> ***Attendance of all Passersby is Required :))***\n\n-# The button below will disappear after 3 minutes`)
-            )
-            .addMediaGalleryComponents(
-                new MediaGalleryBuilder()
-                    .addItems(
-                        new MediaGalleryItemBuilder()
-                            .setURL('https://i.ytimg.com/vi/LKbu8LsjlMI/maxresdefault.jpg')
+        const container = new ContainerBuilder()
+            .setAccentColor(0xF2B0FF)
+            .addSectionComponents(
+                new SectionBuilder()
+                    .addTextDisplayComponents(
+                        new TextDisplayBuilder()
+                            .setContent(`-# ${pingRole} **No. ${dqNum}** <a:stp_bluesparkle:1523665430856728697>\n# ${question}`)
+                    )
+                    .setThumbnailAccessory(
+                        new ThumbnailBuilder()
+                            .setURL(message.guild.iconURL())
                     )
             )
             .addSectionComponents(
                 new SectionBuilder()
                     .addTextDisplayComponents(
                         new TextDisplayBuilder()
-                            .setContent(`Do you dare open this invitation?`)
+                            .setContent(`<a:stp_colorfulheart:1523664998654677203> Next question tomorrow!`)
                     )
                     .setButtonAccessory(
                         new ButtonBuilder()
-                            .setCustomId(`event.yes`)
-                            .setLabel(`RSVP`)
-                            .setStyle(ButtonStyle.Danger)
+                            .setCustomId(`dailyquery.${dqNum}.${question}`)
+                            .setLabel(`Submit Answer`)
+                            .setStyle(ButtonStyle.Primary)
                     )
             )
 
-        const containerNoButton = new ContainerBuilder()
-            .setAccentColor(0xFF0800)
-            .addTextDisplayComponents(
-                new TextDisplayBuilder()
-                    .setContent(`Greetings to all ${role}\n# \`YOU ARE CORDIALLY INVITED\` <a:stp_pinkdiaheart:1532004326652772494>\n> Something's afoot in the Manor of Red, the lone home in the darkest corners of the Stopover.\n\nLet our hearts beat as one and welcome August with a whole... lot... of **LOVE**.\n# <#1505072262468862032>\n> **31st of July, 2026 (9:30 PM)** <a:stp_bluesparkles:1523665430856728697>\n> *Bring a good set of headphones*\n> ***Attendance of all Passersby is Required :))***\n\n-# The button below will disappear after 3 minutes`)
-            )
-            .addMediaGalleryComponents(
-                new MediaGalleryBuilder()
-                    .addItems(
-                        new MediaGalleryItemBuilder()
-                            .setURL('https://i.ytimg.com/vi/LKbu8LsjlMI/maxresdefault.jpg')
-                    )
-            )
-
-        if (!args[2]) await existingMessage.edit({ components: [containerWithButton], flags: MessageFlags.IsComponentsV2 });
-        if (args[2]) await existingMessage.edit({ components: [containerNoButton], flags: MessageFlags.IsComponentsV2 });
+        await channel.send({ components: [container], flags: MessageFlags.IsComponentsV2 });
+        await message.reply(`Your query has been posted!`);
 
     }
 }
