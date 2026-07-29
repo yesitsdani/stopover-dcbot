@@ -1,13 +1,17 @@
-require('dotenv').config();
-console.log(process.env.TESTING);
+require('dotenv').config({quiet: true});
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Events, GatewayIntentBits, EmbedBuilder, Collection, MessageFlags, InteractionType } = require('discord.js');
 const { channels, pairs, users } = require('./pairing-event.json');
 const connectToDatabase = require('./db_connect');
 
-const token = process.env.TOKEN;
-const MDB_SRV = process.env.MDB_SRV;
+//Uncomment when not deployed
+//const token = process.env.TOKEN;
+//const MDB_SRV = process.env.MDB_SRV;
+
+//Uncomment when deployed
+const token = ${{ TOKEN }};
+const MDB_SRV = ${{ MDB_SRV }};
 
 const client = new Client({
     intents: [
