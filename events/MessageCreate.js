@@ -1,7 +1,7 @@
 module.exports = {
-    async run(client, message) {
+    async run(client, message, prefix) {
         if (message.author.bot) return;
-        if (!message.content.toLowerCase().startsWith('stp')) return;
+        if (!message.content.toLowerCase().startsWith(prefix)) return;
         const args = message.content.split(" ");
         args.shift();
         const commandName = args.shift().toLowerCase();

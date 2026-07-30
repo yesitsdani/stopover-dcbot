@@ -6,7 +6,7 @@ const { channels, pairs, users } = require('./pairing-event.json');
 const connectToDatabase = require('./db_connect');
 
 //Uncomment when not deployed
-const token = process.env.TOKEN;
+const token = process.env.TEST_TOKEN;
 const MDB_SRV = process.env.MDB_SRV;
 
 //Uncomment when deployed
@@ -72,7 +72,7 @@ for (file of modals) {
 
 client.on(Events.MessageCreate, async (message) => {
     let event = require('./events/MessageCreate.js');
-    await event.run(client, message);
+    await event.run(client, message, process.env.PREFIX);
 }
 );
 
