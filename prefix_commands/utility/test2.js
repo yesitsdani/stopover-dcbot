@@ -13,7 +13,7 @@ module.exports = {
             new SectionBuilder()
             .addTextDisplayComponents(
                 new TextDisplayBuilder()
-                .setContent(`-# Attention all <@&1504331357386440704>\n# \`SEE YOU TOMORROW\` <a:stp_magentafire:1523665457868050522>\n> The Chief awaits...\n\n> **31st of July, 2026 (9:30 PM)** <a:stp_bluesparkles:1523665430856728697>\n> Attendance of all Passersby is Required`)
+                .setContent(`-# Attention all <@&1504331357386440704>\n# \`SEE YOU TOMORROW\` <a:stp_magentafire:1523665457868050522>\n> The Chief awaits...\n\n# <#1505072262468862032>\n> **31st of July, 2026 (9:30 PM)** <a:stp_bluesparkles:1523665430856728697>\n> Attendance of all Passersby is Required`)
             )
             .setThumbnailAccessory(
                 new ThumbnailBuilder()
