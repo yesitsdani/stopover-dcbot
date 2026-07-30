@@ -13,6 +13,14 @@ module.exports = {
         if (question.includes('<@')) question = question.split(">")[1];
         if (question.includes('asks:')) question = question.split(" asks: ")[1];
 
+        let qLabel = '';
+
+        if (question.length > 45) {
+            qLabel = "Answer today's question"
+        } else {
+            qLabel = question;
+        }
+
         const modal = new ModalBuilder()
         .setCustomId(`dqanswer.${interaction.user.id}.${dqNum}.${qid}`)
         .setTitle(`Daily Query #${dqNum}`)
