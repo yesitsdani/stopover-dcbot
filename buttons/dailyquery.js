@@ -5,13 +5,16 @@ module.exports = {
     name: "dailyquery",
     async execute(client, interaction, args) {
         const dqNum = args.shift();
-        let question = args.shift();
+        let qid = args.shift();
 
+        const repoChannel = interaction.guild.channels.cache.find(chn => chn.id == '1532205140038254772');
+        const repoMsg = await repoChannel.messages.fetch(qid);
+        let question = repoMsg.content;
         if (question.includes('<@')) question = question.split(">")[1];
         if (question.includes('asks:')) question = question.split(" asks: ")[1];
 
         const modal = new ModalBuilder()
-        .setCustomId(`dqanswer.${interaction.user.id}.${dqNum}.${question}`)
+        .setCustomId(`dqanswer.${interaction.user.id}.${dqNum}.${qid}`)
         .setTitle(`Daily Query #${dqNum}`)
         .addLabelComponents(
             new LabelBuilder()

@@ -3,13 +3,18 @@ const { ContainerBuilder, SectionBuilder, ButtonBuilder, ButtonStyle, MessageFla
 module.exports = {
     name: 'dq',
     description: 'stp dq <number> <question>',
-    permissions: ['1532058049148354621', '1506448680000159784', '1531987396986409011'],
+    permissions: ['1532058049148354621', '1506448680000159784', '1531987396986409011', '1511897066262237285'],
     async execute(client, message, args) {
 
         const dqNum = args.shift();
         const question = args.join(" ");
 
         const channel = message.guild.channels.cache.find(chn => chn.id == '1504505207256780951');
+        const repoChannel = message.guild.channels.cache.find(chn => chn.id == '1532205140038254772');
+
+        const questionToRepo = await repoChannel.send(question);
+        const qid = questionToRepo.id;
+
         const pingRole = '<@&1506152844003250177>';
 
         const container = new ContainerBuilder()
@@ -33,7 +38,7 @@ module.exports = {
                     )
                     .setButtonAccessory(
                         new ButtonBuilder()
-                            .setCustomId(`dailyquery.${dqNum}.${question}`)
+                            .setCustomId(`dailyquery.${dqNum}.${qid}`)
                             .setLabel(`Submit Answer`)
                             .setStyle(ButtonStyle.Primary)
                     )

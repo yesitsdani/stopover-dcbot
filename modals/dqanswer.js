@@ -5,7 +5,13 @@ module.exports = {
     async execute(client, interaction, args) {
         const uid = args[0];
         const dqNum = args[1];
-        const question = args[2];
+        const qid = args[2];
+
+        const repoChannel = interaction.guild.channels.cache.find(chn => chn.id == '1532205140038254772');
+        const repoMsg = await repoChannel.messages.fetch(qid);
+        let question = repoMsg.content;
+        if (question.includes('<@')) question = question.split(">")[1];
+        if (question.includes('asks:')) question = question.split(" asks: ")[1];
 
         const channel = interaction.guild.channels.cache.find(chn => chn.id == '1504505337179406346')
 
