@@ -26,7 +26,7 @@ module.exports = {
         .setTitle(`Daily Query #${dqNum}`)
         .addLabelComponents(
             new LabelBuilder()
-            .setLabel(question)
+            .setLabel(qLabel)
             .setTextInputComponent(
                 new TextInputBuilder()
                 .setCustomId(`textanswer`)
