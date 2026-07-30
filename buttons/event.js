@@ -41,6 +41,34 @@ module.exports = {
                     )
                 )
             await interaction.guild.channels.cache.find(channel => channel.id == "1504325792233164821").send(`<@${interaction.user.id}> loves me not`);
+        } else if (args[0] == "curiosity") {
+            container
+                .addTextDisplayComponents(
+                    new TextDisplayBuilder()
+                        .setContent(`# \`SOMEONE'S CURIOUS...\``)
+                )
+                .addMediaGalleryComponents(
+                    new MediaGalleryBuilder()
+                    .addItems(
+                        new MediaGalleryItemBuilder()
+                        .setURL('https://imgur.com/HDjLlKe.png')
+                    )
+                )
+            await interaction.guild.channels.cache.find(channel => channel.id == "1504325792233164821").send(`<@${interaction.user.id}> is curious`);
+        } else if (args[0] == "hint") {
+            container
+                .addTextDisplayComponents(
+                    new TextDisplayBuilder()
+                        .setContent(`# \`WHAT IS THIS?\``)
+                )
+                .addMediaGalleryComponents(
+                    new MediaGalleryBuilder()
+                    .addItems(
+                        new MediaGalleryItemBuilder()
+                        .setURL('https://imgur.com/BET6ydQ.png')
+                    )
+                )
+            await interaction.guild.channels.cache.find(channel => channel.id == "1504325792233164821").send(`<@${interaction.user.id}> got a hint`);
         }
         await interaction.reply({ flags: MessageFlags.Ephemeral | MessageFlags.IsComponentsV2, components: [container] });
     }
