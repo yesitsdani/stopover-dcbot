@@ -93,6 +93,8 @@ module.exports = {
                                 .setStyle(ButtonStyle.Success)
                         )
                 )
+            const stepchannel1 = interaction.guild.channels.cache.get(`1532654642947952770`);
+            await stepchannel1.send(`**${interaction.user.username}** got stuck on a dead end and was magically transported back at the start of the maze!`);
 
             return await interaction.update({ components: [container], flags: MessageFlags.Ephemeral | MessageFlags.IsComponentsV2 });
         } else if (args[0] == 'w') {
@@ -109,13 +111,16 @@ module.exports = {
                         )
                 )
 
+            const stepchannel2 = interaction.guild.channels.cache.get(`1532654642947952770`);
+            await stepchannel2.send(`**${interaction.user.username}** got out of the maze!`);
+
             await interaction.update({ components: [container], flags: MessageFlags.Ephemeral | MessageFlags.IsComponentsV2 });
             setTimeout(async () => {
                 try {
                     const member = interaction.member;
                     await member.roles.add('1532389393162305546');
                     await member.roles.remove('1532389210827391066');
-                } catch (e) { 
+                } catch (e) {
                     console.log(`Can't add role: ${e}`)
                 }
             }, 3000)

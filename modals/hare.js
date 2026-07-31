@@ -13,6 +13,9 @@ module.exports = {
             try {
                 await member.roles.add([`1532389143395569744`, `1532427792824664115`]);
                 await member.roles.remove(`1532388946137579750`);
+
+                const stepchannel = interaction.guild.channels.cache.get(`1532654642947952770`);
+                await stepchannel.send(`**${interaction.user.username}** has grown smaller!`);
                 container
                     .addTextDisplayComponents(
                         new TextDisplayBuilder()

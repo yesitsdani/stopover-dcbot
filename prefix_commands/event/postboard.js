@@ -17,7 +17,7 @@ module.exports = {
                 .setAccentColor(0x6BFFB0)
                 .addTextDisplayComponents(
                     new TextDisplayBuilder()
-                        .setContent(`# \`THE WONDERLAND MAZE\`\n> Welcome to Wonderland!\n\nNow, find a way out.`)
+                        .setContent(`# \`THE MAZE\`\n> You suddenly find yourself lost unable to access the Stopover... what's happening?\n\nThe Chief Passerby has declared that the Escape Room has begun! Solve the puzzles ahead to escape this trap.\n\n**Now, find a way out.**`)
                 )
                 .addMediaGalleryComponents(
                     new MediaGalleryBuilder()
@@ -145,10 +145,12 @@ module.exports = {
                 )
         }
 
-        container.addTextDisplayComponents(
-            new TextDisplayBuilder()
-                .setContent(`-# The Stopover | Escape Room 1: Stopover in Wonderland`)
-        );
+        if (board != "maze") {
+            container.addTextDisplayComponents(
+                new TextDisplayBuilder()
+                    .setContent(`-# The Stopover | Escape Room 1: Stopover in Wonderland`)
+            );
+        }
 
         return await message.channel.send({ components: [container], flags: MessageFlags.IsComponentsV2 });
     }

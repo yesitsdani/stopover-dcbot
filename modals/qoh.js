@@ -14,9 +14,11 @@ module.exports = {
                 container
                     .addTextDisplayComponents(
                         new TextDisplayBuilder()
-                            .setContent(`# \`VERY WELL, TAKE\` <@&1532389497394696393>!\n> My looking glass needs cleaning anyway... Go ahead and shine it up.\n\n## <#1532410356981305414>`)
+                            .setContent(`# \`VERY WELL, TAKE\` <@&1532389497394696393>!\n> My looking glass needs cleaning anyway... Go ahead and shine it up.\n\n## Check your channel list for the Looking Glass`)
                     )
 
+                const stepchannel = interaction.guild.channels.cache.get(`1532654642947952770`);
+                await stepchannel.send(`**${interaction.user.username}** has been given permission by the Queen of Hearts to use the Looking Glass!`);
                 await interaction.reply({ components: [container], flags: MessageFlags.Ephemeral | MessageFlags.IsComponentsV2 })
 
                 setTimeout(async () => {

@@ -18,17 +18,20 @@ module.exports = {
         } else return await interaction.reply({ content: `😺\`CHESHIRE CAT\`: My work here is done... go away`, flags: MessageFlags.Ephemeral });
 
         container
-        .addTextDisplayComponents(
-            new TextDisplayBuilder()
-            .setContent(text)
-        )
-        .addMediaGalleryComponents(
-            new MediaGalleryBuilder()
-            .addItems(
-                new MediaGalleryItemBuilder()
-                .setURL(galleryURL)
+            .addTextDisplayComponents(
+                new TextDisplayBuilder()
+                    .setContent(text)
             )
-        )
+            .addMediaGalleryComponents(
+                new MediaGalleryBuilder()
+                    .addItems(
+                        new MediaGalleryItemBuilder()
+                            .setURL(galleryURL)
+                    )
+            )
+
+        const stepchannel = interaction.guild.channels.cache.get(`1532654642947952770`);
+        await stepchannel.send(`**${interaction.user.username}** screamed at the magical forest!`);
 
         await interaction.reply({ components: [container], flags: MessageFlags.Ephemeral | MessageFlags.IsComponentsV2 })
     }
