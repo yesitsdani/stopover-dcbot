@@ -6,6 +6,7 @@ module.exports = {
     permissions: ['1531987396986409011', '1506448680000159784'],
     async execute(client, message, args) {
         const channel = await message.guild.channels.fetch('1505071480835276900');
+        let existingMessage = await channel.messages.fetch('1532267047252136028');
 
         const container = new ContainerBuilder()
         .setAccentColor(0xff2462)
@@ -26,21 +27,8 @@ module.exports = {
                 new MediaGalleryItemBuilder()
                 .setURL('https://i.pinimg.com/originals/01/80/61/018061c4115995fa9a896cfb107a512a.gif')
             )
-        )
-        .addActionRowComponents(
-            new ActionRowBuilder()
-            .setComponents(
-                new ButtonBuilder()
-                .setCustomId(`event.lovesMe`)
-                .setLabel('They love me...')
-                .setStyle(ButtonStyle.Danger),
-                new ButtonBuilder()
-                .setCustomId('event.lovesMeNot')
-                .setLabel('They love me not...')
-                .setStyle(ButtonStyle.Secondary)
-            )
         );
 
-        await channel.send({ components: [container], flags: MessageFlags.IsComponentsV2 });
+        await existingMessage.edit({ components: [container], flags: MessageFlags.IsComponentsV2 });
     }
 }

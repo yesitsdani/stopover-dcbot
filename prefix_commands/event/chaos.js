@@ -29,6 +29,8 @@ module.exports = {
             await announceChannel.send(`Mic check, Mic check! Pasabog si Badette! (this is a test command; please ignore. thanks!)`)
         }
 
+        await message.reply(`As you wish, Your Majesty.`);
+
         await guild.members.fetch();
 
         let updated = 0;

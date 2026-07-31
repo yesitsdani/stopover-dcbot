@@ -4,6 +4,7 @@ module.exports = {
         if (!message.content.toLowerCase().startsWith(prefix)) return;
         const args = message.content.split(" ");
         args.shift();
+        if (args.length < 1) return;
         const commandName = args.shift().toLowerCase();
         const command = client.prefix_commands.get(commandName);
 
