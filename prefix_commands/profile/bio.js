@@ -7,6 +7,7 @@ module.exports = {
     permissions: [],
     category: 'profile',
     usage: '`stp bio <text>`',
+    cooldown: 1000 * 60,
     testing: false,
     alias: [],
     async execute(client, message, args) {

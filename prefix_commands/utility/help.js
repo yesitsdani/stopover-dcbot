@@ -1,4 +1,5 @@
 const { EmbedBuilder } = require('discord.js');
+const ms = require('ms');
 const fs = require('node:fs');
 const path = require('node:path');
 
@@ -7,6 +8,7 @@ module.exports = {
     description: 'Shows all The Stopover bot\'s commands',
     category: 'utility',
     usage: '`stp help [command]`',
+    cooldown: 1000 * 10,
     testing: false,
     alias: ['command', 'commands'],
     permissions: [],
@@ -48,6 +50,7 @@ module.exports = {
                     content += `<@&${role}> `
                 }
             }
+            if (command.cooldown) content += `\n🔹 **Cooldown**: ${ms(command.cooldown, { long: true })}`;
         };
 
         embed.setDescription(content);

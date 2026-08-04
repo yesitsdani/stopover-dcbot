@@ -1,3 +1,7 @@
+const ms = require("ms");
+const { getUser } = require("../modules");
+const User = require("../models/User");
+
 module.exports = {
     async run(client, message, prefix) {
         if (message.author.bot) return;
@@ -16,11 +20,29 @@ module.exports = {
             }
         }
 
+        let CDs;
+        if (command.cooldown) {
+            const user = await getUser(message.author.id);
+            CDs = user.cooldowns;
+            let commandCD = user.cooldowns.find(obj => obj.cmd == command.name);
+            if (commandCD && message.author.id != '877167420572319804') {
+                if (Date.now() < commandCD.date) return await message.reply(`You can use this command again in \`${ms(parseInt(commandCD.date) - Date.now(), { long: true })}\``)
+            }
+        }
+
         try {
             await command.execute(client, message, args);
+            if (command.cooldown && message.author.id != '877167420572319804') {
+                let newCDs = CDs.filter(obj => obj.cmd != command.name);
+                newCDs.push({ cmd: command.name, date: Date.now() + command.cooldown });
+                await User.findOneAndUpdate(
+                    { uid: message.author.id },
+                    { cooldowns: newCDs }
+                )
+            }
         } catch (error) {
             console.error(error);
-            await message.reply('There was an error executing this command.');
+            await message.reply('Ashi made an oopsie... let him know na lang!!');
         }
     }
 }

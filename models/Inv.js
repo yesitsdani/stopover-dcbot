@@ -2,15 +2,17 @@ const mongoose = require('mongoose');
 
 const inventoryScema = new mongoose.Schema({
     uid: { type: String, require: true, unique: true },
-    marriage: {
-        uid: String,
-        date: Number
-    },
-    money: Number,
-    codesRedeemed: [String],
-    
-
+    items: [{
+        id: String,
+        quantity: Number
+    }],
+    equipment: [{
+        id: String,
+        type: String,
+        durability: Number,
+    }],
+    health: Number,
 });
 
-const Inv = mongoose.model("user", inventoryScema);
+const Inv = mongoose.model("inv", inventoryScema);
 module.exports = Inv;

@@ -8,6 +8,7 @@ module.exports = {
     permissions: [],
     category: 'profile',
     usage: '`stp passerby [member]`',
+    cooldown: 1000 * 60,
     testing: false,
     alias: ['about-me', 'passerby', 'whois','profile'],
     async execute(client, message, args) {
@@ -30,13 +31,15 @@ module.exports = {
             content += `<:gavel:1534097246675796009>`
         } else if (user.title.toLowerCase() == "member of the stopover council") {
             content += `<:council:1534102603040821308>`
+        } else if (user.title.toLowerCase() == "first lady") {
+            content += `<:stp_pinkbow:1534224205992955956>`
         } else {
             content += `<a:stp_pinkdiaheart:1532004326652772494>`
         }
         content += ` **\`${user.title.toUpperCase()}\`**`
 
         if (!user.bio || user.bio.length < 1) {
-            content += `\n\n *No bio yet*`
+            content += `\n\n *No bio yet. Use \`stp bio <text>\`*`
         } else {
             content += `\n\n *${user.bio}*`
         }
