@@ -26,7 +26,7 @@ module.exports = {
                     },
                     $setOnInsert: {
                         uid,
-                        title: "",
+                        title: "Passerby",
                         marriage: {
                             uid: "",
                             date: 0,
