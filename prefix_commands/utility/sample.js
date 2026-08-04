@@ -3,6 +3,10 @@ const { PermissionFlagsBits, ContainerBuilder, SectionBuilder, ButtonBuilder, Bu
 module.exports = {
     name: 'sample',
     description: 'Test command',
+    category: 'utility',
+    usage: '`stp sample`',
+    testing: true,
+    alias: [],
     permissions: ['1531987396986409011', '1506448680000159784'],
     async execute(client, message, args) {
         console.time("reply");

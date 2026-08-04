@@ -1,9 +1,15 @@
 module.exports = {
-    getIdFromMention(mention) {
-        if (!mention) return null;
+    getIdFromMention(input) {
+        if (!input) return null;
 
-        const match = mention.match(/^<(@&?|#)!?(\d+)>$/);
+        // Already a Discord ID
+        if (/^\d{17,20}$/.test(input)) {
+            return input;
+        }
 
-        return match ? match[2] : null;
-    },
+        // User, role, or channel mention
+        const match = input.match(/^<(?:@!?|@&|#)(\d+)>$/);
+
+        return match ? match[1] : null;
+    }
 }

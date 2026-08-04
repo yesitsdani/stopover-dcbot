@@ -3,6 +3,10 @@ const { ContainerBuilder, MessageFlags, SectionBuilder, TextDisplayBuilder, Text
 module.exports = {
     name: 'postboard',
     description: 'postboard',
+    category: 'owner',
+    usage: '`stp help [command]`',
+    testing: true,
+    alias: [],
     permissions: ['1531987396986409011', '1506448680000159784'],
     async execute(client, message, args) {
         if (!args[0]) return await message.reply(`Insufficient arguments: \`stp postboard <board>\``);

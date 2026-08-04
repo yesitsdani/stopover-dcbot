@@ -1,10 +1,16 @@
 const { ContainerBuilder, SectionBuilder, ButtonBuilder, ButtonStyle, MessageFlags, TextDisplayBuilder, ThumbnailBuilder } = require('discord.js');
 
 module.exports = {
-    name: 'dq',
-    description: 'stp dq <number> <question>',
-    permissions: ['1532058049148354621', '1506448680000159784', '1531987396986409011', '1511897066262237285'],
+    name: 'daily-query',
+    description: 'Posts the Daily Query [Authorized Only]',
+    category: 'utility',
+    usage: '`stp daily-query <number> <question>`',
+    testing: false,
+    alias: ['dq'],
+    permissions: ['1506448680000159784', '1511897066262237285'],
     async execute(client, message, args) {
+
+        if (!args[1]) return await message.reply(`Please use: \`stp dq <query-number> <question>\``);
 
         const dqNum = args.shift();
         const question = args.join(" ");

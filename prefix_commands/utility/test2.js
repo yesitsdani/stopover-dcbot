@@ -3,6 +3,10 @@ const { PermissionFlagsBits, ContainerBuilder, SectionBuilder, ButtonBuilder, Bu
 module.exports = {
     name: 'test2',
     description: 'Test command',
+    category: 'utility',
+    usage: '`stp help [command]`',
+    testing: true,
+    alias: [],
     permissions: ['1531987396986409011', '1506448680000159784'],
     async execute(client, message, args) {
         const channel = await message.guild.channels.fetch('1505071480835276900');

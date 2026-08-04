@@ -6,7 +6,7 @@ module.exports = {
         args.shift();
         if (args.length < 1) return;
         const commandName = args.shift().toLowerCase();
-        const command = client.prefix_commands.get(commandName);
+        const command = client.prefix_commands.get(commandName) || client.prefix_commands.find(cmd => cmd.alias && cmd.alias.includes(commandName));
 
         if (!command) return await message.reply(`Unknown command: \`${commandName}\``);
         if (command.permissions && command.permissions.length > 0) {

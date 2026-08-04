@@ -1,6 +1,10 @@
 module.exports = {
     name: 'chaos',
     description: 'chaos',
+    category: 'owner',
+    usage: '`stp help [command]`',
+    testing: true,
+    alias: [],
     permissions: ['1531987396986409011', '1506448680000159784'],
     async execute(client, message, args) {
         if (!args[0]) return await message.reply(`Use the arguments: \`teststart\`, \`testend\`, ⚠️\`quickstart\`, ⚠️\`start\`, ⚠️\`end\`, ⚠️\`maze\``);
