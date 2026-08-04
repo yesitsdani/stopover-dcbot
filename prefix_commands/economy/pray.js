@@ -43,7 +43,7 @@ module.exports = {
         let addingMoney = await addMoney(uid, randomAmount);
         let addFate = await addItemToInv(uid, 'flowersOfFate', 1);
 
-        content += ` ${pronoun} you have been blessed with ${iconizeMoney(randomAmount)} and ${pronoun.toLowerCase()} also received ${iconizeItemWithName('flowersOfFate')} **x1**`;
+        content += ` ${pronoun} have been blessed with ${iconizeMoney(randomAmount)} and ${pronoun.toLowerCase()} also received ${iconizeItemWithName('flowersOfFate')} **x1**`;
 
         await message.reply(content);
     }
