@@ -46,7 +46,7 @@ module.exports = {
 
         content += `\n### <a:stp_cutepinkstar:1528713421183520909> Server Marriage`;
         if (user.marriage.uid.length > 0) {
-            content += `\n> ❤︎ \`${user.marriage.status.toUppercase()}\`: <@${user.marriage.uid}> <a:stp_heartspin:1523664759432548352>`;
+            content += `\n> ❤︎ \`${user.marriage.status.toUpperCase()}\`: <@${user.marriage.uid}> <a:stp_heartspin:1523664759432548352>`;
             content += `\n> ❤︎ Since: ${ms(Date.now() - parseInt(user.marriage.date), { long: true })} ago`;
         } else {
             content += `\n> ❤︎ \`NOT SERVER MARRIED\``;
