@@ -45,5 +45,12 @@ module.exports = {
         return new EmbedBuilder()
             .setColor(0xffa0fb)
             .setFooter({ text: "the stopover bot by ashiii ♡" })
+    },
+    getMemberName(member) {
+        if (member.nickname == null) {
+            return member.user.displayName;
+        } else {
+            return member.nickname;
+        }
     }
 }

@@ -9,6 +9,8 @@ module.exports = {
     alias: [],
     permissions: ['1531987396986409011', '1506448680000159784'],
     async execute(client, message, args) {
-        if (!args[0]) return;
+        for (x of message.member.roles.cache) {
+            console.log(x[1]);
+        }
     }
 }
