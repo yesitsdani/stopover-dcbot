@@ -5,13 +5,8 @@ const { Client, Events, GatewayIntentBits, EmbedBuilder, Collection, MessageFlag
 const { channels, pairs, users } = require('./pairing-event.json');
 const connectToDatabase = require('./db_connect');
 
-//Uncomment when not deployed
 const token = process.env.TOKEN;
 const MDB_SRV = process.env.MDB_SRV;
-
-//Uncomment when deployed
-//const token = ${{ TOKEN }};
-//const MDB_SRV = ${{ MDB_SRV }};
 
 const client = new Client({
     intents: [
@@ -86,6 +81,6 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
 // Log in to Discord with your client's token
 (async () => {
-    //await connectToDatabase(MDB_SRV);
+    await connectToDatabase(MDB_SRV);
     await client.login(token);
 })();
