@@ -38,6 +38,8 @@ module.exports = {
             forDisplay.push({ text: iconizeTitle(userData.title), amount: 175 });
         } else if (userData.title.toLowerCase() == "first lady") {
             forDisplay.push({ text: iconizeTitle(userData.title), amount: 100 });
+        } else if (userData.title.toLowerCase() == "archbishop of the stopover") {
+            forDisplay.push({ text: iconizeTitle(userData.title), amount: 100 });
         } else {
             forDisplay.push({ text: iconizeTitle("Passerby"), amount: 50 });
         }

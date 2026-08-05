@@ -10,6 +10,7 @@ module.exports = {
     testing: false,
     alias: ['dasal'],
     async execute(client, message, args) {
+        if (message.channel.id != `1506182833562193960`) return await message.reply(`You can only do this in the <#1506182833562193960>`);
         let uid = message.author.id;
         if (args[0] && getIdFromMention(args[0]) != null) uid = getIdFromMention(args[0]);
         const member = await message.guild.members.fetch(uid).catch(() => null);

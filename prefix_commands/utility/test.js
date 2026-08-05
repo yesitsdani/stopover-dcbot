@@ -29,6 +29,14 @@ module.exports = {
                 ring: "ringF",
                 status: "Married"
             }
+        } else if (args[0] == 'daniclear') {
+            uid = "811596799663800341";
+            marriage = {
+                uid: "",
+                date: 0,
+                ring: '',
+                status: ''
+            }
         } else if (args[0] == 'clear') {
             marriage = {
                 uid: "",

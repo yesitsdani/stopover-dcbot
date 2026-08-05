@@ -35,6 +35,7 @@ client.once(Events.ClientReady, async (readyClient) => {
 client.prefix_commands = new Collection();
 client.buttons = new Collection();
 client.modals = new Collection();
+client.menus = new Collection();
 
 const foldersPath = path.join(__dirname, 'prefix_commands');
 const commandFolders = fs.readdirSync(foldersPath);
@@ -66,6 +67,13 @@ for (file of modals) {
     client.modals.set(modalName, modal);
 }
 
+const menus = fs.readdirSync("./menus");
+for (file of menus) {
+    const menuName = file.split(".")[0];
+    const menu = require(`./menus/${file}`);
+    client.menus.set(menuName, menu);
+}
+
 client.on(Events.MessageCreate, async (message) => {
     let event = require('./events/MessageCreate.js');
     await event.run(client, message, process.env.PREFIX);
@@ -76,6 +84,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
     let event;
     if (interaction.isButton()) event = require('./events/InteractionButton.js');
     if (interaction.isModalSubmit()) event = require('./events/ModalSubmit.js');
+    if (interaction.isStringSelectMenu()) event = require('./events/StringMenu.js');
     await event.run(client, interaction);
 });
 

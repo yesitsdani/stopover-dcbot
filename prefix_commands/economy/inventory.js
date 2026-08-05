@@ -1,4 +1,5 @@
 const { getUser, iconizeMoney, getInv, createEmbedStandard, iconizeItemWithName } = require("../../modules");
+const items = require('../../data/items.json');
 
 module.exports = {
     name: 'inventory',
@@ -19,7 +20,8 @@ module.exports = {
             content += `\nYou have no items...`
         } else {
             for (x of invData.items) {
-                content += `\n${iconizeItemWithName(x.id)} x${x.quantity}`
+                let item = items.find(itm => itm.id == x.id);
+                if (item) content += `\n${iconizeItemWithName(x.id)} x${x.quantity}`;
             }
         }
 

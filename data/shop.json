@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "itemSold": "ringA",
+        "price": 1000,
+        "messageWhenBought": "Use `stp propose <user>`"
+    },
+    {
+        "id": 2,
+        "itemSold": "ringB",
+        "price": 2500,
+        "messageWhenBought": "Use `stp propose <user>`"
+    },
+    {
+        "id": 3,
+        "itemSold": "ringC",
+        "price": 3000,
+        "messageWhenBought": "Use `stp propose <user>`"
+    },
+    {
+        "id": 4,
+        "itemSold": "ringD",
+        "price": 2500,
+        "messageWhenBought": "Use `stp propose <user>`"
+    },
+    {
+        "id": 5,
+        "itemSold": "ringE",
+        "price": 7000,
+        "messageWhenBought": "Use `stp propose <user>`"
+    }
+]

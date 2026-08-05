@@ -54,6 +54,33 @@ module.exports = {
             { returnDocument: "after" }
         );
     },
+    async subtractMoney(uid, amount) {
+        let userData = await module.exports.getUser(uid);
+
+        let money = userData.money;
+        money -= parseInt(amount);
+
+        return await User.findOneAndUpdate(
+            { uid },
+            { money },
+            { returnDocument: "after" }
+        );
+    },
+    async setMoney(uid, amount) {
+        let userData = await module.exports.getUser(uid);
+
+        let money = parseInt(amount);
+
+        return await User.findOneAndUpdate(
+            { uid },
+            { money },
+            { returnDocument: "after" }
+        );
+    },
+    canAfford(userBalance, requiredAmount) {
+        if (userBalance < requiredAmount) return false;
+        return true;
+    },
     createEmbedStandard() {
         return new EmbedBuilder()
             .setColor(0xffa0fb)
@@ -100,6 +127,42 @@ module.exports = {
             { items },
             { returnDocument: "after" }
         );
+    },
+    hasItem(userItems, id, requiredAmount) {
+        let item = userItems.find(itm => itm.id == id);
+        if (!item) return false;
+        if (item.quantity < requiredAmount) return false;
+        return true;
+    },
+    async takeItemFromInv(uid, id, quantity) {
+        let invData = await module.exports.getInv(uid);
+
+        let items = invData.items;
+        let itemInInv = items.find(itm => itm.id == id);
+        items = items.filter(itm => itm.id != id);
+
+        if (itemInInv.quantity > 1) {
+            items.push({
+                id,
+                quantity: parseInt(itemInInv.quantity) - parseInt(quantity)
+            })
+        }
+
+        return await Inv.findOneAndUpdate(
+            { uid },
+            { items },
+            { returnDocument: "after" }
+        );
+    },
+    getItemNameOnly(itemID) {
+        let item = items.find(itm => itm.id == itemID);
+        if (!item) return false;
+        return item.name;
+    },
+    getItemDescriptionOnly(itemID) {
+        let item = items.find(itm => itm.id == itemID);
+        if (!item) return false;
+        return item.description;
     },
     iconizeItem(itemID) {
         const item = items.find(itm => itm.id == itemID);
