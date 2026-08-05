@@ -101,6 +101,10 @@ module.exports = {
             { returnDocument: "after" }
         );
     },
+    iconizeItem(itemID) {
+        const item = items.find(itm => itm.id == itemID);
+        return `${item.icon}`;
+    },
     iconizeItemWithName(itemID) {
         const item = items.find(itm => itm.id == itemID);
         return `${item.icon} \`${item.name}\``;
