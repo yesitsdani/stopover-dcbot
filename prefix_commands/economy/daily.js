@@ -1,5 +1,5 @@
 const User = require("../../models/User");
-const { getUser, iconizeTitle, iconizeMoney, createEmbedStandard } = require("../../modules");
+const { getUser, iconizeTitle, iconizeMoney, createEmbedStandard, iconizeItem } = require("../../modules");
 
 
 module.exports = {
@@ -32,6 +32,10 @@ module.exports = {
             forDisplay.push({ text: "<@&1504367456255475862>", amount: 100 });
         }
 
+        if (member.roles.cache.has(`1509546096232501429`)) {
+            forDisplay.push({ text: "<@&1509546096232501429>", amount: 300 });
+        }
+
         if (userData.title.toLowerCase() == "the chief passerby") {
             forDisplay.push({ text: iconizeTitle(userData.title), amount: 200 });
         } else if (userData.title.toLowerCase() == "member of the stopover council") {
@@ -51,7 +55,20 @@ module.exports = {
             total += x.amount;
         }
 
-        content += `\n\nTotal: ${iconizeMoney(total)}`;
+        content += `\n\nTotal: + ${iconizeMoney(total)}`;
+
+        const gemBoostRings = ['ringC', 'ringE', 'ringF'];
+        if (userData.marriage.uid.length > 0) {
+            if (
+                gemBoostRings.includes(userData.marriage.ring) &&
+                userData.marriage.status.toLowerCase() == "married"
+            ) {
+                const bonus = total * 0.25;
+                total += bonus;
+                content += `\n${iconizeItem(userData.marriage.ring)} Ring Bonus (25%): + ${iconizeMoney(bonus)}`;
+            }
+        }
+
         let money = parseInt(userData.money) + total;
         let newUser = await User.findOneAndUpdate(
             { uid },

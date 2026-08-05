@@ -28,19 +28,38 @@ module.exports = {
                 `You prayed for **${getMemberName(member)}**. Good for them.`,
                 `Ipagdasal lang si **${getMemberName(member)}** ha. 'Wag luhuran.`,
             ];
+        } else if (uid == '877167420572319804' && message.author.id != uid) {
+            pronoun = `They`;
+            sentences = [
+                `Bet mo ba si Ashi beh...`,
+                `Thank you for praying for the Chief Passerby`,
+                `Pinagdadasal mo bang 'wag siya bumaba sa pwesto?`,
+                `You prayed for Ashiwotototototo.`,
+                `\`Hoy, 'wag mo 'kong luhuran!\` -Ashi. `,
+                `The heart of the Chief Passerby is delighted.`,
+                `Hello, hi, mabuhay! Prayers for the Chief Passerby!`
+            ];
         } else {
             sentences = [
                 `Lumuhod ka sa liwanag at ika'y taimtim na nagdasal.`,
                 `You prayed. PRAYED!?!?`,
                 `Sana nagdadasal ka rin outside Discord beh.`,
                 `Ay ambait naman niyan oh!`,
-                `Change the world, Passerby. One prayer at a time.`
+                `Change the world, Passerby. One prayer at a time.`,
+                `Feel free to modify this prayer or tailor it to your specific needs and benefits...`,
+                `Passerby, say LOVE!`,
+                `Never forget that action comes alongside prayers, Passerby.`,
+                `So ano pinagdasal mo beh? Ver na yan.`,
+                `Dasal now, ervogue sa gen-chat later.`,
+                `Narinig ni Ashi prayers mo. Napaka-yearner mo raw.`,
+                `Tara beh, play tayo. Huh? Ay... pray ba. Sorry.`,
+                `May all Passersby be safe today, tomorrow, and always.`
             ];
         }
 
         let content = sentences[Math.floor(Math.random() * sentences.length)];
 
-        let randomAmount = randomInt(10, 20);
+        let randomAmount = randomInt(5, 13);
         let addingMoney = await addMoney(uid, randomAmount);
         let addFate = await addItemToInv(uid, 'flowersOfFate', 1);
 
