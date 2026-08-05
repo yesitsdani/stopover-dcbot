@@ -119,5 +119,19 @@ module.exports = {
     },
     randomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
+    },
+    iconizeTitle(title) {
+        let content = '';
+        if (title.toLowerCase() == "the chief passerby") {
+            content += `<:gavel:1534097246675796009>`
+        } else if (title.toLowerCase() == "member of the stopover council") {
+            content += `<:council:1534102603040821308>`
+        } else if (title.toLowerCase() == "first lady") {
+            content += `<:stp_pinkbow:1534224205992955956>`
+        } else {
+            content += `<a:stp_pinkdiaheart:1532004326652772494>`
+        }
+        content += ` **\`${title.toUpperCase()}\`**`;
+        return content;
     }
 }
