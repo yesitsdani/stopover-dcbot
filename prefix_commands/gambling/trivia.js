@@ -8,7 +8,7 @@ module.exports = {
     permissions: [],
     category: 'economy',
     usage: '`stp trivia`',
-    cooldown: 1000 * 60 * 5,
+    cooldown: 1000 * 60 * 3,
     testing: false,
     alias: [],
     async execute(client, message, args) {
@@ -30,7 +30,7 @@ module.exports = {
             )
         }
 
-        content += `\n\n\`YOU HAVE 10 SECONDS TO ANSWER\``
+        content += `\n\n\`YOU HAVE 15 SECONDS TO ANSWER\``
 
         const embed = createEmbedStandard()
         .setDescription(content)
@@ -40,6 +40,6 @@ module.exports = {
 
         setTimeout(async () => {
             if (messageSent.content.length < 1) await messageSent.edit({ content: `Times up! Be faster next time`, embeds: [], components: [] });
-        }, 5000*2);
+        }, 5000*3);
     }
 }
