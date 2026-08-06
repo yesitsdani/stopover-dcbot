@@ -23,12 +23,14 @@ module.exports = {
             let profileCommands = [];
             let utilityCommands = [];
             let economyCommands = [];
+            let gamblingCommands = [];
 
             for (command of client.prefix_commands) {
                 if (!command[1].testing && command[1].category != 'admin') {
                     if (command[1].category == 'profile') profileCommands.push(command[0]);
                     if (command[1].category == 'utility') utilityCommands.push(command[0]);
                     if (command[1].category == 'economy') economyCommands.push(command[0]);
+                    //if (command[1].category == 'gambling') gamblingCommands.push(command[0]);
                 }
             }
 
@@ -36,6 +38,7 @@ module.exports = {
             content += `\n### Profile Commands\n\`\`\`${profileCommands.join(', ')}\`\`\``;
             content += `\n### Utility Commands\n\`\`\`${utilityCommands.join(', ')}\`\`\``;
             content += `\n### Economy Commands\n\`\`\`${economyCommands.join(', ')}\`\`\``;
+            //content += `\n### Gambling Commands\n\`\`\`${gamblingCommands.join(', ')}\`\`\``;
         } else {
             content += `-# Command Information\n`
             const commandName = args[0];

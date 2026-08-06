@@ -201,5 +201,12 @@ module.exports = {
         const susNum = Number(input);
         if (Number.isNaN(susNum)) return false;
         return susNum;
+    },
+    checkGemBoost(marriage) {
+        if (marriage.uid.length < 1) return false;
+        if (marriage.status.toLowerCase() != 'married') return false;
+        let validRings = ['ringC', 'ringE', 'ringF'];
+        if (!validRings.includes(marriage.ring)) return false;
+        return true;
     }
 }

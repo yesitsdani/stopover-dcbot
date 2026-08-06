@@ -1,0 +1,181 @@
+[
+    {
+        "question": "When was The Stopover created?",
+        "reward": 200,
+        "options": [
+            { "label": "A", "answer": "May 15, 2026", "correct": false },
+            { "label": "B", "answer": "May 14, 2026", "correct": true },
+            { "label": "C", "answer": "May 17, 2026", "correct": false },
+            { "label": "D", "answer": "May 11, 2026", "correct": false }
+        ]
+    },
+    {
+        "question": "Are you etsin to tweniwan yers old? Tsu you hav gud [blank] skills? Fill in the blanks.",
+        "reward": 100,
+        "options": [
+            { "label": "A", "answer": "French", "correct": false },
+            { "label": "B", "answer": "Filipino", "correct": false },
+            { "label": "C", "answer": "English", "correct": true },
+            { "label": "D", "answer": "Japanese", "correct": false }
+        ]
+    },
+    {
+        "question": "You wanna fight me?",
+        "reward": 100,
+        "options": [
+            { "label": "A", "answer": "No po, work po muna", "correct": false },
+            { "label": "B", "answer": "Jhepoy Dizon", "correct": false },
+            { "label": "C", "answer": "Ngumiti lang siya", "correct": false },
+            { "label": "D", "answer": "Yes I", "correct": true }
+        ]
+    },
+    {
+        "question": "The 13th President of the Philippines",
+        "reward": 100,
+        "options": [
+            { "label": "A", "answer": "Joseph Estrada", "correct": true },
+            { "label": "B", "answer": "Corazon Aquino", "correct": false },
+            { "label": "C", "answer": "Jose Laurel", "correct": false },
+            { "label": "D", "answer": "Fidel Ramos", "correct": false }
+        ]
+    },
+    {
+        "question": "Tinanong ka kung may buntis ba, ano ang tamang sagot?",
+        "reward": 100,
+        "options": [
+            { "label": "A", "answer": "Hindi ko alam", "correct": false },
+            { "label": "B", "answer": "Wala ako sa posisyon para magsalita", "correct": false },
+            { "label": "C", "answer": "Ngumiti lamang", "correct": true },
+            { "label": "D", "answer": "Misua", "correct": false }
+        ]
+    },
+    {
+        "question": "Ang pagpapasikat kay Marjorie sa Bayan ng Naic ay ilelegal gamit ang mga ito MALIBAN sa",
+        "reward": 100,
+        "options": [
+            { "label": "A", "answer": "Ipapa-barangay", "correct": false },
+            { "label": "B", "answer": "Ipapa-Tulfo", "correct": true },
+            { "label": "C", "answer": "Ipapa-Cavite Konek", "correct": false },
+            { "label": "D", "answer": "Iva-Vlog", "correct": false }
+        ]
+    },
+    {
+        "question": "Who is the first person to become a member of the Stopover Council?",
+        "reward": 200,
+        "options": [
+            { "label": "A", "answer": "Ashi", "correct": false },
+            { "label": "B", "answer": "Roi", "correct": false },
+            { "label": "C", "answer": "Nyxell", "correct": true },
+            { "label": "D", "answer": "Aki", "correct": false }
+        ]
+    },
+    {
+        "question": "Who is the second person to become a member of the Stopover Council?",
+        "reward": 200,
+        "options": [
+            { "label": "A", "answer": "Roi", "correct": false },
+            { "label": "B", "answer": "Aki", "correct": true },
+            { "label": "C", "answer": "Calvin", "correct": false },
+            { "label": "D", "answer": "Zeph", "correct": false }
+        ]
+    },
+    {
+        "question": "Who is the fourth person to become a member of the Stopover Council?",
+        "reward": 200,
+        "options": [
+            { "label": "A", "answer": "Nyxell", "correct": false },
+            { "label": "B", "answer": "Calvin", "correct": false },
+            { "label": "C", "answer": "Maiku", "correct": false },
+            { "label": "D", "answer": "Zeph", "correct": true }
+        ]
+    },
+    {
+        "question": "Who is the third person to become a member of the Stopover Council?",
+        "reward": 200,
+        "options": [
+            { "label": "A", "answer": "Roi", "correct": true },
+            { "label": "B", "answer": "Maiku", "correct": false },
+            { "label": "C", "answer": "Zeph", "correct": false },
+            { "label": "D", "answer": "Nyxell", "correct": false }
+        ]
+    },
+    {
+        "question": "Who is the fifth person to become a member of the Stopover Council?",
+        "reward": 200,
+        "options": [
+            { "label": "A", "answer": "Aki", "correct": false },
+            { "label": "B", "answer": "Calvin", "correct": true },
+            { "label": "C", "answer": "Maiku", "correct": false },
+            { "label": "D", "answer": "Nyxell", "correct": false }
+        ]
+    },
+    {
+        "question": "Who is the sixth person to become a member of the Stopover Council?",
+        "reward": 200,
+        "options": [
+            { "label": "A", "answer": "Roi", "correct": false },
+            { "label": "B", "answer": "Nyxell", "correct": false },
+            { "label": "C", "answer": "Zeph", "correct": false },
+            { "label": "D", "answer": "Maiku", "correct": true }
+        ]
+    },
+    {
+        "question": "The Server Owner of the Stopover is also known as [blank]",
+        "reward": 200,
+        "options": [
+            { "label": "A", "answer": "Master Maestro", "correct": false },
+            { "label": "B", "answer": "Server Mowm", "correct": false },
+            { "label": "C", "answer": "The Chief Passerby", "correct": true },
+            { "label": "D", "answer": "The Chief Passersby", "correct": false }
+        ]
+    },
+    {
+        "question": "Lalo na during Christmas... Oo, 'pag birthday mo",
+        "reward": 100,
+        "options": [
+            { "label": "A", "answer": "Capsicum", "correct": false },
+            { "label": "B", "answer": "Pumangit ka na", "correct": false },
+            { "label": "C", "answer": "Birthday ko?", "correct": true },
+            { "label": "D", "answer": "Linamnam ulam", "correct": false }
+        ]
+    },
+    {
+        "question": "Call me by your name",
+        "reward": 100,
+        "options": [
+            { "label": "A", "answer": "A movie staring Timothée Chalamet", "correct": false },
+            { "label": "B", "answer": "Riva Mae s. Boongaling", "correct": true },
+            { "label": "C", "answer": "A song by Lil Nas X", "correct": false }
+        ]
+    },
+    {
+        "question": "Voulez-vous coucher avec moi, ce soir?",
+        "reward": 100,
+        "options": [
+            { "label": "A", "answer": "Ah, ma'am... di po talaga ako marunong mag-Japanese", "correct": false },
+            { "label": "B", "answer": "You want to sleep with my husband!?", "correct": true },
+            { "label": "C", "answer": "The Function Room", "correct": false },
+            { "label": "D", "answer": "You have talent ha", "correct": false }
+        ]
+    },
+    {
+        "question": "You have talent, ha? Can yu take my fotos wearing diz...",
+        "reward": 100,
+        "options": [
+            { "label": "A", "answer": "Yes I", "correct": false },
+            { "label": "B", "answer": "No po, work po muna", "correct": false },
+            { "label": "C", "answer": "The Function Room", "correct": false },
+            { "label": "D", "answer": "Only deez", "correct": true }
+        ]
+    },
+    {
+        "question": "You can get up to sebenti persent on oll dur aytems. Yep, daz rayt",
+        "reward": 100,
+        "options": [
+            { "label": "A", "answer": "Eez a moool wayd seyl", "correct": false },
+            { "label": "B", "answer": "So shap til u drap", "correct": false },
+            { "label": "C", "answer": "What we boat", "correct": false },
+            { "label": "D", "answer": "Labyu all C u durr", "correct": true }
+        ]
+    }
+]
