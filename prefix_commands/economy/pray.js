@@ -1,4 +1,4 @@
-const { getIdFromMention, getMemberName, randomInt, addMoney, addItemToInv, iconizeMoney, iconizeItemWithName } = require("../../modules");
+const { getIdFromMention, getMemberName, randomInt, addMoney, addItemToInv, iconizeMoney, iconizeItemWithName, hasItem, takeItemFromInv } = require("../../modules");
 
 module.exports = {
     name: 'pray',
@@ -10,7 +10,8 @@ module.exports = {
     testing: false,
     alias: ['dasal'],
     async execute(client, message, args) {
-        if (message.channel.id != `1506182833562193960`) return await message.reply(`You can only do this in the <#1506182833562193960>`);
+        const validChannels = ['1506182833562193960', '1504325792233164821'];
+        if (!validChannels.includes(message.channel.id)) return await message.reply(`You can only do this in the <#1506182833562193960>`);
         let uid = message.author.id;
         if (args[0] && getIdFromMention(args[0]) != null) uid = getIdFromMention(args[0]);
         const member = await message.guild.members.fetch(uid).catch(() => null);
@@ -18,26 +19,17 @@ module.exports = {
 
         let sentences = [];
         let pronoun = `You`;
+        let pronoun2 = `Your`;
 
         if (uid != message.author.id) {
             pronoun = `They`;
+            pronoun2 = `Their`;
             sentences = [
                 `Pinagdasal mo si **${getMemberName(member)}** na sana magbago na siya.`,
                 `Bait mo naman kay **${getMemberName(member)}**.`,
                 `Ikaw haaaa, bakit mo pinagdadasal si **${getMemberName(member)}**?`,
                 `You prayed for **${getMemberName(member)}**. Good for them.`,
                 `Ipagdasal lang si **${getMemberName(member)}** ha. 'Wag luhuran.`,
-            ];
-        } else if (uid == '877167420572319804' && message.author.id != uid) {
-            pronoun = `They`;
-            sentences = [
-                `Bet mo ba si Ashi beh...`,
-                `Thank you for praying for the Chief Passerby`,
-                `Pinagdadasal mo bang 'wag siya bumaba sa pwesto?`,
-                `You prayed for Ashiwotototototo.`,
-                `\`Hoy, 'wag mo 'kong luhuran!\` -Ashi. `,
-                `The heart of the Chief Passerby is delighted.`,
-                `Hello, hi, mabuhay! Prayers for the Chief Passerby!`
             ];
         } else {
             sentences = [
@@ -64,6 +56,13 @@ module.exports = {
         let addFate = await addItemToInv(uid, 'flowersOfFate', 1);
 
         content += ` ${pronoun} have been blessed with ${iconizeMoney(randomAmount)} and ${pronoun.toLowerCase()} also received ${iconizeItemWithName('flowersOfFate')} **x1**`;
+
+        let fateLimitReached = hasItem(addFate.items, 'flowersOfFate', 111);
+        if (fateLimitReached) {
+            await takeItemFromInv(uid, 'flowersOfFate', 111);
+            await addItemToInv(uid, 'destinyGem', 1);
+            content += `\n\n**HOLD ON!** Your prayers have been heard. The Flowers of Fate in ${pronoun2.toLowerCase()} hands transformed into a shining gem said to have been held by the masters of destiny itself. ${pronoun} received a ${iconizeItemWithName(`destinyGem`)}`;
+        }
 
         await message.reply(content);
     }

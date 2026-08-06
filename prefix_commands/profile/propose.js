@@ -10,7 +10,7 @@ module.exports = {
     usage: '`stp propose <member>`',
     cooldown: 1000 * 60 * 5,
     testing: false,
-    alias: ['marry'],
+    alias: [],
     async execute(client, message, args) {
         const uid = message.author.id;
         const userData = await getUser(uid);

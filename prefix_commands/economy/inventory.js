@@ -21,9 +21,11 @@ module.exports = {
         } else {
             for (x of invData.items) {
                 let item = items.find(itm => itm.id == x.id);
-                if (item) content += `\n${iconizeItemWithName(x.id)} x${x.quantity}`;
+                if (item) content += `\n\`ID: ${item.usableID}\` | ${iconizeItemWithName(x.id)} x${x.quantity}`;
             }
         }
+
+        content += `\n\nYou can use \`stp iteminfo <ID> to learn more about an item\``;
 
         const embed = createEmbedStandard()
         .setDescription(content);

@@ -4,7 +4,7 @@ module.exports = {
     name: 'setmoney',
     description: 'Sets a user\'s money',
     permissions: ['1506448680000159784'],
-    category: 'economy',
+    category: 'admin',
     usage: '`stp setmoney <member> <amount>`',
     cooldown: 1000 * 10,
     testing: false,

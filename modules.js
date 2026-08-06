@@ -141,7 +141,7 @@ module.exports = {
         let itemInInv = items.find(itm => itm.id == id);
         items = items.filter(itm => itm.id != id);
 
-        if (itemInInv.quantity > 1) {
+        if ((itemInInv.quantity - parseInt(quantity)) > 1) {
             items.push({
                 id,
                 quantity: parseInt(itemInInv.quantity) - parseInt(quantity)
@@ -196,5 +196,10 @@ module.exports = {
         }
         content += ` **\`${title.toUpperCase()}\`**`;
         return content;
+    },
+    checkIfNum(input) {
+        const susNum = Number(input);
+        if (Number.isNaN(susNum)) return false;
+        return susNum;
     }
 }

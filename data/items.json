@@ -4,48 +4,63 @@
         "usableID": 1,
         "description": "Flowers that blossomed from Ashi's Tree of Fate",
         "name": "Flowers of Fate",
-        "icon": "<a:fates:1534208864948326530>"
+        "icon": "<a:fates:1534208864948326530>",
+        "source": "Blessed to a Passerby in prayer."
     },
     {
         "id": "ringA",
         "usableID": 2,
         "description": "Ring used to server-marry another Passerby (No Effects)",
         "name": "Ring of Togetherness",
-        "icon": "<:ringA:1534430890544070699>"
+        "icon": "<:ringA:1534430890544070699>",
+        "source": "Bought in shop."
     },
     {
         "id": "ringB",
         "usableID": 3,
         "description": "Ring used to server-marry another Passerby (+ 25% XP Boost)",
         "name": "Ring of Growth",
-        "icon": "<:ringB:1534434265025216572>"
+        "icon": "<:ringB:1534434265025216572>",
+        "source": "Bought in shop."
     },
     {
         "id": "ringC",
         "usableID": 4,
         "description": "Ring used to server-marry another Passerby (+ 25% Gem Gain)",
         "name": "Ring of Wealth",
-        "icon": "<:ringC:1534433545475461130>"
+        "icon": "<:ringC:1534433545475461130>",
+        "source": "Bought in shop."
     },
     {
         "id": "ringD",
         "usableID": 5,
         "description": "Ring used to server-marry another Passerby (+ 25% Pure DMG)",
         "name": "Ring of Adventure",
-        "icon": "<:ringD:1534434023177322506>"
+        "icon": "<:ringD:1534434023177322506>",
+        "source": "Bought in shop."
     },
     {
         "id": "ringE",
         "usableID": 6,
         "description": "Ring used to server-marry another Passerby (+ 25% XP Boost, Gem Gain, and Pure DMG)",
         "name": "Ring of Blossoming",
-        "icon": "<:ringE:1534436475779809350>"
+        "icon": "<:ringE:1534436475779809350>",
+        "source": "Bought in shop."
     },
     {
         "id": "ringF",
         "usableID": 7,
         "description": "Ring used by the Chief Passerby (+ 25% XP Boost, Gem Gain, and Pure DMG)",
-        "name": "Ring of Reigning",
-        "icon": "<:ringF:1534441926978175077>"
+        "name": "Ring of Ever-Reigning",
+        "icon": "<:ringF:1534441926978175077>",
+        "source": "Be server-married to the Chief Passerby or become the Chief Passerby"
+    },
+    {
+        "id": "destinyGem",
+        "usableID": 8,
+        "description": "Granted to people whose will transcends all fate and claims their own destiny",
+        "name": "Gem of Destiny",
+        "icon": "<a:destinygem:1534871055435567214>",
+        "source": "Rumor has it that destiny takes shape the moment enough fate has been defied"
     }
 ]
