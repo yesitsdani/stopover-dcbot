@@ -1,4 +1,4 @@
-const { getIdFromMention, getMemberName, randomInt, addMoney, addItemToInv, iconizeMoney, iconizeItemWithName, hasItem, takeItemFromInv } = require("../../modules");
+const { getIdFromMention, getMemberName, randomInt, addMoney, addItemToInv, iconizeMoney, iconizeItemWithName, hasItem, takeItemFromInv, resetCommandCD } = require("../../modules");
 
 module.exports = {
     name: 'pray',

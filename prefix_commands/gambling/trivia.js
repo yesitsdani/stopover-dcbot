@@ -1,5 +1,5 @@
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
-const { checkIfNum, randomInt, getUser, canAfford, iconizeMoney, checkGemBoost, iconizeItem, addMoney, subtractMoney, createEmbedStandard } = require("../../modules");
+const { checkIfNum, randomInt, getUser, canAfford, iconizeMoney, checkGemBoost, iconizeItem, addMoney, subtractMoney, createEmbedStandard, resetCommandCD } = require("../../modules");
 const triviaQuestions = require('../../data/trivia.json');
 
 module.exports = {
