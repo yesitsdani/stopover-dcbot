@@ -1,7 +1,7 @@
 [
     {
         "question": "When was The Stopover created?",
-        "reward": 200,
+        "reward": 500,
         "options": [
             { "label": "A", "answer": "May 15, 2026", "correct": false },
             { "label": "B", "answer": "May 14, 2026", "correct": true },
@@ -61,7 +61,7 @@
     },
     {
         "question": "Who is the first person to become a member of the Stopover Council?",
-        "reward": 200,
+        "reward": 300,
         "options": [
             { "label": "A", "answer": "Ashi", "correct": false },
             { "label": "B", "answer": "Roi", "correct": false },
@@ -71,7 +71,7 @@
     },
     {
         "question": "Who is the second person to become a member of the Stopover Council?",
-        "reward": 200,
+        "reward": 300,
         "options": [
             { "label": "A", "answer": "Roi", "correct": false },
             { "label": "B", "answer": "Aki", "correct": true },
@@ -81,7 +81,7 @@
     },
     {
         "question": "Who is the fourth person to become a member of the Stopover Council?",
-        "reward": 200,
+        "reward": 300,
         "options": [
             { "label": "A", "answer": "Nyxell", "correct": false },
             { "label": "B", "answer": "Calvin", "correct": false },
@@ -91,7 +91,7 @@
     },
     {
         "question": "Who is the third person to become a member of the Stopover Council?",
-        "reward": 200,
+        "reward": 300,
         "options": [
             { "label": "A", "answer": "Roi", "correct": true },
             { "label": "B", "answer": "Maiku", "correct": false },
@@ -101,7 +101,7 @@
     },
     {
         "question": "Who is the fifth person to become a member of the Stopover Council?",
-        "reward": 200,
+        "reward": 300,
         "options": [
             { "label": "A", "answer": "Aki", "correct": false },
             { "label": "B", "answer": "Calvin", "correct": true },
@@ -111,7 +111,7 @@
     },
     {
         "question": "Who is the sixth person to become a member of the Stopover Council?",
-        "reward": 200,
+        "reward": 300,
         "options": [
             { "label": "A", "answer": "Roi", "correct": false },
             { "label": "B", "answer": "Nyxell", "correct": false },
@@ -121,7 +121,7 @@
     },
     {
         "question": "The Server Owner of the Stopover is also known as [blank]",
-        "reward": 200,
+        "reward": 300,
         "options": [
             { "label": "A", "answer": "Master Maestro", "correct": false },
             { "label": "B", "answer": "Server Mowm", "correct": false },
@@ -172,10 +172,200 @@
         "question": "You can get up to sebenti persent on oll dur aytems. Yep, daz rayt",
         "reward": 100,
         "options": [
-            { "label": "A", "answer": "Eez a moool wayd seyl", "correct": false },
+            { "label": "A", "answer": "Eez a moool wayd seyl", "correct": true },
             { "label": "B", "answer": "So shap til u drap", "correct": false },
             { "label": "C", "answer": "What we boat", "correct": false },
-            { "label": "D", "answer": "Labyu all C u durr", "correct": true }
+            { "label": "D", "answer": "Labyu all C u durr", "correct": false }
+        ]
+    },
+    {
+        "question": "Sa aling kanta maririnig ang lyrics na: 'Di sapat ang meron tayo ngayon, pwede bang humiling [BLANK]'",
+        "reward": 100,
+        "options": [
+            { "label": "A", "answer": "Ikot-Ikot", "correct": false },
+            { "label": "B", "answer": "Pangako", "correct": false },
+            { "label": "C", "answer": "Isa Pang Araw", "correct": true },
+            { "label": "D", "answer": "Pangarap Ko ang Ibigin Ka", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na Batch 1 Superstar na nag-DP ng Backless Ara Mina",
+        "reward": 300,
+        "options": [
+            { "label": "A", "answer": "Nyxell", "correct": false },
+            { "label": "B", "answer": "Cress", "correct": true },
+            { "label": "C", "answer": "Sashimi", "correct": false },
+            { "label": "D", "answer": "Temmie", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na Batch 2 Superstar na nag-host ng trivia event na Quiz it, Misis!",
+        "reward": 300,
+        "options": [
+            { "label": "A", "answer": "Roi", "correct": true },
+            { "label": "B", "answer": "Zion", "correct": false },
+            { "label": "C", "answer": "Steven", "correct": false },
+            { "label": "D", "answer": "Frost", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na Batch 3 Superstar na kilala sa kanyang lipbite",
+        "reward": 300,
+        "options": [
+            { "label": "A", "answer": "Rudy", "correct": false },
+            { "label": "B", "answer": "Andi", "correct": false },
+            { "label": "C", "answer": "Austin", "correct": true },
+            { "label": "D", "answer": "Will", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na Batch 4 Superstar na babes ng lahat",
+        "reward": 300,
+        "options": [
+            { "label": "A", "answer": "TimmyTime", "correct": false },
+            { "label": "B", "answer": "Chib", "correct": false },
+            { "label": "C", "answer": "Cap'n Ghosty", "correct": false },
+            { "label": "D", "answer": "Flitzby", "correct": true }
+        ]
+    },
+    {
+        "question": "Stopover Member na nahuhumaling kay Maki na mahilig gumamit ng Maki emojis o 'Makimojis' na siya ring ayaw maging kai bi-bi-bigan",
+        "reward": 300,
+        "options": [
+            { "label": "A", "answer": "Ponyo", "correct": false },
+            { "label": "B", "answer": "Zion", "correct": true },
+            { "label": "C", "answer": "Rudy", "correct": false },
+            { "label": "D", "answer": "Saf", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na Loyalty Awardee dahil sa pagiging isa sa pinakaunang member ng server",
+        "reward": 300,
+        "options": [
+            { "label": "A", "answer": "Cee", "correct": true },
+            { "label": "B", "answer": "Aki", "correct": false },
+            { "label": "C", "answer": "Maiku", "correct": false },
+            { "label": "D", "answer": "Yoon", "correct": false }
+        ]
+    },
+    {
+        "question": "Siya ang Archbishop of the Stopover na kayang mag-officiate ng Server Weddings at mag-ordain ng Server Priests",
+        "reward": 300,
+        "options": [
+            { "label": "A", "answer": "Temmie", "correct": false },
+            { "label": "B", "answer": "Yoon", "correct": false },
+            { "label": "C", "answer": "Aizen", "correct": true },
+            { "label": "D", "answer": "Vance", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na kilala sa kanyang cat drawings at Sunshineboy Cafe",
+        "reward": 300,
+        "options": [
+            { "label": "A", "answer": "Vance", "correct": false },
+            { "label": "B", "answer": "Sashimi", "correct": true },
+            { "label": "C", "answer": "Shiryu", "correct": false },
+            { "label": "D", "answer": "Evan", "correct": false }
+        ]
+    },
+    {
+        "question": "The Artist Royale and 2nd Congeniality Awardee of the Stopover",
+        "reward": 300,
+        "options": [
+            { "label": "A", "answer": "Vance", "correct": true },
+            { "label": "B", "answer": "Nyxell", "correct": false },
+            { "label": "C", "answer": "Flitzby", "correct": false },
+            { "label": "D", "answer": "Rudy", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Trio na may cover ng kanta mula sa Encanto na 'We Don't Talk About Bruno'",
+        "reward": 300,
+        "options": [
+            { "label": "A", "answer": "Milo, Sasori, at Rudy", "correct": false },
+            { "label": "B", "answer": "Cress, Nyxell, at Shiryu", "correct": false },
+            { "label": "C", "answer": "Jeremy, Roi, at Ponyo", "correct": true },
+            { "label": "D", "answer": "Sashimi, Evan, at Aizen", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na mahilig sa Gwiyomi at dating pinupuno ng Shaina pics ang Selfie Channel",
+        "reward": 300,
+        "options": [
+            { "label": "A", "answer": "Jeremy", "correct": false },
+            { "label": "B", "answer": "Shiryu", "correct": false },
+            { "label": "C", "answer": "Ero", "correct": true },
+            { "label": "D", "answer": "Ponyo", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na pasimuno ng Hamster Cult",
+        "reward": 300,
+        "options": [
+            { "label": "A", "answer": "Sashimi", "correct": false },
+            { "label": "B", "answer": "Shiryu", "correct": true },
+            { "label": "C", "answer": "Temmie", "correct": false },
+            { "label": "D", "answer": "Evan", "correct": false }
+        ]
+    },
+    {
+        "question": "Alin dito ang Music Bot ni Ashi?",
+        "reward": 300,
+        "options": [
+            { "label": "A", "answer": "Jockie", "correct": false },
+            { "label": "B", "answer": "Chip", "correct": false },
+            { "label": "C", "answer": "Pancake", "correct": true },
+            { "label": "D", "answer": "FlaviBot", "correct": false }
+        ]
+    },
+    {
+        "question": "Ang unang Escape Room ng Stopover ay base sa Piksyonal na lugar na?",
+        "reward": 300,
+        "options": [
+            { "label": "A", "answer": "Westeros", "correct": false },
+            { "label": "B", "answer": "Cavite", "correct": false },
+            { "label": "C", "answer": "Teyvat", "correct": false },
+            { "label": "D", "answer": "Wonderland", "correct": true }
+        ]
+    },
+    {
+        "question": "Ang majority ng members ng Stopover ay galing sa anong Social Media platform?",
+        "reward": 300,
+        "options": [
+            { "label": "A", "answer": "X", "correct": false },
+            { "label": "B", "answer": "Reddit", "correct": true },
+            { "label": "C", "answer": "Facebook", "correct": false },
+            { "label": "D", "answer": "Disboard", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na kilala sa profile picture niyang character mula sa animated show na 'Shaun the Sheep'",
+        "reward": 300,
+        "options": [
+            { "label": "A", "answer": "Sasori", "correct": false },
+            { "label": "B", "answer": "Badzabish", "correct": false },
+            { "label": "C", "answer": "N00bita", "correct": false },
+            { "label": "D", "answer": "TimmyTime", "correct": true }
+        ]
+    },
+    {
+        "question": "Stopover Member na may mahabang mic, alagang pusa, at napakahusay kumanta. Kapangalan niya rin ang isang kilalang brand",
+        "reward": 300,
+        "options": [
+            { "label": "A", "answer": "Sasori", "correct": false },
+            { "label": "B", "answer": "Calvin", "correct": false },
+            { "label": "C", "answer": "Milo", "correct": true },
+            { "label": "D", "answer": "N00bita", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na isang detective",
+        "reward": 300,
+        "options": [
+            { "label": "A", "answer": "Temmie", "correct": true },
+            { "label": "B", "answer": "Badzabish", "correct": false },
+            { "label": "C", "answer": "Steven", "correct": false },
+            { "label": "D", "answer": "Milo", "correct": false }
         ]
     }
 ]
