@@ -13,7 +13,7 @@ module.exports = {
     async execute(client, message, args) {
         const uid = message.author.id;
         if (message.channel.id == '1506182833562193960') {
-            await resetCommandCD(uid,module.exports.name);
+            await resetCommandCD(uid, "gemflip");
             return message.reply(`Susugal sa simbahan? 'di ka kaya karmahin niyan beh?`);
         }
         if (!args[0]) return message.reply(`Please indicate amount to bet`);

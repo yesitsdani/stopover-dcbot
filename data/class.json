@@ -1,0 +1,9 @@
+[
+    {
+        "id": "swordsman",
+        "type": "melee",
+        "atk": 5,
+        "def": 5
+        
+    }
+]

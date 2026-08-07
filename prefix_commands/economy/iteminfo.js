@@ -1,6 +1,7 @@
 const { getUser, iconizeMoney, iconizeItemWithName, createEmbedStandard, getItemDescriptionOnly } = require("../../modules");
 const items = require('../../data/items.json');
 const shop = require('../../data/shop.json');
+const equipments = require('../../data/equipment.json');
 
 module.exports = {
     name: 'iteminfo',
@@ -20,6 +21,9 @@ module.exports = {
         if (!item) return message.reply(`Invalid Item ID`);
 
         let content = `# ${iconizeItemWithName(item.id)}\n### ${getItemDescriptionOnly(item.id)}\n> Source: ${item.source}`;
+
+        const equipment = equipments.find(eq => eq.id == item.id);
+        if (equipment) content += `\n> ${equipment.iteminfo}`;
 
         const embed = createEmbedStandard()
             .setDescription(content);

@@ -1,0 +1,44 @@
+[
+    {
+        "id": "sword1",
+        "type": "sword",
+        "iteminfo": "Can be equipped by the Melee class. Use `stp equip weapon 9` to equip",
+        "dmg": {
+            "melee": 2,
+            "magic": 0,
+            "range": 0
+        },
+        "crit": {
+            "rate": 0.10,
+            "dmg": 0.20
+        }
+    },
+    {
+        "id": "wand1",
+        "type": "wand",
+        "iteminfo": "Can be equipped by the Magic class. Use `stp equip weapon 10` to equip",
+        "dmg": {
+            "melee": 0,
+            "magic": 2,
+            "range": 0
+        },
+        "crit": {
+            "rate": 0.10,
+            "dmg": 0.20
+        }
+    },
+    {
+        "id": "bow1",
+        "type": "bow",
+        "iteminfo": "Can be equipped by the Ranged class. Use `stp equip weapon 11` to equip",
+        "dmg": {
+            "melee": 0,
+            "magic": 0,
+            "range": 2
+        },
+        "crit": {
+            "rate": 0.10,
+            "dmg": 0.20
+        }
+    }
+]

@@ -62,5 +62,45 @@
         "name": "Gem of Destiny",
         "icon": "<a:destinygem:1534871055435567214>",
         "source": "Rumor has it that destiny takes shape the moment enough fate has been defied"
+    },
+    {
+        "id": "sword1",
+        "usableID": 9,
+        "description": "Every warrior starts with this. Can be equipped by warriors",
+        "name": "Beginner's Blade",
+        "icon": ":dagger:",
+        "source": "Bought in shop."
+    },
+    {
+        "id": "wand1",
+        "usableID": 10,
+        "description": "All those who wish to study magic starts with this",
+        "name": "Beginner's Wand",
+        "icon": ":magic_wand:",
+        "source": "Bought in shop."
+    },
+    {
+        "id": "bow1",
+        "usableID": 11,
+        "description": "Ranger's mate in their first hunt.",
+        "name": "Beginner's Bow",
+        "icon": ":bow_and_arrow:",
+        "source": "Bought in shop."
+    },
+    {
+        "id": "slime_drop",
+        "usableID": 12,
+        "description": "Sticky and gooey",
+        "name": "Slime Drop",
+        "icon": "<:slimedrop:1535169189181128764>",
+        "source": "Bought in shop."
+    },
+    {
+        "id": "armor1",
+        "usableID": 13,
+        "description": "Not as sturdy but will do",
+        "name": "Starter Armor",
+        "icon": ":shield:",
+        "source": "Bought in shop."
     }
 ]

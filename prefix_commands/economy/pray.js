@@ -12,7 +12,7 @@ module.exports = {
     async execute(client, message, args) {
         const validChannels = ['1506182833562193960', '1504325792233164821'];
         if (!validChannels.includes(message.channel.id)) {
-            await resetCommandCD(message.author.id, module.exports.name);
+            await resetCommandCD(message.author.id, "pray");
             return await message.reply(`You can only do this in the <#1506182833562193960>`);
         }
         let uid = message.author.id;

@@ -23,22 +23,22 @@ module.exports = {
             let profileCommands = [];
             let utilityCommands = [];
             let economyCommands = [];
-            let gamblingCommands = [];
+            let rpgCommands = [];
 
             for (command of client.prefix_commands) {
                 if (!command[1].testing && command[1].category != 'admin') {
                     if (command[1].category == 'profile') profileCommands.push(command[0]);
                     if (command[1].category == 'utility') utilityCommands.push(command[0]);
                     if (command[1].category == 'economy') economyCommands.push(command[0]);
-                    //if (command[1].category == 'gambling') gamblingCommands.push(command[0]);
+                    if (command[1].category == 'rpg') rpgCommands.push(command[0]);
                 }
             }
 
             content += `# \`STOPOVER BOT COMMANDS\`\n> Use \`stp help <command>\` for more information`;
-            content += `\n### Profile Commands\n\`\`\`${profileCommands.join(', ')}\`\`\``;
-            content += `\n### Utility Commands\n\`\`\`${utilityCommands.join(', ')}\`\`\``;
-            content += `\n### Economy Commands\n\`\`\`${economyCommands.join(', ')}\`\`\``;
-            //content += `\n### Gambling Commands\n\`\`\`${gamblingCommands.join(', ')}\`\`\``;
+            content += `\n### 👤 Profile Commands\n${profileCommands.join(', ')}`;
+            content += `\n### ⚙️ Utility Commands\n${utilityCommands.join(', ')}`;
+            content += `\n### <a:heartgem:1534217106252628038> Economy Commands\n${economyCommands.join(', ')}`;
+            content += `\n### 🗡️ RPG Commands\n${rpgCommands.join(', ')}`;
         } else {
             content += `-# Command Information\n`
             const commandName = args[0];

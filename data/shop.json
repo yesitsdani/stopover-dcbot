@@ -33,5 +33,33 @@
         "category": "profile",
         "price": 7000,
         "messageWhenBought": "Use `stp propose <user>`"
+    },
+    {
+        "id": 6,
+        "itemSold": "sword1",
+        "category": "equipment",
+        "price": 500,
+        "messageWhenBought": "Use `stp equip weapon 9`"
+    },
+    {
+        "id": 7,
+        "itemSold": "wand1",
+        "category": "equipment",
+        "price": 500,
+        "messageWhenBought": "Use `stp equip weapon 10`"
+    },
+    {
+        "id": 8,
+        "itemSold": "bow1",
+        "category": "equipment",
+        "price": 500,
+        "messageWhenBought": "Use `stp equip weapon 11`"
+    },
+    {
+        "id": 9,
+        "itemSold": "armor1",
+        "category": "equipment",
+        "price": 750,
+        "messageWhenBought": "Use `stp equip armor 13`"
     }
 ]

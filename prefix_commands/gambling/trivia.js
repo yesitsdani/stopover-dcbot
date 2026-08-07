@@ -14,8 +14,8 @@ module.exports = {
     async execute(client, message, args) {
         const uid = message.author.id;
         if (message.channel.id == '1506182833562193960') {
-            await resetCommandCD(uid, module.exports.name);
-            return message.reply(`'Wag naman sa simbahan beh...'`);
+            await resetCommandCD(uid, "trivia");
+            return message.reply(`'Wag naman sa simbahan beh...`);
         }
 
         let questionChosen = triviaQuestions[Math.floor(Math.random() * triviaQuestions.length)];

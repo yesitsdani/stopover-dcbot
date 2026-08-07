@@ -1,4 +1,4 @@
-const {} = require(`discord.js`);
+const { StringSelectMenuBuilder, StringSelectMenuOptionBuilder, ActionRowBuilder } = require(`discord.js`);
 const { getIdFromMention, getUser, createEmbedStandard, iconizeMoney, iconizeItem, iconizeTitle } = require(`../../modules`);
 const ms = require(`ms`);
 
@@ -59,6 +59,28 @@ module.exports = {
         .setThumbnail(member.user.avatarURL())
         .setDescription(content);
 
-        await message.reply({ embeds: [embed] });
+        const menu = new StringSelectMenuBuilder()
+        .setCustomId(`profile.${uid}`)
+        .setPlaceholder(`Select Passerby Profile`)
+        .setMaxValues(1)
+        .addOptions(
+            new StringSelectMenuOptionBuilder()
+            .setValue(`main`)
+            .setDescription(`Profile in The Stopover`)
+            .setLabel(`Passerby Profile`),
+            new StringSelectMenuOptionBuilder()
+            .setValue(`rpg`)
+            .setDescription(`Passerby Battle Stats`)
+            .setLabel(`RPG Profile`),
+            new StringSelectMenuOptionBuilder()
+            .setValue(`close`)
+            .setDescription(`Removes the selection menu from this message`)
+            .setLabel(`Close Menu`)
+        )
+
+        const actions = new ActionRowBuilder()
+        .addComponents(menu)
+
+        await message.reply({ embeds: [embed], components: [actions] });
     }
 }

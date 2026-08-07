@@ -1,7 +1,9 @@
+const { EmbedBuilder } = require(`discord.js`);
 const User = require('./models/User');
 const Inv = require('./models/Inv')
-const { EmbedBuilder } = require(`discord.js`);
+const Rpg = require('./models/Rpg');
 const items = require(`./data/items.json`);
+const equipments = require(`./data/equipment.json`);
 
 module.exports = {
     getIdFromMention(input) {
@@ -215,7 +217,83 @@ module.exports = {
         cooldowns = cooldowns.filter(item => item.cmd != cmdName);
         await User.findOneAndUpdate(
             { uid },
-            { $set: {cooldowns} }
+            { $set: { cooldowns } }
         );
+    },
+    async getRpgUser(uid) {
+        return await Rpg.findOneAndUpdate(
+            { uid },
+            {
+                $setOnInsert: {
+                    uid,
+                    class: "",
+                    xp: 0,
+                    level: 1,
+                    area: 1,
+                    health: 100,
+                    maxHealth: 100,
+                    dead: false,
+                    weap: {
+                        id: "",
+                        enchantment: "",
+                        cursed: false,
+                    },
+                    armor: {
+                        id: "",
+                        enchantment: ""
+                    },
+                    mainSkill: '',
+                    skills: [],
+                    blessed: false,
+                    enemiesSlayed: [],
+                    rune: {
+                        id: '',
+                        level: 0
+                    },
+                    tools: []
+                }
+            },
+            {
+                upsert: true,
+                returnDocument: "after"
+            }
+        );
+    },
+    iconizeRpgClass(className) {
+        if (className == null) return `:question: \`No Class Yet\` (Use \`stp class\`)`;
+        const swordClasses = ['swordsman', 'warrior', 'paladin', 'knight'];
+        if (swordClasses.includes(className.toLowerCase())) return `:dagger: \`${className.toUpperCase()}\``;
+        const archerClasses = ['archer', 'hunter', 'sniper', 'ranger'];
+        if (archerClasses.includes(className.toLowerCase())) return `:bow_and_arrow: \`${className.toUpperCase()}\``;
+        const mageClasses = ['mage', 'high mage', 'sage', 'sorcerer'];
+        if (mageClasses.includes(className.toLowerCase())) return `:magic_wand: \`${className.toUpperCase()}\``;
+        const clericClasses = ['healer', 'cleric', 'white mage'];
+        if (clericClasses.includes(className.toLowerCase())) return `:crystal_ball: \`${className.toUpperCase()}\``;
+    },
+    checkClassToWeapon(className, weaponID) {
+        const weapon = equipments.find(weap => weap.id == weaponID);
+        if (!weapon) return false;
+        if (weapon.type == "armor") return false;
+        const swordClasses = ['swordsman', 'warrior', 'paladin', 'knight'];
+        if (swordClasses.includes(className.toLowerCase()) && weapon.type == "sword") return true;
+        const archerClasses = ['archer', 'hunter', 'sniper', 'ranger'];
+        if (archerClasses.includes(className.toLowerCase()) && weapon.type == "bow") return true;
+        const mageClasses = ['mage', 'high mage', 'sage', 'sorcerer', 'healer', 'cleric', 'white mage'];
+        if (mageClasses.includes(className.toLowerCase()) && weapon.type == "wand") return true;
+        return false;
+    },
+    checkIfArmor(equipmentID) {
+        const armor = equipments.find(weap => weap.id == equipmentID);
+        if (!armor) return false;
+        if (armor.type != "armor") return false;
+        return true;
+    },
+    printValidWeapon(className) {
+        const swordClasses = ['swordsman', 'warrior', 'paladin', 'knight'];
+        if (swordClasses.includes(className.toLowerCase())) return `swords`;
+        const archerClasses = ['archer', 'hunter', 'sniper', 'ranger'];
+        if (archerClasses.includes(className.toLowerCase())) return `bows`;
+        const mageClasses = ['mage', 'high mage', 'sage', 'sorcerer', 'healer', 'cleric', 'white mage'];
+        if (mageClasses.includes(className.toLowerCase())) return `wands`;
     }
 }
