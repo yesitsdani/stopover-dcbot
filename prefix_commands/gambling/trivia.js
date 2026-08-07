@@ -13,6 +13,10 @@ module.exports = {
     alias: [],
     async execute(client, message, args) {
         const uid = message.author.id;
+        if (message.channel.id == '1506182833562193960') {
+            await resetCommandCD(uid, module.exports.name);
+            return message.reply(`'Wag naman sa simbahan beh...'`);
+        }
 
         let questionChosen = triviaQuestions[Math.floor(Math.random() * triviaQuestions.length)];
 
@@ -24,22 +28,22 @@ module.exports = {
             content += `\n\`${x.label}\` | ${x.answer}`;
             actions.addComponents(
                 new ButtonBuilder()
-                .setCustomId(`trivia.${uid}.${x.correct}.${questionChosen.reward}.${x.label}`)
-                .setStyle(ButtonStyle.Primary)
-                .setLabel(x.label)
+                    .setCustomId(`trivia.${uid}.${x.correct}.${questionChosen.reward}.${x.label}`)
+                    .setStyle(ButtonStyle.Primary)
+                    .setLabel(x.label)
             )
         }
 
         content += `\n\n\`YOU HAVE 15 SECONDS TO ANSWER\``
 
         const embed = createEmbedStandard()
-        .setDescription(content)
-        .setThumbnail(message.author.avatarURL());
+            .setDescription(content)
+            .setThumbnail(message.author.avatarURL());
 
         const messageSent = await message.reply({ embeds: [embed], components: [actions] });
 
         setTimeout(async () => {
             if (messageSent.content.length < 1) await messageSent.edit({ content: `Times up! Be faster next time`, embeds: [], components: [] });
-        }, 5000*3);
+        }, 5000 * 3);
     }
 }

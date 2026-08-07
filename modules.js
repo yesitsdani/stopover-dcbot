@@ -208,5 +208,14 @@ module.exports = {
         let validRings = ['ringC', 'ringE', 'ringF'];
         if (!validRings.includes(marriage.ring)) return false;
         return true;
+    },
+    async resetCommandCD(uid, cmdName) {
+        const user = await module.exports.getUser(uid);
+        let cooldowns = user.cooldowns;
+        cooldowns = cooldowns.filter(item => item.cmd != cmdName);
+        await User.findOneAndUpdate(
+            { uid },
+            { cooldowns }
+        );
     }
 }

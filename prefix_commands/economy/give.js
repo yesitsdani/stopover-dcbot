@@ -15,6 +15,7 @@ module.exports = {
         let amount = args.shift();
         uid = getIdFromMention(uid);
         if (uid == null) return message.reply(`Member not found`);
+        if (uid == message.author.id) return message.reply(`You can't give to yourself`);
         amount = Number(amount);
         if (Number.isNaN(amount)) return message.reply(`Please use a number for \`<amount>\``);
 

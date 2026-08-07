@@ -2,30 +2,35 @@
     {
         "id": 1,
         "itemSold": "ringA",
+        "category": "profile",
         "price": 1000,
         "messageWhenBought": "Use `stp propose <user>`"
     },
     {
         "id": 2,
         "itemSold": "ringB",
+        "category": "profile",
         "price": 2500,
         "messageWhenBought": "Use `stp propose <user>`"
     },
     {
         "id": 3,
         "itemSold": "ringC",
+        "category": "profile",
         "price": 3000,
         "messageWhenBought": "Use `stp propose <user>`"
     },
     {
         "id": 4,
         "itemSold": "ringD",
+        "category": "profile",
         "price": 2500,
         "messageWhenBought": "Use `stp propose <user>`"
     },
     {
         "id": 5,
         "itemSold": "ringE",
+        "category": "profile",
         "price": 7000,
         "messageWhenBought": "Use `stp propose <user>`"
     }
