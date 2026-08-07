@@ -210,12 +210,15 @@ module.exports = {
         return true;
     },
     async resetCommandCD(uid, cmdName) {
+        console.log(cmdName)
         const user = await module.exports.getUser(uid);
         let cooldowns = user.cooldowns;
+        console.log(`Cooldown before: ${cooldowns}`);
         cooldowns = cooldowns.filter(item => item.cmd != cmdName);
+        console.log(`Cooldown after: ${cooldowns}`);
         await User.findOneAndUpdate(
             { uid },
-            { cooldowns }
+            { $set: {cooldowns} }
         );
     }
 }
