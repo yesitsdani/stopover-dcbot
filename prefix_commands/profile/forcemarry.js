@@ -4,12 +4,12 @@ const User = require('../../models/User');
 module.exports = {
     name: 'forcemarry',
     description: 'Forces marriage of two passerby',
-    permissions: [],
+    permissions: ['1506448680000159784'],
     category: 'admin',
     usage: '`stp forcemarry <member1> <member2> <ring>`',
     cooldown: 1000 * 60,
     testing: false,
-    alias: ['1506448680000159784'],
+    alias: [],
     async execute(client, message, args) {
         const validRings = ['a', 'b', 'c', 'd', 'e'];
         if (!args[2]) return await message.reply(`Insufficient arguments: \`stp forcemarry <member1> <member2> <ring>\``);

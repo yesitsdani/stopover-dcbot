@@ -12,10 +12,10 @@ module.exports = {
         const userData = await getUser(uid);
 
         if (result == "false" || result == false) {
-            return await interaction.editReply({ content: `\`TRIVIA RESULT\`: You are incorrect. Better luck next time! <a:spinheart:1534896467750420541>`, embeds: [], components: [] });
+            return await interaction.editReply({ content: `🚫 \`TRIVIA RESULT\`: You are incorrect. Better luck next time! <a:spinheart:1534896467750420541>`, embeds: [], components: [] });
         } else if (result == "true" || result == true) {
             let reward = checkIfNum(args[0]);
-            let content = `\`TRIVIA RESULT\`: You are correct! You won ${iconizeMoney(reward)}`;
+            let content = `✅ \`TRIVIA RESULT\`: You are correct! You won ${iconizeMoney(reward)}`;
             if (checkGemBoost(userData.marriage)) {
                 const bonus = parseInt(reward * 0.25);
                 reward += bonus;
@@ -23,7 +23,7 @@ module.exports = {
             }
             await addMoney(uid, reward);
 
-            return await interaction.editReply({ content, embeds: [], components: [] });
+            return await interaction.editReply({ content, components: [] });
         }
     }
 }

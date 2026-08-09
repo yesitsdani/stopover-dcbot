@@ -43,7 +43,7 @@ module.exports = {
         const messageSent = await message.reply({ embeds: [embed], components: [actions] });
 
         setTimeout(async () => {
-            if (messageSent.content.length < 1) await messageSent.edit({ content: `Times up! Be faster next time`, embeds: [], components: [] });
+            if (messageSent.content.length < 1) await messageSent.edit({ content: `Times up! Be faster next time`, components: [] });
         }, 5000 * 3);
     }
 }
