@@ -31,35 +31,35 @@ module.exports = {
 
         let winMultiplier = 0;
         let win = false;
-        if ((item1 == item2 && item2 == item3) && item1 == "<a:heartgem:1534217106252628038>") winMultiplier = 4;
-        if (item1 == item2 && item2 == item3) winMultiplier = 3;
-        if (item1 == item2 || item2 == item3 || item1 == item3) winMultiplier = 2;
-        if (item1 == "<a:heartgem:1534217106252628038>" || item3 == "<a:heartgem:1534217106252628038>" || item2 == "<a:heartgem:1534217106252628038>") winMultiplier = 1;
+        if ((item1 == item2 && item2 == item3) && item1 == "<a:heartgem:1534217106252628038>") { winMultiplier = 4; }
+        else if (item1 == item2 && item2 == item3) { winMultiplier = 3; }
+        else if (item1 == item2 || item2 == item3 || item1 == item3) { winMultiplier = 2; }
+        else if (item1 == "<a:heartgem:1534217106252628038>" || item3 == "<a:heartgem:1534217106252628038>" || item2 == "<a:heartgem:1534217106252628038>") { winMultiplier = 1; }
 
         if (winMultiplier > 0) win = true;
 
         const embed = createEmbedStandard()
             .setDescription(`# <a:spinheart:1534896467750420541> | <a:spinheart:1534896467750420541> | <a:spinheart:1534896467750420541>`);
 
-        const sent = await message.reply({embeds: [embed]});
+        const sent = await message.reply({ embeds: [embed] });
 
         setTimeout(async () => {
             const embed1 = createEmbedStandard()
                 .setDescription(`# ${item1} | <a:spinheart:1534896467750420541> | <a:spinheart:1534896467750420541>`);
 
-            await sent.edit({embeds: [embed1]});
+            await sent.edit({ embeds: [embed1] });
         }, 500);
 
         setTimeout(async () => {
             const embed2 = createEmbedStandard()
                 .setDescription(`# ${item1} | ${item2} | <a:spinheart:1534896467750420541>`);
 
-            await sent.edit({embeds: [embed2]});
+            await sent.edit({ embeds: [embed2] });
         }, 750);
 
         setTimeout(async () => {
             content = `# ${item1} | ${item2} | ${item3}`;
-            
+
             if (win) {
                 let winningAmount = amount * winMultiplier;
                 const checkBoost = checkGemBoost(userData.marriage);
@@ -79,7 +79,7 @@ module.exports = {
             const embed3 = createEmbedStandard()
                 .setDescription(content);
 
-            await sent.edit({embeds: [embed3]});
+            await sent.edit({ embeds: [embed3] });
         }, 1000);
     }
 }
