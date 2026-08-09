@@ -33,7 +33,7 @@ module.exports = {
         let win = false;
         if ((item1 == item2 && item2 == item3) && item1 == "<a:heartgem:1534217106252628038>") winMultiplier = 4;
         if (item1 == item2 && item2 == item3) winMultiplier = 3;
-        if (item1 == item2 || item2 == item3) winMultiplier = 2;
+        if (item1 == item2 || item2 == item3 || item1 == item3) winMultiplier = 2;
         if (item1 == "<a:heartgem:1534217106252628038>" || item3 == "<a:heartgem:1534217106252628038>" || item2 == "<a:heartgem:1534217106252628038>") winMultiplier = 1;
 
         if (winMultiplier > 0) win = true;
@@ -55,7 +55,7 @@ module.exports = {
                 .setDescription(`# ${item1} | ${item2} | <a:spinheart:1534896467750420541>`);
 
             await sent.edit({embeds: [embed2]});
-        }, 500);
+        }, 750);
 
         setTimeout(async () => {
             content = `# ${item1} | ${item2} | ${item3}`;
@@ -80,6 +80,6 @@ module.exports = {
                 .setDescription(content);
 
             await sent.edit({embeds: [embed3]});
-        }, 500);
+        }, 1000);
     }
 }
