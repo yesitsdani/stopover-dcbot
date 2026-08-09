@@ -55,8 +55,14 @@ module.exports = {
             }
         )
 
-        await addItemToInv(uid1, ring, 1);
-        await addItemToInv(uid2, ring, 1);
+        let xpBonusRings = ['ringB', 'ringE', 'ringF'];
+        if (xpBonusRings.includes(ring)) {
+            const targetMember = await message.guild.members.fetch(uid1);
+            const ogUserMember = await message.guild.members.fetch(uid2);
+
+            await targetMember.roles.add('1534551714328477767');
+            await ogUserMember.roles.add('1534551714328477767');
+        }
 
         await message.reply(`They have been married using ${iconizeItemWithName(ring)}`);
     }

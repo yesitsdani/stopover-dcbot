@@ -17,6 +17,7 @@ module.exports = {
 
         const userData = await getUser(uid);
         const partnerUid = userData.marriage.uid;
+        const ring = userData.marriage.ring;
 
         const changeToThis = {
             marriage: {
@@ -37,9 +38,18 @@ module.exports = {
             changeToThis
         )
 
+        let xpBonusRings = ['ringB', 'ringE', 'ringF'];
+        if (xpBonusRings.includes(ring)) {
+            const targetMember = await interaction.guild.members.fetch(partnerUid);
+            const ogUserMember = await interaction.guild.members.fetch(uid);
+
+            await targetMember.roles.remove('1534551714328477767');
+            await ogUserMember.roles.remove('1534551714328477767');
+        }
+
 
         const embed = createEmbedStandard()
-            .setDescription(`# \`DIVORCED\`\n> You have decided to divorce. Rings have been broken.`)
+            .setDescription(`# \`DIVORCED\`\n> You have decided to divorce. Rings have been broken. The effects of the rings (if any) has dissipated.`)
             .setThumbnail(interaction.user.avatarURL())
 
         return await interaction.editReply({ components: [], embeds: [embed] });

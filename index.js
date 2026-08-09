@@ -25,10 +25,10 @@ client.once(Events.ClientReady, async (readyClient) => {
     await client.user.setPresence({
         activities: [
             {
-                name: "hello, hi, mabuhay! :))"
+                name: "say \"stp help\""
             }
         ],
-        status: 'dnd'
+        status: 'idle'
     });
 });
 
