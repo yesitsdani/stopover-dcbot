@@ -5,7 +5,7 @@ module.exports = {
     name: "trivia",
     async execute(client, interaction, args) {
         const uid = args.shift();
-        if (uid != interaction.user.id) return message.reply({ content: `This is not for you`, flags: MessageFlags.Ephemeral });
+        if (uid != interaction.user.id) return interaction.reply({ content: `This is not for you`, flags: MessageFlags.Ephemeral });
 
         await interaction.deferUpdate();
         const result = args.shift();
