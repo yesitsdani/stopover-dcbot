@@ -1,7 +1,7 @@
 [
     {
         "question": "When was The Stopover created?",
-        "reward": 500,
+        "reward": 250,
         "options": [
             { "label": "A", "answer": "May 15, 2026", "correct": false },
             { "label": "B", "answer": "May 14, 2026", "correct": true },
@@ -11,7 +11,7 @@
     },
     {
         "question": "Are you etsin to tweniwan yers old? Tsu you hav gud [blank] skills? Fill in the blanks.",
-        "reward": 100,
+        "reward": 50,
         "options": [
             { "label": "A", "answer": "French", "correct": false },
             { "label": "B", "answer": "Filipino", "correct": false },
@@ -21,7 +21,7 @@
     },
     {
         "question": "You wanna fight me?",
-        "reward": 100,
+        "reward": 50,
         "options": [
             { "label": "A", "answer": "No po, work po muna", "correct": false },
             { "label": "B", "answer": "Jhepoy Dizon", "correct": false },
@@ -31,7 +31,7 @@
     },
     {
         "question": "The 13th President of the Philippines",
-        "reward": 100,
+        "reward": 50,
         "options": [
             { "label": "A", "answer": "Joseph Estrada", "correct": true },
             { "label": "B", "answer": "Corazon Aquino", "correct": false },
@@ -41,7 +41,7 @@
     },
     {
         "question": "Tinanong ka kung may buntis ba, ano ang tamang sagot?",
-        "reward": 100,
+        "reward": 50,
         "options": [
             { "label": "A", "answer": "Hindi ko alam", "correct": false },
             { "label": "B", "answer": "Wala ako sa posisyon para magsalita", "correct": false },
@@ -51,7 +51,7 @@
     },
     {
         "question": "Ang pagpapasikat kay Marjorie sa Bayan ng Naic ay ilelegal gamit ang mga ito MALIBAN sa",
-        "reward": 100,
+        "reward": 50,
         "options": [
             { "label": "A", "answer": "Ipapa-barangay", "correct": false },
             { "label": "B", "answer": "Ipapa-Tulfo", "correct": true },
@@ -61,7 +61,7 @@
     },
     {
         "question": "Who is the first person to become a member of the Stopover Council?",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "Ashi", "correct": false },
             { "label": "B", "answer": "Roi", "correct": false },
@@ -71,7 +71,7 @@
     },
     {
         "question": "Who is the second person to become a member of the Stopover Council?",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "Roi", "correct": false },
             { "label": "B", "answer": "Aki", "correct": true },
@@ -81,7 +81,7 @@
     },
     {
         "question": "Who is the fourth person to become a member of the Stopover Council?",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "Nyxell", "correct": false },
             { "label": "B", "answer": "Calvin", "correct": false },
@@ -91,7 +91,7 @@
     },
     {
         "question": "Who is the third person to become a member of the Stopover Council?",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "Roi", "correct": true },
             { "label": "B", "answer": "Maiku", "correct": false },
@@ -101,7 +101,7 @@
     },
     {
         "question": "Who is the fifth person to become a member of the Stopover Council?",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "Aki", "correct": false },
             { "label": "B", "answer": "Calvin", "correct": true },
@@ -111,7 +111,7 @@
     },
     {
         "question": "Who is the sixth person to become a member of the Stopover Council?",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "Roi", "correct": false },
             { "label": "B", "answer": "Nyxell", "correct": false },
@@ -121,7 +121,7 @@
     },
     {
         "question": "The Server Owner of the Stopover is also known as [blank]",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "Master Maestro", "correct": false },
             { "label": "B", "answer": "Server Mowm", "correct": false },
@@ -131,7 +131,7 @@
     },
     {
         "question": "Lalo na during Christmas... Oo, 'pag birthday mo",
-        "reward": 100,
+        "reward": 50,
         "options": [
             { "label": "A", "answer": "Capsicum", "correct": false },
             { "label": "B", "answer": "Pumangit ka na", "correct": false },
@@ -141,7 +141,7 @@
     },
     {
         "question": "Call me by your name",
-        "reward": 100,
+        "reward": 50,
         "options": [
             { "label": "A", "answer": "A movie staring Timothée Chalamet", "correct": false },
             { "label": "B", "answer": "Riva Mae s. Boongaling", "correct": true },
@@ -150,7 +150,7 @@
     },
     {
         "question": "Voulez-vous coucher avec moi, ce soir?",
-        "reward": 100,
+        "reward": 50,
         "options": [
             { "label": "A", "answer": "Ah, ma'am... di po talaga ako marunong mag-Japanese", "correct": false },
             { "label": "B", "answer": "You want to sleep with my husband!?", "correct": true },
@@ -160,7 +160,7 @@
     },
     {
         "question": "You have talent, ha? Can yu take my fotos wearing diz...",
-        "reward": 100,
+        "reward": 50,
         "options": [
             { "label": "A", "answer": "Yes I", "correct": false },
             { "label": "B", "answer": "No po, work po muna", "correct": false },
@@ -170,7 +170,7 @@
     },
     {
         "question": "You can get up to sebenti persent on oll dur aytems. Yep, daz rayt",
-        "reward": 100,
+        "reward": 50,
         "options": [
             { "label": "A", "answer": "Eez a moool wayd seyl", "correct": true },
             { "label": "B", "answer": "So shap til u drap", "correct": false },
@@ -180,7 +180,7 @@
     },
     {
         "question": "Sa aling kanta maririnig ang lyrics na: 'Di sapat ang meron tayo ngayon, pwede bang humiling [BLANK]'",
-        "reward": 100,
+        "reward": 50,
         "options": [
             { "label": "A", "answer": "Ikot-Ikot", "correct": false },
             { "label": "B", "answer": "Pangako", "correct": false },
@@ -190,7 +190,7 @@
     },
     {
         "question": "Stopover Member na Batch 1 Superstar na nag-DP ng Backless Ara Mina",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "Nyxell", "correct": false },
             { "label": "B", "answer": "Cress", "correct": true },
@@ -200,7 +200,7 @@
     },
     {
         "question": "Stopover Member na Batch 2 Superstar na nag-host ng trivia event na Quiz it, Misis!",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "Roi", "correct": true },
             { "label": "B", "answer": "Zion", "correct": false },
@@ -210,7 +210,7 @@
     },
     {
         "question": "Stopover Member na Batch 3 Superstar na kilala sa kanyang lipbite",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "Rudy", "correct": false },
             { "label": "B", "answer": "Andi", "correct": false },
@@ -220,7 +220,7 @@
     },
     {
         "question": "Stopover Member na Batch 4 Superstar na babes ng lahat",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "TimmyTime", "correct": false },
             { "label": "B", "answer": "Chib", "correct": false },
@@ -230,7 +230,7 @@
     },
     {
         "question": "Stopover Member na nahuhumaling kay Maki na mahilig gumamit ng Maki emojis o 'Makimojis' na siya ring ayaw maging kai bi-bi-bigan",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "Ponyo", "correct": false },
             { "label": "B", "answer": "Zion", "correct": true },
@@ -240,7 +240,7 @@
     },
     {
         "question": "Stopover Member na Loyalty Awardee dahil sa pagiging isa sa pinakaunang member ng server",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "Cee", "correct": true },
             { "label": "B", "answer": "Aki", "correct": false },
@@ -250,7 +250,7 @@
     },
     {
         "question": "Siya ang Archbishop of the Stopover na kayang mag-officiate ng Server Weddings at mag-ordain ng Server Priests",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "Temmie", "correct": false },
             { "label": "B", "answer": "Yoon", "correct": false },
@@ -260,7 +260,7 @@
     },
     {
         "question": "Stopover Member na kilala sa kanyang cat drawings at Sunshineboy Cafe",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "Vance", "correct": false },
             { "label": "B", "answer": "Sashimi", "correct": true },
@@ -270,7 +270,7 @@
     },
     {
         "question": "The Artist Royale and 2nd Congeniality Awardee of the Stopover",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "Vance", "correct": true },
             { "label": "B", "answer": "Nyxell", "correct": false },
@@ -280,7 +280,7 @@
     },
     {
         "question": "Stopover Trio na may cover ng kanta mula sa Encanto na 'We Don't Talk About Bruno'",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "Milo, Sasori, at Rudy", "correct": false },
             { "label": "B", "answer": "Cress, Nyxell, at Shiryu", "correct": false },
@@ -290,7 +290,7 @@
     },
     {
         "question": "Stopover Member na mahilig sa Gwiyomi at dating pinupuno ng Shaina pics ang Selfie Channel",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "Jeremy", "correct": false },
             { "label": "B", "answer": "Shiryu", "correct": false },
@@ -300,7 +300,7 @@
     },
     {
         "question": "Stopover Member na pasimuno ng Hamster Cult",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "Sashimi", "correct": false },
             { "label": "B", "answer": "Shiryu", "correct": true },
@@ -310,7 +310,7 @@
     },
     {
         "question": "Alin dito ang Music Bot ni Ashi?",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "Jockie", "correct": false },
             { "label": "B", "answer": "Chip", "correct": false },
@@ -320,7 +320,7 @@
     },
     {
         "question": "Ang unang Escape Room ng Stopover ay base sa Piksyonal na lugar na?",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "Westeros", "correct": false },
             { "label": "B", "answer": "Cavite", "correct": false },
@@ -330,7 +330,7 @@
     },
     {
         "question": "Ang majority ng members ng Stopover ay galing sa anong Social Media platform?",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "X", "correct": false },
             { "label": "B", "answer": "Reddit", "correct": true },
@@ -340,7 +340,7 @@
     },
     {
         "question": "Stopover Member na kilala sa profile picture niyang character mula sa animated show na 'Shaun the Sheep'",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "Sasori", "correct": false },
             { "label": "B", "answer": "Badzabish", "correct": false },
@@ -350,7 +350,7 @@
     },
     {
         "question": "Stopover Member na may mahabang mic, alagang pusa, at napakahusay kumanta. Kapangalan niya rin ang isang kilalang brand",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "Sasori", "correct": false },
             { "label": "B", "answer": "Calvin", "correct": false },
@@ -360,12 +360,162 @@
     },
     {
         "question": "Stopover Member na isang detective",
-        "reward": 300,
+        "reward": 150,
         "options": [
             { "label": "A", "answer": "Temmie", "correct": true },
             { "label": "B", "answer": "Badzabish", "correct": false },
             { "label": "C", "answer": "Steven", "correct": false },
             { "label": "D", "answer": "Milo", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na kilala sakanyang striking hair color na ipapaalala sa'yong siya pa rin 'to, si Diday.",
+        "reward": 150,
+        "options": [
+            { "label": "A", "answer": "N00bita", "correct": false },
+            { "label": "B", "answer": "Badzabish", "correct": true },
+            { "label": "C", "answer": "Kolo", "correct": false },
+            { "label": "D", "answer": "TimmyTime", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na dancer at kilalang kaya sumayaw in heels. Kilala rin siya sakanyang striking red hair",
+        "reward": 150,
+        "options": [
+            { "label": "A", "answer": "Kolo", "correct": true },
+            { "label": "B", "answer": "TimmyTime", "correct": false },
+            { "label": "C", "answer": "N00bita", "correct": false },
+            { "label": "D", "answer": "Badzabish", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na laging nagtatanong ng 'Ako lang ba bisexual?' na madalas ay walang profile picture",
+        "reward": 150,
+        "options": [
+            { "label": "A", "answer": "RB", "correct": false },
+            { "label": "B", "answer": "Milo", "correct": false },
+            { "label": "C", "answer": "JD", "correct": false },
+            { "label": "D", "answer": "Sasori", "correct": true }
+        ]
+    },
+    {
+        "question": "Stopover Member na kilala sakanyang orange cat GIF at katagang pompompurin~ pati na rin ang kanyan",
+        "reward": 150,
+        "options": [
+            { "label": "A", "answer": "RB", "correct": true },
+            { "label": "B", "answer": "Milo", "correct": false },
+            { "label": "C", "answer": "JD", "correct": false },
+            { "label": "D", "answer": "Sasori", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na Fourth Wall Breaker awardee na madalas ay nagdadala ng board at card games sa meetups",
+        "reward": 150,
+        "options": [
+            { "label": "A", "answer": "Vance", "correct": false },
+            { "label": "B", "answer": "Evan", "correct": true },
+            { "label": "C", "answer": "Aizen", "correct": false },
+            { "label": "D", "answer": "Cress", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na kilala sakanyang fierce drag looks at slayable personality. Madalas na kasama ng kanyang kakambal na si Ponyo",
+        "reward": 150,
+        "options": [
+            { "label": "A", "answer": "Valentine", "correct": true },
+            { "label": "B", "answer": "Roi", "correct": false },
+            { "label": "C", "answer": "Hami", "correct": false },
+            { "label": "D", "answer": "Jeremy", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na hoo haa shi wala wala bing bang WOOOH yeahhh zige pa GO GO GOOO uh huh yeah",
+        "reward": 143,
+        "options": [
+            { "label": "D", "answer": "Krungkrung ina merz", "correct": false },
+            { "label": "A", "answer": "Nyeche Ashi ano 'to!?", "correct": true },
+            { "label": "DD", "answer": "Sabi ng mama mo...", "correct": false },
+            { "label": "I", "answer": "Kisa-kisa por da miii", "correct": false }
+        ]
+    },
+    {
+        "question": "Ano ang ihahampas kay Jhepoy Dizon ng batang sa isang viral rage video?",
+        "reward": 50,
+        "options": [
+            { "label": "A", "answer": "Salamin", "correct": false },
+            { "label": "B", "answer": "Subdivision", "correct": false },
+            { "label": "C", "answer": "Laptop", "correct": true },
+            { "label": "D", "answer": "Pisonet", "correct": false }
+        ]
+    },
+    {
+        "question": "Storeh of my layf, sirchin 4 da rayt,",
+        "reward": 50,
+        "options": [
+            { "label": "A", "answer": "Kisa-kisa por da miii", "correct": true },
+            { "label": "B", "answer": "Storow in mah soul", "correct": false },
+            { "label": "C", "answer": "Kasisesarow", "correct": false },
+            { "label": "D", "answer": "Rizon Y da sky is bleu", "correct": false }
+        ]
+    },
+    {
+        "question": "Ma'am natutulog po ba kayo?",
+        "reward": 50,
+        "options": [
+            { "label": "A", "answer": "Obvious ba?", "correct": true },
+            { "label": "B", "answer": "Ay hindi, gising ako 'oh", "correct": false },
+            { "label": "C", "answer": "Laplapan tayo raynao", "correct": false },
+            { "label": "D", "answer": "Hindi po", "correct": false }
+        ]
+    },
+    {
+        "question": "Katagang laging banggit ni Ashi na galing sa isang recap show na kaparehong pangalan ng server na hosted ni Marina Summers",
+        "reward": 400,
+        "options": [
+            { "label": "A", "answer": "Mabuhay, Hello, Hi!", "correct": false },
+            { "label": "B", "answer": "Kung ako 'yan, di kita gaganyanin", "correct": false },
+            { "label": "C", "answer": "Hello, Hi, Mabuhay!", "correct": true },
+            { "label": "D", "answer": "Hi, Hello, Mabuhay!", "correct": false }
+        ]
+    },
+    {
+        "question": "Sa'yong ganda ang puso'y di makalimot. Tuwing kapiling ka,",
+        "reward": 50,
+        "options": [
+            { "label": "A", "answer": "Ang sarap nitong pag-ibig", "correct": false },
+            { "label": "B", "answer": "Ang pagsilip ng bituin", "correct": false },
+            { "label": "C", "answer": "Tanging nadarama", "correct": true },
+            { "label": "D", "answer": "Sa 'yong mga mata", "correct": false }
+        ]
+    },
+    {
+        "question": "Sorry I cannot hear you",
+        "reward": 50,
+        "options": [
+            { "label": "A", "answer": "I'm kinda busy", "correct": true },
+            { "label": "B", "answer": "Please call again", "correct": false },
+            { "label": "C", "answer": "No, it's Patrick", "correct": false },
+            { "label": "D", "answer": "Holabels", "correct": false }
+        ]
+    },
+    {
+        "question": "Ikaw ay biglang nagka-one on one ticket kasama ng Chief Passerby, ano ang gagawin mo?",
+        "reward": 100,
+        "options": [
+            { "label": "A", "answer": "Matatakot at hihingi ng paumanhin", "correct": false },
+            { "label": "B", "answer": "Magtatanong ng ano 'to?", "correct": false },
+            { "label": "C", "answer": "Iho-hoy si Ashi", "correct": false },
+            { "label": "D", "answer": "Sharon Cuneta", "correct": true }
+        ]
+    },
+    {
+        "question": "Stopover Member na kapangalan ang bidang kasama ni Doraemon sa palabas na Doraemon",
+        "reward": 100,
+        "options": [
+            { "label": "A", "answer": "D4mulag", "correct": false },
+            { "label": "B", "answer": "Sh1zuka", "correct": false },
+            { "label": "C", "answer": "N00bita", "correct": true },
+            { "label": "D", "answer": "Shar0n Cun3ta", "correct": false }
         ]
     }
 ]

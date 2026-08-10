@@ -53,8 +53,6 @@ module.exports = {
             }
         }
 
-        content += `\n\n${iconizeMoney(user.money)}`
-
         embed
         .setThumbnail(member.user.avatarURL())
         .setDescription(content);

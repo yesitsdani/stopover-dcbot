@@ -16,13 +16,24 @@ module.exports = {
             await resetCommandCD(uid, "gemflip");
             return message.reply(`Susugal sa simbahan? 'di ka kaya karmahin niyan beh?`);
         }
-        if (!args[0]) return message.reply(`Please indicate amount to bet`);
+        if (!args[0]) {
+            await resetCommandCD(uid, "gemflip");
+            return message.reply(`Please indicate amount to bet`)
+        };
         const userData = await getUser(uid);
         const amount = checkIfNum(args[0]);
-        if (!amount) return message.reply(`Please use a valid number to bet`);
-        if (!canAfford(userData.money, amount)) return message.reply(`You don't have that much to bet`);
-        if (amount > 1000) return message.reply(`You can only bet up to ${iconizeMoney(1000)}`);
-
+        if (!amount) {
+            await resetCommandCD(uid, "gemflip");
+            return message.reply(`Please use a valid number to bet`);
+        }
+        if (!canAfford(userData.money, amount)) {
+            await resetCommandCD(uid, "gemflip");
+            return message.reply(`You don't have that much to bet`);
+        }
+        if (amount > 1000) {
+            await resetCommandCD(uid, "gemflip");
+            return message.reply(`You can only bet up to ${iconizeMoney(1000)}`);
+        }
         let bet = "heads";
         if (args[1]) bet = args[1].toLowerCase();
 

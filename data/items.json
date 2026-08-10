@@ -102,5 +102,37 @@
         "name": "Starter Armor",
         "icon": ":shield:",
         "source": "Bought in shop."
+    },
+    {
+        "id": "access1",
+        "usableID": 14,
+        "description": "Gives access to the Casino Channel (max bet limit is 5000)",
+        "name": "Access Card A",
+        "icon": ":credit_card:",
+        "source": "Bought in shop (soon)."
+    },
+    {
+        "id": "access2",
+        "usableID": 15,
+        "description": "Gives access to the Deluxia Channel (Pray and Gambling allowed)",
+        "name": "Access Card B",
+        "icon": ":credit_card:",
+        "source": "Bought in shop (soon)."
+    },
+    {
+        "id": "roleIcon1",
+        "usableID": 16,
+        "description": "Equips the role icon 'The Undying Conundrum'",
+        "name": "The Undying Conundrum",
+        "icon": ":leaves:",
+        "source": "Bought in shop (soon)."
+    },
+    {
+        "id": "roleIcon2",
+        "usableID": 17,
+        "description": "Equips the role icon 'El Flamme'",
+        "name": "El Flamme",
+        "icon": ":heart_on_fire:",
+        "source": "Bought in shop (soon)."
     }
 ]

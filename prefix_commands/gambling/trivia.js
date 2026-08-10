@@ -8,7 +8,7 @@ module.exports = {
     permissions: [],
     category: 'economy',
     usage: '`stp trivia`',
-    cooldown: 1000 * 90,
+    cooldown: 1000 * 60 * 2,
     testing: false,
     alias: [],
     async execute(client, message, args) {

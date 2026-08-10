@@ -42,8 +42,6 @@ module.exports = {
                     content += `\n> ❤︎ \`${award.toUpperCase()}\``;
                 }
             }
-
-            content += `\n\n${iconizeMoney(user.money)}`
         } else if (chosen == "rpg") {
             const rpgUser = await getRpgUser(uid);
             if (rpgUser.class.length > 0) { content += `${iconizeRpgClass(rpgUser.class)}` }
