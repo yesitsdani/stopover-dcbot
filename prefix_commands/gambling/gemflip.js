@@ -1,3 +1,4 @@
+const { abundancePoint } = require("../../calculator");
 const { checkIfNum, randomInt, getUser, canAfford, iconizeMoney, checkGemBoost, iconizeItem, addMoney, subtractMoney, resetCommandCD } = require("../../modules");
 
 
@@ -30,9 +31,12 @@ module.exports = {
             await resetCommandCD(uid, "gemflip");
             return message.reply(`You don't have that much to bet`);
         }
-        if (amount > 1000) {
+        if (amount > 1000 && !(message.channel.id == "1536739822851596339")) {
             await resetCommandCD(uid, "gemflip");
             return message.reply(`You can only bet up to ${iconizeMoney(1000)}`);
+        } else if (amount > 10000) {
+            await resetCommandCD(uid, "gemflip");
+            return message.reply(`You can only bet up to ${iconizeMoney(10000)}`);
         }
         let bet = "heads";
         if (args[1]) bet = args[1].toLowerCase();
@@ -65,6 +69,7 @@ module.exports = {
         setTimeout(async () => {
             if (win) {
                 await addMoney(uid, winning);
+                await abundancePoint(uid, message);
             } else {
                 await subtractMoney(uid, winning);
             }

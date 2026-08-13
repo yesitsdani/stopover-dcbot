@@ -2,8 +2,10 @@ const { EmbedBuilder } = require(`discord.js`);
 const User = require('./models/User');
 const Inv = require('./models/Inv')
 const Rpg = require('./models/Rpg');
+const Perks = require(`./models/Perks`)
 const items = require(`./data/items.json`);
 const equipments = require(`./data/equipment.json`);
+const recipes = require(`./data/recipes.json`);
 
 module.exports = {
     getIdFromMention(input) {
@@ -295,5 +297,66 @@ module.exports = {
         if (archerClasses.includes(className.toLowerCase())) return `bows`;
         const mageClasses = ['mage', 'high mage', 'sage', 'sorcerer', 'healer', 'cleric', 'white mage'];
         if (mageClasses.includes(className.toLowerCase())) return `wands`;
+    },
+    canCraft(userItems, usableID, quantity) {
+        const itemRecipe = recipes.find(rec => rec.craftingUsableId == usableID);
+        let canCraft = true;
+        const recipe = itemRecipe.recipe;
+        let content = `You don't have enough items to craft this:`
+        for (let i = 0; i < recipe.length; i++) {
+            let item = userItems.find(itm => itm.id == recipe[i].itemID);
+            let itemReference = items.find(itm => itm.id == recipe[i].itemID);
+            if (!item) {
+                canCraft = false;
+                content += `\n${module.exports.iconizeItemWithName(itemReference.id)}: \`0\`/\`${recipe[i].quantity * quantity}\``;
+            } else if (item && (item.quantity < (recipe[i].quantity * quantity))) {
+                canCraft = false;
+                content += `\n${module.exports.iconizeItemWithName(itemReference.id)}: \`${item.quantity}\`/\`${recipe[i].quantity * quantity}\``;
+            }
+        }
+
+        if (canCraft) {
+            return { canCraft, embeds: [] };
+        } else {
+            const embed = module.exports.createEmbedStandard()
+                .setDescription(content);
+            return { canCraft, embeds: [embed] };
+        }
+    },
+    async getUserPerks(uid) {
+        return await Perks.findOneAndUpdate(
+            { uid },
+            {
+                $setOnInsert: {
+                    uid,
+                    cooldownDecrease: {
+                        untilTime: 0,
+                        multiplier: 1
+                    },
+                    rolePerks: [],
+                    dmgBoost: [],
+                    abundancePoints: 0,
+                    devotionPoints: 0,
+                    creationPoints: 0,
+                    libertyPoints: 0
+                }
+            },
+            {
+                upsert: true,
+                returnDocument: "after"
+            }
+        );
+    },
+    roleIconToId(roleId) {
+        const roleIconDatas = [
+            { roleID: "1536749380332159016", itemID: "roleIcon1" },
+            { roleID: "1536749687564927077", itemID: "roleIcon2" },
+            { roleID: "1536750489600004107", itemID: "roleIcon3" },
+            { roleID: "1536750981222768800", itemID: "roleIcon4" },
+            { roleID: "1536751104317067367", itemID: "roleIcon5" }
+        ]
+
+        const roleIconData = roleIconDatas.find(itm => itm.roleID == roleId);
+        return roleIconData.itemID;
     }
 }

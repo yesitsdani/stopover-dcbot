@@ -1,5 +1,6 @@
 const { MessageFlags } = require("discord.js");
 const { checkIfNum, addMoney, iconizeMoney, getUser, checkGemBoost, iconizeItem } = require("../modules");
+const { abundancePoint } = require("../calculator");
 
 module.exports = {
     name: "trivia",
@@ -22,7 +23,7 @@ module.exports = {
                 content += ` with an additional ${iconizeMoney(bonus)} (${iconizeItem(userData.marriage.ring)} Ring Effect +25% Gems). Total: ${iconizeMoney(reward)}`;
             }
             await addMoney(uid, reward);
-
+            await abundancePoint(uid, interaction.message);
             return await interaction.editReply({ content, components: [] });
         }
     }

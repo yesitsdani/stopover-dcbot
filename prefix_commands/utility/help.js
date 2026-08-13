@@ -24,21 +24,25 @@ module.exports = {
             let utilityCommands = [];
             let economyCommands = [];
             let rpgCommands = [];
+            let actionCommands = [];
 
             for (command of client.prefix_commands) {
                 if (!command[1].testing && command[1].category != 'admin') {
-                    if (command[1].category == 'profile') profileCommands.push(command[0]);
-                    if (command[1].category == 'utility') utilityCommands.push(command[0]);
-                    if (command[1].category == 'economy') economyCommands.push(command[0]);
-                    if (command[1].category == 'rpg') rpgCommands.push(command[0]);
+                    let commandWrapped = `\`${command[0]}\``
+                    if (command[1].category == 'profile') profileCommands.push(commandWrapped);
+                    if (command[1].category == 'economy') economyCommands.push(commandWrapped);
+                    if (command[1].category == 'rpg') rpgCommands.push(commandWrapped);
+                    if (command[1].category == 'action') actionCommands.push(commandWrapped);
+                    if (command[1].category == 'utility') utilityCommands.push(commandWrapped);
                 }
             }
 
             content += `# \`STOPOVER BOT COMMANDS\`\n> Use \`stp help <command>\` for more information`;
             content += `\n### 👤 Profile Commands\n${profileCommands.join(', ')}`;
-            content += `\n### ⚙️ Utility Commands\n${utilityCommands.join(', ')}`;
             content += `\n### <a:heartgem:1534217106252628038> Economy Commands\n${economyCommands.join(', ')}`;
             content += `\n### 🗡️ RPG Commands\n${rpgCommands.join(', ')}`;
+            content += `\n### 👋🏻 Action Commands\n${actionCommands.join(', ')}`;
+            content += `\n### ⚙️ Utility Commands\n${utilityCommands.join(', ')}`;
         } else {
             content += `-# Command Information\n`
             const commandName = args[0];

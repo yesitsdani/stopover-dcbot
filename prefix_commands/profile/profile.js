@@ -79,6 +79,10 @@ module.exports = {
         const actions = new ActionRowBuilder()
         .addComponents(menu)
 
-        await message.reply({ embeds: [embed], components: [actions] });
+        const messageSent = await message.reply({ embeds: [embed], components: [actions] });
+
+        setTimeout(async () => {
+            await messageSent.edit({ components: [] });
+        }, 10000);
     }
 }

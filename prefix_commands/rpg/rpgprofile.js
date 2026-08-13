@@ -28,7 +28,10 @@ module.exports = {
         let content = `# <@${uid}> <a:stp_pinksparkles:1528714739004473456>\n`;
 
         const rpgUser = await getRpgUser(uid);
-        content += `${iconizeRpgClass(rpgUser.class)}\n### <a:stp_cutepinkstar:1528713421183520909> Battle Stats`;
+        if (rpgUser.class.length > 0) { content += `${iconizeRpgClass(rpgUser.class)}` }
+        else { content += `:question: \`No Class Yet\` (Use \`stp class\`)` }
+        
+        content += `\n### <a:stp_cutepinkstar:1528713421183520909> Battle Stats`;
         content += `\n:nazar_amulet: Level: ${rpgUser.level}  |  XP: \`${rpgUser.xp}\` / \`${nextLevel(rpgUser.level)}\``;
         content += `\n:heartpulse: Health: \`${rpgUser.health}\` / \`${rpgUser.maxHealth}\``;
         content += `\n### <a:stp_cutegreenstar:1528713624061874318> Equipment\nWeapon: `;
@@ -72,7 +75,11 @@ module.exports = {
         const actions = new ActionRowBuilder()
             .addComponents(menu)
 
-        return await message.reply({ embeds: [embed], components: [actions] });
+        const messageSent = await message.reply({ embeds: [embed], components: [actions] });
+
+        setTimeout(async () => {
+            await messageSent.edit({ components: [] });
+        }, 10000);
 
     }
 }

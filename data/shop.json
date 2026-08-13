@@ -2,35 +2,35 @@
     {
         "id": 1,
         "itemSold": "ringA",
-        "category": "profile",
+        "category": "rings",
         "price": 1000,
         "messageWhenBought": "Use `stp propose <user>`"
     },
     {
         "id": 2,
         "itemSold": "ringB",
-        "category": "profile",
+        "category": "rings",
         "price": 2500,
         "messageWhenBought": "Use `stp propose <user>`"
     },
     {
         "id": 3,
         "itemSold": "ringC",
-        "category": "profile",
+        "category": "rings",
         "price": 3000,
         "messageWhenBought": "Use `stp propose <user>`"
     },
     {
         "id": 4,
         "itemSold": "ringD",
-        "category": "profile",
+        "category": "rings",
         "price": 2500,
         "messageWhenBought": "Use `stp propose <user>`"
     },
     {
         "id": 5,
         "itemSold": "ringE",
-        "category": "profile",
+        "category": "rings",
         "price": 7000,
         "messageWhenBought": "Use `stp propose <user>`"
     },
@@ -61,5 +61,75 @@
         "category": "equipment",
         "price": 750,
         "messageWhenBought": "Use `stp equip armor 13`"
+    },
+    {
+        "id": 10,
+        "itemSold": "roleIcon1",
+        "category": "perks",
+        "price": 75000,
+        "messageWhenBought": "To equip: `stp use 16`"
+    },
+    {
+        "id": 11,
+        "itemSold": "roleIcon2",
+        "category": "perks",
+        "price": 75000,
+        "messageWhenBought": "To equip: `stp use 17`"
+    },
+    {
+        "id": 12,
+        "itemSold": "roleIcon3",
+        "category": "perks",
+        "price": 75000,
+        "messageWhenBought": "To equip: `stp use 23`"
+    },
+    {
+        "id": 13,
+        "itemSold": "roleIcon4",
+        "category": "perks",
+        "price": 75000,
+        "messageWhenBought": "To equip: `stp use 24`"
+    },
+    {
+        "id": 14,
+        "itemSold": "roleIcon5",
+        "category": "perks",
+        "price": 75000,
+        "messageWhenBought": "To equip: `stp use 25`"
+    },
+    {
+        "id": 15,
+        "itemSold": "lootbox1",
+        "category": "perks",
+        "price": 50000,
+        "messageWhenBought": "To open: `stp use 27`"
+    },
+    {
+        "id": 16,
+        "itemSold": "axe1",
+        "category": "equipment",
+        "price": 1500,
+        "messageWhenBought": "To equip: `stp equip tool 20`"
+    },
+    {
+        "id": 17,
+        "itemSold": "pickaxe1",
+        "category": "equipment",
+        "price": 1500,
+        "messageWhenBought": "To equip: `stp equip tool 21`"
+    },
+    {
+        "id": 18,
+        "itemSold": "access1",
+        "category": "perks",
+        "price": 150000,
+        "messageWhenBought": "To use: `stp use 14`"
+    },
+    {
+        "id": 19,
+        "itemSold": "access2",
+        "category": "perks",
+        "price": 100000,
+        "messageWhenBought": "To use: `stp use 15`"
     }
 ]

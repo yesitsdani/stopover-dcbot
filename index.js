@@ -36,6 +36,7 @@ client.prefix_commands = new Collection();
 client.buttons = new Collection();
 client.modals = new Collection();
 client.menus = new Collection();
+client.uses = new Collection();
 
 const foldersPath = path.join(__dirname, 'prefix_commands');
 const commandFolders = fs.readdirSync(foldersPath);
@@ -74,6 +75,13 @@ for (file of menus) {
     client.menus.set(menuName, menu);
 }
 
+const uses = fs.readdirSync("./uses");
+for (file of uses) {
+    const useName = file.split(".")[0];
+    const use = require(`./uses/${file}`);
+    client.uses.set(useName, use);
+}
+
 client.on(Events.MessageCreate, async (message) => {
     let event = require('./events/MessageCreate.js');
     await event.run(client, message, process.env.PREFIX);
@@ -84,7 +92,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
     let event;
     if (interaction.isButton()) event = require('./events/InteractionButton.js');
     if (interaction.isModalSubmit()) event = require('./events/ModalSubmit.js');
-    if (interaction.isStringSelectMenu()) event = require('./events/StringMenu.js');
+    if (interaction.isStringSelectMenu() || interaction.isUserSelectMenu()) event = require('./events/StringMenu.js');
     await event.run(client, interaction);
 });
 

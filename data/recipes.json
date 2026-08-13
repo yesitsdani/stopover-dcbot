@@ -1,0 +1,15 @@
+[
+    {
+        "craftingUsableId": 30,
+        "id": "transcendenceWand",
+        "quantityProduced": 1,
+        "recipe": [
+            { "itemID": "wood2", "quantity": 11 },
+            { "itemID": "destinyGem", "quantity": 1 },
+            { "itemID": "abundanceGem", "quantity": 1 },
+            { "itemID": "devotionGem", "quantity": 1 },
+            { "itemID": "libertyGem", "quantity": 1 },
+            { "itemID": "creationGem", "quantity": 1 }
+        ]
+    }
+]

@@ -4,7 +4,7 @@ const { iconizeItemWithName, getUser, createEmbedStandard, getRpgUser, iconizeRp
 const ms = require("ms");
 
 module.exports = {
-    name: "marry",
+    name: "profile",
     async execute(client, interaction, args) {
         const uid = args.shift();
         const chosen = interaction.values[0];

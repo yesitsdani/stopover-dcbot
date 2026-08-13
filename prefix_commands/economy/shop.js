@@ -1,6 +1,7 @@
-const { getUser, iconizeMoney, iconizeItemWithName, createEmbedStandard } = require("../../modules");
+const { getUser, iconizeMoney, iconizeItemWithName, createEmbedStandard, iconizeItem } = require("../../modules");
 const items = require('../../data/items.json');
 const shop = require('../../data/shop.json');
+const { StringSelectMenuBuilder, StringSelectMenuOptionBuilder, ActionRowBuilder } = require("discord.js");
 
 module.exports = {
     name: 'shop',
@@ -12,17 +13,47 @@ module.exports = {
     testing: false,
     alias: [],
     async execute(client, message, args) {
-        let content = `# \`THE STOPOVER SHOP\`\n> Buy your Passerby supplies here!\n`;
+        const uid = message.author.id;
+        let content = `# \`THE STOPOVER SHOP\`\n> Greetings, Passerby! Find everything you need here in The Stopover Shop.`;
 
-        for (x of shop) {
-            content += `\n\`ID: ${x.id}\` | ${iconizeItemWithName(x.itemSold)} | ${iconizeMoney(x.price)}`
-        }
-
-        content += `\n\n Use \`stp buy <ID> <optional: quantity>\` to buy`;
-        content += `\nUse \`stp shopinfo <ID>\` for more information on a specific item`;
+        content += `\n\n### Select Category:`
+        content += `\n${iconizeItem('ringE')} \`RINGS AND MARRIAGE\``;
+        content += `\n:dagger: \`TOOLS AND EQUIPMENT\``;
+        content += `\n:credit_card: \`ACCESS AND PERKS\``;
+        content += `\n\nThe Dropdown Menu below will disappear in 20 seconds`;
         const embed = createEmbedStandard()
-        .setDescription(content);
+            .setDescription(content);
 
-        await message.reply({ embeds: [embed]});
+        const menu = new StringSelectMenuBuilder()
+            .setCustomId(`shop.${uid}`)
+            .setPlaceholder(`Select Shop Category`)
+            .setMaxValues(1)
+            .addOptions(
+                new StringSelectMenuOptionBuilder()
+                    .setValue(`rings`)
+                    .setDescription(`Rings and other Marriage Things`)
+                    .setLabel(`Rings and Marriage`),
+                new StringSelectMenuOptionBuilder()
+                    .setValue(`equipment`)
+                    .setDescription(`Equippable items used in things`)
+                    .setLabel(`Tools and Equipment`),
+                new StringSelectMenuOptionBuilder()
+                    .setValue(`perks`)
+                    .setDescription(`In-Server Accesses and STP Bot Perks`)
+                    .setLabel(`Access and Perks`),
+                new StringSelectMenuOptionBuilder()
+                    .setValue(`close`)
+                    .setDescription(`Removes the selection menu from this message`)
+                    .setLabel(`Close Menu`)
+            )
+
+        const actions = new ActionRowBuilder()
+            .addComponents(menu)
+
+        const messageSent = await message.reply({ embeds: [embed], components: [actions] });
+
+        setTimeout(async () => {
+            await messageSent.edit({ components: [] });
+        }, 20000);
     }
 }

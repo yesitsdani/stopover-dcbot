@@ -60,7 +60,7 @@
         "usableID": 8,
         "description": "Granted to people whose will transcends all fate and claims their own destiny",
         "name": "Gem of Destiny",
-        "icon": "<a:destinygem:1534871055435567214>",
+        "icon": "<:newDestinyGem:1537458721503055934>",
         "source": "Rumor has it that destiny takes shape the moment enough fate has been defied"
     },
     {
@@ -106,33 +106,161 @@
     {
         "id": "access1",
         "usableID": 14,
-        "description": "Gives access to the Casino Channel (max bet limit is 5000)",
-        "name": "Access Card A",
+        "description": "Gives access to the Casino Channel (max bet limit is 10,000)",
+        "name": "Casino Key Card",
         "icon": ":credit_card:",
-        "source": "Bought in shop (soon)."
+        "source": "Bought in shop."
     },
     {
         "id": "access2",
         "usableID": 15,
-        "description": "Gives access to the Deluxia Channel (Pray and Gambling allowed)",
-        "name": "Access Card B",
+        "description": "Gives access to the Deluxia Club Channel (Pray and Gambling allowed)",
+        "name": "Deluxia Club Membership",
         "icon": ":credit_card:",
-        "source": "Bought in shop (soon)."
+        "source": "Bought in shop."
     },
     {
         "id": "roleIcon1",
         "usableID": 16,
-        "description": "Equips the role icon 'The Undying Conundrum'",
-        "name": "The Undying Conundrum",
-        "icon": ":leaves:",
-        "source": "Bought in shop (soon)."
+        "description": "Equips the role icon 'Le Frooge' next to your name",
+        "name": "Le Frooge (Role Icon)",
+        "icon": "<:frooge:1536754908789743656>",
+        "source": "Bought in shop."
     },
     {
         "id": "roleIcon2",
         "usableID": 17,
-        "description": "Equips the role icon 'El Flamme'",
-        "name": "El Flamme",
-        "icon": ":heart_on_fire:",
+        "description": "Equips the role icon 'Starrybell' next to your name",
+        "name": "Starrybell (Role Icon)",
+        "icon": "<:starrybell:1536754906466091138>",
         "source": "Bought in shop (soon)."
+    },
+    {
+        "id": "wood1",
+        "usableID": 18,
+        "description": "Classic wood logs",
+        "name": "Wood",
+        "icon": ":wood:",
+        "source": "Dropped in `stp chop`"
+    },
+    {
+        "id": "stone1",
+        "usableID": 19,
+        "description": "Classic stone",
+        "name": "Stone",
+        "icon": ":rock:",
+        "source": "Dropped in `stp mine`"
+    },
+    {
+        "id": "axe1",
+        "usableID": 20,
+        "description": "Ordinary axe used to chop wood",
+        "name": "Regular Axe",
+        "icon": "<:axe1:1536588314528718938>",
+        "source": "Bought in shop."
+    },
+    {
+        "id": "pickaxe1",
+        "usableID": 21,
+        "description": "Ordinary pickaxe used to mine stone",
+        "name": "Regular Pickaxe",
+        "icon": "<:pickaxe1:1536602993410183178>",
+        "source": "Bought in shop."
+    },
+    {
+        "id": "access3",
+        "usableID": 22,
+        "description": "Gives access to the  Channel (Pray Gambling allowed)",
+        "name": "Access Card C",
+        "icon": ":credit_card:",
+        "source": "Bought in shop."
+    },
+    {
+        "id": "roleIcon3",
+        "usableID": 23,
+        "description": "Equips the role icon 'The Plant' next to your name",
+        "name": "The Plant (Role Icon)",
+        "icon": "<:theplant:1536754904352297111>",
+        "source": "Bought in shop."
+    },
+    {
+        "id": "roleIcon4",
+        "usableID": 24,
+        "description": "Equips the role icon 'Fishyda' next to your name",
+        "name": "Fishyda (Role Icon)",
+        "icon": "<:fishyda:1536754902276120677>",
+        "source": "Bought in shop."
+    },
+    {
+        "id": "roleIcon5",
+        "usableID": 25,
+        "description": "Equips the role icon 'Berrydot' next to your name",
+        "name": "Role Icon: Berrydot",
+        "icon": "<:berrydot:1536754899885232219>",
+        "source": "Bought in shop."
+    },
+    {
+        "id": "potion1",
+        "usableID": 26,
+        "description": "Cuts cooldown generated in commands (except Daily) by half for 30 minutes",
+        "name": "A Droplet of Time",
+        "icon": ":hourglass_flowing_sand:",
+        "source": "Bought in shop."
+    },
+    {
+        "id": "lootbox1",
+        "usableID": 27,
+        "description": "Randomly gives one random role icon from Set 1: Le Frooge, Starrybell, Berrydot, Fishyda, and The Plant",
+        "name": "Lootbox: Role Icon Set 1",
+        "icon": ":gift:",
+        "source": "Bought in shop."
+    },
+    {
+        "id": "abundanceGem",
+        "usableID": 28,
+        "description": "Granted to people who have mastered the overflow and harnessed the maximums of the material world",
+        "name": "Gem of Abundance",
+        "icon": "<:abundanceGem:1537458719716020245>",
+        "source": "Rumor has it that abundance takes form in the face of countless victories"
+    },
+    {
+        "id": "devotionGem",
+        "usableID": 29,
+        "description": "Granted to people who have concentrated their affection towards their special one",
+        "name": "Gem of Devotion",
+        "icon": "<:devotionGem:1537458718201872516>",
+        "source": "Rumor has it that devotion takes root in consistent loyalty and admiration"
+    },
+    {
+        "id": "transcendenceWand",
+        "usableID": 30,
+        "description": "The wand in folklores said to have usurped the will of the realm.",
+        "name": "Wand of Transcendence",
+        "icon": ":question:",
+        "source": "Crafted using Ever-Mourning Wood and the Gems of Destiny, Abundance, Devotion, Liberty, and Creation"
+    },
+    {
+        "id": "libertyGem",
+        "usableID": 31,
+        "description": "Granted to people who have conquered the challenges of limitation",
+        "name": "Gem of Liberty",
+        "icon": "<:libertyGem:1537458715915976805>",
+        "source": "Rumor has it that liberty reveals itself once the door of freedom opens"
+    },
+    {
+        "id": "creationGem",
+        "usableID": 32,
+        "description": "Granted to people who strived to give and sustain life itself",
+        "name": "Gem of Creation",
+        "icon": "<:creationGem:1537458714221744189>",
+        "source": "Rumor has it that creation is a byproduct of sustaining life other than one's self"
+    },
+    {
+        "id": "wood2",
+        "usableID": 33,
+        "description": "Wood chopped from the deepest parts of the realm's enchanted forest",
+        "name": "Ever-Mourning Wood",
+        "icon": ":question:",
+        "source": "Dropped in `stp chop`"
     }
 ]

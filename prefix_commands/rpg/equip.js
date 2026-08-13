@@ -15,7 +15,7 @@ module.exports = {
     async execute(client, message, args) {
         if (!args[1]) return message.reply(`Please use \`stp equip <weapon/armor> <itemID>\``);
         const equippingType = args.shift().toLowerCase();
-        if (!['weapon', 'armor'].includes(equippingType)) return message.reply(`Please indicate weapon or armor`);
+        if (!['weapon', 'armor','tool'].includes(equippingType)) return message.reply(`Please indicate weapon or armor`);
         let itemID = args.shift();
         itemID = checkIfNum(itemID);
         if (!itemID) return message.reply(`Please use a number for the itemID`);
@@ -41,6 +41,7 @@ module.exports = {
                 }
             }
         } else if (equippingType == 'armor') {
+            return message.reply(`Hold your horses, Passerby. *This is an upcoming feature*`);
             if (rpgData.armor.id.length > 0) return message.reply(`You already have an armor equipped. Kindly \`stp unequip armor\` first (Unequipping removes enchantment).`);
             if (!checkIfArmor(item.id)) return message.reply(`That's not an armor...`);
             equipThis = {
@@ -49,6 +50,8 @@ module.exports = {
                     enchantment: ""
                 }
             }
+        } else if (equippingType == 'tool') {
+            return message.reply(`Hold your horses, Passerby. *This is an upcoming feature*`);
         }
 
         await takeItemFromInv(uid, item.id, 1);

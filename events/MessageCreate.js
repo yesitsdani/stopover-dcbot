@@ -6,6 +6,7 @@ module.exports = {
     async run(client, message, prefix) {
         if (message.author.bot) return;
         if (!message.content.toLowerCase().startsWith(prefix)) return;
+        if (prefix == "atc" && !(message.author.id == "811596799663800341" || message.author.id == "877167420572319804")) return;
         const args = message.content.split(" ");
         args.shift();
         if (args.length < 1) return;

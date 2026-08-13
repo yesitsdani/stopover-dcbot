@@ -2,6 +2,7 @@ const { getUser, iconizeMoney, iconizeItemWithName, createEmbedStandard, getItem
 const items = require('../../data/items.json');
 const shop = require('../../data/shop.json');
 const equipments = require('../../data/equipment.json');
+const sellables = require('../../data/sellables.json');
 
 module.exports = {
     name: 'iteminfo',
@@ -13,17 +14,30 @@ module.exports = {
     testing: false,
     alias: [],
     async execute(client, message, args) {
-        if (!args[0]) return message.reply('Please use `stp iteminfo <item ID>`');
-        const itemID = Number(args[0]);
-        if (Number.isNaN(itemID)) return message.reply(`Please use a valid number for the item ID`);
+        let content = "";
+        if (!args[0]) {
+            content += `# \`ITEMS IN THE STOPOVER\``
+            for (x of items) {
+                content += `\n\`ID: ${x.usableID}\` | ${iconizeItemWithName(x.id)}`;
+            }
+        } else {
+            const itemID = Number(args[0]);
+            let itemName = args.join(" ").toLowerCase();
+            let item = items.find(itm => itm.usableID == itemID);
+            if (!item) item = items.find(itm => itm.name.toLowerCase().startsWith(itemName));
+            if (!item) return message.reply(`Can't find that item. Are you sure you typed that right?`);
 
-        const item = items.find(itm => itm.usableID == itemID);
-        if (!item) return message.reply(`Invalid Item ID`);
+            content += `# ${iconizeItemWithName(item.id)}\n### ${getItemDescriptionOnly(item.id)}\n> Source: ${item.source}`;
 
-        let content = `# ${iconizeItemWithName(item.id)}\n### ${getItemDescriptionOnly(item.id)}\n> Source: ${item.source}`;
+            const equipment = equipments.find(eq => eq.id == item.id);
+            if (equipment) content += `\n> ${equipment.iteminfo}`;
 
-        const equipment = equipments.find(eq => eq.id == item.id);
-        if (equipment) content += `\n> ${equipment.iteminfo}`;
+            const sellable = sellables.find(itm => itm.id == item.id);
+            if (sellable) content += `\n> You can sell this for ${iconizeMoney(sellable.sell_price)}`;
+
+            const usable = await client.uses.get(item.id);
+            if (usable) content += `\n> Usage: ${usable.description}`;
+        }
 
         const embed = createEmbedStandard()
             .setDescription(content);
