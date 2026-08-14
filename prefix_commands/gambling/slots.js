@@ -11,6 +11,7 @@ module.exports = {
     testing: false,
     alias: ['sl', 'slot'],
     async execute(client, message, args) {
+        return await message.reply(`This command is under maintenance`);
         const uid = message.author.id;
         if (message.channel.id == '1506182833562193960') {
             await resetCommandCD(uid, "slots");
@@ -21,6 +22,7 @@ module.exports = {
             return message.reply(`Please indicate amount to bet`);
         }
         const userData = await getUser(uid);
+
         const amount = checkIfNum(args[0]);
         if (!amount) {
             await resetCommandCD(uid, "slots");
