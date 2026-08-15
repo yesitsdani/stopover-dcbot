@@ -11,7 +11,6 @@ module.exports = {
     testing: false,
     alias: ['sl', 'slot'],
     async execute(client, message, args) {
-        return await message.reply(`This command is under maintenance`);
         const uid = message.author.id;
         if (message.channel.id == '1506182833562193960') {
             await resetCommandCD(uid, "slots");
@@ -50,6 +49,7 @@ module.exports = {
         let winMultiplier = 0;
         let win = false;
         let jackpot = false;
+        
         if ((item1 == item2 && item2 == item3) && item1 == "<a:heartgem:1534217106252628038>") { winMultiplier = 5; jackpot = true; }
         else if (item1 == item2 && item2 == item3) { winMultiplier = 4; }
         else if (item1 == item2 || item2 == item3 || item1 == item3) { winMultiplier = 3; }
