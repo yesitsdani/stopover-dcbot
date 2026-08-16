@@ -11,9 +11,10 @@ module.exports = {
     alias: [],
     permissions: ['1531987396986409011', '1506448680000159784'],
     async execute(client, message, args) {
-        await Rpg.findOneAndUpdate(
-            { uid: message.author.id },
-            { class: "" }
-        )
+        const guild = message.guild;
+
+        const house1defaults = ['', '', ''];
+        const house2defaults = ['', '', ''];
+        
     }
 }

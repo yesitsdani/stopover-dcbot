@@ -26,7 +26,7 @@ module.exports = {
             title = args.join(' ');
         }
 
-        if (title.length > 30) return await message.reply('Titles that are bestowed can only be 30 characters long.');
+        if (title.length > 100) return await message.reply('Titles that are bestowed can only be 30 characters long.');
 
         const newUser = await await User.findOneAndUpdate(
             { uid },

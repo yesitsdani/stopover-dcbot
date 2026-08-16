@@ -195,6 +195,8 @@ module.exports = {
             content += `<:council:1534102603040821308>`
         } else if (title.toLowerCase() == "first lady") {
             content += `<:stp_pinkbow:1534224205992955956>`
+        } else if (title.toLowerCase() == "ang reyna ng stopover") {
+            content += `<:stp_pinkbow:1534224205992955956>`
         } else {
             content += `<a:stp_pinkdiaheart:1532004326652772494>`
         }

@@ -37,15 +37,17 @@ module.exports = {
         }
 
         if (userData.title.toLowerCase() == "the chief passerby") {
-            forDisplay.push({ text: iconizeTitle(userData.title), amount: 200 });
+            forDisplay.push({ text: iconizeTitle(userData.title), amount: 20000 });
         } else if (userData.title.toLowerCase() == "member of the stopover council") {
-            forDisplay.push({ text: iconizeTitle(userData.title), amount: 175 });
+            forDisplay.push({ text: iconizeTitle(userData.title), amount: 1500 });
         } else if (userData.title.toLowerCase() == "first lady") {
             forDisplay.push({ text: iconizeTitle(userData.title), amount: 100 });
         } else if (userData.title.toLowerCase() == "archbishop of the stopover") {
-            forDisplay.push({ text: iconizeTitle(userData.title), amount: 100 });
-        } else {
-            forDisplay.push({ text: iconizeTitle("Passerby"), amount: 50 });
+            forDisplay.push({ text: iconizeTitle(userData.title), amount: 750 });
+        } else if (userData.title.toLowerCase() == "ang reyna ng stopover") {
+            forDisplay.push({ text: iconizeTitle(userData.title), amount: 1500 });
+        }  else {
+            forDisplay.push({ text: iconizeTitle("Passerby"), amount: 150 });
         }
         
         let content = `# \`YOUR DAILY GEMS\`\n> \`21 HOURS\` for the next claiming`;
