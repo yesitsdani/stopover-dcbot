@@ -3,13 +3,13 @@ const { devotionPoint } = require("../../calculator");
 
 
 module.exports = {
-    name: 'punch',
-    description: 'Punches a Passerby!',
+    name: 'wagwagan',
+    description: 'Wagwags a Passerby!',
     category: 'action',
-    usage: '`stp punch <passerby>`',
+    usage: '`stp wagwagan <passerby>`',
     cooldown: 1000 * 60 * 1,
     testing: false,
-    alias: ['suntok', 'sapak'],
+    alias: ['fight', 'wagwag', 'sabunot', 'sabunutan'],
     permissions: [],
     async execute(client, message, args) {
         const uid = message.author.id;
@@ -23,16 +23,16 @@ module.exports = {
         const targetName = getMemberName(member);
 
         const gifs = [
-            "https://i0.wp.com/drunkenanimeblog.com/wp-content/uploads/2023/05/anime-boxing.gif",
-            "https://i.redd.it/etrabmya4zye1.gif",
-            "https://i2.kym-cdn.com/photos/images/original/000/989/495/3b8.gif"
+            "https://i.redd.it/7essyy30pj7x.gif",
+            "https://contents.pep.ph/images2/news/7a1a0a856.gif",
+            "https://media.tenor.com/W_igImlld00AAAAM/drph-angel-drag-race-angel.gif"
             ];
         const captions = [
-            `Sinuntok mo si ${targetName}... walang aawat ah!`,
-            `You punched ${targetName}!`,
-            `BOOGSH! Sapak!! ${targetName} ahh!!!`,
+            `Hawakan mo nga sa tenga si ${targetName}... walang aawat ah!`,
+            `Winagwag mo si ${targetName}!`,
+            `BOOGSH!! ${targetName} ahh!!!`,
             `Ginawa mong punching bag si ${targetName}`,
-            `Sinapak ka, ${targetName}... sapakyu!!`
+            `Fight kayo bes oh, ${targetName}... FIGHT!!`
         ];
 
         const gif = gifs[Math.floor(Math.random() * gifs.length)];
