@@ -1,5 +1,5 @@
 const User = require("../../models/User");
-const { getUser, iconizeTitle, iconizeMoney, createEmbedStandard, iconizeItem } = require("../../modules");
+const { getUser, iconizeTitle, iconizeMoney, createEmbedStandard, iconizeItem, getGemBoostBonus } = require("../../modules");
 
 
 module.exports = {
@@ -59,15 +59,16 @@ module.exports = {
 
         content += `\n\nTotal: + ${iconizeMoney(total)}`;
 
-        const gemBoostRings = ['ringC', 'ringE', 'ringF'];
+        const gemBoostRings = ['ringC', 'ringE', 'ringF', 'ringG'];
         if (userData.marriage.uid.length > 0) {
             if (
                 gemBoostRings.includes(userData.marriage.ring) &&
                 userData.marriage.status.toLowerCase() == "married"
             ) {
-                const bonus = total * 0.25;
+                const bonusRate = getGemBoostBonus(userData.marriage);
+                const bonus = total * bonusRate;
                 total += bonus;
-                content += `\n${iconizeItem(userData.marriage.ring)} Ring Bonus (25%): + ${iconizeMoney(bonus)}`;
+                content += `\n${iconizeItem(userData.marriage.ring)} Ring Bonus (${bonusRate * 100}%): + ${iconizeMoney(bonus)}`;
             }
         }
 

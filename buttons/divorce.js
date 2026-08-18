@@ -38,7 +38,7 @@ module.exports = {
             changeToThis
         )
 
-        let xpBonusRings = ['ringB', 'ringE', 'ringF'];
+        let xpBonusRings = ['ringB', 'ringE', 'ringF','ringG'];
         if (xpBonusRings.includes(ring)) {
             const targetMember = await interaction.guild.members.fetch(partnerUid);
             const ogUserMember = await interaction.guild.members.fetch(uid);

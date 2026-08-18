@@ -1,5 +1,5 @@
 const { MessageFlags } = require("discord.js");
-const { checkIfNum, addMoney, iconizeMoney, getUser, checkGemBoost, iconizeItem } = require("../modules");
+const { checkIfNum, addMoney, iconizeMoney, getUser, checkGemBoost, iconizeItem, getGemBoostBonus } = require("../modules");
 const { abundancePoint } = require("../calculator");
 
 module.exports = {
@@ -18,9 +18,10 @@ module.exports = {
             let reward = checkIfNum(args[0]);
             let content = `✅ \`TRIVIA RESULT\`: You are correct! You won ${iconizeMoney(reward)}`;
             if (checkGemBoost(userData.marriage)) {
-                const bonus = parseInt(reward * 0.25);
+                const bonusRate = getGemBoostBonus(userData.marriage);
+                const bonus = parseInt(reward * bonusRate);
                 reward += bonus;
-                content += ` with an additional ${iconizeMoney(bonus)} (${iconizeItem(userData.marriage.ring)} Ring Effect +25% Gems). Total: ${iconizeMoney(reward)}`;
+                content += ` with an additional ${iconizeMoney(bonus)} (${iconizeItem(userData.marriage.ring)} Ring Effect +${bonusRate * 100}% Gems). Total: ${iconizeMoney(reward)}`;
             }
             await addMoney(uid, reward);
             await abundancePoint(uid, interaction.message);

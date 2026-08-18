@@ -211,9 +211,15 @@ module.exports = {
     checkGemBoost(marriage) {
         if (marriage.uid.length < 1) return false;
         if (marriage.status.toLowerCase() != 'married') return false;
-        let validRings = ['ringC', 'ringE', 'ringF'];
+        let validRings = ['ringC', 'ringE', 'ringF','ringG'];
         if (!validRings.includes(marriage.ring)) return false;
         return true;
+    },
+    getGemBoostBonus(marriage) {
+        if (marriage.ring == `ringF`) return 0.45;
+        else if (marriage.ring == `ringG`) return 0.35;
+        else if (marriage.ring == `ringE` || marriage.ring == `ringC`) return 0.25;
+        else return false;
     },
     async resetCommandCD(uid, cmdName) {
         const user = await module.exports.getUser(uid);

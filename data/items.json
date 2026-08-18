@@ -50,7 +50,7 @@
     {
         "id": "ringF",
         "usableID": 7,
-        "description": "Ring used by the Chief Passerby (+ 25% XP Boost, Gem Gain, and Pure DMG)",
+        "description": "Ring used by the Chief Passerby (+ 25% XP Boost and Pure DMG, +45% Gem Gain)",
         "name": "Ring of Ever-Reigning",
         "icon": "<:ringF:1534441926978175077>",
         "source": "Be server-married to the Chief Passerby or become the Chief Passerby"
@@ -262,5 +262,13 @@
         "name": "Ever-Mourning Wood",
         "icon": ":question:",
         "source": "Dropped in `stp chop`"
+    },
+    {
+        "id": "ringG",
+        "usableID": 34,
+        "description": "Ring used by the Members of the Stopover Council (+ 25% XP Boost and Pure DMG, +35% Gem Gain)",
+        "name": "Ring of Authority",
+        "icon": "<:ringG:1539305523768201217>",
+        "source": "Be server-married to a Member of the Stopover Council or be a Member of the Stopover Council"
     }
 ]

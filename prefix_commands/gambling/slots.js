@@ -1,5 +1,5 @@
 const { abundancePoint } = require("../../calculator");
-const { resetCommandCD, getUser, checkIfNum, canAfford, iconizeMoney, createEmbedStandard, checkGemBoost, iconizeItem, addMoney, subtractMoney } = require("../../modules");
+const { resetCommandCD, getUser, checkIfNum, canAfford, iconizeMoney, createEmbedStandard, checkGemBoost, iconizeItem, addMoney, subtractMoney, getGemBoostBonus } = require("../../modules");
 
 module.exports = {
     name: 'slots',
@@ -86,9 +86,10 @@ module.exports = {
                 if (jackpot) content += `### JACKPOT! 🎉`;
                 content += `\nCongratulations! You won ${iconizeMoney(winningAmount)}!`
                 if (checkBoost) {
-                    let bonus = winningAmount * 0.25
+                    const bonusRate = getGemBoostBonus(userData.marriage);
+                    let bonus = winningAmount * bonusRate
                     winningAmount += bonus;
-                    content += ` You also get an additional ${iconizeMoney(bonus)} (${iconizeItem(userData.marriage.ring)} Ring Effect: 25% Gem Boost)`
+                    content += ` You also get an additional ${iconizeMoney(bonus)} (${iconizeItem(userData.marriage.ring)} Ring Effect: ${bonusRate * 100}% Gem Boost)`
                 }
 
                 await addMoney(uid, winningAmount);

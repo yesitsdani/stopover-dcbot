@@ -1,5 +1,5 @@
 const { abundancePoint } = require("../../calculator");
-const { checkIfNum, randomInt, getUser, canAfford, iconizeMoney, checkGemBoost, iconizeItem, addMoney, subtractMoney, resetCommandCD } = require("../../modules");
+const { checkIfNum, randomInt, getUser, canAfford, iconizeMoney, checkGemBoost, iconizeItem, addMoney, subtractMoney, resetCommandCD, getGemBoostBonus } = require("../../modules");
 
 
 module.exports = {
@@ -58,9 +58,10 @@ module.exports = {
             newContent += ` You won ${iconizeMoney(amount)}`
             const gemBoost = checkGemBoost(userData.marriage);
             if (gemBoost) {
-                const bonus = parseInt(amount * 0.25);
+                const bonusRate = getGemBoostBonus(userData.marriage);
+                const bonus = parseInt(amount * bonusRate);
                 winning += bonus;
-                newContent += ` with an additional ${iconizeMoney(bonus)} (${iconizeItem(userData.marriage.ring)} Ring Effect +25% Gems). Total winnings: ${iconizeMoney(winning)}`;
+                newContent += ` with an additional ${iconizeMoney(bonus)} (${iconizeItem(userData.marriage.ring)} Ring Effect +${bonusRate * 100}% Gems). Total winnings: ${iconizeMoney(winning)}`;
             }
         } else {
             newContent = `<:stillheart:1534896542941581444> Gem flipped! You chose **${bet}** and it landed on **${flip}**. You lost ${iconizeMoney(amount)}`;

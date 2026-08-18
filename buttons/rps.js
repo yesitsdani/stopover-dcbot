@@ -1,5 +1,5 @@
 const { MessageFlags, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
-const { createEmbedStandard, getUser, checkGemBoost, iconizeMoney, iconizeItem, addMoney, subtractMoney } = require("../modules");
+const { createEmbedStandard, getUser, checkGemBoost, iconizeMoney, iconizeItem, addMoney, subtractMoney, getGemBoostBonus } = require("../modules");
 const { abundancePoint } = require("../calculator");
 
 function iconizePlay(play) {
@@ -141,8 +141,9 @@ module.exports = {
                 let content = `# <@${winningUid}>\n> Won by choosing ${iconizePlay(winningPlay)}\n\nThey won ${iconizeMoney(betAmount)}`;
 
                 if (hasGemBoost) {
-                    let bonus = parseInt(betAmount * 0.25);
-                    content += ` with additional ${iconizeMoney(bonus)} (${iconizeItem(winnerData.marriage.ring)} Ring Effect: 25% Gem Boost)`;
+                    const bonusRate = getGemBoostBonus(winnerData.marriage);
+                    let bonus = parseInt(betAmount * bonusRate);
+                    content += ` with additional ${iconizeMoney(bonus)} (${iconizeItem(winnerData.marriage.ring)} Ring Effect: ${bonusRate * 100}% Gem Boost)`;
                     betAmount += bonus;
                 }
 

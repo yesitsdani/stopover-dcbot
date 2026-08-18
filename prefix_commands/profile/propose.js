@@ -30,20 +30,21 @@ module.exports = {
         if (member.user.bot) return message.reply(`Sana okay ka lang...`);
 
         const invData = await getInv(uid);
-        const validRings = ['ringA', 'ringB', 'ringC', 'ringD', 'ringE', 'ringF'];
-        let hasRing = false;
+        const validRings = ['ringA', 'ringB', 'ringC', 'ringD', 'ringE', 'ringF','ringG'];
         let ringsInInv = [];
 
         for (let i = 0; i < validRings.length; i++) {
             if (hasItem(invData.items, validRings[i], 1)) {
-                hasRing = true;
                 ringsInInv.push(validRings[i]);
             }
         }
 
         if (!ringsInInv.includes('ringF') && uid == "877167420572319804") ringsInInv.push(`ringF`);
 
-        if (!hasRing) return await message.reply(`You have no rings! Buy one in the \`stp shop\``);
+        const origMember = await message.guild.members.fetch(uid);
+        if (origMember.roles.cache.has(`1511897066262237285`) && !ringsInInv.includes('ringG')) ringsInInv.push(`ringG`);
+
+        if (ringsInInv.length < 1) return await message.reply(`You have no rings! Buy one in the \`stp shop\``);
 
         const container = new ContainerBuilder()
             .setAccentColor(0xffa0fb)
