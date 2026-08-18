@@ -21,7 +21,19 @@ module.exports = {
         for (const [index, user] of top10.entries()) {
             if (user.uid != '877167420572319804') {
                 if (index == 0) richestUID = user.uid;
-                content += `\n${count}. :moneybag: <@${user.uid}> | ${iconizeMoney(user.money)}\n`;
+
+                if (count == 1) {
+                    content += `\n${count}. :first_place: `;
+                } else if  (count == 2) {
+                    content += `\n${count}. :second_place: `;
+                } else if (count == 3) {
+                    content += `\n${count}. :third_place: `;
+                } else {
+                    content += `\n${count}. :military_medal: `;
+                }
+                
+
+                content += `<@${user.uid}> | ${iconizeMoney(user.money)}`;
                 count++;
             }
         }

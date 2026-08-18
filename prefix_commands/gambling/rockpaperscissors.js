@@ -1,5 +1,5 @@
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
-const { getIdFromMention, resetCommandCD, getUser, checkIfNum, iconizeMoney, createEmbedStandard } = require("../../modules");
+const { getIdFromMention, resetCommandCD, getUser, checkIfNum, iconizeMoney, createEmbedStandard, getBetLimit } = require("../../modules");
 
 module.exports = {
     name: 'rockpaperscissors',
@@ -26,7 +26,7 @@ module.exports = {
             await resetCommandCD(uid, "rockpaperscissors");
             return message.reply(`Please tag a passerby properly`);
         }
-        
+
         if (target == uid) {
             await resetCommandCD(uid, "rockpaperscissors");
             return message.reply(`Sana bumili ka na lang ng salamin beh`);
@@ -49,12 +49,10 @@ module.exports = {
             return message.reply(`Please use a valid number for the bet amount`);
         }
 
-        if (betAmount > 1000 && message.channel.id != "1536739822851596339") {
+        const limit = getBetLimit(message.channel.id);
+        if (amount > limit) {
             await resetCommandCD(uid, "rockpaperscissors");
-            return message.reply(`Max bet amount is ${iconizeMoney(1000)}. Go to the <#1536739822851596339> for a higher bet cap`);
-        } else if (betAmount > 10000) {
-            await resetCommandCD(uid, "rockpaperscissors");
-            return message.reply(`Max bet amount is ${iconizeMoney(10000)}`);
+            return message.reply(`You can only bet up to ${iconizeMoney(limit)}`);
         }
 
         const userData = await getUser(uid);

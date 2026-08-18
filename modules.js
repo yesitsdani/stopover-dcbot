@@ -366,5 +366,12 @@ module.exports = {
 
         const roleIconData = roleIconDatas.find(itm => itm.roleID == roleId);
         return roleIconData.itemID;
+    },
+    getBetLimit(channelID) {
+        if (channelID == "1536748105276461077") return 250000;
+        if (channelID == "1539317293451055164") return 100000;
+        if (channelID == "1536739822851596339") return 10000;
+        if (channelID == "1536747732688183376") return 7500;
+        return 1000;
     }
 }

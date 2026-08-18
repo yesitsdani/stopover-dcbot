@@ -1,5 +1,5 @@
 const { abundancePoint } = require("../../calculator");
-const { resetCommandCD, getUser, checkIfNum, canAfford, iconizeMoney, createEmbedStandard, checkGemBoost, iconizeItem, addMoney, subtractMoney, getGemBoostBonus } = require("../../modules");
+const { resetCommandCD, getUser, checkIfNum, canAfford, iconizeMoney, createEmbedStandard, checkGemBoost, iconizeItem, addMoney, subtractMoney, getGemBoostBonus, getBetLimit } = require("../../modules");
 
 module.exports = {
     name: 'slots',
@@ -31,12 +31,11 @@ module.exports = {
             await resetCommandCD(uid, "slots");
             return message.reply(`You don't have that much to bet`);
         }
-        if (amount > 1000 && !(message.channel.id == "1536739822851596339")) {
+
+        const limit = getBetLimit(message.channel.id);
+        if (amount > limit) {
             await resetCommandCD(uid, "slots");
-            return message.reply(`You can only bet up to ${iconizeMoney(1000)}`);
-        } else if (amount > 10000) {
-            await resetCommandCD(uid, "slots");
-            return message.reply(`You can only bet up to ${iconizeMoney(10000)}`);
+            return message.reply(`You can only bet up to ${iconizeMoney(limit)}`);
         }
 
 
@@ -49,8 +48,8 @@ module.exports = {
         let winMultiplier = 0;
         let win = false;
         let jackpot = false;
-        
-        if ((item1 == item2 && item2 == item3) && item1 == "<a:heartgem:1534217106252628038>") { winMultiplier = 5; jackpot = true; }
+
+        if ((item1 == item2 && item2 == item3) && item1 == "<a:heartgem:1534217106252628038>") { winMultiplier = 6; jackpot = true; }
         else if (item1 == item2 && item2 == item3) { winMultiplier = 4; }
         else if (item1 == item2 || item2 == item3 || item1 == item3) { winMultiplier = 3; }
         else if (item1 == "<a:heartgem:1534217106252628038>" || item3 == "<a:heartgem:1534217106252628038>" || item2 == "<a:heartgem:1534217106252628038>") { winMultiplier = 1; }

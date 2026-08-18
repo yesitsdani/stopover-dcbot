@@ -1,5 +1,5 @@
 const { abundancePoint } = require("../../calculator");
-const { checkIfNum, randomInt, getUser, canAfford, iconizeMoney, checkGemBoost, iconizeItem, addMoney, subtractMoney, resetCommandCD, getGemBoostBonus } = require("../../modules");
+const { checkIfNum, randomInt, getUser, canAfford, iconizeMoney, checkGemBoost, iconizeItem, addMoney, subtractMoney, resetCommandCD, getGemBoostBonus, getBetLimit } = require("../../modules");
 
 
 module.exports = {
@@ -31,13 +31,13 @@ module.exports = {
             await resetCommandCD(uid, "gemflip");
             return message.reply(`You don't have that much to bet`);
         }
-        if (amount > 1000 && !(message.channel.id == "1536739822851596339")) {
+
+        const limit = getBetLimit(message.channel.id);
+        if (amount > limit) {
             await resetCommandCD(uid, "gemflip");
-            return message.reply(`You can only bet up to ${iconizeMoney(1000)}`);
-        } else if (amount > 10000) {
-            await resetCommandCD(uid, "gemflip");
-            return message.reply(`You can only bet up to ${iconizeMoney(10000)}`);
+            return message.reply(`You can only bet up to ${iconizeMoney(limit)}`);
         }
+
         let bet = "heads";
         if (args[1]) bet = args[1].toLowerCase();
 

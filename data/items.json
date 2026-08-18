@@ -106,8 +106,8 @@
     {
         "id": "access1",
         "usableID": 14,
-        "description": "Gives access to the Casino Channel (max bet limit is 10,000)",
-        "name": "Casino Key Card",
+        "description": "Gives access to the Casino Bronze Channel (max bet limit is 10,000)",
+        "name": "Casino Bronze Key Card",
         "icon": ":credit_card:",
         "source": "Bought in shop."
     },
@@ -270,5 +270,21 @@
         "name": "Ring of Authority",
         "icon": "<:ringG:1539305523768201217>",
         "source": "Be server-married to a Member of the Stopover Council or be a Member of the Stopover Council"
+    },
+    {
+        "id": "access4",
+        "usableID": 35,
+        "description": "Gives access to the Casino Silver Channel (max bet limit is 100,000)",
+        "name": "Casino Silver Key Card",
+        "icon": ":credit_card:",
+        "source": "Bought in shop."
+    },
+    {
+        "id": "access5",
+        "usableID": 36,
+        "description": "Gives access to the Casino Gold Channel (max bet limit is 250,000)",
+        "name": "Casino Gold Key Card",
+        "icon": ":credit_card:",
+        "source": "Bought in shop."
     }
 ]

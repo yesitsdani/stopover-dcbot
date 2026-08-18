@@ -131,5 +131,12 @@
         "category": "perks",
         "price": 100000,
         "messageWhenBought": "To use: `stp use 15`"
+    },
+    {
+        "id": 20,
+        "itemSold": "access4",
+        "category": "perks",
+        "price": 1000000,
+        "messageWhenBought": "To use: `stp use 35`"
     }
 ]
