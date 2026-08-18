@@ -14,6 +14,8 @@ module.exports = {
         const uid = message.author.id;
         if (!args[0]) return await message.reply(`Hala, sino aanuhin mo, ha? Please use \`stp hug <passerby>\``);
 
+        if (!args[0].startsWith(`<@`)) return await message.reply(`You have to tag the Passerby`);
+
         const target = getIdFromMention(args[0]);
         if (target == null) return await message.reply(`Hala, sino aanuhin mo, ha?`);
         if (target == uid) return await message.reply(`Have you met your hand?`);

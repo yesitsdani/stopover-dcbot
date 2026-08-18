@@ -399,7 +399,7 @@
         ]
     },
     {
-        "question": "Stopover Member na kilala sakanyang orange cat GIF at katagang pompompurin~ pati na rin ang kanyan",
+        "question": "Stopover Member na kilala sakanyang orange cat GIF at katagang pompompurin~",
         "reward": 150,
         "options": [
             { "label": "A", "answer": "RB", "correct": true },
@@ -516,6 +516,306 @@
             { "label": "B", "answer": "Sh1zuka", "correct": false },
             { "label": "C", "answer": "N00bita", "correct": true },
             { "label": "D", "answer": "Shar0n Cun3ta", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na siyang dahilan kung bakit nagkaron ng Hold-Me-Back channel",
+        "reward": 150,
+        "options": [
+            { "label": "A", "answer": "Lux", "correct": false },
+            { "label": "B", "answer": "Sasori", "correct": false },
+            { "label": "C", "answer": "Frost", "correct": true },
+            { "label": "D", "answer": "Ashi", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na kinahuhumalingan sakanyang deep voice at napaka-cute na childhood pic sakanyang Profile Picture",
+        "reward": 150,
+        "options": [
+            { "label": "A", "answer": "Zion", "correct": false },
+            { "label": "B", "answer": "Rik", "correct": true },
+            { "label": "C", "answer": "Cee", "correct": false },
+            { "label": "D", "answer": "Steven", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na kilala sakanyang matalim na dila na siyang dahilan upang manalo siya ng Silent Killer Award",
+        "reward": 150,
+        "options": [
+            { "label": "A", "answer": "Saf", "correct": false },
+            { "label": "B", "answer": "Jiji", "correct": false },
+            { "label": "C", "answer": "Cee", "correct": false },
+            { "label": "D", "answer": "Steven", "correct": true }
+        ]
+    },
+    {
+        "question": "Stopover Member na unang nakatakas sa Escape Room 1: Stopover in Wonderland na siya ring kilalang kakambal ng Batch 4 Superstar",
+        "reward": 150,
+        "options": [
+            { "label": "A", "answer": "Matcha", "correct": true },
+            { "label": "B", "answer": "Chib", "correct": false },
+            { "label": "C", "answer": "TimmyTime", "correct": false },
+            { "label": "D", "answer": "Aizen", "correct": false }
+        ]
+    },
+    {
+        "question": "Who is the seventh person to become a member of the Stopover Council?",
+        "reward": 150,
+        "options": [
+            { "label": "A", "answer": "Aki", "correct": false },
+            { "label": "B", "answer": "Vance", "correct": true },
+            { "label": "C", "answer": "Roi", "correct": false },
+            { "label": "D", "answer": "Maiku", "correct": false }
+        ]
+    },
+    {
+        "question": "Ring used by the Chief Passerby",
+        "reward": 150,
+        "options": [
+            { "label": "A", "answer": "Ring of Blossoming", "correct": false },
+            { "label": "B", "answer": "Ring of Ever-Reigning", "correct": true },
+            { "label": "C", "answer": "Ring of Togetherness", "correct": false },
+            { "label": "D", "answer": "Ring of Authority", "correct": false }
+        ]
+    },
+    {
+        "question": "Ring used by Members of the Stopover Council",
+        "reward": 150,
+        "options": [
+            { "label": "A", "answer": "Ring of Blossoming", "correct": false },
+            { "label": "B", "answer": "Ring of Ever-Reigning", "correct": false },
+            { "label": "C", "answer": "Ring of Togetherness", "correct": false },
+            { "label": "D", "answer": "Ring of Authority", "correct": true }
+        ]
+    },
+    {
+        "question": "Bahala na kayo sa buhay ninyo...",
+        "reward": 50,
+        "options": [
+            { "label": "A", "answer": "Wala akong pakialam sainyo", "correct": false },
+            { "label": "B", "answer": "'Di pala ako nag-sunblock", "correct": false },
+            { "label": "C", "answer": "Basta ako, nakaangat na ako", "correct": true },
+            { "label": "D", "answer": "My head will be bloodied but unbowed", "correct": false }
+        ]
+    },
+    {
+        "question": "You've known someone for more than 20 years, ano dapat ang di mo malimutang gawin?",
+        "reward": 50,
+        "options": [
+            { "label": "A", "answer": "Utangan", "correct": false },
+            { "label": "B", "answer": "Kumustahin", "correct": true },
+            { "label": "C", "answer": "Pasiyahin", "correct": false },
+            { "label": "D", "answer": "Ah, Okay", "correct": false }
+        ]
+    },
+    {
+        "question": "Nung wala ako, hinahanap niyo ako, ngayong andito ako...",
+        "reward": 50,
+        "options": [
+            { "label": "A", "answer": "Inaambush niyo ako nang ganyan", "correct": false },
+            { "label": "B", "answer": "Tinatanong niyo bat ako andito", "correct": true },
+            { "label": "C", "answer": "I am a Senator of this Republic", "correct": false },
+            { "label": "D", "answer": "Hagdan sa Fire Exit", "correct": false }
+        ]
+    },
+    {
+        "question": "Ang mga sumusunod ay kabilang sa Ashi's Wonderful Gems maliban sa",
+        "reward": 250,
+        "options": [
+            { "label": "A", "answer": "Gem of Devotion", "correct": false },
+            { "label": "B", "answer": "Gem of Subjugation", "correct": true },
+            { "label": "C", "answer": "Gem of Liberty", "correct": false },
+            { "label": "D", "answer": "Gem of Abundance", "correct": false }
+        ]
+    },
+    {
+        "question": "Ano ang nakakalimutan kapag ginagawang tau-tauhan, robot, at katatawanan sa harapan kahit hindi binabayaran?",
+        "reward": 50,
+        "options": [
+            { "label": "A", "answer": "Boundaries", "correct": true },
+            { "label": "B", "answer": "Kakapalan ng Mukha", "correct": false },
+            { "label": "C", "answer": "Board Passer", "correct": false },
+            { "label": "D", "answer": "Pag-live sa Social Media", "correct": false }
+        ]
+    },
+    {
+        "question": "Opening song ni Ashi noong Ikatlong Parangalang Stopover?",
+        "reward": 250,
+        "options": [
+            { "label": "A", "answer": "'Greedy' by Ariana Grande", "correct": false },
+            { "label": "B", "answer": "'Sumayaw, Sumunod' by Sexbomb", "correct": false },
+            { "label": "C", "answer": "'Maging Sino Ka Man' by Rey Valera", "correct": false },
+            { "label": "D", "answer": "'Bongga ka 'Day' by Hotdog", "correct": true }
+        ]
+    },
+    {
+        "question": "Si Roi at Jolo ay parehong nanalo ng Best Pop Vocal Awards noong 3rd Stopover Awards. Sila rin ay nag-collab cover ng kantang...",
+        "reward": 250,
+        "options": [
+            { "label": "A", "answer": "'Rewrite the Stars' from The Greatest Showman", "correct": false },
+            { "label": "B", "answer": "'For Good' from Wicked", "correct": true },
+            { "label": "C", "answer": "'Therapy' from Tick Tick Boom", "correct": false },
+            { "label": "D", "answer": "'Ikaw ay Ako' by Morisette and Klarisse De Guzman", "correct": false }
+        ]
+    },
+    {
+        "question": "Ang mga events ng Stopover ay kadalasang may theme na ginagamit. Ano ang kulay na ginamit para sa theme ng 3rd Stopover Awards?",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "Yellow", "correct": true },
+            { "label": "B", "answer": "Green", "correct": false },
+            { "label": "C", "answer": "Orange and Cyan", "correct": false },
+            { "label": "D", "answer": "Red", "correct": false }
+        ]
+    },
+    {
+        "question": "Ang mga events ng Stopover ay kadalasang may theme na ginagamit. Ano ang kulay na ginamit para sa theme ng Escape Room 1: Stopover in Wonderland?",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "Yellow", "correct": false },
+            { "label": "B", "answer": "Green", "correct": false },
+            { "label": "C", "answer": "Orange and Cyan", "correct": false },
+            { "label": "D", "answer": "Red", "correct": true }
+        ]
+    },
+    {
+        "question": "Ang mga events ng Stopover ay kadalasang may theme na ginagamit. Ano ang kulay na ginamit para sa theme ng Stopover: House Wars?",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "Yellow", "correct": false },
+            { "label": "B", "answer": "Green", "correct": false },
+            { "label": "C", "answer": "Orange and Cyan", "correct": true },
+            { "label": "D", "answer": "Red", "correct": false }
+        ]
+    },
+    {
+        "question": "Server Rule (SR) na nagbabawal sa pagle-leak at pagdo-doxx sa Stopover",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "SR 8", "correct": false },
+            { "label": "B", "answer": "SR 11", "correct": false },
+            { "label": "C", "answer": "SR 7", "correct": true },
+            { "label": "D", "answer": "SR 4", "correct": false }
+        ]
+    },
+    {
+        "question": "Server Rule (SR) na naglagay ng minimum level requirement na 10 bago makapag-request ng access sa Selfie at NSFW channels",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "SR 9", "correct": true },
+            { "label": "B", "answer": "SR 11", "correct": false },
+            { "label": "C", "answer": "SR 1", "correct": false },
+            { "label": "D", "answer": "SR 10", "correct": false }
+        ]
+    },
+    {
+        "question": "Council Member na naging Office-in-Charge (OIC) sa unang beses na nag-hiatus ang Chief Passerby",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "Nyxell", "correct": false },
+            { "label": "B", "answer": "Roi", "correct": false },
+            { "label": "C", "answer": "Jeremy", "correct": true },
+            { "label": "D", "answer": "Maiku", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na kilala sakanyang inquisitive personality na handa kang tanungin ng extra details sa kinekwento mo.",
+        "reward": 150,
+        "options": [
+            { "label": "A", "answer": "Kolo", "correct": false },
+            { "label": "B", "answer": "Sasori", "correct": false },
+            { "label": "C", "answer": "Rudy", "correct": false },
+            { "label": "D", "answer": "Soleil", "correct": true }
+        ]
+    },
+    {
+        "question": "Stopover Member na nanalong 3rd Golden Passerby at siya ring naparangalan dahil sa tagal na hindi umalis sa VC.",
+        "reward": 150,
+        "options": [
+            { "label": "A", "answer": "Rudy", "correct": true },
+            { "label": "B", "answer": "Austin", "correct": false },
+            { "label": "C", "answer": "Nyxell", "correct": false },
+            { "label": "D", "answer": "Roi", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na League player at kilala sakanyang pasikip na boses.",
+        "reward": 150,
+        "options": [
+            { "label": "A", "answer": "Valentine", "correct": false },
+            { "label": "B", "answer": "Ponyo", "correct": true },
+            { "label": "C", "answer": "Shilo", "correct": false },
+            { "label": "D", "answer": "RG", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na DND player at kilala rin sakanyang guitar covers sa Audio-Only channels.",
+        "reward": 150,
+        "options": [
+            { "label": "A", "answer": "Neko", "correct": true },
+            { "label": "B", "answer": "Evan", "correct": false },
+            { "label": "C", "answer": "Yoon", "correct": false },
+            { "label": "D", "answer": "Maiku", "correct": false }
+        ]
+    },
+    {
+        "question": "Pangalan ng unang batch ng Stopover",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "1NDERFUL", "correct": true },
+            { "label": "B", "answer": "E1", "correct": false },
+            { "label": "C", "answer": "SAPA1", "correct": false },
+            { "label": "D", "answer": "Q1TUM", "correct": false }
+        ]
+    },
+    {
+        "question": "Pangalan ng ikalawang batch ng Stopover",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "KAN2", "correct": false },
+            { "label": "B", "answer": "2GETHER", "correct": false },
+            { "label": "C", "answer": "2ND2NONE", "correct": true },
+            { "label": "D", "answer": "2NAY", "correct": false }
+        ]
+    },
+    {
+        "question": "Pangalan ng ikatlong batch ng Stopover",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "GEN3", "correct": false },
+            { "label": "B", "answer": "3UPHORIA", "correct": true },
+            { "label": "C", "answer": "GENUIN3", "correct": false },
+            { "label": "D", "answer": "EL3VATE", "correct": false }
+        ]
+    },
+    {
+        "question": "Orihinal na pangalan ng ikaapat batch ng Stopover",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "4EVER", "correct": false },
+            { "label": "B", "answer": "4TRAGIS", "correct": false },
+            { "label": "C", "answer": "4EVERMORE", "correct": false },
+            { "label": "D", "answer": "4TUNE", "correct": true }
+        ]
+    },
+    {
+        "question": "Orihinal na pangalan ng ikalimang batch ng Stopover",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "5TRENGTH", "correct": false },
+            { "label": "B", "answer": "5ARA", "correct": false },
+            { "label": "C", "answer": "5TAR", "correct": true },
+            { "label": "D", "answer": "AVI5ALA", "correct": false }
+        ]
+    },
+    {
+        "question": "Pangalan ng ikaanim batch ng Stopover",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "6EORGE", "correct": false },
+            { "label": "B", "answer": "6ORGEOUS", "correct": true },
+            { "label": "C", "answer": "6MAL", "correct": false },
+            { "label": "D", "answer": "6LORY", "correct": false }
         ]
     }
 ]
