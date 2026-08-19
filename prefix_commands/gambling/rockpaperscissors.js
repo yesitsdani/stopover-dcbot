@@ -50,7 +50,7 @@ module.exports = {
         }
 
         const limit = getBetLimit(message.channel.id);
-        if (amount > limit) {
+        if (betAmount > limit) {
             await resetCommandCD(uid, "rockpaperscissors");
             return message.reply(`You can only bet up to ${iconizeMoney(limit)}`);
         }

@@ -58,7 +58,9 @@ module.exports = {
                     { returnDocument: 'after' }
                 )
 
-                await takeItemFromInv(uid, ring, 1);
+                const unremoveableRing = ['ringF', 'ringG'];
+
+                if (!unremoveableRing.includes(ring)) await takeItemFromInv(uid, ring, 1);
 
                 const newContainer = new ContainerBuilder()
                     .setAccentColor(0xffa0fb)
