@@ -30,6 +30,6 @@ module.exports = {
             { tools }
         )
 
-        return message.reply(`You chopped ${iconizeItemWithName(id)} x${amount}`);
+        return message.reply(`You mined ${iconizeItemWithName(id)} x${amount}`);
     }
 }
