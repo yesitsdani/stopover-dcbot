@@ -33,7 +33,7 @@
         "quantityProduced": 1,
         "recipe": [
             { "id": "passion_drop1", "quantity": 10 },
-            { "id": "slime_drop", "quantity": 10 },
+            { "id": "wood1", "quantity": 10 },
             { "id": "sword1", "quantity": 1 }
         ]
     },
@@ -43,7 +43,8 @@
         "quantityProduced": 1,
         "recipe": [
             { "id": "passion_drop1", "quantity": 10 },
-            { "id": "slime_drop", "quantity": 10 },
+            { "id": "wood1", "quantity": 10 },
+            { "id": "slime_drop", "quantity": 1 },
             { "id": "bow1", "quantity": 1 }
         ]
     },
@@ -53,7 +54,8 @@
         "quantityProduced": 1,
         "recipe": [
             { "id": "passion_drop1", "quantity": 10 },
-            { "id": "slime_drop", "quantity": 10 },
+            { "id": "wood1", "quantity": 10 },
+            { "id": "cheese_drop", "quantity": 1 },
             { "id": "wand1", "quantity": 1 }
         ]
     },
@@ -65,7 +67,7 @@
             { "id": "passion_drop1", "quantity": 10 },
             { "id": "slime_drop", "quantity": 10 },
             { "id": "armor1", "quantity": 1 },
-            { "id": "wand1", "quantity": 1 }
+            { "id": "armor1", "quantity": 1 }
         ]
     },
     {

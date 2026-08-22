@@ -142,8 +142,15 @@
     {
         "id": 21,
         "itemSold": "potion-2",
-        "category": "equipment",
+        "category": "misc",
         "price": 750,
         "messageWhenBought": "To use: `stp use 40`"
+    },
+    {
+        "id": 22,
+        "itemSold": "emptyflask",
+        "category": "misc",
+        "price": 50,
+        "messageWhenBought": "Just an empty flask... that's it"
     }
 ]

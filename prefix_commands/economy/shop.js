@@ -20,6 +20,7 @@ module.exports = {
         content += `\n${iconizeItem('ringE')} \`RINGS AND MARRIAGE\``;
         content += `\n:dagger: \`TOOLS AND EQUIPMENT\``;
         content += `\n:credit_card: \`ACCESS AND PERKS\``;
+        content += `\n:jar: \`ITEMS AND MISCELLANEOUS\``;
         content += `\n\nThe Dropdown Menu below will disappear in 20 seconds`;
         const embed = createEmbedStandard()
             .setDescription(content);
@@ -41,6 +42,10 @@ module.exports = {
                     .setValue(`perks`)
                     .setDescription(`In-Server Accesses and STP Bot Perks`)
                     .setLabel(`Access and Perks`),
+                new StringSelectMenuOptionBuilder()
+                    .setValue(`misc`)
+                    .setDescription(`Crafting materials and other items`)
+                    .setLabel(`Items and Miscellaneous`),
                 new StringSelectMenuOptionBuilder()
                     .setValue(`close`)
                     .setDescription(`Removes the selection menu from this message`)

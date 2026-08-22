@@ -30,7 +30,7 @@ module.exports = {
             content += `\n\`ID: ${item.usableID}\` | ${iconizeItemWithName(x.itemSold)} | ${iconizeMoney(x.price)}`;
         }
 
-        content += `\n\n-# To purchase: \`stp buy <item ID>\`\n-# For info: \`stp iteminfo <item ID>\``
+        content += `\n\n-# To purchase: \`stp buy <item ID> <optional: quantity>\`\n-# For info: \`stp iteminfo <item ID>\``
 
         const embed = createEmbedStandard()
             .setDescription(content)

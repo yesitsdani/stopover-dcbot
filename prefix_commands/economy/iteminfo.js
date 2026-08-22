@@ -3,6 +3,7 @@ const items = require('../../data/items.json');
 const shop = require('../../data/shop.json');
 const equipments = require('../../data/equipment.json');
 const sellables = require('../../data/sellables.json');
+const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
 
 module.exports = {
     name: 'iteminfo',
@@ -15,11 +16,30 @@ module.exports = {
     alias: [],
     async execute(client, message, args) {
         let content = "";
+        let components = [];
         if (!args[0]) {
-            content += `# \`ITEMS IN THE STOPOVER\``
-            for (x of items) {
+            content += `# \`ITEMS IN THE STOPOVER\`\n> Page 1\n`;
+            for (let i = 0; i < 10; i++) {
+                let x = items[i];
                 content += `\n\`ID: ${x.usableID}\` | ${iconizeItemWithName(x.id)}`;
             }
+
+            content += `\n\n-# Use \`stp iteminfo <id>\` for each item's detail`;
+
+            components.push(
+                new ActionRowBuilder()
+                    .addComponents(
+                        new ButtonBuilder()
+                            .setCustomId(`iteminfo.0`)
+                            .setLabel(`< Previous`)
+                            .setStyle(ButtonStyle.Primary)
+                            .setDisabled(true),
+                        new ButtonBuilder()
+                            .setCustomId(`iteminfo.2`)
+                            .setLabel(`Next >`)
+                            .setStyle(ButtonStyle.Primary)
+                    )
+            )
         } else {
             const itemID = Number(args[0]);
             let itemName = args.join(" ").toLowerCase();
@@ -38,24 +58,28 @@ module.exports = {
             const equipment = equipments.find(eq => eq.id == item.id);
             if (equipment) {
                 content += `\n> ${equipment.iteminfo}`;
-                if (equipment.type != "armor") {
+                if (equipment.type != "armor" && equipment.type != "tool") {
                     content += `\n### \`WEAPON STATS\`:\n> :dagger: \`ATK\`: ${equipment.atk}`;
                     content += `\nMelee Damage Bonus: ${equipment.dmg.melee * 100}%`;
                     content += `\nMagic Damage Bonus: ${equipment.dmg.magic * 100}%`;
                     content += `\nRange Damage Bonus: ${equipment.dmg.range * 100}%`;
-                } else {
+                    content += `\n\n+${equipment.crit.rate * 100}% Crit Rate and +${equipment.crit.dmg * 100}% Crit DMG`
+                } else if (equipment.type != "tool") {
                     content += `\n### \`ARMOR STATS\`:\n> :shield: \`DEF\`: ${equipment.def}`;
                     content += `\nMelee Resistance Bonus: ${equipment.res.melee * 100}%`;
                     content += `\nMagic Resistance Bonus: ${equipment.res.magic * 100}%`;
                     content += `\nRange Resistance Bonus: ${equipment.res.range * 100}%`;
+                    content += `\n\n+${equipment.crit.rate * 100}% Crit Rate and +${equipment.crit.dmg * 100}% Crit DMG`
+                } else {
+                    content += `\n### \`TOOL STATS\`:\n> :hammer_pick: \`TYPE\`: ${equipment.tooltype}`;
+                    content += `\nDurability: ${equipment.durability}`;
                 }
-                content += `\n\n+${equipment.crit.rate * 100}% Crit Rate and +${equipment.crit.dmg * 100}% Crit DMG`
             }
         }
 
         const embed = createEmbedStandard()
             .setDescription(content);
 
-        await message.reply({ embeds: [embed] });
+        await message.reply({ embeds: [embed], components });
     }
 }

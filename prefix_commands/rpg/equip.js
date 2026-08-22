@@ -1,4 +1,4 @@
-const { checkIfNum, hasItem, getInv, getRpgUser, iconizeItemWithName, checkClassToWeapon, printValidWeapon, checkIfArmor, takeItemFromInv } = require("../../modules");
+const { checkIfNum, hasItem, getInv, getRpgUser, iconizeItemWithName, checkClassToWeapon, printValidWeapon, checkIfArmor, takeItemFromInv, checkIfTool, checkToolTypeInTools } = require("../../modules");
 const items = require(`../../data/items.json`);
 const equipments = require(`../../data/equipment.json`);
 const Rpg = require("../../models/Rpg");
@@ -8,14 +8,14 @@ module.exports = {
     description: 'Equips a weapon or armor',
     permissions: [],
     category: 'rpg',
-    usage: '`stp equip <weapon/armor> <itemID>`',
+    usage: '`stp equip <weapon/armor/tool> <itemID>`',
     cooldown: 1000 * 10,
     testing: false,
     alias: [],
     async execute(client, message, args) {
-        if (!args[1]) return message.reply(`Please use \`stp equip <weapon/armor> <itemID>\``);
+        if (!args[1]) return message.reply(`Please use \`stp equip <weapon/armor/tool> <itemID>\``);
         const equippingType = args.shift().toLowerCase();
-        if (!['weapon', 'armor','tool'].includes(equippingType)) return message.reply(`Please indicate weapon or armor`);
+        if (!['weapon', 'armor','tool'].includes(equippingType)) return message.reply(`Please indicate weapon, armor, or tool`);
         let itemID = args.shift();
         itemID = checkIfNum(itemID);
         if (!itemID) return message.reply(`Please use a number for the itemID`);
@@ -50,7 +50,19 @@ module.exports = {
                 }
             }
         } else if (equippingType == 'tool') {
-            return message.reply(`Hold your horses, Passerby. *This is an upcoming feature*`);
+            if (!checkIfTool(item.id)) return message.reply(`That's not a tool...`);
+            const tool = equipments.find(itm => itm.id == item.id);
+            if (checkToolTypeInTools(rpgData.tools, tool.tooltype)) return message.reply(`You already have this type of tool in your toolbox: \`${tool.tooltype}\``);
+
+            let tools = rpgData.tools;
+            tools.push({
+                id: item.id,
+                durability: tool.durability
+            });
+
+            equipThis = {
+                tools
+            };
         }
 
         await takeItemFromInv(uid, item.id, 1);

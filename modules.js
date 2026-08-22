@@ -318,6 +318,12 @@ module.exports = {
         if (armor.type != "armor") return false;
         return true;
     },
+    checkIfTool(equipmentID) {
+        const tool = equipments.find(weap => weap.id == equipmentID);
+        if (!tool) return false;
+        if (tool.type != "tool") return false;
+        return true;
+    },
     printValidWeapon(className) {
         const swordClasses = ['swordsman', 'warrior', 'paladin', 'knight'];
         if (swordClasses.includes(className.toLowerCase())) return `swords`;
@@ -521,5 +527,58 @@ module.exports = {
             { inBattle },
             { returnDocument: "after" }
         )
+    },
+    checkToolTypeInTools(tools, toolType) {
+        let toolbox = [];
+        for (x of tools) {
+            toolbox.push(equipments.find(itm => itm.id == x.id));
+        }
+        toolbox = toolbox.filter(itm => itm.tooltype == toolType);
+        if (toolbox.length > 0) return true;
+        else return false;
+    },
+    removeToolTypeFromTools(tools, toolType) {
+        let toolbox = [];
+        for (x of tools) {
+            let tool = equipments.find(itm => itm.id == x.id);
+            if (tool.tooltype != toolType) toolbox.push({
+                id: x.id,
+                durability: x.durability
+            })
+        }
+        return toolbox;
+    },
+    depleteTool(tools, toolType, amount) {
+        let toolbox = [];
+        for (x of tools) {
+            let tool = equipments.find(itm => itm.id == x.id);
+            if (tool.tooltype == toolType) {
+                let newDurability = parseInt(x.durability) - parseInt(amount);
+                if (newDurability > 0) toolbox.push({
+                    id: x.id,
+                    durability: newDurability
+                });
+            } else {
+                toolbox.push({
+                    id: x.id,
+                    durability: x.durability
+                })
+            }
+        }
+        return toolbox;
+    },
+    getToolFromToolbox(tools, toolType) {
+        let toolID = ``;
+        for (x of tools) {
+            let tool = equipments.find(itm => itm.id == x.id);
+            if (tool.tooltype == toolType) toolID = x.id;
+        }
+        return toolID;
+    },
+    getChopPool(channelID) {
+        return ['wood1','wood1','wood1','wood1','wood1','wood2','wood1','wood1'];
+    },
+    getMinePool(channelID) {
+        return ['stone1','stone1','stone1'];
     }
 }
