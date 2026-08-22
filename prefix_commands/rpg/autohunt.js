@@ -8,7 +8,6 @@ module.exports = {
     testing: false,
     alias: ['ah'],
     async execute(client, message, args) {
-        const summonedEnemy = summonMonster(message.channel.id);
-        const rpgData = await getRpgUser(message.author.id);
+        return message.reply(`Hold your horses, Passerby. *This feature is coming soon...*`);
     }
 }
