@@ -42,6 +42,8 @@ module.exports = {
                 }, 2000);
             }
             return;
-        } else { }
+        } else {
+            return await interaction.update({ components: [], content: "Fleed" });
+        }
     }
 }
