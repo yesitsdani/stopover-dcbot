@@ -21,14 +21,19 @@ const rpgSchema = new mongoose.Schema({
     mainSkill: String,
     skills: [String],
     blessed: Boolean,
-    enemiesSlayed: [String],
+    enemiesSlayed: [{
+        id: Number,
+        turns: Number
+    }],
     rune: {
         id: String,
         level: Number
     },
     tools: [
         { id: String, durability: Number }
-    ]
+    ],
+    inBattle: Boolean,
+    deadUntil: Number
 });
 
 const Rpg = mongoose.model("rpg", rpgSchema);

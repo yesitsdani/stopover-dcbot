@@ -1,5 +1,5 @@
 const items = require(`../../data/items.json`);
-const { takeItemFromInv, checkIfNum, getInv } = require("../../modules");
+const { takeItemFromInv, checkIfNum, getInv, getRpgUser } = require("../../modules");
 
 module.exports = {
     name: 'use',
@@ -7,7 +7,7 @@ module.exports = {
     permissions: [],
     category: 'rpg',
     usage: '`stp use <itemID>`',
-    cooldown: 1000 * 10,
+    cooldown: 1000 * 5,
     testing: false,
     alias: [],
     async execute(client, message, args) {
@@ -16,10 +16,14 @@ module.exports = {
         if (itemID == null) return message.reply(`Please use a valid number for \`<itemID>\``);
         const uid = message.author.id;
 
+        const rpgData = await getRpgUser(uid);
+        if (rpgData.inBattle) return message.reply(`You cannot use this because you are currently in battle right now.`);
+
         const item = items.find(itm => itm.usableID == itemID);
         if (!item) return message.reply(`Item not found`);
-        const usable = client.uses.get(item.id);
-        if (!usable) return message.reply(`This item is not usable`);
+        let usable = client.uses.get(item.id);
+        if (!usable && item.id.startsWith('potion')) usable = require('../../uses/potion.js');
+        if (!usable) return message.reply(`This item is not usable`)
 
         const invData = await getInv(uid);
         const itemInInv = invData.items.find(itm => itm.id == item.id);

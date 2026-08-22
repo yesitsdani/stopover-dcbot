@@ -1,18 +1,125 @@
 [
     {
-        "id": 1,
-        "name": "Slime",
-        "icon": "<a:slime:1535169166431100948>",
-        "type": "melee",
-        "properClass": ["all"],
-        "atk": 5,
-        "def": 3,
-        "rewards": {
-            "money": 50,
-            "xp": { "min": 1, "max": 4 },
-            "items": [
-                { "id": "slime_drop", "min": 1, "max": 3 }
-            ]
-        }
+        "areaName": "zero",
+        "rarities": [
+            "common",
+            "common",
+            "common",
+            "common",
+            "uncommon"
+        ],
+        "monsters": [
+            {
+                "id": 1,
+                "name": "Slime",
+                "icon": "<a:slime:1535169166431100948>",
+                "type": "melee",
+                "rarity": "common",
+                "properClass": [
+                    "all"
+                ],
+                "hp": 20,
+                "rewards": {
+                    "money": 50,
+                    "xp": {
+                        "min": 1,
+                        "max": 4
+                    },
+                    "items": [
+                        {
+                            "id": "slime_drop",
+                            "min": 1,
+                            "max": 3
+                        }
+                    ]
+                },
+                "stat": {
+                    "atk": 5,
+                    "meleeDmg": 0.2,
+                    "magicDmg": 0,
+                    "rangeDmg": 0,
+                    "critRate": 0,
+                    "critDmg": 0,
+                    "def": 3,
+                    "meleeRes": 0.3,
+                    "magicRes": 0,
+                    "rangeRes": 0.5
+                }
+            },
+            {
+                "id": 2,
+                "name": "Evil Rat",
+                "icon": ":rat:",
+                "type": "melee",
+                "rarity": "common",
+                "properClass": [
+                    "all"
+                ],
+                "hp": 20,
+                "rewards": {
+                    "money": 35,
+                    "xp": {
+                        "min": 1,
+                        "max": 4
+                    },
+                    "items": [
+                        {
+                            "id": "cheese_drop",
+                            "min": 1,
+                            "max": 3
+                        }
+                    ]
+                },
+                "stat": {
+                    "atk": 2,
+                    "meleeDmg": 2,
+                    "magicDmg": 0,
+                    "rangeDmg": 0,
+                    "critRate": 0,
+                    "critDmg": 0,
+                    "def": 1,
+                    "meleeRes": 0.1,
+                    "magicRes": 0,
+                    "rangeRes": 0.7
+                }
+            },
+            {
+                "id": 3,
+                "name": "Enchanted Sword",
+                "icon": ":dagger:",
+                "type": "melee",
+                "rarity": "uncommon",
+                "properClass": [
+                    "all"
+                ],
+                "hp": 30,
+                "rewards": {
+                    "money": 70,
+                    "xp": {
+                        "min": 3,
+                        "max": 8
+                    },
+                    "items": [
+                        {
+                            "id": "passion_drop1",
+                            "min": 1,
+                            "max": 3
+                        }
+                    ]
+                },
+                "stat": {
+                    "atk": 7,
+                    "meleeDmg": 0.7,
+                    "magicDmg": 0,
+                    "rangeDmg": 0,
+                    "critRate": 0,
+                    "critDmg": 0,
+                    "def": 5,
+                    "meleeRes": 0.7,
+                    "magicRes": 0.1,
+                    "rangeRes": 0.1
+                }
+            }
+        ]
     }
 ]

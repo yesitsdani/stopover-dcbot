@@ -9,6 +9,7 @@ module.exports = {
     usage: '`stp forcemarry <member1> <member2> <ring>`',
     cooldown: 1000 * 60,
     testing: false,
+    bypassDeath: true,
     alias: [],
     async execute(client, message, args) {
         const validRings = ['a', 'b', 'c', 'd', 'e'];

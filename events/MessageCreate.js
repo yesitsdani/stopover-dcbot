@@ -1,5 +1,5 @@
 const ms = require("ms");
-const { getUser } = require("../modules");
+const { getUser, getRpgUser } = require("../modules");
 const User = require("../models/User");
 
 module.exports = {
@@ -30,6 +30,13 @@ module.exports = {
                 if (Date.now() < commandCD.date) return await message.reply(`You can use this command again in \`${ms(parseInt(commandCD.date) - Date.now(), { long: true })}\``)
             }
         }
+
+        const rpgData = await getRpgUser(message.author.id);
+        if (
+            rpgData.dead && 
+            command.name != "revive" && 
+            !command.bypassDeath
+        ) return await message.reply(`You are currently dead. Please do \`stp revive\``)
 
         try {
             await command.execute(client, message, args);

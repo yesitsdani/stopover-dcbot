@@ -1,4 +1,5 @@
 const shop = require('../../data/shop.json');
+const items = require('../../data/items.json');
 const { getUser, canAfford, iconizeMoney, subtractMoney, addItemToInv, iconizeItemWithName } = require('../../modules');
 
 module.exports = {
@@ -6,13 +7,13 @@ module.exports = {
     description: 'Buys an item',
     permissions: [],
     category: 'economy',
-    usage: '`stp buy <shop item id> [optional: quantity]`',
+    usage: '`stp buy <item id> [optional: quantity]`',
     cooldown: 1000 * 10,
     testing: false,
     alias: [],
     async execute(client, message, args) {
         const uid = message.author.id;
-        if (!args[0]) return message.reply(`Please use \`stp buy <shop item id> [optional: quantity]\``);
+        if (!args[0]) return message.reply(`Please use \`stp buy <item id> [optional: quantity]\``);
         const shopItemID = Number(args[0]);
         if (Number.isNaN(shopItemID)) return message.reply(`Please use a valid number for the shop item ID`);
 
@@ -21,7 +22,8 @@ module.exports = {
             quantity = Number(args[1]);
             if (Number.isNaN(quantity)) return message.reply(`Please use a valid number for the quantity`);
         }
-        const itemInShop = shop.find(itm => itm.id == shopItemID);
+        const item = items.find(itm => itm.usableID == shopItemID);
+        const itemInShop = shop.find(itm => itm.itemSold == item.id);
         if (!itemInShop) return message.reply(`Are you sure that's in \`stp shop\`?`);
         const finalPrice = quantity * parseInt(itemInShop.price);
 

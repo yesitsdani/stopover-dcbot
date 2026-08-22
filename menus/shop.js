@@ -1,5 +1,6 @@
 const { MessageFlags } = require("discord.js");
 const shop = require(`../data/shop.json`);
+const items = require(`../data/items.json`);
 const { iconizeItemWithName, iconizeMoney, createEmbedStandard } = require("../modules");
 
 module.exports = {
@@ -25,8 +26,11 @@ module.exports = {
         const shopItems = shop.filter(itm => itm.category == chosen);
 
         for (x of shopItems) {
-            content += `\n\`Shop ID: ${x.id}\` | ${iconizeItemWithName(x.itemSold)} | ${iconizeMoney(x.price)}`;
+            const item = items.find(itm => itm.id == x.itemSold);
+            content += `\n\`ID: ${item.usableID}\` | ${iconizeItemWithName(x.itemSold)} | ${iconizeMoney(x.price)}`;
         }
+
+        content += `\n\n-# To purchase: \`stp buy <item ID>\`\n-# For info: \`stp iteminfo <item ID>\``
 
         const embed = createEmbedStandard()
             .setDescription(content)

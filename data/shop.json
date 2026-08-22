@@ -138,5 +138,12 @@
         "category": "perks",
         "price": 1000000,
         "messageWhenBought": "To use: `stp use 35`"
+    },
+    {
+        "id": 21,
+        "itemSold": "potion-2",
+        "category": "equipment",
+        "price": 750,
+        "messageWhenBought": "To use: `stp use 40`"
     }
 ]

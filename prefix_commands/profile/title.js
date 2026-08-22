@@ -8,6 +8,7 @@ module.exports = {
     category: 'profile',
     usage: '`stp title <member OR title>`',
     testing: false,
+    bypassDeath: true,
     alias: ['bestow'],
     async execute(client, message, args) {
         if (!args[0]) return await message.reply(`Please set a title to bestow upon yourself: \`stp title <title>\`. You can also bestow a title on another person using: \`stp title <user> <title>\``);

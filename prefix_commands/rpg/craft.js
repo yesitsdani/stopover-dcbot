@@ -1,4 +1,4 @@
-const { checkIfNum, getInv, canCraft } = require("../../modules");
+const { checkIfNum, getInv, canCraft, takeMultipleItemsFromInv, addItemToInv, iconizeItemWithName } = require("../../modules");
 const recipes = require(`../../data/recipes.json`);
 
 module.exports = {
@@ -25,8 +25,10 @@ module.exports = {
         const invData = await getInv(uid);
         const craftable = canCraft(invData.items, itemID, quantity);
 
-        if (craftable) {
-            return message.reply(`Craftable!`);
+        if (craftable.canCraft) {
+            await takeMultipleItemsFromInv(uid, itemRecipe.recipe);
+            await addItemToInv(uid, itemRecipe.id, itemRecipe.quantityProduced);
+            return message.reply(`Successfully crafted ${iconizeItemWithName(itemRecipe.id)}`);
         } else {
             return message.reply({ content: "Could not craft item", embeds: craftable.embeds });
         }

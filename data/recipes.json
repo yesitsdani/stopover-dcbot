@@ -1,15 +1,94 @@
 [
     {
+        "craftingUsableId": 39,
+        "id": "magical_pouch",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "slime_drop", "quantity": 5 },
+            { "id": "abundanceGem", "quantity": 1 }
+        ]
+    },
+    {
+        "craftingUsableId": 41,
+        "id": "potion-3",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "passion_drop1", "quantity": 3 },
+            { "id": "emptyflask", "quantity": 1 }
+        ]
+    },
+    {
+        "craftingUsableId": 42,
+        "id": "potion-4",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "passion_drop1", "quantity": 5 },
+            { "id": "abundanceGem", "quantity": 1 },
+            { "id": "emptyflask", "quantity": 1 }
+        ]
+    },
+    {
+        "craftingUsableId": 44,
+        "id": "sword2",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "passion_drop1", "quantity": 10 },
+            { "id": "slime_drop", "quantity": 10 },
+            { "id": "sword1", "quantity": 1 }
+        ]
+    },
+    {
+        "craftingUsableId": 46,
+        "id": "bow2",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "passion_drop1", "quantity": 10 },
+            { "id": "slime_drop", "quantity": 10 },
+            { "id": "bow1", "quantity": 1 }
+        ]
+    },
+    {
+        "craftingUsableId": 45,
+        "id": "wand2",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "passion_drop1", "quantity": 10 },
+            { "id": "slime_drop", "quantity": 10 },
+            { "id": "wand1", "quantity": 1 }
+        ]
+    },
+    {
+        "craftingUsableId": 47,
+        "id": "armor2",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "passion_drop1", "quantity": 10 },
+            { "id": "slime_drop", "quantity": 10 },
+            { "id": "armor1", "quantity": 1 },
+            { "id": "wand1", "quantity": 1 }
+        ]
+    },
+    {
+        "craftingUsableId": 48,
+        "id": "armor3",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "passion_drop1", "quantity": 10 },
+            { "id": "slime_drop", "quantity": 10 },
+            { "id": "armor1", "quantity": 1 }
+        ]
+    },
+    {
         "craftingUsableId": 30,
         "id": "transcendenceWand",
         "quantityProduced": 1,
         "recipe": [
-            { "itemID": "wood2", "quantity": 11 },
-            { "itemID": "destinyGem", "quantity": 1 },
-            { "itemID": "abundanceGem", "quantity": 1 },
-            { "itemID": "devotionGem", "quantity": 1 },
-            { "itemID": "libertyGem", "quantity": 1 },
-            { "itemID": "creationGem", "quantity": 1 }
+            { "id": "wood2", "quantity": 11 },
+            { "id": "destinyGem", "quantity": 1 },
+            { "id": "abundanceGem", "quantity": 1 },
+            { "id": "devotionGem", "quantity": 1 },
+            { "id": "libertyGem", "quantity": 1 },
+            { "id": "creationGem", "quantity": 1 }
         ]
     }
 ]

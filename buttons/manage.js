@@ -75,7 +75,7 @@ module.exports = {
             }
         } else if (action == "nsfw") {
             if (member.roles.cache.has("1504338673900982272")) {
-                await member.roles.remove("1504338673900982272");
+                await member.roles.remove(["1504338673900982272","1504331922246209717"]);
                 content += ` NSFW access has been removed by ${getMemberName(origMember)} (<@${uid}>)`;
             } else {
                 await member.roles.add("1504338673900982272");

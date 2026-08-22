@@ -24,7 +24,7 @@ module.exports = {
 
         let content = `# ${iconizeItemWithName(itemRecipe.id)}\n-# \`Item ID\`: ${item.usableID}\n`;
         for (x of itemRecipe.recipe) {
-            content += `\n**x${x.quantity}** | ${iconizeItemWithName(x.itemID)}`;
+            content += `\n**x${x.quantity}** | ${iconizeItemWithName(x.id)}`;
         }
 
         const invData = await getInv(uid);
@@ -32,7 +32,7 @@ module.exports = {
 
         if (itemCraftable.canCraft) content += `\n\nYou have enough materials to craft this item!`;
         else content += `\n\nYou don't have enough materials to craft this item`;
-        content += `-# To craft this, use \`stp craft 30\``;
+        content += `\n-# To craft this, use \`stp craft ${itemRecipe.craftingUsableId}\``;
         
         const embed = createEmbedStandard()
         .setDescription(content);

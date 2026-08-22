@@ -34,7 +34,7 @@ module.exports = {
             buttonID += `weapon`
         } else if (equippingType == 'armor') {
             if (rpgData.armor.id.length < 1) return message.reply(`You don't have an armor equipped. Kindly \`stp equip armor <itemID>\` first.`);
-            content += `\n\n${iconizeItemWithName(rpgData.weap.id)}`
+            content += `\n\n${iconizeItemWithName(rpgData.armor.id)}`
             if (rpgData.armor.enchantment.length < 1) {
                 content += `\n\`NO ENCHANTMENT YET\``
             } else {

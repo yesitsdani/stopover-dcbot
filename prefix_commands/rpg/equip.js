@@ -41,7 +41,6 @@ module.exports = {
                 }
             }
         } else if (equippingType == 'armor') {
-            return message.reply(`Hold your horses, Passerby. *This is an upcoming feature*`);
             if (rpgData.armor.id.length > 0) return message.reply(`You already have an armor equipped. Kindly \`stp unequip armor\` first (Unequipping removes enchantment).`);
             if (!checkIfArmor(item.id)) return message.reply(`That's not an armor...`);
             equipThis = {

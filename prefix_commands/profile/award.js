@@ -8,6 +8,7 @@ module.exports = {
     category: 'profile',
     usage: '`stp award <member OR awards>`',
     testing: false,
+    bypassDeath: true,
     alias: [],
     async execute(client, message, args) {
         if (!args[0]) return await message.reply(`Please set an award to bestow upon yourself: \`stp award <title>\`. You can also bestow an award on another person using: \`stp award <user> <award>\``);

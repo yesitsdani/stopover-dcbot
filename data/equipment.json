@@ -3,8 +3,9 @@
         "id": "sword1",
         "type": "sword",
         "iteminfo": "Can be equipped by the Melee class. Use `stp equip weapon 9` to equip",
+        "atk": 5,
         "dmg": {
-            "melee": 2,
+            "melee": 0.5,
             "magic": 0,
             "range": 0
         },
@@ -17,9 +18,10 @@
         "id": "wand1",
         "type": "wand",
         "iteminfo": "Can be equipped by the Magic class. Use `stp equip weapon 10` to equip",
+        "atk": 5,
         "dmg": {
             "melee": 0,
-            "magic": 2,
+            "magic": 0.5,
             "range": 0
         },
         "crit": {
@@ -31,13 +33,104 @@
         "id": "bow1",
         "type": "bow",
         "iteminfo": "Can be equipped by the Ranged class. Use `stp equip weapon 11` to equip",
+        "atk": 5,
         "dmg": {
             "melee": 0,
             "magic": 0,
-            "range": 2
+            "range": 0.5
         },
         "crit": {
             "rate": 0.10,
+            "dmg": 0.20
+        }
+    },
+    {
+        "id": "armor1",
+        "type": "armor",
+        "iteminfo": "Use `stp equip armor 13` to equip",
+        "def": 3,
+        "res": {
+            "melee": 0.2,
+            "magic": 0.2,
+            "range": 0.2
+        },
+        "crit": {
+            "rate": 0.10,
+            "dmg": 0.20
+        }
+    },
+    {
+        "id": "sword2",
+        "type": "sword",
+        "iteminfo": "Can be equipped by the Melee class. Use `stp equip weapon 44` to equip",
+        "atk": 15,
+        "dmg": {
+            "melee": 0.75,
+            "magic": 0,
+            "range": 0
+        },
+        "crit": {
+            "rate": 0.25,
+            "dmg": 0.40
+        }
+    },
+    {
+        "id": "wand2",
+        "type": "wand",
+        "iteminfo": "Can be equipped by the Magic class. Use `stp equip weapon 45` to equip",
+        "atk": 15,
+        "dmg": {
+            "melee": 0,
+            "magic": 0.75,
+            "range": 0
+        },
+        "crit": {
+            "rate": 0.25,
+            "dmg": 0.40
+        }
+    },
+    {
+        "id": "bow2",
+        "type": "bow",
+        "iteminfo": "Can be equipped by the Ranged class. Use `stp equip weapon 46` to equip",
+        "atk": 15,
+        "dmg": {
+            "melee": 0,
+            "magic": 0,
+            "range": 0.75
+        },
+        "crit": {
+            "rate": 0.25,
+            "dmg": 0.40
+        }
+    },
+    {
+        "id": "armor2",
+        "type": "armor",
+        "iteminfo": "Use `stp equip armor 47` to equip",
+        "def": 9,
+        "res": {
+            "melee": 0.3,
+            "magic": 0.5,
+            "range": 0.3
+        },
+        "crit": {
+            "rate": 0.13,
+            "dmg": 0.20
+        }
+    },
+    {
+        "id": "armor3",
+        "type": "armor",
+        "iteminfo": "Use `stp equip armor 48` to equip",
+        "def": 12,
+        "res": {
+            "melee": 0.7,
+            "magic": 0,
+            "range": 0.7
+        },
+        "crit": {
+            "rate": 0.15,
             "dmg": 0.20
         }
     }

@@ -91,9 +91,9 @@
         "id": "slime_drop",
         "usableID": 12,
         "description": "Sticky and gooey",
-        "name": "Slime Drop",
+        "name": "Slime Blob",
         "icon": "<:slimedrop:1535169189181128764>",
-        "source": "Bought in shop."
+        "source": "Dropped by Slimes."
     },
     {
         "id": "armor1",
@@ -200,7 +200,7 @@
         "source": "Bought in shop."
     },
     {
-        "id": "potion1",
+        "id": "potion-1",
         "usableID": 26,
         "description": "Cuts cooldown generated in commands (except Daily) by half for 30 minutes",
         "name": "A Droplet of Time",
@@ -236,7 +236,7 @@
         "usableID": 30,
         "description": "The wand in folklores said to have usurped the will of the realm.",
         "name": "Wand of Transcendence",
-        "icon": ":question:",
+        "icon": ":magic_wand:",
         "source": "Crafted using Ever-Mourning Wood and the Gems of Destiny, Abundance, Devotion, Liberty, and Creation"
     },
     {
@@ -260,7 +260,7 @@
         "usableID": 33,
         "description": "Wood chopped from the deepest parts of the realm's enchanted forest",
         "name": "Ever-Mourning Wood",
-        "icon": ":question:",
+        "icon": ":wood:",
         "source": "Dropped in `stp chop`"
     },
     {
@@ -286,5 +286,101 @@
         "name": "Casino Gold Key Card",
         "icon": ":credit_card:",
         "source": "Bought in shop."
+    },
+    {
+        "id": "cheese_drop",
+        "usableID": 37,
+        "description": "Might be used for something",
+        "name": "Suspicious Cheese",
+        "icon": ":cheese:",
+        "source": "Dropped by Evil Rats."
+    },
+    {
+        "id": "passion_drop1",
+        "usableID": 38,
+        "description": "Can be used to craft potions",
+        "name": "Ignited Passion",
+        "icon": ":heart_on_fire:",
+        "source": "Dropped by Enchanted Objects."
+    },
+    {
+        "id": "magical_pouch",
+        "usableID": 39,
+        "description": "A magical pouch used to store Stopover gems",
+        "name": "Magical Gem Pouch",
+        "icon": ":pouch:",
+        "source": "Crafted with Slime drops and the Gem of Abundance."
+    },
+    {
+        "id": "potion-2",
+        "usableID": 40,
+        "description": "Heals a Passerby (25% of Max HP)",
+        "name": "Lesser Healing Potion",
+        "icon": ":test_tube:",
+        "source": "Bought from shop"
+    },
+    {
+        "id": "potion-3",
+        "usableID": 41,
+        "description": "Heals a Passerby (50% of Max HP)",
+        "name": "Healing Potion",
+        "icon": ":test_tube:",
+        "source": "Crafted"
+    },
+    {
+        "id": "potion-4",
+        "usableID": 42,
+        "description": "Heals a Passerby (75% of Max HP)",
+        "name": "Greater Healing Potion",
+        "icon": ":test_tube:",
+        "source": "Crafted"
+    },
+    {
+        "id": "emptyflask",
+        "usableID": 43,
+        "description": "Just an empty flask",
+        "name": "Empty Potion Flask",
+        "icon": ":jar:",
+        "source": "Bought from shop"
+    },
+    {
+        "id": "sword2",
+        "usableID": 44,
+        "description": "The sword of nature",
+        "name": "Blade of Grass",
+        "icon": ":dagger:",
+        "source": "Crafted"
+    },
+    {
+        "id": "wand2",
+        "usableID": 45,
+        "description": "A wand that can spark",
+        "name": "Sparks Wand",
+        "icon": ":magic_wand:",
+        "source": "Crafted"
+    },
+    {
+        "id": "bow2",
+        "usableID": 46,
+        "description": "Used in speed and agility.",
+        "name": "Brisk Bow",
+        "icon": ":bow_and_arrow:",
+        "source": "Crafted"
+    },
+    {
+        "id": "armor2",
+        "usableID": 47,
+        "description": "Robe of those who dare to brave the magical arts",
+        "name": "Novice Robe",
+        "icon": ":shield:",
+        "source": "Crafted"
+    },
+    {
+        "id": "armor3",
+        "usableID": 48,
+        "description": "For physical combatants ready to take on more than meager tasks",
+        "name": "Shieldskin Armor",
+        "icon": ":shield:",
+        "source": "Crafted"
     }
 ]

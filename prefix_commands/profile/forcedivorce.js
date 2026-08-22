@@ -9,6 +9,7 @@ module.exports = {
     usage: '`stp forcedivorce <member1>`',
     cooldown: 1000 * 60,
     testing: false,
+    bypassDeath: true,
     alias: [],
     async execute(client, message, args) {
         if (!args[0]) return await message.reply(`Insufficient arguments: \`stp forcedivorce <member1>\``);

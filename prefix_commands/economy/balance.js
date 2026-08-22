@@ -8,6 +8,7 @@ module.exports = {
     usage: '`stp balance [member]`',
     cooldown: 1000 * 10,
     testing: false,
+    bypassDeath: true,
     alias: ['gems', 'bal', 'currency'],
     async execute(client, message, args) {
         const uid = message.author.id;

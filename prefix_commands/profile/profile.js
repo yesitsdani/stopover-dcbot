@@ -10,6 +10,7 @@ module.exports = {
     usage: '`stp passerby [member]`',
     cooldown: 1000 * 60,
     testing: false,
+    bypassDeath: true,
     alias: ['about-me', 'passerby', 'whois','profile'],
     async execute(client, message, args) {
         let uid = '';

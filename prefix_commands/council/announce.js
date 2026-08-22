@@ -9,6 +9,7 @@ module.exports = {
     usage: '`stp announce`',
     cooldown: 1000 * 60 * 1,
     testing: false,
+    bypassDeath: true,
     alias: ['anunsyo'],
     permissions: ['1506448680000159784', '1511897066262237285'],
     async execute(client, message, args) {

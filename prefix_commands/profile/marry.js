@@ -9,6 +9,7 @@ module.exports = {
     usage: '`stp marry`',
     cooldown: 1000 * 60 * 5,
     testing: false,
+    bypassDeath: true,
     alias: ['marriage'],
     async execute(client, message, args) {
         const uid = message.author.id;
