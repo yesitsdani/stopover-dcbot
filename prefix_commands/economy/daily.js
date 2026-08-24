@@ -106,7 +106,6 @@ module.exports = {
         );
 
         const newBalance = newUser.money;
-        content += `\nNew Balance: ${iconizeMoney(newBalance)}\n`;
 
         const rpgData = await getRpgUser(uid);
         await regenHP(uid, parseInt(rpgData.maxHealth));
