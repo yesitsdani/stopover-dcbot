@@ -1,5 +1,5 @@
 const { summonMonster, createEmbedFight } = require("../../calculator");
-const { getRpgUser } = require("../../modules");
+const { getRpgUser, createLoadingScreen } = require("../../modules");
 
 module.exports = {
     name: 'hunt',
@@ -16,6 +16,10 @@ module.exports = {
 
         const fightGui = await createEmbedFight(message, summonedEnemy, summonedEnemy.hp, 0, message.author.id, rpgData, 0, 0);
 
-        return message.reply(fightGui.gui);
+        const messageSent = await message.reply({ embeds: [createLoadingScreen()] });
+
+        setTimeout(async () => {
+            await messageSent.edit(fightGui.gui);
+        }, 2000);
     }
 }

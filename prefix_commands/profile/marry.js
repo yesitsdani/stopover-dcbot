@@ -1,5 +1,5 @@
 const ms = require("ms");
-const { getUser, createEmbedStandard, iconizeItem, iconizeItemWithName, getItemDescriptionOnly } = require("../../modules");
+const { getUser, createEmbedStandard, iconizeItem, iconizeItemWithName, getItemDescriptionOnly, createLoadingScreen } = require("../../modules");
 
 module.exports = {
     name: 'marry',
@@ -37,6 +37,10 @@ module.exports = {
         .setThumbnail(member.user.avatarURL())
         .setDescription(content)
 
-        await message.reply({ embeds: [embed] });
+        const messageSent = await message.reply({ embeds: [createLoadingScreen()] });
+
+        setTimeout(async () => {
+            await messageSent.edit({ embeds: [embed] });
+        }, 2000);
     }
 }

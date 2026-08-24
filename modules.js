@@ -580,5 +580,44 @@ module.exports = {
     },
     getMinePool(channelID) {
         return ['stone1','stone1','stone1'];
+    },
+    createLoadingScreen() {
+        const embed = module.exports.createEmbedStandard()
+        
+        const tooltips = [
+            "**Day of Creation** - The Stopover was created on May 14th, 2026",
+            "**Ring of Ever-Reigning** - The Ring used by The Chief Passerby",
+            "**The Stopover Council** - Moderators of The Stopover and Special Advisors to the Chief Passerby",
+            "**Ring of Authority** - The Ring used by Members of the Stopover Council",
+            "**Sparklight Woods** - The birthplace of all journeys",
+            "**Ashi has his own rules**",
+            "**Passerby** - A Member of The Stopover",
+            "**Ashi's Wonderful Gems** - Gems constituting the embodiment of Abundance, Creation, Destiny, Devotion, and Liberty",
+            "**Nyxell** - The first Passerby to become a Member of the Stopover Council",
+            "**Aki** - The second Passerby to become a Member of the Stopover Council",
+            "**Roi** - The third Passerby to become a Member of the Stopover Council",
+            "**Zeph** - The fourth Passerby to become a Member of the Stopover Council",
+            "**Jeremy** - The fifth Passerby to become a Member of the Stopover Council",
+            "**Maiku** - The sixth Passerby to become a Member of the Stopover Council",
+            "**Vance** - The seventh Passerby to become a Member of the Stopover Council",
+            "**In Words that Linger:** \"You wanna fight me? Yes I\"",
+            "**In Words that Linger:** \"Natutulog ka po ba ma'am? Obvious ba?\"",
+            "**In Words that Linger:** \"Bahala kayo sa buhay ninyo, basta ako, nakaangat na 'ko\"",
+            "**In Words that Linger:** \"aHH DADDI-\"",
+            "**Roi** - The Second Star Passerby",
+            "**Jeremy** - The First Star Passerby",
+            "**Wand of Transcendence** - History says the Chief Passerby created the realm with this wand before breaking it to create the mythical Wonderful Gems",
+            "**Heraldry of the Chief** - The sword lost to time, hoping to be reassembled by a second chance akin to the creation of this realm",
+            "**Sparrow's Frostpoint** - The bow and arrow that, as History says, marked the end of the Cold Days",
+            "**Town of Quantilla** - A small town at the end of the Sparklight Woods where all adventurers sing hallelujah",
+            "**Capitalia Dalandia** - Capital Kingdom of the Realm where all Stopovers and its Passersby eventually lead."
+        ];
+
+        let content = `# <a:spinheart:1534896467750420541> \`LOADING...\`\n> `;
+        content += tooltips[Math.floor(Math.random() * tooltips.length)];
+
+        embed.setDescription(content);
+
+        return embed;
     }
 }

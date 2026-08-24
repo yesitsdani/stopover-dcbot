@@ -1,5 +1,5 @@
 const User = require("../../models/User");
-const { getUser, iconizeMoney, createEmbedStandard } = require("../../modules");
+const { getUser, iconizeMoney, createEmbedStandard, createLoadingScreen } = require("../../modules");
 
 module.exports = {
     name: 'leaderboard',
@@ -24,14 +24,14 @@ module.exports = {
 
                 if (count == 1) {
                     content += `\n${count}. :first_place: `;
-                } else if  (count == 2) {
+                } else if (count == 2) {
                     content += `\n${count}. :second_place: `;
                 } else if (count == 3) {
                     content += `\n${count}. :third_place: `;
                 } else {
                     content += `\n${count}. :military_medal: `;
                 }
-                
+
 
                 content += `<@${user.uid}> | ${iconizeMoney(user.money)}`;
                 count++;
@@ -45,6 +45,10 @@ module.exports = {
             .setDescription(content)
             .setThumbnail(member.user.avatarURL());
 
-        await message.reply({ embeds: [embed] });
+        const messageSent = await message.reply({ embeds: [createLoadingScreen()] });
+
+        setTimeout(async () => {
+            await messageSent.edit({ embeds: [embed] });
+        }, 2000);
     }
 }

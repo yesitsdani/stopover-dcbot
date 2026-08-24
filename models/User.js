@@ -16,8 +16,9 @@ const userSchema = new mongoose.Schema({
         cmd: String,
         date: Number
     }],
-    awards: [String]
-    
+    awards: [String],
+    dailyStreak: Number,
+    dailyStreakCap: Number,
 
 });
 

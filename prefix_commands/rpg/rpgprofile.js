@@ -1,6 +1,6 @@
 const { ActionRowBuilder, StringSelectMenuOptionBuilder, StringSelectMenuBuilder } = require("discord.js");
 const { nextLevel } = require("../../calculator");
-const { getIdFromMention, getRpgUser, iconizeRpgClass, iconizeItemWithName, createEmbedStandard } = require("../../modules");
+const { getIdFromMention, getRpgUser, iconizeRpgClass, iconizeItemWithName, createEmbedStandard, createLoadingScreen } = require("../../modules");
 
 module.exports = {
     name: 'rpgprofile',
@@ -30,7 +30,7 @@ module.exports = {
         const rpgUser = await getRpgUser(uid);
         if (rpgUser.class.length > 0) { content += `${iconizeRpgClass(rpgUser.class)}` }
         else { content += `:question: \`No Class Yet\` (Use \`stp class\`)` }
-        
+
         content += `\n### <a:stp_cutepinkstar:1528713421183520909> Battle Stats`;
         content += `\n:nazar_amulet: Level: ${rpgUser.level}  |  XP: \`${rpgUser.xp}\` / \`${nextLevel(rpgUser.level)}\``;
         content += `\n:heartpulse: Health: \`${rpgUser.health}\` / \`${rpgUser.maxHealth}\``;
@@ -75,11 +75,14 @@ module.exports = {
         const actions = new ActionRowBuilder()
             .addComponents(menu)
 
-        const messageSent = await message.reply({ embeds: [embed], components: [actions] });
+        const messageSent = await message.reply({ embeds: [createLoadingScreen()] });
 
         setTimeout(async () => {
-            await messageSent.edit({ components: [] });
-        }, 10000);
+            await messageSent.edit({ embeds: [embed], components: [actions] });
+            setTimeout(async () => {
+                await messageSent.edit({ components: [] });
+            }, 10000);
+        }, 2000);
 
     }
 }

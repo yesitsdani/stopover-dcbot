@@ -1,4 +1,4 @@
-const { getIdFromMention, getPouch, createEmbedStandard, getPouchCapacity, iconizeMoney } = require("../../modules");
+const { getIdFromMention, getPouch, createEmbedStandard, getPouchCapacity, iconizeMoney, createLoadingScreen } = require("../../modules");
 
 module.exports = {
     name: 'pouch',
@@ -13,7 +13,7 @@ module.exports = {
     async execute(client, message, args) {
         let uid = message.author.id;
         if (args[0] && getIdFromMention(args[0]) != null) uid = getIdFromMention(args[0]);
-        
+
         let pronoun = "You";
         if (uid != message.author.id) pronoun = "They";
 
@@ -25,8 +25,12 @@ module.exports = {
         content += `\n#  Balance: ${iconizeMoney(userPouch.gems)}`;
 
         const embed = createEmbedStandard()
-        .setDescription(content);
+            .setDescription(content);
 
-        return message.reply({ embeds: [embed] });
+        const messageSent = await message.reply({ embeds: [createLoadingScreen()] });
+
+        setTimeout(async () => {
+            await messageSent.edit({ embeds: [embed] });
+        }, 2000);
     }
 }

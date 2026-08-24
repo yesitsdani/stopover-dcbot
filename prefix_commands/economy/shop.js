@@ -1,4 +1,4 @@
-const { getUser, iconizeMoney, iconizeItemWithName, createEmbedStandard, iconizeItem } = require("../../modules");
+const { getUser, iconizeMoney, iconizeItemWithName, createEmbedStandard, iconizeItem, createLoadingScreen } = require("../../modules");
 const items = require('../../data/items.json');
 const shop = require('../../data/shop.json');
 const { StringSelectMenuBuilder, StringSelectMenuOptionBuilder, ActionRowBuilder } = require("discord.js");
@@ -55,10 +55,13 @@ module.exports = {
         const actions = new ActionRowBuilder()
             .addComponents(menu)
 
-        const messageSent = await message.reply({ embeds: [embed], components: [actions] });
+        const messageSent = await message.reply({ embeds: [createLoadingScreen()] });
 
         setTimeout(async () => {
-            await messageSent.edit({ components: [] });
-        }, 20000);
+            await messageSent.edit({ embeds: [embed], components: [actions] });
+            setTimeout(async () => {
+                await messageSent.edit({ components: [] });
+            }, 20000);
+        }, 2000);
     }
 }

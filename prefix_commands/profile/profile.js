@@ -1,5 +1,5 @@
 const { StringSelectMenuBuilder, StringSelectMenuOptionBuilder, ActionRowBuilder } = require(`discord.js`);
-const { getIdFromMention, getUser, createEmbedStandard, iconizeMoney, iconizeItem, iconizeTitle } = require(`../../modules`);
+const { getIdFromMention, getUser, createEmbedStandard, iconizeMoney, iconizeItem, iconizeTitle, createLoadingScreen } = require(`../../modules`);
 const ms = require(`ms`);
 
 module.exports = {
@@ -11,7 +11,7 @@ module.exports = {
     cooldown: 1000 * 60,
     testing: false,
     bypassDeath: true,
-    alias: ['about-me', 'passerby', 'whois','profile'],
+    alias: ['about-me', 'passerby', 'whois', 'profile'],
     async execute(client, message, args) {
         let uid = '';
         if (!args[0]) {
@@ -21,7 +21,7 @@ module.exports = {
         }
 
         if (uid == null) return await message.reply(`Member not found.`);
-        
+
         const member = await message.guild.members.fetch(uid);
         const user = await getUser(uid);
 
@@ -55,35 +55,38 @@ module.exports = {
         }
 
         embed
-        .setThumbnail(member.user.avatarURL())
-        .setDescription(content);
+            .setThumbnail(member.user.avatarURL())
+            .setDescription(content);
 
         const menu = new StringSelectMenuBuilder()
-        .setCustomId(`profile.${uid}`)
-        .setPlaceholder(`Select Passerby Profile`)
-        .setMaxValues(1)
-        .addOptions(
-            new StringSelectMenuOptionBuilder()
-            .setValue(`main`)
-            .setDescription(`Profile in The Stopover`)
-            .setLabel(`Passerby Profile`),
-            new StringSelectMenuOptionBuilder()
-            .setValue(`rpg`)
-            .setDescription(`Passerby Battle Stats`)
-            .setLabel(`RPG Profile`),
-            new StringSelectMenuOptionBuilder()
-            .setValue(`close`)
-            .setDescription(`Removes the selection menu from this message`)
-            .setLabel(`Close Menu`)
-        )
+            .setCustomId(`profile.${uid}`)
+            .setPlaceholder(`Select Passerby Profile`)
+            .setMaxValues(1)
+            .addOptions(
+                new StringSelectMenuOptionBuilder()
+                    .setValue(`main`)
+                    .setDescription(`Profile in The Stopover`)
+                    .setLabel(`Passerby Profile`),
+                new StringSelectMenuOptionBuilder()
+                    .setValue(`rpg`)
+                    .setDescription(`Passerby Battle Stats`)
+                    .setLabel(`RPG Profile`),
+                new StringSelectMenuOptionBuilder()
+                    .setValue(`close`)
+                    .setDescription(`Removes the selection menu from this message`)
+                    .setLabel(`Close Menu`)
+            )
 
         const actions = new ActionRowBuilder()
-        .addComponents(menu)
+            .addComponents(menu)
 
-        const messageSent = await message.reply({ embeds: [embed], components: [actions] });
+        const messageSent = await message.reply({ embeds: [createLoadingScreen()]});
 
         setTimeout(async () => {
-            await messageSent.edit({ components: [] });
-        }, 10000);
+            await messageSent.edit({ embeds: [embed], components: [actions] });
+            setTimeout(async () => {
+                await messageSent.edit({ components: [] });
+            }, 10000);
+        }, 2000);
     }
 }

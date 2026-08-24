@@ -1,5 +1,5 @@
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
-const { getUser, iconizeItemWithName, getItemDescriptionOnly, createEmbedStandard } = require("../../modules");
+const { getUser, iconizeItemWithName, getItemDescriptionOnly, createEmbedStandard, createLoadingScreen } = require("../../modules");
 
 module.exports = {
     name: 'divorce',
@@ -34,6 +34,10 @@ module.exports = {
                     .setStyle(ButtonStyle.Secondary)
             )
 
-        return message.reply({ embeds: [embed], components: [action] });
+        const messageSent = await message.reply({ embeds: [createLoadingScreen()] });
+
+        setTimeout(async () => {
+            await messageSent.edit({ embeds: [embed], components: [action] });
+        }, 2000);
     }
 }
