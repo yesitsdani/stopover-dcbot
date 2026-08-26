@@ -1,5 +1,5 @@
 const { ActionRowBuilder, StringSelectMenuOptionBuilder, StringSelectMenuBuilder } = require("discord.js");
-const { nextLevel } = require("../../calculator");
+const { nextLevel, levelHealth, setHealth } = require("../../calculator");
 const { getIdFromMention, getRpgUser, iconizeRpgClass, iconizeItemWithName, createEmbedStandard, createLoadingScreen } = require("../../modules");
 
 module.exports = {
@@ -27,7 +27,10 @@ module.exports = {
             .setThumbnail(member.user.avatarURL());
         let content = `# <@${uid}> <a:stp_pinksparkles:1528714739004473456>\n`;
 
-        const rpgUser = await getRpgUser(uid);
+        let rpgUser = await getRpgUser(uid);
+
+        if (levelHealth(rpgUser.level) > rpgUser.maxHealth) rpgUser = await setHealth(uid, levelHealth(rpgUser.level));
+        
         if (rpgUser.class.length > 0) { content += `${iconizeRpgClass(rpgUser.class)}` }
         else { content += `:question: \`No Class Yet\` (Use \`stp class\`)` }
 

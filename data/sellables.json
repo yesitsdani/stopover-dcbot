@@ -33,5 +33,45 @@
         "useableID": 25,
         "id": "roleIcon5",
         "sell_price": 35000
+    },
+    {
+        "useableID": 64,
+        "id": "crop-carrot",
+        "sell_price": 230
+    },
+    {
+        "useableID": 65,
+        "id": "crop-potato",
+        "sell_price": 340
+    },
+    {
+        "useableID": 66,
+        "id": "crop-onion",
+        "sell_price": 480
+    },
+    {
+        "useableID": 67,
+        "id": "crop-corn",
+        "sell_price": 600
+    },
+    {
+        "useableID": 68,
+        "id": "crop-eggplant",
+        "sell_price": 800
+    },
+    {
+        "useableID": 69,
+        "id": "crop-garlic",
+        "sell_price": 1030
+    },
+    {
+        "useableID": 70,
+        "id": "crop-banana",
+        "sell_price": 1290
+    },
+    {
+        "useableID": 71,
+        "id": "farm-plotTitle",
+        "sell_price": 999999
     }
 ]

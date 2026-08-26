@@ -1,0 +1,30 @@
+[
+    {
+        "id": "carrot",
+        "harvestTime": 30
+    },
+    {
+        "id": "potato",
+        "harvestTime": 45
+    },
+    {
+        "id": "onion",
+        "harvestTime": 60
+    },
+    {
+        "id": "corn",
+        "harvestTime": 75
+    },
+    {
+        "id": "eggplant",
+        "harvestTime": 90
+    },
+    {
+        "id": "garlic",
+        "harvestTime": 105
+    },
+    {
+        "id": "banana",
+        "harvestTime": 120
+    }
+]

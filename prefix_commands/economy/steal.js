@@ -8,6 +8,6 @@ module.exports = {
     testing: false,
     alias: ['nakaw', 'dukot', 'kulimbat'],
     async execute(client, message, args) {
-        return await message.reply(`Hold your horses, Passerby! *This is an upcoming feature*`);
+        return await message.reply(`The Chief Passerby has not yet declared \`THE HOUR OF MISCHIEF\`. Please wait for such declaration then try again.`);
     }
 }

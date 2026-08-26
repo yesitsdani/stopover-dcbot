@@ -160,15 +160,150 @@
         "id": "transcendenceWand",
         "type": "wand",
         "iteminfo": "Can be equipped by the Magic class. Use `stp equip weapon 30` to equip",
-        "atk": 250,
+        "atk": 80,
         "dmg": {
             "melee": 0,
-            "magic": 2.75,
+            "magic": 2.25,
             "range": 0
         },
         "crit": {
+            "rate": 0.01,
+            "dmg": 2.65
+        }
+    },
+    {
+        "id": "sword3",
+        "type": "sword",
+        "iteminfo": "Can be equipped by the Melee class. Use `stp equip weapon 53` to equip",
+        "atk": 22,
+        "dmg": {
+            "melee": 0.75,
+            "magic": 0,
+            "range": 0
+        },
+        "crit": {
+            "rate": 0.33,
+            "dmg": 1.5
+        }
+    },
+    {
+        "id": "wand3",
+        "type": "wand",
+        "iteminfo": "Can be equipped by the Magic class. Use `stp equip weapon 54` to equip",
+        "atk": 22,
+        "dmg": {
+            "melee": 0.15,
+            "magic": 0.75,
+            "range": 0
+        },
+        "crit": {
+            "rate": 0.1,
+            "dmg": 0.40
+        }
+    },
+    {
+        "id": "bow3",
+        "type": "bow",
+        "iteminfo": "Can be equipped by the Ranged class. Use `stp equip weapon 55` to equip",
+        "atk": 22,
+        "dmg": {
+            "melee": 0,
+            "magic": 0.15,
+            "range": 0.75
+        },
+        "crit": {
+            "rate": 0.1,
+            "dmg": 0.40
+        }
+    },
+    {
+        "id": "sword4",
+        "type": "sword",
+        "iteminfo": "Can be equipped by the Melee class. Use `stp equip weapon 53` to equip",
+        "atk": 24,
+        "dmg": {
+            "melee": 0.4,
+            "magic": 0.15,
+            "range": 0
+        },
+        "crit": {
+            "rate": 0.33,
+            "dmg": 0.4
+        }
+    },
+    {
+        "id": "wand4",
+        "type": "wand",
+        "iteminfo": "Can be equipped by the Magic class. Use `stp equip weapon 54` to equip",
+        "atk": 24,
+        "dmg": {
+            "melee": 0.15,
+            "magic": 0.75,
+            "range": 0
+        },
+        "crit": {
+            "rate": 0.1,
+            "dmg": 1.5
+        }
+    },
+    {
+        "id": "bow4",
+        "type": "bow",
+        "iteminfo": "Can be equipped by the Ranged class. Use `stp equip weapon 55` to equip",
+        "atk": 24,
+        "dmg": {
+            "melee": 0,
+            "magic": 0,
+            "range": 0.75
+        },
+        "crit": {
             "rate": 0.75,
-            "dmg": 2.40
+            "dmg": 0.25
+        }
+    },
+    {
+        "id": "armor4",
+        "type": "armor",
+        "iteminfo": "Use `stp equip armor 75` to equip",
+        "def": 16,
+        "res": {
+            "melee": 0.02,
+            "magic": 0.9,
+            "range": 0.02
+        },
+        "crit": {
+            "rate": 0.33,
+            "dmg": 0.40
+        }
+    },
+    {
+        "id": "armor5",
+        "type": "armor",
+        "iteminfo": "Use `stp equip armor 76` to equip",
+        "def": 19,
+        "res": {
+            "melee": 0.45,
+            "magic": 0.1,
+            "range": 0.33
+        },
+        "crit": {
+            "rate": 0.33,
+            "dmg": 0.95
+        }
+    },
+    {
+        "id": "transcendenceArmor",
+        "type": "armor",
+        "iteminfo": "Use `stp equip armor 77` to equip",
+        "def": 80,
+        "res": {
+            "melee": 0.75,
+            "magic": 0.75,
+            "range": 0.75
+        },
+        "crit": {
+            "rate": 0.77,
+            "dmg": 0.01
         }
     }
 ]

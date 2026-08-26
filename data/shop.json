@@ -152,5 +152,61 @@
         "category": "misc",
         "price": 50,
         "messageWhenBought": "Just an empty flask... that's it"
+    },
+    {
+        "id": 30,
+        "itemSold": "farm-plotTitle",
+        "category": "farm",
+        "price": 1000000,
+        "messageWhenBought": "Do `stp use 71`"
+    },
+    {
+        "id": 23,
+        "itemSold": "seed-carrot",
+        "category": "farm",
+        "price": 200,
+        "messageWhenBought": "Do `stp plant 57`"
+    },
+    {
+        "id": 24,
+        "itemSold": "seed-potato",
+        "category": "farm",
+        "price": 250,
+        "messageWhenBought": "Do `stp plant 58`"
+    },
+    {
+        "id": 25,
+        "itemSold": "seed-onion",
+        "category": "farm",
+        "price": 300,
+        "messageWhenBought": "Do `stp plant 59`"
+    },
+    {
+        "id": 26,
+        "itemSold": "seed-corn",
+        "category": "farm",
+        "price": 300,
+        "messageWhenBought": "Do `stp plant 60`"
+    },
+    {
+        "id": 27,
+        "itemSold": "seed-eggplant",
+        "category": "farm",
+        "price": 350,
+        "messageWhenBought": "Do `stp plant 61`"
+    },
+    {
+        "id": 28,
+        "itemSold": "seed-garlic",
+        "category": "farm",
+        "price": 400,
+        "messageWhenBought": "Do `stp plant 62`"
+    },
+    {
+        "id": 29,
+        "itemSold": "seed-banana",
+        "category": "farm",
+        "price": 450,
+        "messageWhenBought": "Do `stp plant 63`"
     }
 ]

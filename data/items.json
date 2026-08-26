@@ -382,5 +382,237 @@
         "name": "Shieldskin Armor",
         "icon": ":shield:",
         "source": "Crafted"
+    },
+    {
+        "id": "animalMeat",
+        "usableID": 49,
+        "description": "Don't let it out too long...",
+        "name": "Raw Meat",
+        "icon": ":cut_of_meat:",
+        "source": "Dropped by animals"
+    },
+    {
+        "id": "pixieDust",
+        "usableID": 50,
+        "description": "Not used for flying",
+        "name": "Pixie Dust",
+        "icon": ":sparkles:",
+        "source": "Dropped by Pixies"
+    },
+    {
+        "id": "bubblesOfFantasy",
+        "usableID": 51,
+        "description": "Magical beings bleed these... things that seem to be pocket dimensions of fantasy",
+        "name": "Bubbles of Fantasy",
+        "icon": ":bubbles:",
+        "source": "Dropped by Magical Beings"
+    },
+    {
+        "id": "passion_drop2",
+        "usableID": 52,
+        "description": "Can be used to craft potions",
+        "name": "Rekindled Passion",
+        "icon": ":fire:",
+        "source": "Dropped by Magical Beings of Pure Flame"
+    },
+    {
+        "id": "sword3",
+        "usableID": 53,
+        "description": "Sword made out of the gift of creation (hits critical strikes better)",
+        "name": "Carrot Sword",
+        "icon": ":dagger:",
+        "source": "Crafted"
+    },
+    {
+        "id": "wand3",
+        "usableID": 54,
+        "description": "Crafted from bones of those who refuse to die (provides some melee damage per attack)",
+        "name": "Wand of the Undead",
+        "icon": ":magic_wand:",
+        "source": "Crafted"
+    },
+    {
+        "id": "bow3",
+        "usableID": 55,
+        "description": "Bow that uses imagination for its arrows (provides some magic damage per shot)",
+        "name": "Fantastic Bow",
+        "icon": ":bow_and_arrow:",
+        "source": "Crafted"
+    },
+    {
+        "id": "animalBone",
+        "usableID": 56,
+        "description": "A sturdy organic material",
+        "name": "Bone",
+        "icon": ":bone:",
+        "source": "Dropped by Monsters"
+    },
+    {
+        "id": "seed-carrot",
+        "usableID": 57,
+        "description": "Used to grow carrots",
+        "name": "Carrot Seeds",
+        "icon": "<:seed:1542102846588194846>",
+        "source": "Bought from shop"
+    },
+    {
+        "id": "seed-potato",
+        "usableID": 58,
+        "description": "Used to grow potatoes",
+        "name": "Potato Seeds",
+        "icon": "<:seed:1542102846588194846>",
+        "source": "Bought from shop"
+    },
+    {
+        "id": "seed-onion",
+        "usableID": 59,
+        "description": "Used to grow onions",
+        "name": "Onion Seeds",
+        "icon": "<:seed:1542102846588194846>",
+        "source": "Bought from shop"
+    },
+    {
+        "id": "seed-corn",
+        "usableID": 60,
+        "description": "Used to grow corns",
+        "name": "Corn Seeds",
+        "icon": "<:seed:1542102846588194846>",
+        "source": "Bought from shop"
+    },
+    {
+        "id": "seed-eggplant",
+        "usableID": 61,
+        "description": "Used to grow eggplants",
+        "name": "Eggplant Seeds",
+        "icon": "<:seed:1542102846588194846>",
+        "source": "Bought from shop"
+    },
+    {
+        "id": "seed-garlic",
+        "usableID": 62,
+        "description": "Used to grow garlic",
+        "name": "Garlic Seeds",
+        "icon": "<:seed:1542102846588194846>",
+        "source": "Bought from shop"
+    },
+    {
+        "id": "seed-banana",
+        "usableID": 63,
+        "description": "Used to grow bananas",
+        "name": "Banana Seeds",
+        "icon": "<:seed:1542102846588194846>",
+        "source": "Bought from shop"
+    },
+    {
+        "id": "crop-carrot",
+        "usableID": 64,
+        "description": "A crunchy, orange vegetable",
+        "name": "Carrot",
+        "icon": ":carrot:",
+        "source": "Grown from seeds"
+    },
+    {
+        "id": "crop-potato",
+        "usableID": 65,
+        "description": "An earthy and hard vegetable",
+        "name": "Potato",
+        "icon": ":potato:",
+        "source": "Grown from seeds"
+    },
+    {
+        "id": "crop-onion",
+        "usableID": 66,
+        "description": "A layered eye-tearing vegetable",
+        "name": "Onion",
+        "icon": ":onion:",
+        "source": "Grown from seeds"
+    },
+    {
+        "id": "crop-corn",
+        "usableID": 67,
+        "description": "A yellow puffy vegetable",
+        "name": "Corn",
+        "icon": ":corn:",
+        "source": "Grown from seeds"
+    },
+    {
+        "id": "crop-eggplant",
+        "usableID": 68,
+        "description": "A purple elongated vegetable",
+        "name": "Eggplant",
+        "icon": ":eggplant:",
+        "source": "Bought from shop"
+    },
+    {
+        "id": "crop-garlic",
+        "usableID": 69,
+        "description": "A smelly yet aromatic vegetable",
+        "name": "Garlic",
+        "icon": ":garlic:",
+        "source": "Grown from seeds"
+    },
+    {
+        "id": "crop-banana",
+        "usableID": 70,
+        "description": "An elongated sweet yellow fruit",
+        "name": "Banana",
+        "icon": ":banana:",
+        "source": "Grown from seeds"
+    },
+    {
+        "id": "farm-plotTitle",
+        "usableID": 71,
+        "description": "Adds an additional plot to your farm",
+        "name": "Farm Title (+1 Plot)",
+        "icon": ":page_facing_up:",
+        "source": "Bought from shop"
+    },
+    {
+        "id": "sword4",
+        "usableID": 72,
+        "description": "A kinder, less-hostile enchanted sword (provides some magic damage per strike)",
+        "name": "Blessed Enchanted Sword",
+        "icon": ":dagger:",
+        "source": "Crafted"
+    },
+    {
+        "id": "wand4",
+        "usableID": 73,
+        "description": "A magical gem got stuck to a banana somehow... (critical attacks hit harder)",
+        "name": "Banana Wand",
+        "icon": ":magic_wand:",
+        "source": "Crafted"
+    },
+    {
+        "id": "bow4",
+        "usableID": 74,
+        "description": "Once held by an infamous figure (more accurate critical strikes)",
+        "name": "Robinhood's Bow",
+        "icon": ":bow_and_arrow:",
+        "source": "Crafted"
+    },
+    {
+        "id": "armor4",
+        "usableID": 75,
+        "description": "Robe of mages blessed with the gift of creation",
+        "name": "Cloak of Creation",
+        "icon": ":shield:",
+        "source": "Crafted"
+    },
+    {
+        "id": "armor5",
+        "usableID": 76,
+        "description": "Made from potato skin that is surprisingly sturdy...",
+        "name": "Potatoskin Armor",
+        "icon": ":shield:",
+        "source": "Crafted"
+    },
+    {
+        "id": "transcendenceArmor",
+        "usableID": 77,
+        "description": "Armor made to withstand the will of the world pounding on one person",
+        "name": "Armor of Transcendence",
+        "icon": ":shield:",
+        "source": "Crafted using Ever-Mourning Wood and the Gems of Destiny, Abundance, Devotion, Liberty, and Creation"
     }
 ]

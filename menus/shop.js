@@ -21,6 +21,10 @@ module.exports = {
             content += `\n> Tools and Equipment\n`;
         } else if (chosen == "perks") {
             content += `\n> Access and Perks\n`;
+        } else if (chosen == "farm") {
+            content += `\n> Seeds for Farming\n`;
+        } else if (chosen == "misc") {
+            content += `\n> Items and Miscellaneous\n`;
         }
 
         const shopItems = shop.filter(itm => itm.category == chosen);

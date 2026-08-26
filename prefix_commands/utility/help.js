@@ -25,6 +25,7 @@ module.exports = {
             let economyCommands = [];
             let rpgCommands = [];
             let actionCommands = [];
+            let farmCommands = [];
 
             for (command of client.prefix_commands) {
                 if (!command[1].testing && command[1].category != 'admin') {
@@ -34,6 +35,7 @@ module.exports = {
                     if (command[1].category == 'rpg') rpgCommands.push(commandWrapped);
                     if (command[1].category == 'action') actionCommands.push(commandWrapped);
                     if (command[1].category == 'utility') utilityCommands.push(commandWrapped);
+                    if (command[1].category == 'farm') farmCommands.push(commandWrapped);
                 }
             }
 
@@ -43,6 +45,7 @@ module.exports = {
             content += `\n### 🗡️ RPG Commands\n${rpgCommands.join(', ')}`;
             content += `\n### 👋🏻 Action Commands\n${actionCommands.join(', ')}`;
             content += `\n### ⚙️ Utility Commands\n${utilityCommands.join(', ')}`;
+            content += `\n### 🌱 Farm Commands\n${farmCommands.join(', ')}`;
         } else {
             content += `-# Command Information\n`
             const commandName = args[0];

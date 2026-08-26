@@ -7,6 +7,8 @@ const items = require(`./data/items.json`);
 const equipments = require(`./data/equipment.json`);
 const recipes = require(`./data/recipes.json`);
 const Pouch = require('./models/Pouch');
+const Farm = require('./models/Farm');
+const ms = require('ms');
 
 module.exports = {
     getIdFromMention(input) {
@@ -576,14 +578,14 @@ module.exports = {
         return toolID;
     },
     getChopPool(channelID) {
-        return ['wood1','wood1','wood1','wood1','wood1','wood2','wood1','wood1'];
+        return ['wood1', 'wood1', 'wood1', 'wood1', 'wood1', 'wood2', 'wood1', 'wood1'];
     },
     getMinePool(channelID) {
-        return ['stone1','stone1','stone1'];
+        return ['stone1', 'stone1', 'stone1'];
     },
     createLoadingScreen() {
         const embed = module.exports.createEmbedStandard()
-        
+
         const tooltips = [
             "**Day of Creation** - The Stopover was created on May 14th, 2026",
             "**Ring of Ever-Reigning** - The Ring used by The Chief Passerby",
@@ -619,5 +621,41 @@ module.exports = {
         embed.setDescription(content);
 
         return embed;
+    },
+    async getFarm(uid) {
+        return await Farm.findOneAndUpdate(
+            { uid },
+            {
+                $setOnInsert: {
+                    uid,
+                    plotSlots: 2,
+                    barnSlots: 2,
+                    plots: [],
+                    barn: [],
+                    fertilizer: {
+                        speedRate: 2,
+                        untilWhen: 0
+                    },
+                    doubleDrop: {
+                        speedRate: 2,
+                        untilWhen: 0
+                    }
+                }
+            },
+            {
+                upsert: true,
+                returnDocument: "after"
+            }
+        );
+    },
+    showPlots(plot) {
+        let content = '';
+        for (x of plot) {
+            let harvestTime = parseInt(x.harvestTime) - Date.now();
+            let harvestTimeText = '';
+            harvestTime > 0 ? harvestTimeText = `${ms(harvestTime, { long: true })} left` : harvestTimeText = `Ready to Harvest!`
+            content += `\n${module.exports.iconizeItemWithName(`crop-${x.id}`)} | ${harvestTimeText}`;
+        }
+        return content;
     }
 }

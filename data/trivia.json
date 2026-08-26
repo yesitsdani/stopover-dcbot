@@ -817,5 +817,25 @@
             { "label": "C", "answer": "6MAL", "correct": false },
             { "label": "D", "answer": "6LORY", "correct": false }
         ]
+    },
+    {
+        "question": "Science tells us that our genetic imprints predetermines your fate, your character, your [BLANK]",
+        "reward": 150,
+        "options": [
+            { "label": "A", "answer": "Will", "correct": false },
+            { "label": "B", "answer": "Intentions", "correct": false },
+            { "label": "C", "answer": "Choices", "correct": true },
+            { "label": "D", "answer": "Ambitions", "correct": false }
+        ]
+    },
+    {
+        "question": "Why am I so beautiful in this kameruh, I can't even imagine...",
+        "reward": 150,
+        "options": [
+            { "label": "A", "answer": "Erk erk", "correct": false },
+            { "label": "B", "answer": "Whot is the meaning of dzat?", "correct": false },
+            { "label": "C", "answer": "oHH SHAKS", "correct": true },
+            { "label": "D", "answer": "You didn't know!?", "correct": false }
+        ]
     }
 ]

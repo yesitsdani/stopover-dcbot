@@ -23,6 +23,7 @@ module.exports = {
         if (!item) return message.reply(`Item not found`);
         let usable = client.uses.get(item.id);
         if (!usable && item.id.startsWith('potion')) usable = require('../../uses/potion.js');
+        if (!usable && item.id.startsWith('farm')) usable = require('../../uses/farm.js');
         if (!usable) return message.reply(`This item is not usable`)
 
         const invData = await getInv(uid);

@@ -44,7 +44,7 @@ module.exports = {
             return;
         } else {
             await setUserInBattle(uid, false);
-            return await interaction.update({ components: [], content: "Fleed" });
+            return await interaction.update({ components: [], content: "Fled" });
         }
     }
 }

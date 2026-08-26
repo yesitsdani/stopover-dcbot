@@ -45,9 +45,25 @@ module.exports = {
             await Perks.findOneAndUpdate({ uid }, { devotionPoints });
         }
     },
+    async creationPoint(uid, message, amount) {
+        const userPerks = await getUserPerks(uid);
+        let creationPoints = parseInt(userPerks.creationPoints) + parseInt(amount);
+
+        if (creationPoints >= 111) {
+            creationPoints = 0;
+            await addItemToInv(uid, "creationGem", 1);
+            const embed = createEmbedStandard()
+                .setDescription(`# \`BEHOLD, THE GEM OF CREATION\`\nThe universe acknowledges the life you have created and sustained. You received a ${iconizeItemWithName('creationGem')}`)
+                .setThumbnail(message.author.avatarURL());
+            await message.channel.send({ content: `<@${uid}>`, embeds: [embed] });
+        }
+
+        await Perks.findOneAndUpdate({ uid }, { creationPoints });
+    },
     async createEmbedFight(message, summonedEnemy, currentHp, deductToHP, uid, rpgData, deductToPlayer, turnCount) {
         let currentHP = parseInt(currentHp) - parseInt(deductToHP);
-        let playerHP = await rpgDeductHP(uid, deductToPlayer);
+        let playerHP = rpgData.health;
+        if (currentHP > 0) playerHP = await rpgDeductHP(uid, deductToPlayer);
 
         let content = ``;
         let actions = [];
@@ -58,8 +74,13 @@ module.exports = {
             content += await module.exports.battleLost(message, uid);
             isDead = true;
             await setUserInBattle(uid, false);
+
         } else if (currentHP > 0) {
-            content += `# ${summonedEnemy.icon} \`${summonedEnemy.name.toUpperCase()}\`\n> **ATK**: ${summonedEnemy.stat.atk} | **DEF**: ${summonedEnemy.stat.def}\n> \`${summonedEnemy.rarity.toUpperCase()}\`\n`;
+            content += `# ${summonedEnemy.icon} \`${summonedEnemy.name.toUpperCase()}\`\n> **ATK**: ${summonedEnemy.stat.atk} | **DEF**: ${summonedEnemy.stat.def}\n>`;
+            if (summonedEnemy.type == "melee") content += ` :dagger:`;
+            if (summonedEnemy.type == "magic") content += ` :magic_wand:`;
+            if (summonedEnemy.type == "range") content += ` :bow_and_arrow:`;
+            content += ` \`${summonedEnemy.rarity.toUpperCase()}\`\n`
             content += `\n🖤 \`Monster HP\`: ${currentHP} / ${summonedEnemy.hp}`;
             content += `\n❤️ \`Your HP\`: ${playerHP.health} / ${rpgData.maxHealth}`;
             if (turnCount > 0) content += `\n\n-# \`Turn: ${turnCount}\` You dealt **\`${deductToHP} DMG\`** to the ${summonedEnemy.name} but it also dealt **\`${deductToPlayer} DMG\`** to you...`
@@ -79,8 +100,9 @@ module.exports = {
                         .setLabel(`Flee`)
                         .setStyle(ButtonStyle.Danger)
                 ))
+
         } else {
-            content += `# ${summonedEnemy.icon} \`${summonedEnemy.name.toUpperCase()} DEFEATED\`\n`;
+            content += `# ${summonedEnemy.icon} \`${summonedEnemy.name.toUpperCase()} DEFEATED\`\n> You dealt **\`${deductToHP} DMG\`** for your final blow\n\n`;
             content += await module.exports.battleWin(message, uid, summonedEnemy.id);
             await setUserInBattle(uid, false);
         }
@@ -92,7 +114,9 @@ module.exports = {
         return { gui: { embeds: [embed], components: actions }, isDead };
     },
     summonMonster(channelID) {
-        let areaObject = enemies.find(itm => itm.areaName == "zero");
+        let areaName = "zero";
+        if (channelID == "1541814968200990731") areaName = "one";
+        let areaObject = enemies.find(itm => itm.areaName == areaName);
 
         const roll = areaObject.rarities[Math.floor(Math.random() * areaObject.rarities.length)];
         const enemyPool = areaObject.monsters.filter(mons => mons.rarity == roll);
@@ -152,7 +176,7 @@ module.exports = {
             critDmg += weapon.crit.dmg;
         }
 
-        const stat = {
+        let stat = {
 
             atk,
             meleeDmg,
@@ -165,6 +189,14 @@ module.exports = {
             magicRes,
             rangeRes
         }
+
+        const classBonus = module.exports.giveClassBonus(rpgData.class, rpgData.level);
+
+        stat[`${classBonus.type}Dmg`] += classBonus.bonus;
+        stat.critRate += classBonus.critRate;
+        stat.critDmg += classBonus.critDmg;
+        stat.atk += classBonus.atk;
+        stat.def += classBonus.def;
 
         return stat;
     },
@@ -183,7 +215,7 @@ module.exports = {
 
         //Give gem rewards
         let amount = parseInt(rewards.money);
-        let content = `> You won ${iconizeMoney(amount)}!`
+        let content = `You won ${iconizeMoney(amount)}!`
         if (gemBoostActive) {
             let bonus = parseInt(amount * getGemBoostBonus(userData.marriage));
             amount += bonus;
@@ -198,6 +230,10 @@ module.exports = {
 
         if (addXp.levelUp) {
             content += ` **LEVEL UP!** You are now level ${addXp.newRpgData.level}`;
+        }
+
+        if (addXp.levelLock) {
+            content += ` You have reached the maximum level for this class`;
         }
 
         //Get item rewards
@@ -220,13 +256,17 @@ module.exports = {
         let xp = rpgData.xp;
         let level = rpgData.level;
         let levelUp = false;
-        xp += parseInt(amount);
+        if (level < 10) xp += parseInt(amount);
+
+        let levelLock = false;
         const nextLevel = module.exports.nextLevel(rpgData.level);
 
-        if (xp > nextLevel) {
+        if (xp > nextLevel && level < 10) {
             xp = 0;
             level++;
             levelUp = true;
+        } else if (level >= 10) {
+            levelLock = true;
         }
 
         const newRpgData = await Rpg.findOneAndUpdate(
@@ -235,7 +275,7 @@ module.exports = {
             { returnDocument: "after" }
         );
 
-        return { newRpgData, levelUp };
+        return { newRpgData, levelUp, levelLock };
     },
     async battleLost(message, uid) {
         const rpgData = await getRpgUser(uid);
@@ -294,5 +334,55 @@ module.exports = {
         }
 
         return content;
+    },
+    giveClassBonus(className, level) {
+        let type = ``;
+        let bonus = (0.05) * level;
+        let critDmg = 0;
+        let critRate = 0;
+        let atk = (4) * level;
+        let def = (4) * level;
+
+        const swordClasses = ['swordsman', 'warrior', 'paladin', 'knight'];
+        if (swordClasses.includes(className.toLowerCase())) {
+            type = "melee";
+            critDmg = 0.1 * level;
+        }
+        const archerClasses = ['archer', 'hunter', 'sniper', 'ranger'];
+        if (archerClasses.includes(className.toLowerCase())) {
+            type = "range";
+            critRate = 0.045 * level;
+            def = 2 * level;
+        }
+        const mageClasses = ['mage', 'high mage', 'sage', 'sorcerer'];
+        if (mageClasses.includes(className.toLowerCase())) {
+            type = "magic";
+            bonus = (0.07) * level;
+            atk = (7) * level;
+        }
+        const clericClasses = ['healer', 'cleric', 'white mage'];
+        if (clericClasses.includes(className.toLowerCase())) {
+            type = "magic";
+            bonus = (0.03) * level;
+            atk = (2) * level;
+        }
+
+        return {
+            type, bonus, critRate, critDmg, atk, def
+        }
+    },
+    getMonster(id) {
+        return enemies.flatMap(area => area.monsters).find(monster => monster.id == parseInt(id));
+    },
+    levelHealth(level) {
+        return 95 + (5 * level);
+    },
+    async setHealth (uid, newMaxHealth) {
+        const maxHealth = parseInt(newMaxHealth);
+        return await Rpg.findOneAndUpdate(
+            { uid },
+            { maxHealth },
+            { returnDocument: `after` }
+        )
     }
 }
