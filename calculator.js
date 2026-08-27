@@ -265,6 +265,9 @@ module.exports = {
             xp = 0;
             level++;
             levelUp = true;
+
+            const newHealth = module.exports.levelHealth(level);
+            await module.exports.setHealth(uid, newHealth);
         } else if (level >= 10) {
             levelLock = true;
         }

@@ -13,7 +13,7 @@ module.exports = {
     permissions: [],
     async execute(client, message, args) {
         const uid = message.author.id;
-        if (!args[0]) return await message.reply(`Why are you punching air, bes? Please use \`stp hug <passerby>\``);
+        if (!args[0]) return await message.reply(`Why are you punching air, bes? Please use \`stp wagwagan <passerby>\``);
 
         if (!args[0].startsWith(`<@`)) return await message.reply(`You have to tag the Passerby`);
 
