@@ -385,10 +385,52 @@
                     "rangeDmg": 0,
                     "critRate": 0,
                     "critDmg": 0,
-                    "def": 28,
+                    "def": 35,
                     "meleeRes": 0.90,
                     "magicRes": 0.5,
                     "rangeRes": 0.5
+                }
+            },
+            {
+                "id": 11,
+                "name": "Disenchanted Wand",
+                "icon": ":magic_wand:",
+                "type": "magic",
+                "rarity": "uncommon",
+                "properClass": [
+                    "all"
+                ],
+                "hp": 75,
+                "rewards": {
+                    "money": 250,
+                    "xp": {
+                        "min": 10,
+                        "max": 15
+                    },
+                    "items": [
+                        {
+                            "id": "passion_drop1",
+                            "min": 5,
+                            "max": 7
+                        },
+                        {
+                            "id": "bubblesOfFantasy",
+                            "min": 4,
+                            "max": 7
+                        }
+                    ]
+                },
+                "stat": {
+                    "atk": 22,
+                    "meleeDmg": 0,
+                    "magicDmg": 0.5,
+                    "rangeDmg": 0,
+                    "critRate": 0,
+                    "critDmg": 0,
+                    "def": 26,
+                    "meleeRes": 0.5,
+                    "magicRes": 0.90,
+                    "rangeRes": 0.05
                 }
             }
         ]

@@ -115,7 +115,7 @@ module.exports = {
     },
     summonMonster(channelID) {
         let areaName = "zero";
-        if (channelID == "1541814968200990731") areaName = "one";
+        if (channelID == "1541814968200990731" || channelID == "1542373388914393128") areaName = "one";
         let areaObject = enemies.find(itm => itm.areaName == areaName);
 
         const roll = areaObject.rarities[Math.floor(Math.random() * areaObject.rarities.length)];
