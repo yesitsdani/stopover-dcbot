@@ -1,80 +1,20 @@
-const User = require('../../models/User');
-const { getIdFromMention, getUser } = require(`../../modules`);
-const ms = require('ms');
+const { PermissionFlagsBits, ContainerBuilder, SectionBuilder, ButtonBuilder, ButtonStyle, MediaGalleryBuilder, MediaGalleryItemBuilder, MessageFlags, TextDisplayBuilder, ThumbnailBuilder, ActionRowBuilder } = require('discord.js');
+const { resetCommandCD } = require('../../modules');
+const Rpg = require('../../models/Rpg');
 
 module.exports = {
     name: 'test',
     description: 'Test command',
     category: 'utility',
-    usage: '`stp help [command]`',
+    usage: '`stp test [command]`',
     testing: true,
     alias: [],
     permissions: ['1531987396986409011', '1506448680000159784'],
     async execute(client, message, args) {
-        const setTime = new Date(2026, 5, 14).getTime();
-        if (!args[0]) return message.reply(`Please set argument`)
-
-        let uid = message.author.id;
-        let marriage;
-
-        if (args[0] == 'marryzion') {
-            marriage = {
-                uid: "764037666538651658",
-                date: setTime,
-                ring: "ringF",
-                status: "Married"
-            }
-        } else if (args[0] == 'marrytimmy') {
-            marriage = {
-                uid: "762483844267769897",
-                date: 1787654979321,
-                ring: "ringF",
-                status: "Married"
-            }
-        } else if (args[0] == 'zion') {
-            uid = "764037666538651658";
-            marriage = {
-                uid: message.author.id,
-                date: setTime,
-                ring: "ringF",
-                status: "Married"
-            }
-        } else if (args[0] == 'zionclear') {
-            uid = "764037666538651658";
-            marriage = {
-                uid: "",
-                date: 0,
-                ring: '',
-                status: ''
-            }
-        } else if (args[0] == 'daniclear') {
-            uid = "811596799663800341";
-            marriage = {
-                uid: "",
-                date: 0,
-                ring: '',
-                status: ''
-            }
-        } else if (args[0] == 'clear') {
-            marriage = {
-                uid: "",
-                date: 0,
-                ring: "",
-                status: ""
-            }
-        } else if (args[0] == 'seemarriage') {
-            const userData = await getUser(uid);
-            return console.log(userData.marriage);
-        } else {
-            return message.reply(`Invalid arguments`)
-        }
-
-        await User.findOneAndUpdate(
-            { uid },
-            { marriage },
-            { returnDocument: "after" }
-        );
-
-        await message.reply(`Done`)
+        await Rpg.findOneAndUpdate(
+            { uid: message.author.id },
+            { deadUntil: 0 }
+        )
+        
     }
 }

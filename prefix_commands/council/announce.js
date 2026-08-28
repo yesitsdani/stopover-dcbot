@@ -5,9 +5,9 @@ const { createEmbedStandard } = require("../../modules")
 module.exports = {
     name: 'announce',
     description: 'Announces in the announcement chat [Authorized Only]',
-    category: 'utility',
+    category: 'council',
     usage: '`stp announce`',
-    cooldown: 1000 * 60 * 1,
+    cooldown: 1000 * 5,
     testing: false,
     bypassDeath: true,
     alias: ['anunsyo'],

@@ -3,7 +3,7 @@ const { PermissionFlagsBits, ContainerBuilder, SectionBuilder, ButtonBuilder, Bu
 module.exports = {
     name: 'sample',
     description: 'Test command',
-    category: 'utility',
+    category: 'admin',
     usage: '`stp sample`',
     testing: true,
     alias: [],

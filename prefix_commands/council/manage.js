@@ -5,9 +5,9 @@ const { createEmbedStandard } = require("../../modules")
 module.exports = {
     name: 'manage',
     description: 'Manages a Passerby [Authorized Only]',
-    category: 'utility',
+    category: 'council',
     usage: '`stp manage`',
-    cooldown: 1000 * 60 * 1,
+    cooldown: 1000 * 5,
     testing: false,
     bypassDeath: true,
     alias: [],

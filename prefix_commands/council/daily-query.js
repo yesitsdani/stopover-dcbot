@@ -3,7 +3,7 @@ const { ContainerBuilder, SectionBuilder, ButtonBuilder, ButtonStyle, MessageFla
 module.exports = {
     name: 'daily-query',
     description: 'Posts the Daily Query [Authorized Only]',
-    category: 'utility',
+    category: 'council',
     usage: '`stp daily-query <number> <question>`',
     testing: false,
     alias: ['dq'],

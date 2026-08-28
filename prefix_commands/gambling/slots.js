@@ -39,7 +39,7 @@ module.exports = {
         }
 
 
-        const icons = ["🍒", "🍌", "⚖️", "🍆", "<a:heartgem:1534217106252628038>", "<a:stp_hw:1535966807188316240>", "<:stp_default:1535967935275864156>", "<:stp_wndrlnd:1535967982067650590>"];
+        const icons = ["🍒", "🍌", "⚖️", "🍆", "🥕", "<a:heartgem:1534217106252628038>", "<a:stp_hw:1535966807188316240>", "<:stp_default:1535967935275864156>", "<:stp_wndrlnd:1535967982067650590>"];
 
         const item1 = icons[Math.floor(Math.random() * icons.length)];
         const item2 = icons[Math.floor(Math.random() * icons.length)];
@@ -49,9 +49,9 @@ module.exports = {
         let win = false;
         let jackpot = false;
 
-        if ((item1 == item2 && item2 == item3) && item1 == "<a:heartgem:1534217106252628038>") { winMultiplier = 6; jackpot = true; }
-        else if (item1 == item2 && item2 == item3) { winMultiplier = 4; }
-        else if (item1 == item2 || item2 == item3 || item1 == item3) { winMultiplier = 3; }
+        if ((item1 == item2 && item2 == item3) && item1 == "<a:heartgem:1534217106252628038>") { winMultiplier = 7; jackpot = true; }
+        else if (item1 == item2 && item2 == item3) { winMultiplier = 3; }
+        else if (item1 == item2 || item2 == item3 || item1 == item3) { winMultiplier = 2; }
         else if (item1 == "<a:heartgem:1534217106252628038>" || item3 == "<a:heartgem:1534217106252628038>" || item2 == "<a:heartgem:1534217106252628038>") { winMultiplier = 1; }
 
         if (winMultiplier > 0) win = true;

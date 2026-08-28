@@ -9,6 +9,7 @@ const recipes = require(`./data/recipes.json`);
 const Pouch = require('./models/Pouch');
 const Farm = require('./models/Farm');
 const ms = require('ms');
+const GuildSettings = require('./models/GuildSettings');
 
 module.exports = {
     getIdFromMention(input) {
@@ -657,5 +658,33 @@ module.exports = {
             content += `\n${module.exports.iconizeItemWithName(`crop-${x.id}`)} | ${harvestTimeText}`;
         }
         return content;
+    },
+    async getGuildSettings(gid) {
+        return await GuildSettings.findOneAndUpdate(
+            { gid },
+            {
+                $setOnInsert: {
+                    gid,
+                    events: [String],
+                    channels: {
+                        announcement: "",
+                        news: "",
+                        events: "",
+                        dq: "",
+                    },
+                    dqCount: 0,
+                    newsBuilder: {
+                        newsType: "",
+                        articles: [],
+                        imgURL: "",
+                        authors: []
+                    }
+                }
+            },
+            {
+                upsert: true,
+                returnDocument: "after"
+            }
+        );
     }
 }

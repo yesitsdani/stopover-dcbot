@@ -3,11 +3,11 @@ const { ActivityType } = require('discord.js');
 module.exports = {
     name: 'status',
     description: 'Sets the Stopover bot\'s status.',
-    category: 'utility',
+    category: 'council',
     usage: '`stp status <status> [activity] [type]`',
     testing: false,
     alias: [],
-    permissions: ['1532058049148354621', '1506448680000159784', '1531987396986409011', '1511897066262237285'],
+    permissions: ['1506448680000159784', '1511897066262237285'],
     async execute(client, message, args) {
         if (!args[0]) return await message.reply(`Incorrect command: please use \`stp status <status> [activity] [type]\`\n> - Valid Status: online, idle, dnd\n> - Valid activity: playing, listening, watching`)
         const statuschosen = args.shift().toLowerCase();

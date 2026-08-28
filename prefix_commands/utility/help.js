@@ -13,6 +13,10 @@ module.exports = {
     alias: ['command', 'commands'],
     permissions: [],
     async execute(client, message, args) {
+        const uid = message.author.id;
+        const member = await message.member;
+        const isCouncil = member.roles.cache.has("1506448680000159784") || member.roles.cache.has("1511897066262237285")
+
         const embed = new EmbedBuilder()
             .setColor(0xffa0fb)
             .setFooter({ text: "the stopover bot by ashiii ♡" })
@@ -26,6 +30,7 @@ module.exports = {
             let rpgCommands = [];
             let actionCommands = [];
             let farmCommands = [];
+            let councilCommands = [];
 
             for (command of client.prefix_commands) {
                 if (!command[1].testing && command[1].category != 'admin') {
@@ -36,10 +41,14 @@ module.exports = {
                     if (command[1].category == 'action') actionCommands.push(commandWrapped);
                     if (command[1].category == 'utility') utilityCommands.push(commandWrapped);
                     if (command[1].category == 'farm') farmCommands.push(commandWrapped);
+                    if (command[1].category == 'council') councilCommands.push(commandWrapped);
                 }
             }
 
+            
             content += `# \`STOPOVER BOT COMMANDS\`\n> Use \`stp help <command>\` for more information`;
+
+            if (isCouncil) content += `\n### 👑 Council Commands\n${councilCommands.join(', ')}`;
             content += `\n### 👤 Profile Commands\n${profileCommands.join(', ')}`;
             content += `\n### <a:heartgem:1534217106252628038> Economy Commands\n${economyCommands.join(', ')}`;
             content += `\n### 🗡️ RPG Commands\n${rpgCommands.join(', ')}`;
