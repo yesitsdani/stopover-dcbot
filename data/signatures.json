@@ -1,0 +1,57 @@
+[
+    {
+        "uid": "877167420572319804",
+        "name": "Ashi",
+        "signature": "<:sig_ashi1:1543142925196595220><:sig_ashi2:1543142926798950440>",
+        "signType": "chief"
+    },
+    {
+        "uid": "561587120523837444",
+        "name": "Nyxell",
+        "signature": "<:sig_nyx1:1543142936835784714><:sig_nyx2:1543142938677088287>",
+        "signType": "council"
+    },
+    {
+        "uid": "309681837238648832",
+        "name": "Aki",
+        "signature": "<:sig_aki1:1543142921996603473><:sig_aki2:1543142923510743141>",
+        "signType": "council"
+    },
+    {
+        "uid": "881116317212631061",
+        "name": "Roi",
+        "signature": "<:sig_roi1:1543142940363333652><:sig_roi2:1543142941953101884>",
+        "signType": "council"
+    },
+    {
+        "uid": "748539888701407332",
+        "name": "Zeph",
+        "signature": "<:sig_zeph1:1543142947036602419><:sig_zeph2:1543142948760453130>",
+        "signType": "council"
+    },
+    {
+        "uid": "325263095595401216",
+        "name": "Jeremy",
+        "signature": "<:sig_jeremy1:1543142927990001776><:sig_jeremy2:1543142929965514813>",
+        "signType": "council"
+    },
+    {
+        "uid": "607924215575740417",
+        "name": "Maiku",
+        "signature": "<:sig_maiku1:1543142932302008371><:sig_maiku2:1543142934852014080>",
+        "signType": "council"
+    },
+    {
+        "uid": "588638498823864330",
+        "name": "Vance",
+        "signature": "<:sig_vance1:1543142943538290768><:sig_vance2:1543142945291767928>",
+        "signType": "council"
+    },
+    {
+        "uid": "the-council",
+        "name": "The Stopover Council",
+        "signature": "<:sig_council1:1543144638137770107><:sig_council2:1543144640058888252>",
+        "signType": "council"
+    }
+
+]

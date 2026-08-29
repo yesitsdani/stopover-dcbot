@@ -18,6 +18,13 @@ const guildSettingSchema = new mongoose.Schema({
         }],
         imgURL: String,
         authors: [String]
+    },
+    announcementBuilder: {
+        title: String,
+        content: String,
+        ping: String,
+        imgURL: String,
+        signatories: [String]
     }
 });
 

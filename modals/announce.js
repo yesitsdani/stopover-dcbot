@@ -1,33 +1,29 @@
-const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
-const { createEmbedStandard } = require("../modules");
+const { ActionRowBuilder, ButtonBuilder, ButtonStyle, MessageFlags } = require("discord.js");
+const { createEmbedStandard, getGuildSettings } = require("../modules");
+const { createAnnouncementEmbed, updateAnnouncementBuilder, createAnnouncementButtons } = require("../prefix_commands/council/announce");
 
 module.exports = {
     name: "announce",
     async execute(client, interaction, args) {
-        const uid = args.shift();
+        await interaction.deferReply({ flags: MessageFlags.Ephemeral });
         const title = interaction.fields.getTextInputValue('title');
         const announcement = interaction.fields.getTextInputValue('announcement');
 
-        const content = `# \`${title.toUpperCase()}\`\n\n${announcement}`;
-        const embed = createEmbedStandard()
-            .setDescription(content);
+        const gid = interaction.guild.id;
+        const guildData = await getGuildSettings(gid);
+        let announcementBuilder = guildData.announcementBuilder;
 
-        const actions = new ActionRowBuilder()
-            .addComponents(
-                new ButtonBuilder()
-                    .setCustomId(`announce.${uid}.write`)
-                    .setLabel(`Edit`)
-                    .setStyle(ButtonStyle.Primary),
-                new ButtonBuilder()
-                    .setCustomId(`announce.${uid}.send.ann`)
-                    .setLabel(`Send @Announcement`)
-                    .setStyle(ButtonStyle.Success),
-                new ButtonBuilder()
-                    .setCustomId(`announce.${uid}.send.all`)
-                    .setLabel(`Send @everyone`)
-                    .setStyle(ButtonStyle.Danger)
-            )
+        announcementBuilder[`title`] = title;
+        announcementBuilder[`content`] = announcement;
 
-        await interaction.update({ embeds: [embed], components: [actions] });
+        const newGuildData = await updateAnnouncementBuilder(gid, announcementBuilder);
+        announcementBuilder = newGuildData.announcementBuilder;
+
+        await interaction.message.edit({ 
+            embeds: [createAnnouncementEmbed(announcementBuilder)], 
+            components: [createAnnouncementButtons(announcementBuilder)] 
+        });
+
+        return await interaction.editReply(`Announcement updated!`);
     }
 }
