@@ -1,3 +1,4 @@
+const { MessageFlags } = require('discord.js');
 const { createPlayerStat, createEnemyStat, createEmbedFight, calculateDMG } = require('../calculator');
 const enemies = require('../data/enemies.json');
 const { getRpgUser, checkClassToDmgType, setUserInBattle } = require('../modules');
