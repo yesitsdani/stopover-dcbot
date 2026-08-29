@@ -17,11 +17,13 @@ module.exports = {
         await message.reply(`Please wait (this can take a while...)`);
 
         let count = 0;
-        for (mention of args) {
+        for (const mention of args) {
             const uid = getIdFromMention(mention);
             if (uid == null) continue;
-            const member = await message.guild.members.fetch(uid);
-            if (!member) continue;
+            let member; 
+            try {
+                member = await message.guild.members.fetch(uid);
+            } catch (e) { continue; }
             if (member.user.bot) continue;
             await member.roles.add(`1507597348363309168`);
             count++;
