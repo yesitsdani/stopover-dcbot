@@ -1,0 +1,11 @@
+[
+    {
+        "id": "blacksmith1",
+        "name": "Joe the Blacksmith",
+        "subtitle": "Town of Quantilla's local blacksmith.",
+        "description": "Need your tools upgraded? Of course you do! And you're in luck because Joe is here for YOU!\n\nWho doesn't want better tools? Better tools mean more durability and better drops! What're you waiting for? Come on down!",
+        "button": "Talk to Joe",
+        "imgURL": "https://64.media.tumblr.com/1ff88caf2f2842cc08081eac0d0d626d/tumblr_o39gf0RHfM1u77u56o1_640.gifv",
+        "imgCredits": ""
+    }
+]
