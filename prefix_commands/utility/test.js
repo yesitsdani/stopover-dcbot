@@ -2,6 +2,7 @@ const { PermissionFlagsBits, ContainerBuilder, SectionBuilder, ButtonBuilder, Bu
 const { resetCommandCD } = require('../../modules');
 const Rpg = require('../../models/Rpg');
 const GuildSettings = require('../../models/GuildSettings');
+const { updateAshimail } = require('../../models/Ashimail');
 
 module.exports = {
     name: 'test',
@@ -12,20 +13,19 @@ module.exports = {
     alias: [],
     permissions: ['1531987396986409011', '1506448680000159784'],
     async execute(client, message, args) {
-        const guildData = await GuildSettings.findOneAndUpdate(
-            { gid: message.guild.id },
+        await updateAshimail(
+            message.author.id,
             {
-                announcementBuilder: {
+                mailBuilder: {
+                    uid: "",
+                    anon: false,
                     title: "",
                     content: "",
-                    ping: "",
-                    imgURL: "",
-                    signatories: []
+                    unread: false,
+                    dateSent: 0
                 }
             }
         )
-
-        console.log(guildData);
 
         return message.reply(`Done!`);
 

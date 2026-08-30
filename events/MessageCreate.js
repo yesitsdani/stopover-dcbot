@@ -39,7 +39,6 @@ module.exports = {
         ) return await message.reply(`You are currently dead. Please do \`stp revive\``)
 
         try {
-            await command.execute(client, message, args);
             if (command.cooldown && message.author.id != '877167420572319804') {
                 let newCDs = CDs.filter(obj => obj.cmd != command.name);
                 newCDs.push({ cmd: command.name, date: Date.now() + command.cooldown });
@@ -48,6 +47,7 @@ module.exports = {
                     { cooldowns: newCDs }
                 )
             }
+            await command.execute(client, message, args);
         } catch (error) {
             console.error(error);
             await message.reply('Ashi made an oopsie... let him know na lang!!');

@@ -10,6 +10,7 @@ const Pouch = require('./models/Pouch');
 const Farm = require('./models/Farm');
 const ms = require('ms');
 const GuildSettings = require('./models/GuildSettings');
+const { Ashimail } = require('./models/Ashimail');
 
 module.exports = {
     getIdFromMention(input) {
@@ -678,6 +679,34 @@ module.exports = {
                         articles: [],
                         imgURL: "",
                         authors: []
+                    }
+                }
+            },
+            {
+                upsert: true,
+                returnDocument: "after"
+            }
+        );
+    },
+    async getAshimail(uid) {
+        return await Ashimail.findOneAndUpdate(
+            { uid },
+            {
+                $setOnInsert: {
+                    uid,
+                    receivedMail: [],
+                    sentMail: [],
+                    matches: [],
+                    ashimailAddress: "",
+                    ashimailPass: "",
+                    sessionUntil: 0,
+                    mailBuilder: {
+                        uid: "",
+                        anon: false,
+                        title: "",
+                        content: "",
+                        unread: false,
+                        dateSent: 0
                     }
                 }
             },

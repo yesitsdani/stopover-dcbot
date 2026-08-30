@@ -35,8 +35,7 @@ module.exports = {
                         name: 'stp_pinksparkles:',
                         id: '1543172551079886949',
                         animated: true
-                    })
-                    .setDisabled(true),
+                    }),
                 new ButtonBuilder()
                     .setCustomId(`mail.match`)
                     .setLabel(`Your Matchmaker Mailbox`)
@@ -50,5 +49,10 @@ module.exports = {
             )
 
         return await message.channel.send({ embeds: [embed], components: [buttonRow] });
+    },
+
+    ashimailHome() {
+        const embed = createEmbedStandard();
+        return embed;
     }
 }
