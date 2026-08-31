@@ -1,6 +1,7 @@
 [
     {
         "id": "flowersOfFate",
+        "category": "general",
         "usableID": 1,
         "description": "Flowers that blossomed from Ashi's Tree of Fate",
         "name": "Flowers of Fate",
@@ -9,6 +10,7 @@
     },
     {
         "id": "ringA",
+        "category": "profile",
         "usableID": 2,
         "description": "Ring used to server-marry another Passerby (No Effects)",
         "name": "Ring of Togetherness",
@@ -17,6 +19,7 @@
     },
     {
         "id": "ringB",
+        "category": "profile",
         "usableID": 3,
         "description": "Ring used to server-marry another Passerby (+ 25% XP Boost)",
         "name": "Ring of Growth",
@@ -25,6 +28,7 @@
     },
     {
         "id": "ringC",
+        "category": "profile",
         "usableID": 4,
         "description": "Ring used to server-marry another Passerby (+ 25% Gem Gain)",
         "name": "Ring of Wealth",
@@ -33,6 +37,7 @@
     },
     {
         "id": "ringD",
+        "category": "profile",
         "usableID": 5,
         "description": "Ring used to server-marry another Passerby (+ 25% Pure DMG)",
         "name": "Ring of Adventure",
@@ -41,6 +46,7 @@
     },
     {
         "id": "ringE",
+        "category": "profile",
         "usableID": 6,
         "description": "Ring used to server-marry another Passerby (+ 25% XP Boost, Gem Gain, and Pure DMG)",
         "name": "Ring of Blossoming",
@@ -49,6 +55,7 @@
     },
     {
         "id": "ringF",
+        "category": "profile",
         "usableID": 7,
         "description": "Ring used by the Chief Passerby (+ 25% XP Boost and Pure DMG, +45% Gem Gain)",
         "name": "Ring of Ever-Reigning",
@@ -57,6 +64,7 @@
     },
     {
         "id": "destinyGem",
+        "category": "special",
         "usableID": 8,
         "description": "Granted to people whose will transcends all fate and claims their own destiny",
         "name": "Gem of Destiny",
@@ -65,6 +73,7 @@
     },
     {
         "id": "sword1",
+        "category": "equipment",
         "usableID": 9,
         "description": "Every warrior starts with this. Can be equipped by warriors",
         "name": "Beginner's Blade",
@@ -73,6 +82,7 @@
     },
     {
         "id": "wand1",
+        "category": "equipment",
         "usableID": 10,
         "description": "All those who wish to study magic starts with this",
         "name": "Beginner's Wand",
@@ -81,6 +91,7 @@
     },
     {
         "id": "bow1",
+        "category": "equipment",
         "usableID": 11,
         "description": "Ranger's mate in their first hunt.",
         "name": "Beginner's Bow",
@@ -89,6 +100,7 @@
     },
     {
         "id": "slime_drop",
+        "category": "general",
         "usableID": 12,
         "description": "Sticky and gooey",
         "name": "Slime Blob",
@@ -97,6 +109,7 @@
     },
     {
         "id": "armor1",
+        "category": "equipment",
         "usableID": 13,
         "description": "Not as sturdy but will do",
         "name": "Starter Armor",
@@ -105,6 +118,7 @@
     },
     {
         "id": "access1",
+        "category": "special",
         "usableID": 14,
         "description": "Gives access to the Casino Bronze Channel (max bet limit is 10,000)",
         "name": "Casino Bronze Key Card",
@@ -113,6 +127,7 @@
     },
     {
         "id": "access2",
+        "category": "special",
         "usableID": 15,
         "description": "Gives access to the Deluxia Club Channel (Pray and Gambling allowed)",
         "name": "Deluxia Club Membership",
@@ -121,6 +136,7 @@
     },
     {
         "id": "roleIcon1",
+        "category": "profile",
         "usableID": 16,
         "description": "Equips the role icon 'Le Frooge' next to your name",
         "name": "Le Frooge (Role Icon)",
@@ -129,6 +145,7 @@
     },
     {
         "id": "roleIcon2",
+        "category": "profile",
         "usableID": 17,
         "description": "Equips the role icon 'Starrybell' next to your name",
         "name": "Starrybell (Role Icon)",
@@ -137,6 +154,7 @@
     },
     {
         "id": "wood1",
+        "category": "general",
         "usableID": 18,
         "description": "Classic wood logs",
         "name": "Wood",
@@ -145,6 +163,7 @@
     },
     {
         "id": "stone1",
+        "category": "general",
         "usableID": 19,
         "description": "Classic stone",
         "name": "Stone",
@@ -153,6 +172,7 @@
     },
     {
         "id": "axe1",
+        "category": "equipment",
         "usableID": 20,
         "description": "Ordinary axe used to chop wood",
         "name": "Regular Axe",
@@ -161,6 +181,7 @@
     },
     {
         "id": "pickaxe1",
+        "category": "equipment",
         "usableID": 21,
         "description": "Ordinary pickaxe used to mine stone",
         "name": "Regular Pickaxe",
@@ -169,6 +190,7 @@
     },
     {
         "id": "access3",
+        "category": "special",
         "usableID": 22,
         "description": "Gives access to the  Channel (Pray Gambling allowed)",
         "name": "Access Card C",
@@ -177,6 +199,7 @@
     },
     {
         "id": "roleIcon3",
+        "category": "profile",
         "usableID": 23,
         "description": "Equips the role icon 'The Plant' next to your name",
         "name": "The Plant (Role Icon)",
@@ -185,6 +208,7 @@
     },
     {
         "id": "roleIcon4",
+        "category": "profile",
         "usableID": 24,
         "description": "Equips the role icon 'Fishyda' next to your name",
         "name": "Fishyda (Role Icon)",
@@ -193,6 +217,7 @@
     },
     {
         "id": "roleIcon5",
+        "category": "profile",
         "usableID": 25,
         "description": "Equips the role icon 'Berrydot' next to your name",
         "name": "Role Icon: Berrydot",
@@ -201,6 +226,7 @@
     },
     {
         "id": "potion-1",
+        "category": "general",
         "usableID": 26,
         "description": "Cuts cooldown generated in commands (except Daily) by half for 30 minutes",
         "name": "A Droplet of Time",
@@ -209,6 +235,7 @@
     },
     {
         "id": "lootbox1",
+        "category": "special",
         "usableID": 27,
         "description": "Randomly gives one random role icon from Set 1: Le Frooge, Starrybell, Berrydot, Fishyda, and The Plant",
         "name": "Lootbox: Role Icon Set 1",
@@ -217,6 +244,7 @@
     },
     {
         "id": "abundanceGem",
+        "category": "special",
         "usableID": 28,
         "description": "Granted to people who have mastered the overflow and harnessed the maximums of the material world",
         "name": "Gem of Abundance",
@@ -225,6 +253,7 @@
     },
     {
         "id": "devotionGem",
+        "category": "special",
         "usableID": 29,
         "description": "Granted to people who have concentrated their affection towards their special one",
         "name": "Gem of Devotion",
@@ -233,6 +262,7 @@
     },
     {
         "id": "transcendenceWand",
+        "category": "equipment",
         "usableID": 30,
         "description": "The wand in folklores said to have usurped the will of the realm.",
         "name": "Wand of Transcendence",
@@ -241,6 +271,7 @@
     },
     {
         "id": "libertyGem",
+        "category": "special",
         "usableID": 31,
         "description": "Granted to people who have conquered the challenges of limitation",
         "name": "Gem of Liberty",
@@ -249,6 +280,7 @@
     },
     {
         "id": "creationGem",
+        "category": "special",
         "usableID": 32,
         "description": "Granted to people who strived to give and sustain life itself",
         "name": "Gem of Creation",
@@ -257,6 +289,7 @@
     },
     {
         "id": "wood2",
+        "category": "general",
         "usableID": 33,
         "description": "Wood chopped from the deepest parts of the realm's enchanted forest",
         "name": "Ever-Mourning Wood",
@@ -265,6 +298,7 @@
     },
     {
         "id": "ringG",
+        "category": "profile",
         "usableID": 34,
         "description": "Ring used by the Members of the Stopover Council (+ 25% XP Boost and Pure DMG, +35% Gem Gain)",
         "name": "Ring of Authority",
@@ -273,6 +307,7 @@
     },
     {
         "id": "access4",
+        "category": "special",
         "usableID": 35,
         "description": "Gives access to the Casino Silver Channel (max bet limit is 100,000)",
         "name": "Casino Silver Key Card",
@@ -281,14 +316,16 @@
     },
     {
         "id": "access5",
+        "category": "special",
         "usableID": 36,
-        "description": "Gives access to the Casino Gold Channel (max bet limit is 250,000)",
+        "description": "Gives access to the Casino Gold Channel (max bet limit is 1,000,000)",
         "name": "Casino Gold Key Card",
         "icon": ":credit_card:",
         "source": "Bought in shop."
     },
     {
         "id": "cheese_drop",
+        "category": "general",
         "usableID": 37,
         "description": "Might be used for something",
         "name": "Suspicious Cheese",
@@ -297,6 +334,7 @@
     },
     {
         "id": "passion_drop1",
+        "category": "general",
         "usableID": 38,
         "description": "Can be used to craft potions",
         "name": "Ignited Passion",
@@ -305,6 +343,7 @@
     },
     {
         "id": "magical_pouch",
+        "category": "special",
         "usableID": 39,
         "description": "A magical pouch used to store Stopover gems",
         "name": "Magical Gem Pouch",
@@ -313,6 +352,7 @@
     },
     {
         "id": "potion-2",
+        "category": "general",
         "usableID": 40,
         "description": "Heals a Passerby (25% of Max HP)",
         "name": "Lesser Healing Potion",
@@ -321,6 +361,7 @@
     },
     {
         "id": "potion-3",
+        "category": "general",
         "usableID": 41,
         "description": "Heals a Passerby (50% of Max HP)",
         "name": "Healing Potion",
@@ -329,6 +370,7 @@
     },
     {
         "id": "potion-4",
+        "category": "general",
         "usableID": 42,
         "description": "Heals a Passerby (75% of Max HP)",
         "name": "Greater Healing Potion",
@@ -337,6 +379,7 @@
     },
     {
         "id": "emptyflask",
+        "category": "general",
         "usableID": 43,
         "description": "Just an empty flask",
         "name": "Empty Potion Flask",
@@ -345,6 +388,7 @@
     },
     {
         "id": "sword2",
+        "category": "equipment",
         "usableID": 44,
         "description": "The sword of nature",
         "name": "Blade of Grass",
@@ -353,6 +397,7 @@
     },
     {
         "id": "wand2",
+        "category": "equipment",
         "usableID": 45,
         "description": "A wand that can spark",
         "name": "Sparks Wand",
@@ -361,6 +406,7 @@
     },
     {
         "id": "bow2",
+        "category": "equipment",
         "usableID": 46,
         "description": "Used in speed and agility.",
         "name": "Brisk Bow",
@@ -369,6 +415,7 @@
     },
     {
         "id": "armor2",
+        "category": "equipment",
         "usableID": 47,
         "description": "Robe of those who dare to brave the magical arts",
         "name": "Novice Robe",
@@ -377,6 +424,7 @@
     },
     {
         "id": "armor3",
+        "category": "equipment",
         "usableID": 48,
         "description": "For physical combatants ready to take on more than meager tasks",
         "name": "Shieldskin Armor",
@@ -385,6 +433,7 @@
     },
     {
         "id": "animalMeat",
+        "category": "general",
         "usableID": 49,
         "description": "Don't let it out too long...",
         "name": "Raw Meat",
@@ -393,6 +442,7 @@
     },
     {
         "id": "pixieDust",
+        "category": "general",
         "usableID": 50,
         "description": "Not used for flying",
         "name": "Pixie Dust",
@@ -401,6 +451,7 @@
     },
     {
         "id": "bubblesOfFantasy",
+        "category": "general",
         "usableID": 51,
         "description": "Magical beings bleed these... things that seem to be pocket dimensions of fantasy",
         "name": "Bubbles of Fantasy",
@@ -409,6 +460,7 @@
     },
     {
         "id": "passion_drop2",
+        "category": "general",
         "usableID": 52,
         "description": "Can be used to craft potions",
         "name": "Rekindled Passion",
@@ -417,6 +469,7 @@
     },
     {
         "id": "sword3",
+        "category": "equipment",
         "usableID": 53,
         "description": "Sword made out of the gift of creation (hits critical strikes better)",
         "name": "Carrot Sword",
@@ -425,6 +478,7 @@
     },
     {
         "id": "wand3",
+        "category": "equipment",
         "usableID": 54,
         "description": "Crafted from bones of those who refuse to die (provides some melee damage per attack)",
         "name": "Wand of the Undead",
@@ -433,6 +487,7 @@
     },
     {
         "id": "bow3",
+        "category": "equipment",
         "usableID": 55,
         "description": "Bow that uses imagination for its arrows (provides some magic damage per shot)",
         "name": "Fantastic Bow",
@@ -441,6 +496,7 @@
     },
     {
         "id": "animalBone",
+        "category": "general",
         "usableID": 56,
         "description": "A sturdy organic material",
         "name": "Bone",
@@ -449,6 +505,7 @@
     },
     {
         "id": "seed-carrot",
+        "category": "general",
         "usableID": 57,
         "description": "Used to grow carrots",
         "name": "Carrot Seeds",
@@ -457,6 +514,7 @@
     },
     {
         "id": "seed-potato",
+        "category": "general",
         "usableID": 58,
         "description": "Used to grow potatoes",
         "name": "Potato Seeds",
@@ -465,6 +523,7 @@
     },
     {
         "id": "seed-onion",
+        "category": "general",
         "usableID": 59,
         "description": "Used to grow onions",
         "name": "Onion Seeds",
@@ -473,6 +532,7 @@
     },
     {
         "id": "seed-corn",
+        "category": "general",
         "usableID": 60,
         "description": "Used to grow corns",
         "name": "Corn Seeds",
@@ -481,6 +541,7 @@
     },
     {
         "id": "seed-eggplant",
+        "category": "general",
         "usableID": 61,
         "description": "Used to grow eggplants",
         "name": "Eggplant Seeds",
@@ -489,6 +550,7 @@
     },
     {
         "id": "seed-garlic",
+        "category": "general",
         "usableID": 62,
         "description": "Used to grow garlic",
         "name": "Garlic Seeds",
@@ -497,6 +559,7 @@
     },
     {
         "id": "seed-banana",
+        "category": "general",
         "usableID": 63,
         "description": "Used to grow bananas",
         "name": "Banana Seeds",
@@ -505,6 +568,7 @@
     },
     {
         "id": "crop-carrot",
+        "category": "general",
         "usableID": 64,
         "description": "A crunchy, orange vegetable",
         "name": "Carrot",
@@ -513,6 +577,7 @@
     },
     {
         "id": "crop-potato",
+        "category": "general",
         "usableID": 65,
         "description": "An earthy and hard vegetable",
         "name": "Potato",
@@ -521,6 +586,7 @@
     },
     {
         "id": "crop-onion",
+        "category": "general",
         "usableID": 66,
         "description": "A layered eye-tearing vegetable",
         "name": "Onion",
@@ -529,6 +595,7 @@
     },
     {
         "id": "crop-corn",
+        "category": "general",
         "usableID": 67,
         "description": "A yellow puffy vegetable",
         "name": "Corn",
@@ -537,6 +604,7 @@
     },
     {
         "id": "crop-eggplant",
+        "category": "general",
         "usableID": 68,
         "description": "A purple elongated vegetable",
         "name": "Eggplant",
@@ -545,6 +613,7 @@
     },
     {
         "id": "crop-garlic",
+        "category": "general",
         "usableID": 69,
         "description": "A smelly yet aromatic vegetable",
         "name": "Garlic",
@@ -553,6 +622,7 @@
     },
     {
         "id": "crop-banana",
+        "category": "general",
         "usableID": 70,
         "description": "An elongated sweet yellow fruit",
         "name": "Banana",
@@ -561,6 +631,7 @@
     },
     {
         "id": "farm-plotTitle",
+        "category": "special",
         "usableID": 71,
         "description": "Adds an additional plot to your farm",
         "name": "Farm Title (+1 Plot)",
@@ -569,6 +640,7 @@
     },
     {
         "id": "sword4",
+        "category": "equipment",
         "usableID": 72,
         "description": "A kinder, less-hostile enchanted sword (provides some magic damage per strike)",
         "name": "Blessed Enchanted Sword",
@@ -577,6 +649,7 @@
     },
     {
         "id": "wand4",
+        "category": "equipment",
         "usableID": 73,
         "description": "A magical gem got stuck to a banana somehow... (critical attacks hit harder)",
         "name": "Banana Wand",
@@ -585,6 +658,7 @@
     },
     {
         "id": "bow4",
+        "category": "equipment",
         "usableID": 74,
         "description": "Once held by an infamous figure (more accurate critical strikes)",
         "name": "Robinhood's Bow",
@@ -593,6 +667,7 @@
     },
     {
         "id": "armor4",
+        "category": "equipment",
         "usableID": 75,
         "description": "Robe of mages blessed with the gift of creation",
         "name": "Cloak of Creation",
@@ -601,6 +676,7 @@
     },
     {
         "id": "armor5",
+        "category": "equipment",
         "usableID": 76,
         "description": "Made from potato skin that is surprisingly sturdy...",
         "name": "Potatoskin Armor",
@@ -609,10 +685,29 @@
     },
     {
         "id": "transcendenceArmor",
+        "category": "equipment",
         "usableID": 77,
         "description": "Armor made to withstand the will of the world pounding on one person",
         "name": "Armor of Transcendence",
         "icon": ":shield:",
         "source": "Crafted using Ever-Mourning Wood and the Gems of Destiny, Abundance, Devotion, Liberty, and Creation"
+    },
+    {
+        "id": "magicInk",
+        "category": "special",
+        "usableID": 78,
+        "description": "Special ink used to send anonymous Ashimails",
+        "name": "Ink of Mirage",
+        "icon": ":pen_ballpoint:",
+        "source": "Daily bonus and other sources"
+    },
+    {
+        "id": "lb-ashiGem",
+        "category": "special",
+        "usableID": 79,
+        "description": "Transforms randomly into one of Ashi's Wonderful Gems of Abundance, Creation, Destiny, Devotion, and Liberty",
+        "name": "Ashi's Wonderful Gem",
+        "icon": "<:ashiGem:1543870405729591317>",
+        "source": "A gift granted by the Chief Passerby"
     }
 ]

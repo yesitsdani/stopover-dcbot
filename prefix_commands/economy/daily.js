@@ -1,5 +1,5 @@
 const User = require("../../models/User");
-const { getUser, iconizeTitle, iconizeMoney, createEmbedStandard, iconizeItem, getGemBoostBonus, getRpgUser, regenHP, createLoadingScreen } = require("../../modules");
+const { getUser, iconizeTitle, iconizeMoney, createEmbedStandard, iconizeItem, getGemBoostBonus, getRpgUser, regenHP, createLoadingScreen, iconizeItemWithName, addItemToInv } = require("../../modules");
 
 
 module.exports = {
@@ -71,6 +71,9 @@ module.exports = {
                 content += `\n${iconizeItem(userData.marriage.ring)} Ring Bonus (${bonusRate * 100}%): + ${iconizeMoney(bonus)}`;
             }
         }
+
+        await addItemToInv(uid, "magicInk", 1);
+        content += `\n\nYou received an ${iconizeItemWithName("magicInk")}!`;
 
         let dailyStreakCap = parseInt(userData.dailyStreakCap);
         let dailyStreak = parseInt(userData.dailyStreak);

@@ -1,5 +1,3 @@
-const { PermissionFlagsBits, ContainerBuilder, SectionBuilder, ButtonBuilder, ButtonStyle, MediaGalleryBuilder, MediaGalleryItemBuilder, MessageFlags, TextDisplayBuilder, ThumbnailBuilder, ActionRowBuilder } = require('discord.js');
-const { resetCommandCD } = require('../../modules');
 const Rpg = require('../../models/Rpg');
 const GuildSettings = require('../../models/GuildSettings');
 const { updateAshimail } = require('../../models/Ashimail');
@@ -22,9 +20,15 @@ module.exports = {
                     title: "",
                     content: "",
                     unread: false,
-                    dateSent: 0
+                    dateSent: 0,
+                    signed: false
                 }
             }
+        )
+
+        await GuildSettings.findOneAndUpdate(
+            { uid: message.guild.id },
+            { afkUsers: [], mailedUsers: [] }
         )
 
         return message.reply(`Done!`);

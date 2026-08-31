@@ -1,0 +1,85 @@
+[
+    {
+        "code": "HELLO@ASHIMAIL",
+        "expired": false,
+        "money": 0,
+        "items": [
+            { "id": "magicInk", "quantity": 7 }
+        ],
+        "message": "<#1543300726812319845> This ink would allow you to send `ANONYMOUS` Ashimails"
+    },
+    {
+        "code": "WelcomeToTheStopover",
+        "expired": false,
+        "money": 1500,
+        "items": [
+            { "id": "flowersOfFate", "quantity": 1 },
+            { "id": "farm-plotTitle", "quantity": 1 },
+            { "id": "lb-ashiGem", "quantity": 1 }
+        ],
+        "message": "We hope you enjoy your stay, Passerby!"
+    },
+    {
+        "code": "HelloHiMabuhay!",
+        "expired": false,
+        "money": 1500,
+        "items": [],
+        "message": ""
+    },
+    {
+        "code": "ChiefPasserbyAshi",
+        "expired": false,
+        "money": 5555,
+        "items": [],
+        "message": "Courtesy of <:gavel:1534097246675796009> **`THE CHIEF PASSERBY`**, Ashi"
+    },
+    {
+        "code": "CouncilNyx",
+        "expired": false,
+        "money": 1500,
+        "items": [],
+        "message": "Courtesy of <:council:1534102603040821308> **`COUNCIL MEMBER`**, Nyxell"
+    },
+    {
+        "code": "CouncilAki",
+        "expired": false,
+        "money": 1500,
+        "items": [],
+        "message": "Courtesy of <:council:1534102603040821308> **`COUNCIL MEMBER`**, Aki"
+    },
+    {
+        "code": "CouncilRoi",
+        "expired": false,
+        "money": 3000,
+        "items": [],
+        "message": "Courtesy of <:council:1534102603040821308> **`COUNCIL MEMBER`**, Roi"
+    },
+    {
+        "code": "CouncilZeph",
+        "expired": false,
+        "money": 1500,
+        "items": [],
+        "message": "Courtesy of <:council:1534102603040821308> **`COUNCIL MEMBER`**, Zeph"
+    },
+    {
+        "code": "CouncilJeremy",
+        "expired": false,
+        "money": 1500,
+        "items": [],
+        "message": "Courtesy of <:council:1534102603040821308> **`COUNCIL MEMBER`**, Jeremy"
+    },
+    {
+        "code": "CouncilMaiku",
+        "expired": false,
+        "money": 1500,
+        "items": [],
+        "message": "Courtesy of <:council:1534102603040821308> **`COUNCIL MEMBER`**, Maiku"
+    },
+    {
+        "code": "CouncilVance",
+        "expired": false,
+        "money": 1500,
+        "items": [],
+        "message": "Courtesy of <:council:1534102603040821308> **`COUNCIL MEMBER`**, Vance"
+    }
+]

@@ -45,7 +45,6 @@ module.exports = {
                         id: '1543304375894679552',
                         animated: true
                     })
-                    .setDisabled(true)
             )
 
         return await message.channel.send({ embeds: [embed], components: [buttonRow] });

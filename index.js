@@ -4,9 +4,13 @@ const path = require('node:path');
 const { Client, Events, GatewayIntentBits, EmbedBuilder, Collection, MessageFlags, InteractionType } = require('discord.js');
 const { channels, pairs, users } = require('./pairing-event.json');
 const connectToDatabase = require('./db_connect');
+const GuildSettings = require('./models/GuildSettings.js');
+const { setMailedUsers, setAfkUsers } = require('./alerts.js');
+const { getGuildSettings } = require('./modules.js');
 
 const token = process.env.TOKEN;
 const MDB_SRV = process.env.MDB_SRV;
+const capitalGid = process.env.CGID;
 
 const client = new Client({
     intents: [
@@ -21,8 +25,13 @@ const client = new Client({
 });
 
 client.once(Events.ClientReady, async (readyClient) => {
+    const guildData = await getGuildSettings(capitalGid);
+    setMailedUsers(guildData.mailedUsers);
+    setAfkUsers(guildData.afkUsers);
+    console.log(`Alerts set successfully!`);
     console.log(`Ready! Logged in as ${readyClient.user.tag}`);
-    await client.user.setPresence({
+
+    client.user.setPresence({
         activities: [
             {
                 name: "say \"stp help\""

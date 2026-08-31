@@ -62,10 +62,12 @@ module.exports = {
             mailBuilder[`content`] = content;
             mailBuilder[`anon`] = anonymous;
             mailBuilder[`uid`] = uid;
+            if (anonymous) mailBuilder[`signed`] = false;
+            if (!anonymous) mailBuilder[`signed`] = true;
 
             const newAshiMail = await updateAshimail(uid, { mailBuilder });
 
-            return await interaction.update(mailBuilderGui(newAshiMail.mailBuilder));
+            return await interaction.update(await mailBuilderGui(newAshiMail.mailBuilder));
         }
     },
 

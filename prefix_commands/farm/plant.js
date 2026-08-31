@@ -9,7 +9,7 @@ module.exports = {
     description: 'Plants a seed down',
     permissions: [],
     category: 'farm',
-    usage: '`stp plant <item ID>`',
+    usage: '`stp plant <item ID> [quantity]`',
     cooldown: 1000 * 10,
     testing: false,
     alias: [],
@@ -18,27 +18,35 @@ module.exports = {
         let itemID = checkIfNum(args[0]);
         if (!itemID) return message.reply(`Invalid item ID`);
         let item = items.find(itm => itm.usableID == itemID);
-        if (!item) return message.reply (`Item not found`);
+        if (!item) return message.reply(`Item not found`);
         if (!item.id.startsWith('seed')) return message.reply(`That item is not a seed`);
+
+        let seedQuantity = 1;
+        if (checkIfNum(args[1])) seedQuantity = checkIfNum(args[1]);
 
         const uid = message.author.id;
         const invData = await getInv(uid);
 
-        const haveIt = hasItem(invData.items, item.id, 1);
-        if (!haveIt) return message.reply(`You don't have this seed`);
-        
+        const haveIt = hasItem(invData.items, item.id, seedQuantity);
+        if (!haveIt) return message.reply(`Either you don't have this seed or this much of the seed`);
+
         const farmData = await getFarm(uid);
-        if (farmData.plots.length >= farmData.plotSlots) return message.reply(`You can only plant up to ${farmData.plotSlots} crops at a time`);
+        if (
+            (farmData.plots.length + seedQuantity) > farmData.plotSlots ||
+            (farmData.plots.length) >= farmData.plotSlots
+        ) return message.reply(`You can only plant up to ${farmData.plotSlots} crops at a time`);
 
         const cropID = item.id.split("-")[1];
         const crop = crops.find(itm => itm.id == cropID);
         const harvestTime = Date.now() + (1000 * 60 * parseInt(crop.harvestTime));
 
         let plots = farmData.plots;
-        plots.push({
-            id: cropID,
-            harvestTime
-        });
+        for (let count = 1; count <= seedQuantity; count++) {
+            plots.push({
+                id: cropID,
+                harvestTime
+            });
+        }
 
         const newFarm = await Farm.findOneAndUpdate(
             { uid },
@@ -46,14 +54,14 @@ module.exports = {
             { returnDocument: 'after' }
         );
 
-        await creationPoint(uid, message, 1);
-        await takeItemFromInv(uid, item.id, 1);
+        await creationPoint(uid, message, seedQuantity);
+        await takeItemFromInv(uid, item.id, seedQuantity);
 
         let content = `Planted in your farm:\n`;
         content += showPlots(newFarm.plots);
 
         const embed = createEmbedStandard()
-        .setDescription(content);
+            .setDescription(content);
 
         const messageSent = await message.reply({ embeds: [createLoadingScreen()] });
 

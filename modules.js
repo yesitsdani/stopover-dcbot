@@ -706,7 +706,8 @@ module.exports = {
                         title: "",
                         content: "",
                         unread: false,
-                        dateSent: 0
+                        dateSent: 0,
+                        signed: false
                     }
                 }
             },

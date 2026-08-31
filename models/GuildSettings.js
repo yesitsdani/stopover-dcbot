@@ -25,7 +25,13 @@ const guildSettingSchema = new mongoose.Schema({
         ping: String,
         imgURL: String,
         signatories: [String]
-    }
+    },
+    afkUsers: [{
+        uid: String,
+        reason: String,
+        afkSince: Number
+    }],
+    mailedUsers: [String]
 });
 
 const GuildSettings = mongoose.model("guildSetting", guildSettingSchema);

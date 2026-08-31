@@ -24,6 +24,7 @@ module.exports = {
         let usable = client.uses.get(item.id);
         if (!usable && item.id.startsWith('potion')) usable = require('../../uses/potion.js');
         if (!usable && item.id.startsWith('farm')) usable = require('../../uses/farm.js');
+        if (!usable && item.id.startsWith('lb')) usable = require('../../uses/lb.js');
         if (!usable) return message.reply(`This item is not usable`)
 
         const invData = await getInv(uid);

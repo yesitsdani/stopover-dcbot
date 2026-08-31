@@ -7,7 +7,8 @@ const mail = {
     title: String,
     content: String,
     unread: Boolean,
-    dateSent: Number
+    dateSent: Number,
+    signed: Boolean
 }
 
 const ashimailSchema = new mongoose.Schema({
