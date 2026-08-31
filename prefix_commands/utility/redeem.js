@@ -41,6 +41,8 @@ module.exports = {
             await addMultipleItemsToInv(uid, redeem.items);
         }
 
+        content += `\n\n${redeem.message}`;
+
         const embed = createEmbedStandard()
         .setDescription(content)
         .setThumbnail(message.author.avatarURL());
