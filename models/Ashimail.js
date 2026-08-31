@@ -23,7 +23,8 @@ const ashimailSchema = new mongoose.Schema({
     ashimailAddress: String,
     ashimailPass: String,
     sessionUntil: Number,
-    mailBuilder: mail
+    mailBuilder: mail,
+    registered: Boolean
 });
 
 const Ashimail = mongoose.model("ashimail", ashimailSchema);

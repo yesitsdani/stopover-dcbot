@@ -27,7 +27,8 @@ module.exports = {
                         { uid },
                         {
                             ashimailAddress: username,
-                            ashimailPass: password
+                            ashimailPass: password,
+                            registered: true
                         },
                         { returnDocument: "after" }
                     );

@@ -19,7 +19,7 @@ module.exports = {
             let embed;
             let buttonRow;
 
-            if (ashimail.ashimailAddress.length < 1) {
+            if (!ashimail.registered) {
                 //show embed with button to modal
                 embed = createEmbedStandard()
                     .setDescription(`# \`NEW ASHIMAIL USER!\`\nEnter an your \`@ashimail.stp\` address below:`)
