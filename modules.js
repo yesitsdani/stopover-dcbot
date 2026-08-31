@@ -697,7 +697,7 @@ module.exports = {
                     receivedMail: [],
                     sentMail: [],
                     matches: [],
-                    ashimailAddress: "",
+                    ashimailAddress: `${Date.now()}`,
                     ashimailPass: "",
                     sessionUntil: 0,
                     mailBuilder: {
