@@ -20,7 +20,7 @@ const ashimailSchema = new mongoose.Schema({
         liked: Boolean,
         rating: Number
     }],
-    ashimailAddress: { type: String, unique: true },
+    ashimailAddress: String,
     ashimailPass: String,
     sessionUntil: Number,
     mailBuilder: mail
