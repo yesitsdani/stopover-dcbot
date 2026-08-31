@@ -440,7 +440,14 @@ module.exports = {
             if (mail) {
                 content += `\n\`${i + 1}\` `;
                 mail.unread ? content += `📧 | ` : content += `✉️ | `;
-                if (mail.signed) mail.uid == "877167420572319804" ? content += '<:gavel:1534097246675796009>' : content += '<:council:1534102603040821308>';
+                if (mail.signed) {
+                    const signature = signatures.find(itm => itm.uid == mail.uid);
+                    if (mail.uid == "877167420572319804") {
+                        content += '<:gavel:1534097246675796009>'
+                    } else if (signature) {
+                        content += '<:council:1534102603040821308>';
+                    }
+                }
                 content += ` "${mail.title}" (${ms(Date.now() - parseInt(mail.dateSent), { long: true })} ago)`;
                 menu.addOptions(
                     new StringSelectMenuOptionBuilder()
