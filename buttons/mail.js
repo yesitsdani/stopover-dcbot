@@ -323,7 +323,7 @@ module.exports = {
         content += `> From: <@${from}>\n`;
         if (mail.anon) content += `> (Anonymously Sent)\n`;
 
-        if (mail.dateSent != 0) content += `> Sent <t:${Math.floor(timestamp / mail.dateSent)}:D>\n`;
+        if (mail.dateSent != 0) content += `> Sent <t:${Math.floor(mail.dateSent / 1000)}:D>\n`;
 
         content += `\n${mail.content}`;
         const embed = createEmbedStandard()
