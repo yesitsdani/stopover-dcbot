@@ -15,34 +15,8 @@ module.exports = {
 
         if (action == "open") {
             await interaction.deferReply({ flags: MessageFlags.Ephemeral });
-
-            let embed;
-            let buttonRow;
-
-            if (!ashimail.registered) {
-                //show embed with button to modal
-                embed = createEmbedStandard()
-                    .setDescription(`# \`NEW ASHIMAIL USER!\`\nEnter an your \`@ashimail.stp\` address below:`)
-                    .setThumbnail(interaction.user.avatarURL())
-
-                buttonRow = new ActionRowBuilder()
-                    .addComponents(
-                        new ButtonBuilder()
-                            .setLabel(`Open Ashimail`)
-                            .setCustomId(`mail.new`)
-                            .setStyle(ButtonStyle.Primary)
-                    )
-            } else if (ashimail.sessionUntil < Date.now()) {
-                //show embed with button to login
-                const gui = module.exports.loginGui(interaction.user.avatarURL());
-                embed = gui.embed;
-                buttonRow = gui.components;
-            } else {
-                //show embed inbox 
-                return await interaction.editReply(module.exports.homepageGui(ashimail));
-            }
-
-            return await interaction.editReply({ embeds: [embed], components: [buttonRow] });
+            //show embed inbox 
+            return await interaction.editReply(module.exports.homepageGui(ashimail));
 
         } else if (action == "new" || action == "login") {
 
@@ -233,7 +207,7 @@ module.exports = {
     },
 
     homepageGui(ashimail) {
-        let content = `# <@${ashimail.uid}>'s Inbox\n> **\`${ashimail.ashimailAddress}@ashimail.stp\`**\n`;
+        let content = `# <@${ashimail.uid}>'s Inbox\n> This is your **Ashimail Dashboard**\n`;
 
         content += `\n✉️ **Unread Ashimails**:`;
         if (ashimail.receivedMail.length > 0) {

@@ -14,21 +14,8 @@ module.exports = {
         await updateAshimail(
             message.author.id,
             {
-                mailBuilder: {
-                    uid: "",
-                    anon: false,
-                    title: "",
-                    content: "",
-                    unread: false,
-                    dateSent: 0,
-                    signed: false
-                }
+                sessionUntil: 0
             }
-        )
-
-        await GuildSettings.findOneAndUpdate(
-            { uid: message.guild.id },
-            { afkUsers: [], mailedUsers: [] }
         )
 
         return message.reply(`Done!`);
