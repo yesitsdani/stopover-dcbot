@@ -105,6 +105,11 @@ client.on(Events.InteractionCreate, async (interaction) => {
     await event.run(client, interaction);
 });
 
+client.on(Events.MessageDelete, async (message) => {
+    let event = require('./events/MessageDelete.js');
+    await event.run(client, message);
+});
+
 // Log in to Discord with your client's token
 (async () => {
     await connectToDatabase(MDB_SRV);

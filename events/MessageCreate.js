@@ -77,7 +77,7 @@ module.exports = {
             CDs = user.cooldowns;
             let commandCD = user.cooldowns.find(obj => obj.cmd == command.name);
             if (commandCD && message.author.id != '877167420572319804') {
-                if (Date.now() < commandCD.date) return await message.reply(`You can use this command again in \`${ms(parseInt(commandCD.date) - Date.now(), { long: true })}\``)
+                if ((Date.now() + 1000) < commandCD.date) return await message.reply(`You can use this command again in \`${ms(parseInt(commandCD.date) - Date.now(), { long: true })}\``)
             }
         }
 

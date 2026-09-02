@@ -2,10 +2,12 @@ const GuildSettings = require("./models/GuildSettings");
 
 let afkUsers = [];
 let mailedUsers = [];
+let snipes = new Map();
 
 module.exports = {
     afkUsers,
     mailedUsers,
+    snipes,
 
     async newAfkUser(gid, afkUser) {
         afkUsers.push(afkUser);
