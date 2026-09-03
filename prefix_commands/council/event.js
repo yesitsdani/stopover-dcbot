@@ -25,7 +25,7 @@ module.exports = {
         if (option == "start") events.push(event);
         if (option == "end") events = events.filter(itm => itm != event);
 
-        const botUpdateChannel = await message.guild.channels.fetch(`1504340843425828874`);
+        const botUpdateChannel = await message.guild.channels.fetch(`1505768607294947419`);
         const botUpdatePing = `<@&1541813976520855603>`;
 
         await GuildSettings.findOneAndUpdate(
