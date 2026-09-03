@@ -434,5 +434,326 @@
                 }
             }
         ]
+    },
+    {
+        "areaName": "three",
+        "rarities": [
+            "common", "common",
+            "common", "common",
+            "common", "common",
+            "common", "common",
+            "uncommon",
+            "uncommon",
+            "rare",
+            "common", "common",
+            "common", "common",
+            "common", "common",
+            "common", "common",
+            "uncommon",
+            "uncommon",
+            "rare",
+            "epic"
+        ],
+        "monsters": [
+            {
+                "id": 12,
+                "name": "Wild Boar",
+                "icon": ":boar:",
+                "type": "melee",
+                "rarity": "common",
+                "properClass": [
+                    "all"
+                ],
+                "hp": 40,
+                "rewards": {
+                    "money": 125,
+                    "xp": {
+                        "min": 3,
+                        "max": 7
+                    },
+                    "items": [
+                        {
+                            "id": "animalMeat",
+                            "min": 1,
+                            "max": 3
+                        },
+                        {
+                            "id": "animalBone",
+                            "min": 1,
+                            "max": 3
+                        }
+                    ]
+                },
+                "stat": {
+                    "atk": 50,
+                    "meleeDmg": 0.2,
+                    "magicDmg": 0,
+                    "rangeDmg": 0,
+                    "critRate": 0.2,
+                    "critDmg": 0.7,
+                    "def": 75,
+                    "meleeRes": 0.3,
+                    "magicRes": 0,
+                    "rangeRes": 0.8
+                }
+            },
+            {
+                "id": 13,
+                "name": "Deer of Disgrace",
+                "icon": ":deer:",
+                "type": "melee",
+                "rarity": "common",
+                "properClass": [
+                    "all"
+                ],
+                "hp": 40,
+                "rewards": {
+                    "money": 155,
+                    "xp": {
+                        "min": 4,
+                        "max": 8
+                    },
+                    "items": [
+                        {
+                            "id": "animalMeat",
+                            "min": 1,
+                            "max": 3
+                        },
+                        {
+                            "id": "animalBone",
+                            "min": 1,
+                            "max": 3
+                        }
+                    ]
+                },
+                "stat": {
+                    "atk": 51,
+                    "meleeDmg": 0.3,
+                    "magicDmg": 0,
+                    "rangeDmg": 0,
+                    "critRate": 0.2,
+                    "critDmg": 0.7,
+                    "def": 60,
+                    "meleeRes": 0.1,
+                    "magicRes": 0.5,
+                    "rangeRes": 0.7
+                }
+            },
+            {
+                "id": 14,
+                "name": "Banished Pixie",
+                "icon": ":fairy:",
+                "type": "magic",
+                "rarity": "common",
+                "properClass": [
+                    "all"
+                ],
+                "hp": 50,
+                "rewards": {
+                    "money": 160,
+                    "xp": {
+                        "min": 5,
+                        "max": 9
+                    },
+                    "items": [
+                        {
+                            "id": "pixieDust",
+                            "min": 3,
+                            "max": 4
+                        },
+                        {
+                            "id": "bubblesOfFantasy",
+                            "min": 1,
+                            "max": 2
+                        }
+                    ]
+                },
+                "stat": {
+                    "atk": 17,
+                    "meleeDmg": 0,
+                    "magicDmg": 0.2,
+                    "rangeDmg": 0,
+                    "critRate": 0,
+                    "critDmg": 0,
+                    "def": 24,
+                    "meleeRes": 0.75,
+                    "magicRes": 0.75,
+                    "rangeRes": 0.2
+                }
+            },
+            {
+                "id": 15,
+                "name": "Cursed Unicorn",
+                "icon": ":unicorn:",
+                "type": "magic",
+                "rarity": "uncommon",
+                "properClass": [
+                    "all"
+                ],
+                "hp": 75,
+                "rewards": {
+                    "money": 250,
+                    "xp": {
+                        "min": 10,
+                        "max": 15
+                    },
+                    "items": [
+                        {
+                            "id": "bubblesOfFantasy",
+                            "min": 2,
+                            "max": 3
+                        },
+                        {
+                            "id": "animalMeat",
+                            "min": 4,
+                            "max": 6
+                        },
+                        {
+                            "id": "animalBone",
+                            "min": 4,
+                            "max": 6
+                        }
+                    ]
+                },
+                "stat": {
+                    "atk": 22,
+                    "meleeDmg": 0,
+                    "magicDmg": 0.8,
+                    "rangeDmg": 0,
+                    "critRate": 0,
+                    "critDmg": 0,
+                    "def": 24,
+                    "meleeRes": 0.1,
+                    "magicRes": 0.75,
+                    "rangeRes": 0.2
+                }
+            },
+            {
+                "id": 16,
+                "name": "Peacock of Artillery",
+                "icon": ":peacock:",
+                "type": "range",
+                "rarity": "uncommon",
+                "properClass": [
+                    "all"
+                ],
+                "hp": 75,
+                "rewards": {
+                    "money": 250,
+                    "xp": {
+                        "min": 10,
+                        "max": 15
+                    },
+                    "items": [
+                        {
+                            "id": "passion_drop1",
+                            "min": 1,
+                            "max": 3
+                        },
+                        {
+                            "id": "animalBone",
+                            "min": 1,
+                            "max": 3
+                        }
+                    ]
+                },
+                "stat": {
+                    "atk": 22,
+                    "meleeDmg": 0,
+                    "magicDmg": 0,
+                    "rangeDmg": 0.5,
+                    "critRate": 0,
+                    "critDmg": 0,
+                    "def": 24,
+                    "meleeRes": 0,
+                    "magicRes": 0.75,
+                    "rangeRes": 0.2
+                }
+            },
+            {
+                "id": 17,
+                "name": "Fabled Phoenix of Quantilla",
+                "icon": ":phoenix:",
+                "type": "magic",
+                "rarity": "rare",
+                "properClass": [
+                    "all"
+                ],
+                "hp": 90,
+                "rewards": {
+                    "money": 450,
+                    "xp": {
+                        "min": 17,
+                        "max": 24
+                    },
+                    "items": [
+                        {
+                            "id": "passion_drop2",
+                            "min": 5,
+                            "max": 7
+                        },
+                        {
+                            "id": "animalBone",
+                            "min": 10,
+                            "max": 13
+                        }
+                    ]
+                },
+                "stat": {
+                    "atk": 30,
+                    "meleeDmg": 0,
+                    "magicDmg": 0.5,
+                    "rangeDmg": 0,
+                    "critRate": 0,
+                    "critDmg": 0,
+                    "def": 35,
+                    "meleeRes": 0.90,
+                    "magicRes": 0.5,
+                    "rangeRes": 0.5
+                }
+            },
+            {
+                "id": 18,
+                "name": "Cursed Bow",
+                "icon": ":magic_wand:",
+                "type": "magic",
+                "rarity": "uncommon",
+                "properClass": [
+                    "all"
+                ],
+                "hp": 75,
+                "rewards": {
+                    "money": 250,
+                    "xp": {
+                        "min": 10,
+                        "max": 15
+                    },
+                    "items": [
+                        {
+                            "id": "passion_drop1",
+                            "min": 5,
+                            "max": 7
+                        },
+                        {
+                            "id": "bubblesOfFantasy",
+                            "min": 4,
+                            "max": 7
+                        }
+                    ]
+                },
+                "stat": {
+                    "atk": 22,
+                    "meleeDmg": 0,
+                    "magicDmg": 0.5,
+                    "rangeDmg": 0,
+                    "critRate": 0,
+                    "critDmg": 0,
+                    "def": 26,
+                    "meleeRes": 0.5,
+                    "magicRes": 0.90,
+                    "rangeRes": 0.05
+                }
+            }
+        ]
     }
 ]
