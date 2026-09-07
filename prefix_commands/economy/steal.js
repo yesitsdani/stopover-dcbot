@@ -53,14 +53,14 @@ module.exports = {
                     let changes;
                     if (memberHouse == "one") {
                         let stealMania1 = houseData.stealMania1;
-                        stealMania1 += stolenAmount;
+                        stealMania1 += parseInt(stolenAmount);
                         changes = { stealMania1 };
                     } else if (memberHouse == "two") {
                         let stealMania2 = houseData.stealMania2;
-                        stealMania2 += stolenAmount;
+                        stealMania2 += parseInt(stolenAmount);
                         changes = { stealMania2 };
                     }
-                    content += `\n\n⚔️ \`HOUSE WARS\`: Your house gained **${stolenAmount}pts** for the \`STEAL MANIA\` challenge!`
+                    content += `\n\n⚔️ \`HOUSE WARS\`: Your house gained **${parseInt(stolenAmount)}pts** for the \`STEAL MANIA\` challenge!`
                 }
             }
 
