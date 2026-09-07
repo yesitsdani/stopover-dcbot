@@ -1,7 +1,7 @@
 const ms = require("ms");
 const { getUser, getRpgUser, getMemberName, iconizeTitle } = require("../modules");
 const User = require("../models/User");
-const { getMailedUser, removeMailedUser, getAfkUser, removeAfkUser } = require("../alerts");
+const { getMailedUser, removeMailedUser, getAfkUser, removeAfkUser, getMatchMail, removeMatchMail } = require("../alerts");
 
 module.exports = {
     async run(client, message, prefix) {
@@ -13,6 +13,11 @@ module.exports = {
         if (getMailedUser(uid)) {
             await message.reply(`You have unread mail! Go to <#1543300726812319845>`);
             await removeMailedUser(gid, uid);
+        }
+
+        if (getMatchMail(uid)) {
+            await message.reply(`💌 You've got mail from your pairing in the **matchmaking event**! Go to <#1543300726812319845>`);
+            await removeMatchMail(gid, uid);
         }
 
         if (getAfkUser(uid)) {

@@ -16,7 +16,6 @@ module.exports = {
 
         if (action == "open") {
             const choice = interaction.values[0];
-
             if (choice.startsWith('open')) {
 
                 const mails = sortMails(ashimail.receivedMail);

@@ -678,8 +678,8 @@
         "id": "armor5",
         "category": "equipment",
         "usableID": 76,
-        "description": "Made from potato skin that is surprisingly sturdy...",
-        "name": "Potatoskin Armor",
+        "description": "Made from potato skin that is surprisingly sturdy... also, it's named after Potata!",
+        "name": "Potataskin Armor",
         "icon": ":shield:",
         "source": "Crafted"
     },

@@ -1,13 +1,16 @@
 const GuildSettings = require("./models/GuildSettings");
+const { getGuildSettings } = require("./modules");
 
 let afkUsers = [];
 let mailedUsers = [];
+let matchMails = [];
 let snipes = new Map();
 
 module.exports = {
     afkUsers,
     mailedUsers,
     snipes,
+    matchMails,
 
     async newAfkUser(gid, afkUser) {
         afkUsers.push(afkUser);
@@ -63,6 +66,39 @@ module.exports = {
 
     setMailedUsers(users) {
         mailedUsers = users;
+        return mailedUsers;
+    },
+
+    async newMatchMail(gid, uid) {
+        const guildData = await getGuildSettings(gid);
+        let tempMatchMails = guildData.matchMails;
+        if (!tempMatchMails.includes(uid)) {
+            tempMatchMails.push(uid);
+
+            await GuildSettings.findOneAndUpdate(
+                { gid },
+                { matchMails: tempMatchMails }
+            );
+        }
+        return tempMatchMails;
+    },
+
+    async removeMatchMail(gid, uid) {
+        matchMails = matchMails.filter(itm => itm != uid);
+        await GuildSettings.findOneAndUpdate(
+            { gid },
+            { matchMails }
+        )
+        return mailedUsers;
+    },
+
+    getMatchMail(uid) {
+        if (matchMails.includes(uid)) return true;
+        return false;
+    },
+
+    setMatchMails(users) {
+        matchMails = users;
         return mailedUsers;
     }
 };

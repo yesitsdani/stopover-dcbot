@@ -29,6 +29,7 @@ const ashimailSchema = new mongoose.Schema({
 
 const Ashimail = mongoose.model("ashimail", ashimailSchema);
 module.exports = {
+    mail,
     Ashimail,
     async updateAshimail(uid, changes) {
         return await Ashimail.findOneAndUpdate(

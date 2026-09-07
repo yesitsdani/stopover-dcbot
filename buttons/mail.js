@@ -1,8 +1,9 @@
 const { MessageFlags, ActionRowBuilder, ButtonBuilder, ButtonStyle, ModalBuilder, LabelBuilder, TextInputBuilder, TextInputStyle, CheckboxGroupBuilder, CheckboxBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuilder, UserSelectMenuBuilder } = require("discord.js");
-const { getAshimail, createEmbedStandard, getUser, iconizeTitle, getGuildSettings, getInv, hasItem, iconizeItemWithName } = require("../modules");
+const { getAshimail, createEmbedStandard, getUser, iconizeTitle, getGuildSettings, getInv, hasItem, iconizeItemWithName, iconizeItem } = require("../modules");
 const { updateAshimail } = require("../models/Ashimail");
 const ms = require("ms");
 const signatures = require(`../data/signatures.json`);
+const { getMatchData } = require("../models/Match");
 
 module.exports = {
     name: "mail",
@@ -148,15 +149,24 @@ module.exports = {
             const newAshimail = await updateAshimail(uid, { mailBuilder });
             const gui = await module.exports.mailBuilderGui(newAshimail.mailBuilder);
             return await interaction.editReply(gui);
+        } else if (action == "sentbox") {
+            await interaction.deferUpdate();
+            const gui = module.exports.inboxGui(ashimail, 1, 'sent');
+            return await interaction.editReply(gui);
         } else if (action == "match") {
             await interaction.deferReply({ flags: MessageFlags.Ephemeral });
             const guildData = await getGuildSettings(gid);
+            const msettings = guildData.MatchMakerSettings;
 
-            if (!guildData.events.includes['matchmaker'] && uid != "877167420572319804") {
-                await interaction.editReply(`<:gavel:1534097246675796009> \`THE CHIEF PASSERBY\` has yet to open <a:hearts:1543304375894679552> \`THE STOPOVER: MATCHMAKER\` event. Please come back when the event is active, Passerby!`);
-            } else {
-                await interaction.editReply(`Hala wait lang po, bossing`);
-            }
+            if (!guildData.events.includes['matchmaker'] && !(uid == "877167420572319804" || uid == "811596799663800341")) 
+                return await interaction.editReply(`<:gavel:1534097246675796009> \`THE CHIEF PASSERBY\` has yet to open <a:hearts:1543304375894679552> \`THE STOPOVER: MATCHMAKER\` event. Please come back when the event is active, Passerby!`);
+
+            const matchData = await getMatchData(uid);
+            if (!matchData) return await interaction.editReply(`It seems like you did not register for this edition of **The Stopover Matchmaker**`);
+
+            if (msettings.likingTime) return await interaction.editReply(await module.exports.likingTimeGui(uid, msettings));
+
+            return await interaction.editReply(module.exports.matchHomeGui(uid, msettings, matchData));
         }
     },
 
@@ -240,10 +250,12 @@ module.exports = {
                     .setCustomId(`mail.inbox`)
                     .setLabel(`Read Ashimails`)
                     .setStyle(ButtonStyle.Primary),
+                /*
                 new ButtonBuilder()
-                    .setCustomId(`mail.logout`)
-                    .setLabel(`Logout`)
-                    .setStyle(ButtonStyle.Danger)
+                    .setCustomId(`mail.sentbox`)
+                    .setLabel(`Sent Ashimails`)
+                    .setStyle(ButtonStyle.Primary)
+                */
             );
 
         return { content: "", embeds: [embed], components: [buttonRow] };
@@ -279,7 +291,7 @@ module.exports = {
         return embed;
     },
 
-    sentMailEmbed(mail) {
+    async sentMailEmbed(mail) {
         let content = `# \`RE\`: ${mail.title}\n> To: <@${mail.uid}>\n`;
 
         if (mail.anon) content += `> (Anonymously Sent)\n`;
@@ -389,6 +401,7 @@ module.exports = {
     inboxGui(ashimail, page, mode) {
         let content = '';
         let mailArray = ashimail.receivedMail;
+
         if (mode == "sent") {
             content += `# \`SENT ASHIMAILS\`:\n`;
             mailArray = ashimail.sentMail;
@@ -402,7 +415,7 @@ module.exports = {
         if (mails.length < 1) content += `\n*You have no Ashimails yet...*`;
 
         const menu = new StringSelectMenuBuilder()
-            .setCustomId(`mail.open`)
+            .setCustomId(`mail.open.${mode}`)
             .setPlaceholder(`Select Ashimail or Page`)
             .setMaxValues(1);
 
@@ -422,12 +435,17 @@ module.exports = {
                         content += '<:council:1534102603040821308>';
                     }
                 }
+
                 content += ` "${mail.title}" (${ms(Date.now() - parseInt(mail.dateSent), { long: true })} ago)`;
+
+                let menuLabel = `Received Ashimail #${i + 1}`;
+                if (mode == "sent") menuLabel = `Sent Ashimail #${i + 1}`;
+
                 menu.addOptions(
                     new StringSelectMenuOptionBuilder()
                         .setValue(`open.${i}`)
                         .setDescription(mail.title)
-                        .setLabel(`Received Ashimail #${i + 1}`)
+                        .setLabel(menuLabel)
                 )
             }
         }
@@ -473,5 +491,74 @@ module.exports = {
         let mails = receivedMails;
         mails.sort((a, b) => b.dateSent - a.dateSent);
         return mails;
+    },
+
+    matchHomeGui(uid, msettings, matchData) {
+        let content = `# <@${uid}>'s Matchmail\n> This is your **Matchmail Dashboard**\n\nAll mails you send and receive in the match mail are **anonymous** and will not consume ${iconizeItemWithName('magicInk')}\n`;
+        let components = [];
+
+        const currentPair = matchData.pairs[msettings.matchIndex];
+        if (!currentPair) {
+            content += `\nYou are currently not matched with anyone\n`;
+        } else {
+            content += `\n\`MATCHED!\` You are currently matched with someone and your similarity rating is: \n## <a:stp_heartspin:1523664759432548352> **\`${currentPair.rating}\`**\n`
+        }
+
+        const buttonRow = new ActionRowBuilder();
+
+        if (msettings.likingTime) {
+            content += `\n **Time of Judgement!** You have until __the next 12:00 PM__ to like your current match or not`;
+            buttonRow.addComponents(
+                new ButtonBuilder()
+                    .setCustomId(`match.judge.primer`)
+                    .setLabel(`Judge Pair`)
+                    .setStyle(ButtonStyle.Primary)
+            )
+            components.push(buttonRow);
+        } else if (currentPair) {
+            content += `\n If you matched today, you have until tomorrow, 9:00 PM to send each other Ashimails!`;
+            buttonRow.addComponents(
+                new ButtonBuilder()
+                    .setCustomId(`match.write`)
+                    .setLabel(`Write to Pair`)
+                    .setStyle(ButtonStyle.Success),
+                new ButtonBuilder()
+                    .setCustomId(`match.inbox`)
+                    .setLabel(`Read Ashimails`)
+                    .setStyle(ButtonStyle.Primary)
+            )
+            components.push(buttonRow);
+        }
+
+        const embed = createEmbedStandard().setDescription(content);
+        return { embeds: [embed], components };
+    },
+
+    async likingTimeGui(uid, msettings) {
+        const matchData = await getMatchData(uid);
+        const matchIndex = msettings.matchIndex;
+
+        let content = `# \`THE TIME HAS COME... TO JUDGE YOUR PAIR\`\n> Do you like your Match #${matchIndex + 1}?`;
+
+        const embed = createEmbedStandard()
+            .setDescription(content);
+
+        const buttonRow = new ActionRowBuilder()
+            .addComponents(
+                new ButtonBuilder()
+                    .setCustomId(`match.judge.yes`)
+                    .setLabel(`I like them`)
+                    .setStyle(ButtonStyle.Success),
+                new ButtonBuilder()
+                    .setCustomId(`match.judge.no`)
+                    .setLabel(`I'll have to Pass`)
+                    .setStyle(ButtonStyle.Danger),
+                new ButtonBuilder()
+                    .setCustomId(`match.inbox`)
+                    .setLabel(`Read Ashimails`)
+                    .setStyle(ButtonStyle.Primary)
+            )
+
+        return { embeds: [embed], components: [buttonRow] };
     }
 }

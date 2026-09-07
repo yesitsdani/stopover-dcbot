@@ -31,7 +31,15 @@ const guildSettingSchema = new mongoose.Schema({
         reason: String,
         afkSince: Number
     }],
-    mailedUsers: [String]
+    mailedUsers: [String],
+    
+    matchMails: [String],
+    MatchMakerSettings: {
+        matchIndex: Number,
+        likingTime: Boolean,
+        finished: Boolean
+    },
+
 });
 
 const GuildSettings = mongoose.model("guildSetting", guildSettingSchema);

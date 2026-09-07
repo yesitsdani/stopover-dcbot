@@ -11,10 +11,15 @@ module.exports = {
     alias: [],
     permissions: ['1531987396986409011', '1506448680000159784'],
     async execute(client, message, args) {
-        await updateAshimail(
-            message.author.id,
+        await GuildSettings.findOneAndUpdate(
+            { gid: message.guild.id },
             {
-                sessionUntil: 0
+                matchMails: [],
+                MatchMakerSettings: {
+                    matchIndex: 0,
+                    likingTime: false,
+                    finished: false
+                },
             }
         )
 

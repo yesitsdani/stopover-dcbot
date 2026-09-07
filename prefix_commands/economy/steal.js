@@ -1,3 +1,4 @@
+const { getHouse, getHouseData } = require("../../models/House");
 const { getGuildSettings, randomInt, getIdFromMention, getUser, iconizeMoney, addMoney, getMemberName, subtractMoney } = require("../../modules");
 
 module.exports = {
@@ -26,7 +27,7 @@ module.exports = {
         const targetData = await getUser(target);
         const userData = await getUser(uid);
 
-
+        if (targetMember.roles.cache.has(`1506448680000159784`)) return message.reply(`You cannot steal from <:gavel:1534097246675796009> \`THE CHIEF PASSERBY\``);
         if (targetMember.roles.cache.has(`1511897066262237285`)) return message.reply(`<:gavel:1534097246675796009> \`THE CHIEF PASSERBY\` has given protection to the <:council:1534102603040821308> \`MEMBERS OF THE STOPOVER COUNCIL\``);
         if (message.member.roles.cache.has(`1511897066262237285`)) return message.reply(`As a <:council:1534102603040821308> \`MEMBER OF THE STOPOVER COUNCIL\`, you are prohibited from stealing, as per orders of <:gavel:1534097246675796009> \`THE CHIEF PASSERBY\``);
         if (targetData.money < 1000) return message.reply(`<:gavel:1534097246675796009> \`THE CHIEF PASSERBY\` has given protection to Passerby with less than ${iconizeMoney(1000)}`);
@@ -40,7 +41,32 @@ module.exports = {
 
             await addMoney(uid, stolenAmount);
             await subtractMoney(target, stolenAmount);
-            return await message.reply(`You have stolen ${iconizeMoney(stolenAmount)} from **${getMemberName(targetMember)}**`);
+
+            let content = `You have stolen ${iconizeMoney(stolenAmount)} from **${getMemberName(targetMember)}**`
+
+            if (guildData.events.includes(`stealmania`)) {
+                const memberHouse = getHouse(message.member);
+                const targetHouse = getHouse(targetMember);
+
+                if (memberHouse != targetHouse) {
+                    const houseData = await getHouseData(gid);
+                    let changes;
+                    if (memberHouse == "one") {
+                        let stealMania1 = houseData.stealMania1;
+                        stealMania1 += stolenAmount;
+                        changes = { stealMania1 };
+                    } else if (memberHouse == "two") {
+                        let stealMania2 = houseData.stealMania2;
+                        stealMania2 += stolenAmount;
+                        changes = { stealMania2 };
+                    }
+                    content += `\n\n⚔️ \`HOUSE WARS\`: Your house gained **${stolenAmount}pts** for the \`STEAL MANIA\` challenge!`
+                }
+            }
+
+            return await message.reply(content);
+
+
         } else {
             const moneyForGrabs = userData.money * 0.1;
             const penaltyRatio = randomInt(1, 100) / 100;

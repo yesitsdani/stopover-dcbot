@@ -1,3 +1,4 @@
+const { MessageFlags } = require("discord.js");
 const Pouch = require("../models/Pouch");
 const { addItemToInv, getPouch, getPouchUpgradeCost, subtractMoney, canAfford, getUser, createEmbedStandard, iconizeMoney, getPouchCapacity } = require("../modules");
 
