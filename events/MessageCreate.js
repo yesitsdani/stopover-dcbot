@@ -2,7 +2,7 @@ const ms = require("ms");
 const { getUser, getRpgUser, getMemberName, iconizeTitle } = require("../modules");
 const User = require("../models/User");
 const { getMailedUser, removeMailedUser, getAfkUser, removeAfkUser, getMatchMail, removeMatchMail } = require("../alerts");
-const { matchroomPair, findMatchroom } = require("../prefix_commands/event/matchroom");
+const { matchroomPair, findMatchroom, roomOwners } = require("../prefix_commands/event/matchroom");
 
 module.exports = {
     async run(client, message, prefix) {
@@ -11,7 +11,7 @@ module.exports = {
         if (matchroom) {
             const pairedChannel = await findMatchroom(message.guild, matchroom);
             if (!pairedChannel) return;
-            return await pairedChannel.send(`<@${message.author.id}> | Your ${matchroomPair.get(`matchnum`)} says: ${message.content}`);
+            return await pairedChannel.send(`<@${roomOwners.get(matchroom)}> | Your ${matchroomPair.get(`matchnum`)} says: ${message.content}`);
         }
 
         if (prefix == "atc" && !(message.author.id == "811596799663800341" || message.author.id == "877167420572319804")) return;
