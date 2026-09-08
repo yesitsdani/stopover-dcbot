@@ -31,6 +31,13 @@ module.exports = {
                 ring: "ringF",
                 status: "Married"
             }
+        } else if (args[0] == 'marrypotata') {
+            marriage = {
+                uid: "764144385176109096",
+                date: 1788531615784,
+                ring: "ringF",
+                status: "Married"
+            }
         } else if (args[0] == 'zionmarry') {
             uid = "764037666538651658";
             marriage = {
@@ -47,6 +54,14 @@ module.exports = {
                 ring: "ringF",
                 status: "Married"
             }
+        } else if (args[0] == 'potatamarry') {
+            uid = "764144385176109096";
+            marriage = {
+                uid: message.author.id,
+                date: 1788531615784,
+                ring: "ringF",
+                status: "Married"
+            }
         } else if (args[0] == 'zionclear') {
             uid = "764037666538651658";
             marriage = {
@@ -57,6 +72,14 @@ module.exports = {
             }
         } else if (args[0] == 'timmyclear') {
             uid = "762483844267769897";
+            marriage = {
+                uid: "",
+                date: 0,
+                ring: '',
+                status: ''
+            }
+        } else if (args[0] == 'potataclear') {
+            uid = "764144385176109096";
             marriage = {
                 uid: "",
                 date: 0,

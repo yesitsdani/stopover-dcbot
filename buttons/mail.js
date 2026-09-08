@@ -551,13 +551,9 @@ module.exports = {
                 new ButtonBuilder()
                     .setCustomId(`match.judge.no`)
                     .setLabel(`I'll have to Pass`)
-                    .setStyle(ButtonStyle.Danger),
-                new ButtonBuilder()
-                    .setCustomId(`match.inbox`)
-                    .setLabel(`Read Ashimails`)
-                    .setStyle(ButtonStyle.Primary)
+                    .setStyle(ButtonStyle.Danger)
             )
 
-        return { embeds: [embed], components: [buttonRow] };
+        return { content: `<@${uid}>`, embeds: [embed], components: [buttonRow] };
     }
 }

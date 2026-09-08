@@ -11,7 +11,8 @@ const matchSchema = new mongoose.Schema({
     }],
     sentMail: [mail],
     receivedMail: [mail],
-    mailBuilder: mail
+    mailBuilder: mail,
+    channel: { type: String, default: null }
 });
 
 const Match = mongoose.model("match", matchSchema);

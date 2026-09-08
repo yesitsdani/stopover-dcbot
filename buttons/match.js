@@ -126,7 +126,7 @@ module.exports = {
 
             } else if (option == 'no') {
                 const embed = createEmbedStandard()
-                    .setDescription(`# \`YOU HAVE CHOSEN TO NOT MEET YOUR PAIR\`\n> While the liking time is still active, you can still change your mind. Thank you, Passerby!`);
+                    .setDescription(`# \`YOU HAVE CHOSEN TO NOT MEET YOUR PAIR\`\n> Thank you, Passerby!`);
 
                 return await interaction.editReply({ embeds: [embed], components: [] });
             } else if (option == 'yes') {
@@ -143,7 +143,7 @@ module.exports = {
                 await updateMatch(uid, { pairs });
 
                 const embed = createEmbedStandard()
-                    .setDescription(`# 💌 \`YOU LIKED YOUR PAIR!\`\n> If they liked you as well, you will get to know each others' identity after 💌 \`THE STOPOVER MATCHMAKER\` event\n\nWhile the liking time is still active, you can still change your mind. Thank you, Passerby!`);
+                    .setDescription(`# 💌 \`YOU LIKED YOUR MATCH #${msettings.matchIndex + 1}!\`\n> If they liked you as well, you will get to know each others' identity after 💌 \`THE STOPOVER MATCHMAKER\` event\n\nThank you, Passerby!`);
 
                 return await interaction.editReply({ embeds: [embed], components: [] });
             }

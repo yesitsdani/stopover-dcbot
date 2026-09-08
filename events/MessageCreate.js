@@ -2,10 +2,18 @@ const ms = require("ms");
 const { getUser, getRpgUser, getMemberName, iconizeTitle } = require("../modules");
 const User = require("../models/User");
 const { getMailedUser, removeMailedUser, getAfkUser, removeAfkUser, getMatchMail, removeMatchMail } = require("../alerts");
+const { matchroomPair, findMatchroom } = require("../prefix_commands/event/matchroom");
 
 module.exports = {
     async run(client, message, prefix) {
         if (message.author.bot) return;
+        const matchroom = matchroomPair.get(message.channel.id);
+        if (matchroom) {
+            const pairedChannel = await findMatchroom(message.guild, matchroom);
+            if (!pairedChannel) return;
+            return await pairedChannel.send(`💗 | \`Your Match Says\`: ${message.content}`);
+        }
+
         if (prefix == "atc" && !(message.author.id == "811596799663800341" || message.author.id == "877167420572319804")) return;
 
         const uid = message.author.id;
