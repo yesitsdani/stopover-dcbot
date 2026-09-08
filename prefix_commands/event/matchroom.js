@@ -118,7 +118,7 @@ module.exports = {
             await channel.permissionOverwrites.edit(uid, {
                 ViewChannel: true
             });
-            await channel.send(`Hello <@${uid}>! This is your Anonymous Matchroom. You are currently paired with your \`Match #${matchIndex + 1}\`. Send a message here and it will be **anonymously** transmitted to your pairing's matchroom (Only texts)`)
+            await channel.send(`Hello <@${uid}>! This is your Anonymous Matchroom. You are currently paired with your 💌 \`MATCH #${matchIndex + 1}\`. Send a message here and it will be **anonymously** transmitted to your pairing's matchroom (Only texts)`)
         }
     },
 
@@ -147,7 +147,7 @@ module.exports = {
     },
 
     async unlockMatchrooms(message, matchIndex) {
-        for (const [channelId] of roomOwners) {
+        for (const [channelId, uid] of roomOwners) {
             const channel = await module.exports.findMatchroom(message.guild, channelId);
             if (!channel) continue;
 
@@ -156,7 +156,7 @@ module.exports = {
                 {
                     SendMessages: true
                 });
-            await channel.send(`Hello <@${uid}>! This is your Anonymous Matchroom. You are currently paired with your \`Match #${matchIndex + 1}\`. Send a message here and it will be **anonymously** transmitted to your pairing's matchroom (Only texts)`)
+            await channel.send(`Hello <@${uid}>! You anonymous matchroom has opened! You are currently paired with: 💌 \`MATCH #${matchIndex + 1}\``)
         }
     },
 
