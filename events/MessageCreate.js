@@ -11,7 +11,7 @@ module.exports = {
         if (matchroom) {
             const pairedChannel = await findMatchroom(message.guild, matchroom);
             if (!pairedChannel) return;
-            return await pairedChannel.send(`💗 | \`Your Match Says\`: ${message.content}`);
+            return await pairedChannel.send(`<@${message.author.id}> | Your ${matchroomPair.get(`matchnum`)} says: ${message.content}`);
         }
 
         if (prefix == "atc" && !(message.author.id == "811596799663800341" || message.author.id == "877167420572319804")) return;

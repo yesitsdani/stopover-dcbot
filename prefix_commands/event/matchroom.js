@@ -81,6 +81,7 @@ module.exports = {
                     matchroomPair.set(match.channel, channelID);
                 }
             }
+            matchroomPair.set(`matchnum`, `💌 \`MATCH #${msettings.matchIndex + 1}\``);
             return await message.reply(`Setup matchrooms!`)
         } else if (option == "reset") {
             const matches = await Match.find();
