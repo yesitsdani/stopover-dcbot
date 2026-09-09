@@ -125,6 +125,17 @@ module.exports = {
                 return await interaction.editReply(await likingTimeGui(uid, msettings));
 
             } else if (option == 'no') {
+                let currentPair = await module.exports.getCurrentPair(gid, matchData);
+                let pairs = matchData.pairs;
+                
+                currentPair[`finished`] = true;
+                pairs[msettings.matchIndex] = currentPair;
+
+                const logChannel = await interaction.guild.channels.fetch('1543823184472707113');
+                await logChannel.send(`💌 \`MATCHMAKER EVENT\`: <@${uid}> did not like their Pair :(( (Pair #${msettings.matchIndex + 1})`);
+
+                await updateMatch(uid, { pairs });
+
                 const embed = createEmbedStandard()
                     .setDescription(`# \`YOU HAVE CHOSEN TO NOT MEET YOUR PAIR\`\n> Thank you, Passerby!`);
 

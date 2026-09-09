@@ -1,4 +1,4 @@
-const { getHouse, getHouseData } = require("../../models/House");
+const { getHouse, getHouseData, updateHouseData } = require("../../models/House");
 const { getGuildSettings, randomInt, getIdFromMention, getUser, iconizeMoney, addMoney, getMemberName, subtractMoney } = require("../../modules");
 
 module.exports = {
@@ -60,6 +60,8 @@ module.exports = {
                         stealMania2 += parseInt(stolenAmount);
                         changes = { stealMania2 };
                     }
+
+                    await updateHouseData(gid, changes);
                     content += `\n\n⚔️ \`HOUSE WARS\`: Your house gained **${parseInt(stolenAmount)}pts** for the \`STEAL MANIA\` challenge!`
                 }
             }

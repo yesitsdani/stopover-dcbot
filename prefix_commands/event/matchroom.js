@@ -1,5 +1,5 @@
 const { ChannelType } = require("discord.js");
-const { Match } = require("../../models/Match");
+const { Match, getMatchData } = require("../../models/Match");
 const { getGuildSettings } = require("../../modules");
 const { likingTimeGui } = require("../../buttons/mail");
 
@@ -157,7 +157,12 @@ module.exports = {
                 {
                     SendMessages: true
                 });
-            await channel.send(`Hello <@${uid}>! You anonymous matchroom has opened! You are currently paired with: 💌 \`MATCH #${matchIndex + 1}\``)
+
+            const matchData = await getMatchData(uid);
+            const currentPair = matchData.pairs[matchIndex];
+            const rating = currentPair.rating;
+
+            await channel.send(`Hello <@${uid}>! You anonymous matchroom has opened! You are currently paired with: 💌 \`MATCH #${matchIndex + 1}\` and your similarity rating is:\n# <a:stp_heartspin:1523664759432548352> **\`${rating}\`**\nYou have 33 hours to chat, Passerby. Good luck and enjoy!`)
         }
     },
 
