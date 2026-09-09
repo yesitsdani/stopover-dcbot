@@ -31,6 +31,8 @@ module.exports = {
             }
         }
 
+        if (matchData.channel) content += `\n\nChannel: <#${matchData.channel}>`;
+
         content += `\n\nSent Ashimails: **x${matchData.sentMail.length}**`;
         content += `\nReceived Ashimails: **x${matchData.receivedMail.length}**`;
 

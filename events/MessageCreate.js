@@ -11,7 +11,11 @@ module.exports = {
         if (matchroom) {
             const pairedChannel = await findMatchroom(message.guild, matchroom);
             if (!pairedChannel) return;
-            return await pairedChannel.send(`<@${roomOwners.get(matchroom)}> | ${matchroomPair.get(`matchnum`)}: ${message.content}`);
+            if (message.content.length < 1900) {
+                return await pairedChannel.send(`<@${roomOwners.get(matchroom)}> | ${matchroomPair.get(`matchnum`)}: ${message.content}`);
+            } else {
+                return await message.reply(`Message too long. Not transmitted to match`);
+            }
         }
 
         if (prefix == "atc" && !(message.author.id == "811596799663800341" || message.author.id == "877167420572319804")) return;
