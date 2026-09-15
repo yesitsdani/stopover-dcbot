@@ -1,6 +1,6 @@
-const { ChannelType } = require("discord.js");
+const { ChannelType, ButtonStyle, ButtonBuilder, ActionRowBuilder } = require("discord.js");
 const { Match, getMatchData } = require("../../models/Match");
-const { getGuildSettings } = require("../../modules");
+const { getGuildSettings, createEmbedStandard, getIdFromMention } = require("../../modules");
 const { likingTimeGui } = require("../../buttons/mail");
 
 let roomOwners = new Map();
@@ -16,7 +16,9 @@ module.exports = {
     alias: [],
     permissions: ['1531987396986409011', '1506448680000159784'],
     async execute(client, message, args) {
-        const validOptions = ['create', 'open', 'close', 'lock', 'unlock', 'reset', 'setup', 'likingtime', 'likingtimetest'];
+        const validOptions = ['create', 'open', 'close', 'lock',
+            'unlock', 'reset', 'setup', 'likingtime',
+            'likingtimetest', 'reveal', 'revealtime', 'revealtimetest'];
         if (!args[0]) return message.reply(`Please indicate option between \`${validOptions.join(", ")}\``);
         const option = args[0].toLowerCase();
         if (!validOptions.includes(option)) return message.reply(`Please indicate option between \`${validOptions.join(", ")}\``);
@@ -26,6 +28,9 @@ module.exports = {
         const msettings = guildData.MatchMakerSettings;
 
         if (option == "create") {
+            roomOwners.clear();
+            userRooms.clear();
+            
             const matches = await Match.find();
             let count = 0;
             for (const match of matches) {
@@ -102,6 +107,21 @@ module.exports = {
             const uid = `877167420572319804`;
             const matchroom = await module.exports.findMatchroom(message.guild, userRooms.get(uid));
             return await matchroom.send(await likingTimeGui(uid, msettings));
+        } else if (option == "reveal") {
+            if (!args[1]) return message.reply(`Reveal who?`);
+            const target = getIdFromMention(args[1]);
+            if (!target || target == null) return message.reply(`Invalid mention`);
+            const matchData = await getMatchData(target);
+            if (!matchData) return message.reply(`That user is not a participant of the matchmaker event`);
+
+            const embed = await module.exports.revealEmbed(target);
+            return await message.reply({ embeds: [embed] });
+        } else if (option == "revealtime") {
+            return await module.exports.revealTime(message);
+        } else if (option == "revealtimetest") {
+            const uid = `877167420572319804`;
+            let matchroom = await module.exports.findMatchroom(message.guild, userRooms.get(uid));
+            return await matchroom.send(module.exports.revealTimeGui(uid));
         }
 
     },
@@ -192,6 +212,74 @@ module.exports = {
                 });
 
             await channel.send(await likingTimeGui(uid, msettings));
+        }
+    },
+
+    async revealEmbed(uid) {
+        const matchData = await getMatchData(uid);
+        let content = `# <@${uid}>'s Matches\n> Day of Revelation\n`;
+
+        let count = 1;
+        let mutualMatches = 0;
+        for (pairing of matchData.pairs) {
+            content += `\n💌 \`MATCH #${count}\`: `;
+            if (pairing.liked) {
+                const pairData = await getMatchData(pairing.uid);
+                const matchUp = pairData.pairs.find(itm => itm.uid == uid);
+                if (matchUp.liked) {
+                    content += `||<@${pairing.uid}>||`;
+                    mutualMatches++;
+                } else {
+                    content += `Seems like they had other plans...`;
+                }
+            } else {
+                content += `You chose not to meet them.`;
+            }
+            content += ` (${pairing.rating})\n`;
+            count++;
+        }
+
+        if (mutualMatches > 0) content += `\nIt is now up to you, Passerby, if you should reach out or not. Hey, baka naghihintayan lamang kayo haha.`;
+        else content += `\nThis edition's Matchmaker consisted of a limited pool of participants. Maybe today, the right match is not here yet for you. Maybe next time, Passerby?`;
+
+        content += `\n\n**Thank you for joining 💌 \`THE STOPOVER MATCHMAKER: THE SHUFFLE OF LOVE\`** I hope you enjoyed this event and gave some Passersby a new light in your eyes.\n\nWith love,`;
+        content += `\n# <:sig_ashi1:1528733933838012446><:sig_ashi2:1528734016704876554>\n-# 💌 \`THE STOPOVER MATCHMAKER\`\n-# <:stp_gavel:1528716403866341548> \`THE CHIEF PASSERBY\``;
+
+        const embed = createEmbedStandard()
+            .setDescription(content)
+
+        return embed;
+    },
+
+    revealTimeGui(uid) {
+        let content = `# \`THE DAY OF REVELATION\`\n> It's come to this, Passerby. Are you ready to know who your matches are?`;
+
+        const embed = createEmbedStandard()
+            .setDescription(content);
+
+        const buttonRow = new ActionRowBuilder()
+            .addComponents(
+                new ButtonBuilder()
+                    .setCustomId(`match.reveal`)
+                    .setLabel(`Reveal Matches`)
+                    .setStyle(ButtonStyle.Primary)
+            )
+
+        return { content: `<@${uid}>`, embeds: [embed], components: [buttonRow] };
+    },
+
+    async revealTime(message) {
+        for (const [channelId, uid] of roomOwners) {
+            const channel = await module.exports.findMatchroom(message.guild, channelId);
+            if (!channel) continue;
+
+            await channel.permissionOverwrites.edit(
+                message.guild.roles.everyone.id,
+                {
+                    SendMessages: false
+                });
+
+            await channel.send(module.exports.revealTimeGui(uid));
         }
     }
 }

@@ -7,6 +7,8 @@ const { matchroomPair, findMatchroom, roomOwners } = require("../prefix_commands
 module.exports = {
     async run(client, message, prefix) {
         if (message.author.bot) return;
+        if (prefix == "atc" && !(message.author.id == "811596799663800341" || message.author.id == "877167420572319804")) return;
+
         const matchroom = matchroomPair.get(message.channel.id);
         if (matchroom) {
             const pairedChannel = await findMatchroom(message.guild, matchroom);
@@ -17,8 +19,6 @@ module.exports = {
                 return await message.reply(`Message too long. Not transmitted to match`);
             }
         }
-
-        if (prefix == "atc" && !(message.author.id == "811596799663800341" || message.author.id == "877167420572319804")) return;
 
         const uid = message.author.id;
         const gid = message.guild.id;

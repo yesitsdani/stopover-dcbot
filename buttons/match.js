@@ -4,6 +4,7 @@ const { getGuildSettings, createEmbedStandard } = require("../modules");
 const { logMailEmbed, sortMails, matchHomeGui, likingTimeGui } = require("./mail");
 const ms = require("ms");
 const { newMatchMail } = require("../alerts");
+const { revealEmbed } = require("../prefix_commands/event/matchroom");
 
 module.exports = {
     name: "match",
@@ -158,6 +159,10 @@ module.exports = {
 
                 return await interaction.editReply({ embeds: [embed], components: [] });
             }
+        } else if (action == "reveal") {
+            await interaction.deferUpdate();
+            const embed = await revealEmbed(uid);
+            return await interaction.editReply({ embeds: [embed], components: [] });
         }
     },
 

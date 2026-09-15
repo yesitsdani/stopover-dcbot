@@ -158,7 +158,7 @@ module.exports = {
             const guildData = await getGuildSettings(gid);
             const msettings = guildData.MatchMakerSettings;
 
-            //if (!guildData.events.includes['matchmaker'] && !(uid == "877167420572319804" || uid == "811596799663800341")) return await interaction.editReply(`<:gavel:1534097246675796009> \`THE CHIEF PASSERBY\` has yet to open <a:hearts:1543304375894679552> \`THE STOPOVER: MATCHMAKER\` event. Please come back when the event is active, Passerby!`);
+            if (!guildData.events.includes['matchmaker']) return await interaction.editReply(`<:gavel:1534097246675796009> \`THE CHIEF PASSERBY\` has yet to open <a:hearts:1543304375894679552> \`THE STOPOVER: MATCHMAKER\` event. Please come back when the event is active, Passerby!`);
 
             const matchData = await getMatchData(uid);
             if (!matchData) return await interaction.editReply(`It seems like you did not register for this edition of **The Stopover Matchmaker**`);
