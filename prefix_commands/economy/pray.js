@@ -10,10 +10,10 @@ module.exports = {
     testing: false,
     alias: ['dasal'],
     async execute(client, message, args) {
-        const validChannels = ['1506182833562193960', '1504325792233164821', '1536747732688183376'];
+        const validChannels = ['1506182833562193960', '1504325792233164821', '1536747732688183376', '1543499083853996104'];
         if (!validChannels.includes(message.channel.id)) {
             await resetCommandCD(message.author.id, "pray");
-            return await message.reply(`You can only do this in the <#1506182833562193960> and <#1536747732688183376> (buy access in \`stp shop\`)`);
+            return await message.reply(`You can only do this in the <#1506182833562193960>, <#1543499083853996104> and <#1536747732688183376> (buy access in \`stp shop\`)`);
         }
         let uid = message.author.id;
         if (args[0] && getIdFromMention(args[0]) != null) uid = getIdFromMention(args[0]);

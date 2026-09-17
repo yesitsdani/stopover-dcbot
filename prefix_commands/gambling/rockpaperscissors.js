@@ -44,12 +44,15 @@ module.exports = {
         }
 
         let betAmount = checkIfNum(args[1]);
-        if (betAmount == null) {
+        const limit = getBetLimit(message.channel.id);
+
+        if (betAmount == null && args[1].toLowerCase != "max") {
             await resetCommandCD(uid, "rockpaperscissors");
             return message.reply(`Please use a valid number for the bet amount`);
+        } else if (args[1].toLowerCase == "max") {
+            betAmount = limit;
         }
 
-        const limit = getBetLimit(message.channel.id);
         if (betAmount > limit) {
             await resetCommandCD(uid, "rockpaperscissors");
             return message.reply(`You can only bet up to ${iconizeMoney(limit)}`);

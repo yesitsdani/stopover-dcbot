@@ -63,6 +63,10 @@ module.exports = {
                             .setDescription(`Items that can change your In-Server and Passerby Profile`)
                             .setLabel(`Profile and In-Server Items`),
                         new StringSelectMenuOptionBuilder()
+                            .setValue(`farming`)
+                            .setDescription(`Seeds, Crops, and other Farm produce`)
+                            .setLabel(`Farming Items`),
+                        new StringSelectMenuOptionBuilder()
                             .setValue(`close`)
                             .setDescription(`Removes the selection menu from this message`)
                             .setLabel(`Close Menu`)

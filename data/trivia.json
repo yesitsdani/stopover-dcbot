@@ -837,5 +837,215 @@
             { "label": "C", "answer": "oHH SHAKS", "correct": true },
             { "label": "D", "answer": "You didn't know!?", "correct": false }
         ]
+    },
+    {
+        "question": "Sino ang nagbago ng tenor ng conversation?",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "Kolo", "correct": false },
+            { "label": "B", "answer": "Soleil", "correct": true },
+            { "label": "C", "answer": "TimmyTime", "correct": false },
+            { "label": "D", "answer": "Roi", "correct": false }
+        ]
+    },
+    {
+        "question": "I miss you",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "Yahoo", "correct": true },
+            { "label": "B", "answer": "I miss you too", "correct": false },
+            { "label": "C", "answer": "Huh, sino ka?", "correct": false },
+            { "label": "D", "answer": "'Wag ako beh", "correct": false }
+        ]
+    },
+    {
+        "question": "Kilala sakaniyang jokes sa Selfie Channel",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "Milo", "correct": true },
+            { "label": "B", "answer": "Sasori", "correct": false },
+            { "label": "C", "answer": "TimmyTime", "correct": false },
+            { "label": "D", "answer": "RB", "correct": false }
+        ]
+    },
+    {
+        "question": "Meron din naman palang ganda ang buhay",
+        "reward": 150,
+        "options": [
+            { "label": "A", "answer": "Makulay ang buhay", "correct": false },
+            { "label": "B", "answer": "Habang may buhay", "correct": false },
+            { "label": "C", "answer": "Puede nang mangarap", "correct": true },
+            { "label": "D", "answer": "Okay na po yun", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na isang Architecture student na kilala rin sakanyang Hachiware profile picture",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "Andy", "correct": false },
+            { "label": "B", "answer": "Kye", "correct": true },
+            { "label": "C", "answer": "Soleil", "correct": false },
+            { "label": "D", "answer": "Ish", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na kilala sakaniyang pagkahilig sa penguin character na si Pingu. Noot noot.",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "Charlie", "correct": false },
+            { "label": "B", "answer": "Andy", "correct": false },
+            { "label": "C", "answer": "Kye", "correct": false },
+            { "label": "D", "answer": "Siaz", "correct": true }
+        ]
+    },
+    {
+        "question": "Stopover Trio na kilala sa paghawak ng longest VC record so far (500 hours as of writing)",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "Twinklets", "correct": false },
+            { "label": "B", "answer": "Soleil, Rudy, at Samjam", "correct": true },
+            { "label": "C", "answer": "We Don't Talk About Bruno Trio", "correct": false },
+            { "label": "D", "answer": "Kolo, Samjam, at Lumoneko", "correct": false }
+        ]
+    },
+    {
+        "question": "Ang official na server tag ng The Stopover ay may pink na diamond at katagang [BLANK]",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "SPVR", "correct": false },
+            { "label": "B", "answer": "STOP", "correct": true },
+            { "label": "C", "answer": "OVER", "correct": false },
+            { "label": "D", "answer": "spvr", "correct": false }
+        ]
+    },
+    {
+        "question": "Ang members ng Stopover ay tinatawag din na...",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "Stopoverists", "correct": false },
+            { "label": "B", "answer": "Cavitists", "correct": false },
+            { "label": "C", "answer": "Passerby", "correct": true },
+            { "label": "D", "answer": "Passenger", "correct": false }
+        ]
+    },
+    {
+        "question": "Lugar sa QC na madalas pinagkikitaan ng Passersby na featured online ng iba't-ibang personalities dahil sa cozy vibe nito",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "The Cat Stop", "correct": false },
+            { "label": "B", "answer": "Sunshine PH", "correct": false },
+            { "label": "C", "answer": "Cat Cafe PH", "correct": false },
+            { "label": "D", "answer": "Sunshineboy Cafe", "correct": true }
+        ]
+    },
+    {
+        "question": "Stopover Member na galing sa Batch 2 pero naging tanyag sa panahon ng Batch 6. Kilala rin siya sakanyang chill personality, boses tuwing nag-iingles, gym pics, at makinang na ngiti",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "Shake", "correct": false },
+            { "label": "B", "answer": "Lumoneko", "correct": false },
+            { "label": "C", "answer": "MX", "correct": true },
+            { "label": "D", "answer": "Kolo", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na nakakasama tuwing siya ay nasa VC during work hours. Siya ay kilala rin sakanyang piercing at tattoos, notably: ang The Fallen Angel",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "Shake", "correct": true },
+            { "label": "B", "answer": "Lumoneko", "correct": false },
+            { "label": "C", "answer": "MX", "correct": false },
+            { "label": "D", "answer": "Kolo", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na kinalilituhan sa kung paano ibigkas ang kaniyang server name na siyang mahilig din maglaro ng Stopover RPG. Madalas siyang gumamit ng anime bilang profile picture.",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "Charlie", "correct": false },
+            { "label": "B", "answer": "Samjam", "correct": false },
+            { "label": "C", "answer": "Mikieatto", "correct": true },
+            { "label": "D", "answer": "Andy", "correct": false }
+        ]
+    },
+    {
+        "question": "Ang Passersby na ito ay mga Cleric sa Stopover RPG maliban kay:",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "Frost", "correct": false },
+            { "label": "B", "answer": "Sol", "correct": false },
+            { "label": "C", "answer": "Ashi", "correct": false },
+            { "label": "D", "answer": "Rudy", "correct": true }
+        ]
+    },
+    {
+        "question": "Stopover Member na kilala dahil sa walang-sawang pagpapatugtog ng mga kanta ni NIKI",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "Kol", "correct": false },
+            { "label": "B", "answer": "Sol", "correct": false },
+            { "label": "C", "answer": "Pol", "correct": true },
+            { "label": "D", "answer": "Jol(o)", "correct": false }
+        ]
+    },
+    {
+        "question": "Syempre...",
+        "reward": 150,
+        "options": [
+            { "label": "A", "answer": "Yes", "correct": false },
+            { "label": "B", "answer": "English ay 'Of course'", "correct": false },
+            { "label": "C", "answer": "Ikaw lang...", "correct": true },
+            { "label": "D", "answer": "Puede nang mangarap", "correct": false }
+        ]
+    },
+    {
+        "question": "Stopover Member na laging nasasabihang kaboses ng loyalty awardee na si Cee at kilala sakanyang server nickname na katunog ng isang popular na SIM ng isang Filipino Telco Company",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "Temmie", "correct": false },
+            { "label": "B", "answer": "Kolo", "correct": false },
+            { "label": "C", "answer": "Tengs", "correct": true },
+            { "label": "D", "answer": "Tanks", "correct": false }
+        ]
+    },
+    {
+        "question": "Alin sa mga sumusunod ang naging nickname ni Roi",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "Lou Zone", "correct": false },
+            { "label": "B", "answer": "Bi-Siaz", "correct": false },
+            { "label": "C", "answer": "Minty Now", "correct": true },
+            { "label": "D", "answer": "Po-lippines", "correct": false }
+        ]
+    },
+    {
+        "question": "Alin sa mga sumusunod ang naging nickname ni Vincent",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "Lou Zone", "correct": true },
+            { "label": "B", "answer": "Bi-Siaz", "correct": false },
+            { "label": "C", "answer": "Minty Now", "correct": false },
+            { "label": "D", "answer": "Po-lippines", "correct": false }
+        ]
+    },
+    {
+        "question": "Alin sa mga sumusunod ang naging nickname ni Siaz",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "Lou Zone", "correct": false },
+            { "label": "B", "answer": "Bi-Siaz", "correct": true },
+            { "label": "C", "answer": "Minty Now", "correct": false },
+            { "label": "D", "answer": "Po-lippines", "correct": false }
+        ]
+    },
+    {
+        "question": "Alin sa mga sumusunod ang naging nickname ni Ponyo",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "Lou Zone", "correct": false },
+            { "label": "B", "answer": "Bi-Siaz", "correct": false },
+            { "label": "C", "answer": "Minty Now", "correct": false },
+            { "label": "D", "answer": "Po-lippines", "correct": true }
+        ]
     }
 ]

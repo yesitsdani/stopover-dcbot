@@ -505,7 +505,7 @@
     },
     {
         "id": "seed-carrot",
-        "category": "general",
+        "category": "farming",
         "usableID": 57,
         "description": "Used to grow carrots",
         "name": "Carrot Seeds",
@@ -514,7 +514,7 @@
     },
     {
         "id": "seed-potato",
-        "category": "general",
+        "category": "farming",
         "usableID": 58,
         "description": "Used to grow potatoes",
         "name": "Potato Seeds",
@@ -523,7 +523,7 @@
     },
     {
         "id": "seed-onion",
-        "category": "general",
+        "category": "farming",
         "usableID": 59,
         "description": "Used to grow onions",
         "name": "Onion Seeds",
@@ -532,7 +532,7 @@
     },
     {
         "id": "seed-corn",
-        "category": "general",
+        "category": "farming",
         "usableID": 60,
         "description": "Used to grow corns",
         "name": "Corn Seeds",
@@ -541,7 +541,7 @@
     },
     {
         "id": "seed-eggplant",
-        "category": "general",
+        "category": "farming",
         "usableID": 61,
         "description": "Used to grow eggplants",
         "name": "Eggplant Seeds",
@@ -550,7 +550,7 @@
     },
     {
         "id": "seed-garlic",
-        "category": "general",
+        "category": "farming",
         "usableID": 62,
         "description": "Used to grow garlic",
         "name": "Garlic Seeds",
@@ -559,7 +559,7 @@
     },
     {
         "id": "seed-banana",
-        "category": "general",
+        "category": "farming",
         "usableID": 63,
         "description": "Used to grow bananas",
         "name": "Banana Seeds",
@@ -568,7 +568,7 @@
     },
     {
         "id": "crop-carrot",
-        "category": "general",
+        "category": "farming",
         "usableID": 64,
         "description": "A crunchy, orange vegetable",
         "name": "Carrot",
@@ -577,7 +577,7 @@
     },
     {
         "id": "crop-potato",
-        "category": "general",
+        "category": "farming",
         "usableID": 65,
         "description": "An earthy and hard vegetable",
         "name": "Potato",
@@ -586,7 +586,7 @@
     },
     {
         "id": "crop-onion",
-        "category": "general",
+        "category": "farming",
         "usableID": 66,
         "description": "A layered eye-tearing vegetable",
         "name": "Onion",
@@ -595,7 +595,7 @@
     },
     {
         "id": "crop-corn",
-        "category": "general",
+        "category": "farming",
         "usableID": 67,
         "description": "A yellow puffy vegetable",
         "name": "Corn",
@@ -604,7 +604,7 @@
     },
     {
         "id": "crop-eggplant",
-        "category": "general",
+        "category": "farming",
         "usableID": 68,
         "description": "A purple elongated vegetable",
         "name": "Eggplant",
@@ -613,7 +613,7 @@
     },
     {
         "id": "crop-garlic",
-        "category": "general",
+        "category": "farming",
         "usableID": 69,
         "description": "A smelly yet aromatic vegetable",
         "name": "Garlic",
@@ -622,7 +622,7 @@
     },
     {
         "id": "crop-banana",
-        "category": "general",
+        "category": "farming",
         "usableID": 70,
         "description": "An elongated sweet yellow fruit",
         "name": "Banana",
@@ -709,5 +709,113 @@
         "name": "Ashi's Wonderful Gem",
         "icon": "<:ashiGem:1543870405729591317>",
         "source": "A gift granted by the Chief Passerby"
+    },
+    {
+        "id": "ore-coal",
+        "category": "general",
+        "usableID": 80,
+        "description": "Can be used to smelt ores. Refining it would allow better ores to be smelted",
+        "name": "Coal Chunks",
+        "icon": "<:orecoal:1549616325159034961>",
+        "source": "Mining anywhere"
+    },
+    {
+        "id": "refined-coal",
+        "category": "general",
+        "usableID": 81,
+        "description": "Used to smelt platinum and amethysts",
+        "name": "Refined Coal",
+        "icon": "<:coal:1549616403928060026>",
+        "source": "Refined from a blacksmith"
+    },
+    {
+        "id": "ore-iron",
+        "category": "general",
+        "usableID": 82,
+        "description": "Smeltable",
+        "name": "Iron Ore",
+        "icon": "<:oreiron:1549616331354144808>",
+        "source": "Mining anywhere"
+    },
+    {
+        "id": "iron-bar",
+        "category": "general",
+        "usableID": 83,
+        "description": "A lofty material",
+        "name": "Iron",
+        "icon": "<:iron:1549616408890056735>",
+        "source": "Smelted from ore"
+    },
+    {
+        "id": "ore-copper",
+        "category": "general",
+        "usableID": 84,
+        "description": "Smeltable",
+        "name": "Copper Ore",
+        "icon": "<:orecopper:1549616327352918017>",
+        "source": "Mining anywhere"
+    },
+    {
+        "id": "copper-bar",
+        "category": "general",
+        "usableID": 85,
+        "description": "A lofty material",
+        "name": "Copper",
+        "icon": "<:copper:1549616405610106890>",
+        "source": "Smelted from ore"
+    },
+    {
+        "id": "ore-gold",
+        "category": "general",
+        "usableID": 86,
+        "description": "Smeltable",
+        "name": "Gold Ore",
+        "icon": "<:oregold:1549616329298944141>",
+        "source": "Mining"
+    },
+    {
+        "id": "gold-bar",
+        "category": "general",
+        "usableID": 87,
+        "description": "A lofty material",
+        "name": "Gold",
+        "icon": "<:gold:1549616407111540806>",
+        "source": "Smelted from ore"
+    },
+    {
+        "id": "ore-amethyst",
+        "category": "general",
+        "usableID": 88,
+        "description": "Smeltable",
+        "name": "Amethyst Ore",
+        "icon": "<:oreamethyst:1549616323510673568>",
+        "source": "Mining"
+    },
+    {
+        "id": "amethyst-bar",
+        "category": "general",
+        "usableID": 89,
+        "description": "A lofty material",
+        "name": "Amethyst",
+        "icon": "<:amethyst:1549616401554079814>",
+        "source": "Smelted from ore"
+    },
+    {
+        "id": "ore-platinum",
+        "category": "general",
+        "usableID": 90,
+        "description": "Smeltable",
+        "name": "Platinum Ore",
+        "icon": "<:oreplatinum:1549616334692688003>",
+        "source": "Mining"
+    },
+    {
+        "id": "platinum-bar",
+        "category": "general",
+        "usableID": 91,
+        "description": "A lofty material",
+        "name": "Platinum",
+        "icon": "<:platinum:1549616410425298984>",
+        "source": "Smelted from ore"
     }
 ]

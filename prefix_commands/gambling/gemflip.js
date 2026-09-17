@@ -22,20 +22,24 @@ module.exports = {
             return message.reply(`Please indicate amount to bet`)
         };
         const userData = await getUser(uid);
-        const amount = checkIfNum(args[0]);
-        if (!amount) {
+        let amount = checkIfNum(args[0]);
+        const limit = getBetLimit(message.channel.id);
+
+        if (!amount && args[0].toLowerCase() != "max") {
             await resetCommandCD(uid, "gemflip");
             return message.reply(`Please use a valid number to bet`);
-        }
-        if (!canAfford(userData.money, amount)) {
-            await resetCommandCD(uid, "gemflip");
-            return message.reply(`You don't have that much to bet`);
+        } else if (args[0].toLowerCase() == "max") {
+            amount = limit;
         }
 
-        const limit = getBetLimit(message.channel.id);
         if (amount > limit) {
             await resetCommandCD(uid, "gemflip");
             return message.reply(`You can only bet up to ${iconizeMoney(limit)}`);
+        }
+
+        if (!canAfford(userData.money, amount)) {
+            await resetCommandCD(uid, "gemflip");
+            return message.reply(`You don't have that much to bet`);
         }
 
         let bet = "heads";

@@ -8,7 +8,7 @@ module.exports = {
     usage: '`stp fuck <passerby>`',
     cooldown: 1000 * 60 * 1,
     testing: false,
-    alias: ['kantot', 'totnak', 'lewd'],
+    alias: ['kantot', 'totnak', 'lewd', 'jorbot'],
     permissions: [],
     async execute(client, message, args) {
         const uid = message.author.id;

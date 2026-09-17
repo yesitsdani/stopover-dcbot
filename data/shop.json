@@ -126,18 +126,25 @@
         "messageWhenBought": "To use: `stp use 14`"
     },
     {
-        "id": 19,
-        "itemSold": "access2",
-        "category": "perks",
-        "price": 100000,
-        "messageWhenBought": "To use: `stp use 15`"
-    },
-    {
         "id": 20,
         "itemSold": "access4",
         "category": "perks",
         "price": 1000000,
         "messageWhenBought": "To use: `stp use 35`"
+    },
+    {
+        "id": 31,
+        "itemSold": "access5",
+        "category": "perks",
+        "price": 25000000,
+        "messageWhenBought": "To use: `stp use 36`"
+    },
+    {
+        "id": 19,
+        "itemSold": "access2",
+        "category": "perks",
+        "price": 100000,
+        "messageWhenBought": "To use: `stp use 15`"
     },
     {
         "id": 21,

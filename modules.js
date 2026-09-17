@@ -398,6 +398,7 @@ module.exports = {
         return roleIconData.itemID;
     },
     getBetLimit(channelID) {
+        if (channelID == "1543499083853996104") return 1000000;
         if (channelID == "1536748105276461077") return 250000;
         if (channelID == "1539317293451055164") return 100000;
         if (channelID == "1536739822851596339") return 10000;
