@@ -1053,8 +1053,8 @@
         "reward": 500,
         "options": [
             { "label": "A", "answer": "Kolo", "correct": false },
-            { "label": "B", "answer": "TimmyTime", "correct": true },
-            { "label": "C", "answer": "Samjam", "correct": false },
+            { "label": "B", "answer": "TimmyTime", "correct": false },
+            { "label": "C", "answer": "Samjam", "correct": true },
             { "label": "D", "answer": "JD", "correct": false }
         ]
     }
