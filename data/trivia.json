@@ -1047,5 +1047,15 @@
             { "label": "C", "answer": "Minty Now", "correct": false },
             { "label": "D", "answer": "Po-lippines", "correct": true }
         ]
+    },
+    {
+        "question": "Stopover Member na kasama ni Sol at Rudy sa pag-maintain ng longest VC record. Kilala rin siya sa pagkahilig sa Stopover RPG at pagtulog sa VC",
+        "reward": 500,
+        "options": [
+            { "label": "A", "answer": "Kolo", "correct": false },
+            { "label": "B", "answer": "TimmyTime", "correct": true },
+            { "label": "C", "answer": "Samjam", "correct": false },
+            { "label": "D", "answer": "JD", "correct": false }
+        ]
     }
 ]
