@@ -77,7 +77,11 @@ module.exports = {
             const member = await interaction.guild.members.fetch(targetUid);
             const origMember = await interaction.guild.members.fetch(uid);
 
-            let batchRoles = ['1513016636280541234', '1513016746326495286', '1515313966845267988', '1521884104738607104', '1523321069438636203', '1538537845302632548'];
+            let batchRoles = [
+                '1513016636280541234', '1513016746326495286', '1515313966845267988', 
+                '1521884104738607104', '1523321069438636203', '1538537845302632548',
+                '1551501507579617290'
+            ];
             let batchRoleToAdd = interaction.values[0];
             let content = `<@${targetUid}>'s batch role has been set to <@&${batchRoleToAdd}>`;
             const batchNumArg = args.shift();

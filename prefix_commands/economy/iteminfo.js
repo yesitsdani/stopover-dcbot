@@ -47,7 +47,7 @@ module.exports = {
             if (!item) item = items.find(itm => itm.name.toLowerCase().startsWith(itemName));
             if (!item) return message.reply(`Can't find that item. Are you sure you typed that right?`);
 
-            content += `# ${iconizeItemWithName(item.id)}\n### ${getItemDescriptionOnly(item.id)}\n> Source: ${item.source}`;
+            content += `# ${iconizeItemWithName(item.id)}\n### ${getItemDescriptionOnly(item.id)}\n>\`Item ID: ${item.usableID}\`\n> Source: ${item.source}`;
 
             const sellable = sellables.find(itm => itm.id == item.id);
             if (sellable) content += `\n> You can sell this for ${iconizeMoney(sellable.sell_price)}`;

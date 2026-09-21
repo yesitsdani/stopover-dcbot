@@ -51,7 +51,10 @@ module.exports = {
                                 .setLabel(`Batch 5TAR`),
                             new StringSelectMenuOptionBuilder()
                                 .setValue(`1538537845302632548`)
-                                .setLabel(`Batch 6ORGEOUS`)
+                                .setLabel(`Batch 6ORGEOUS`),
+                            new StringSelectMenuOptionBuilder()
+                                .setValue(`1551501507579617290`)
+                                .setLabel(`Batch 7UXURY`)
                         )
                 )
 
