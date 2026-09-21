@@ -27,6 +27,10 @@ module.exports = {
                 content += `<@&1521884104738607104>`;
             } else if (member.roles.cache.has("1523321069438636203")) {
                 content += `<@&1523321069438636203>`;
+            } else if (member.roles.cache.has("1538537845302632548")) {
+                content += `<@&1538537845302632548>`;
+            } else if (member.roles.cache.has("1551501507579617290")) {
+                content += `<@&1551501507579617290>`;
             } else {
                 content += `\`NO BATCH ROLE!\``;
             }
