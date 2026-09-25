@@ -1,38 +1,36 @@
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
-const items = require('../data/items.json');
+const recipes = require('../data/recipes.json');
 const { iconizeItemWithName, createEmbedStandard } = require('../modules');
 
 module.exports = {
-    name: "iteminfo",
+    name: "recipes",
     async execute(client, interaction, args) {
         await interaction.deferUpdate();
         const page = parseInt(args[0]);
 
-        let content = `# \`ITEMS IN THE STOPOVER\`\n> Page ${page}\n`;
-        let index = (page - 1) * 10;
-        for (let i = index; i < index + 10; i++) {
-            let x = items[i];
-            if (x) content += `\n\`ID: ${x.usableID}\` | ${iconizeItemWithName(x.id)}`;
+        let content = `# \`CRAFTING RECIPES\`\n> Page ${page}\n> Use \`stp recipe <id>\` to see specific recipe\n`;
+        let index = (page - 1) * 15;
+        for (let i = index; i < index + 15; i++) {
+            let x = recipes[i];
+            if (x) content += `\n\`ID: ${x.craftingUsableId}\` ${iconizeItemWithName(x.id)}`;
         }
-
-        content += `\n\n-# Use \`stp iteminfo <id>\` for each item's detail`;
 
         const embed = createEmbedStandard()
         .setDescription(content)
 
         let disablePrev = page <= 1;
         let disableNext = false;
-        if (!items[(page * 10)]) disableNext = true;
+        if (!recipes[(page * 15)]) disableNext = true;
 
         const buttonRow = new ActionRowBuilder()
         .addComponents(
             new ButtonBuilder()
-            .setCustomId(`iteminfo.${page - 1}`)
+            .setCustomId(`recipes.${page - 1}`)
             .setLabel(`< Previous`)
             .setStyle(ButtonStyle.Primary)
             .setDisabled(disablePrev),
             new ButtonBuilder()
-            .setCustomId(`iteminfo.${page + 1}`)
+            .setCustomId(`recipes.${page + 1}`)
             .setLabel(`Next >`)
             .setStyle(ButtonStyle.Primary)
             .setDisabled(disableNext)

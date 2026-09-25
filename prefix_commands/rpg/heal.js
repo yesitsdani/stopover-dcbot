@@ -1,3 +1,4 @@
+const { harmonyPoint } = require("../../calculator");
 const { getRpgUser, checkIfCleric, getIdFromMention, regenHP } = require("../../modules");
 
 module.exports = {
@@ -30,6 +31,9 @@ module.exports = {
 
         const newTargetRpgData = await regenHP(target, healAmount);
         await member.roles.remove('1540634777194070016');
+
+        await harmonyPoint(uid, message, 1);
+        await harmonyPoint(target, message, 1);
 
         return message.reply(`You have healed them with the tip of your wand! Their health is now: \`${newTargetRpgData.health}\` / \`${newTargetRpgData.maxHealth}\``);
     }

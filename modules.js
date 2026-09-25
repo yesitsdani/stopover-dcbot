@@ -503,7 +503,8 @@ module.exports = {
         );
     },
     getPouchCapacity(level) {
-        return level * 1000000;
+        const base = 1000000 * level;
+        return parseInt(base + (1000000 * ((level - 1) / 2.5)));
     },
     getPouchUpgradeCost(level) {
         return parseInt((level * (level * 0.25)) * 100000);

@@ -39,6 +39,40 @@
         ]
     },
     {
+        "craftingUsableId": 53,
+        "id": "sword3",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "crop-carrot", "quantity": 22 },
+            { "id": "sword1", "quantity": 1 }
+        ]
+    },
+    {
+        "craftingUsableId": 72,
+        "id": "sword4",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "pixieDust", "quantity": 22 },
+            { "id": "bubblesOfFantasy", "quantity": 5 },
+            { "id": "sword1", "quantity": 1 }
+        ]
+    },
+    {
+        "craftingUsableId": 103,
+        "id": "transcendenceSword",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "wood2", "quantity": 11 },
+            { "id": "wand1", "quantity": 1 },
+            { "id": "destinyGem", "quantity": 1 },
+            { "id": "abundanceGem", "quantity": 1 },
+            { "id": "devotionGem", "quantity": 1 },
+            { "id": "libertyGem", "quantity": 1 },
+            { "id": "creationGem", "quantity": 1 },
+            { "id": "passion_drop2", "quantity": 11 }
+        ]
+    },
+    {
         "craftingUsableId": 46,
         "id": "bow2",
         "quantityProduced": 1,
@@ -50,6 +84,43 @@
         ]
     },
     {
+        "craftingUsableId": 55,
+        "id": "bow3",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "pixieDust", "quantity": 22 },
+            { "id": "bubblesOfFantasy", "quantity": 5 },
+            { "id": "bow1", "quantity": 1 }
+        ]
+    },
+    {
+        "craftingUsableId": 74,
+        "id": "bow4",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "pixieDust", "quantity": 2 },
+            { "id": "crop-onion", "quantity": 7 },
+            { "id": "crop-corn", "quantity": 7 },
+            { "id": "crop-garlic", "quantity": 7 },
+            { "id": "bow1", "quantity": 1 }
+        ]
+    },
+    {
+        "craftingUsableId": 102,
+        "id": "transcendenceBow",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "wood2", "quantity": 11 },
+            { "id": "wand1", "quantity": 1 },
+            { "id": "destinyGem", "quantity": 1 },
+            { "id": "abundanceGem", "quantity": 1 },
+            { "id": "devotionGem", "quantity": 1 },
+            { "id": "libertyGem", "quantity": 1 },
+            { "id": "creationGem", "quantity": 1 },
+            { "id": "passion_drop2", "quantity": 11 }
+        ]
+    },
+    {
         "craftingUsableId": 45,
         "id": "wand2",
         "quantityProduced": 1,
@@ -58,6 +129,41 @@
             { "id": "wood1", "quantity": 10 },
             { "id": "cheese_drop", "quantity": 1 },
             { "id": "wand1", "quantity": 1 }
+        ]
+    },
+    {
+        "craftingUsableId": 54,
+        "id": "wand3",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "animalBone", "quantity": 15 },
+            { "id": "animalMeat", "quantity": 15 },
+            { "id": "wand1", "quantity": 1 }
+        ]
+    },
+    {
+        "craftingUsableId": 73,
+        "id": "wand4",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "crop-banana", "quantity": 22 },
+            { "id": "bubblesOfFantasy", "quantity": 5 },
+            { "id": "wand1", "quantity": 1 }
+        ]
+    },
+    {
+        "craftingUsableId": 30,
+        "id": "transcendenceWand",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "wood2", "quantity": 11 },
+            { "id": "wand1", "quantity": 1 },
+            { "id": "destinyGem", "quantity": 1 },
+            { "id": "abundanceGem", "quantity": 1 },
+            { "id": "devotionGem", "quantity": 1 },
+            { "id": "libertyGem", "quantity": 1 },
+            { "id": "creationGem", "quantity": 1 },
+            { "id": "passion_drop2", "quantity": 11 }
         ]
     },
     {
@@ -81,67 +187,6 @@
         ]
     },
     {
-        "craftingUsableId": 53,
-        "id": "sword3",
-        "quantityProduced": 1,
-        "recipe": [
-            { "id": "crop-carrot", "quantity": 22 },
-            { "id": "sword1", "quantity": 1 }
-        ]
-    },
-    {
-        "craftingUsableId": 54,
-        "id": "wand3",
-        "quantityProduced": 1,
-        "recipe": [
-            { "id": "animalBone", "quantity": 15 },
-            { "id": "animalMeat", "quantity": 15 },
-            { "id": "wand1", "quantity": 1 }
-        ]
-    },
-    {
-        "craftingUsableId": 55,
-        "id": "bow3",
-        "quantityProduced": 1,
-        "recipe": [
-            { "id": "pixieDust", "quantity": 22 },
-            { "id": "bubblesOfFantasy", "quantity": 5 },
-            { "id": "bow1", "quantity": 1 }
-        ]
-    },
-    {
-        "craftingUsableId": 72,
-        "id": "sword4",
-        "quantityProduced": 1,
-        "recipe": [
-            { "id": "pixieDust", "quantity": 22 },
-            { "id": "bubblesOfFantasy", "quantity": 5 },
-            { "id": "sword1", "quantity": 1 }
-        ]
-    },
-    {
-        "craftingUsableId": 73,
-        "id": "wand4",
-        "quantityProduced": 1,
-        "recipe": [
-            { "id": "crop-banana", "quantity": 22 },
-            { "id": "bubblesOfFantasy", "quantity": 5 },
-            { "id": "wand1", "quantity": 1 }
-        ]
-    },
-    {
-        "craftingUsableId": 74,
-        "id": "bow4",
-        "quantityProduced": 1,
-        "recipe": [
-            { "id": "pixieDust", "quantity": 2 },
-            { "id": "crop-onion", "quantity": 7 },
-            { "id": "crop-corn", "quantity": 7 },
-            { "id": "crop-garlic", "quantity": 7 },
-            { "id": "bow1", "quantity": 1 }
-        ]
-    },
-    {
         "craftingUsableId": 75,
         "id": "armor4",
         "quantityProduced": 1,
@@ -162,21 +207,6 @@
         ]
     },
     {
-        "craftingUsableId": 30,
-        "id": "transcendenceWand",
-        "quantityProduced": 1,
-        "recipe": [
-            { "id": "wood2", "quantity": 11 },
-            { "id": "wand1", "quantity": 1 },
-            { "id": "destinyGem", "quantity": 1 },
-            { "id": "abundanceGem", "quantity": 1 },
-            { "id": "devotionGem", "quantity": 1 },
-            { "id": "libertyGem", "quantity": 1 },
-            { "id": "creationGem", "quantity": 1 },
-            { "id": "passion_drop2", "quantity": 11 }
-        ]
-    },
-    {
         "craftingUsableId": 77,
         "id": "transcendenceArmor",
         "quantityProduced": 1,
@@ -189,6 +219,86 @@
             { "id": "libertyGem", "quantity": 1 },
             { "id": "creationGem", "quantity": 1 },
             { "id": "passion_drop2", "quantity": 11 }
+        ]
+    },
+    {
+        "craftingUsableId": 81,
+        "id": "refined-coal",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "ore-coal", "quantity": 5 }
+        ]
+    },
+    {
+        "craftingUsableId": 85,
+        "id": "copper-bar",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "refined-coal", "quantity": 1 },
+            { "id": "ore-copper", "quantity": 5 }
+        ]
+    },
+    {
+        "craftingUsableId": 83,
+        "id": "iron-bar",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "refined-coal", "quantity": 1 },
+            { "id": "ore-iron", "quantity": 5 }
+        ]
+    },
+    {
+        "craftingUsableId": 87,
+        "id": "gold-bar",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "refined-coal", "quantity": 1 },
+            { "id": "ore-gold", "quantity": 5 }
+        ]
+    },
+    {
+        "craftingUsableId": 89,
+        "id": "amethyst-bar",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "refined-coal", "quantity": 1 },
+            { "id": "ore-amethyst", "quantity": 5 }
+        ]
+    },
+    {
+        "craftingUsableId": 92,
+        "id": "pickaxe_copper",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "copper-bar", "quantity": 30 },
+            { "id": "wood2", "quantity": 10 }
+        ]
+    },
+    {
+        "craftingUsableId": 93,
+        "id": "pickaxe_iron",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "iron-bar", "quantity": 30 },
+            { "id": "wood2", "quantity": 10 }
+        ]
+    },
+    {
+        "craftingUsableId": 94,
+        "id": "pickaxe_gold",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "gold-bar", "quantity": 30 },
+            { "id": "wood2", "quantity": 10 }
+        ]
+    },
+    {
+        "craftingUsableId": 95,
+        "id": "pickaxe_amethyst",
+        "quantityProduced": 1,
+        "recipe": [
+            { "id": "amethyst-bar", "quantity": 30 },
+            { "id": "wood2", "quantity": 10 }
         ]
     }
 ]

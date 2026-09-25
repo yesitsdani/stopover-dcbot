@@ -35,51 +35,73 @@
     },
     {
         "code": "CouncilNyx",
-        "expired": false,
+        "expired": true,
         "money": 1500,
         "items": [],
         "message": "Courtesy of <:council:1534102603040821308> **`COUNCIL MEMBER`**, Nyxell"
     },
     {
         "code": "CouncilAki",
-        "expired": false,
+        "expired": true,
         "money": 1500,
         "items": [],
         "message": "Courtesy of <:council:1534102603040821308> **`COUNCIL MEMBER`**, Aki"
     },
     {
         "code": "CouncilRoi",
-        "expired": false,
+        "expired": true,
         "money": 3000,
         "items": [],
         "message": "Courtesy of <:council:1534102603040821308> **`COUNCIL MEMBER`**, Roi"
     },
     {
         "code": "CouncilZeph",
-        "expired": false,
+        "expired": true,
         "money": 1500,
         "items": [],
         "message": "Courtesy of <:council:1534102603040821308> **`COUNCIL MEMBER`**, Zeph"
     },
     {
         "code": "CouncilJeremy",
-        "expired": false,
+        "expired": true,
         "money": 1500,
         "items": [],
         "message": "Courtesy of <:council:1534102603040821308> **`COUNCIL MEMBER`**, Jeremy"
     },
     {
         "code": "CouncilMaiku",
-        "expired": false,
+        "expired": true,
         "money": 1500,
         "items": [],
         "message": "Courtesy of <:council:1534102603040821308> **`COUNCIL MEMBER`**, Maiku"
     },
     {
         "code": "CouncilVance",
-        "expired": false,
+        "expired": true,
         "money": 1500,
         "items": [],
         "message": "Courtesy of <:council:1534102603040821308> **`COUNCIL MEMBER`**, Vance"
+    },
+    {
+        "code": "TIME2MINE",
+        "expired": false,
+        "money": 1212,
+        "items": [
+            { "id": "copper-bar", "quantity": 5 },
+            { "id": "iron-bar", "quantity": 4 },
+            { "id": "gold-bar", "quantity": 3 },
+            { "id": "amethyst-bar", "quantity": 2 },
+            { "id": "refined-coal", "quantity": 1 }
+        ],
+        "message": "Time for a cave dive, Passerby?"
+    },
+    {
+        "code": "LUXURIOUS",
+        "expired": false,
+        "money": 5555,
+        "items": [
+            { "id": "lb-ashiGem2", "quantity": 1 }
+        ],
+        "message": "Which of the luxurious gems are you gunna get?! I am so excited for you!!!"
     }
 ]

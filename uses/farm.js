@@ -15,9 +15,9 @@ module.exports = {
         if (item.id == "farm-plotTitle") {
             const uid = message.author.id;
             const farmData = await getFarm(uid);
-            if (farmData.plotSlots >= 6) {
+            if (farmData.plotSlots >= 10) {
                 await addItemToInv(uid, item.id, 1);
-                return message.reply(`You can only have up to \`6\` farm slots. You can sell your plot title using \`stp sell 71\``);
+                return message.reply(`You can only have up to \`10\` farm slots. You can sell your plot title using \`stp sell 71\``);
             }
 
             let plotSlots = parseInt(farmData.plotSlots) + 1;

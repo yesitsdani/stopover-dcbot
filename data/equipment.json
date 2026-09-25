@@ -154,7 +154,12 @@
         "drop": {
             "min": 1,
             "max": 3
-        }
+        },
+        "pool": [
+            { "id": "ore-coal", "chance": 20, "deduct": 2 },
+            { "id": "ore-copper", "chance": 10, "deduct": 3 },
+            { "id": "stone1", "chance": 100, "deduct": 1 }
+        ]
     },
     {
         "id": "transcendenceWand",
@@ -304,6 +309,109 @@
         "crit": {
             "rate": 0.77,
             "dmg": 0.01
+        }
+    },
+    {
+        "id": "pickaxe_copper",
+        "type": "tool",
+        "tooltype": "pickaxe",
+        "iteminfo": "Use `stp equip tool 92` to equip",
+        "durability": 125,
+        "drop": {
+            "min": 2,
+            "max": 6
+        },
+        "pool": [
+            { "id": "ore-coal", "chance": 10, "deduct": 2 },
+            { "id": "ore-copper", "chance": 45, "deduct": 1 },
+            { "id": "ore-iron", "chance": 8, "deduct": 3 },
+            { "id": "stone1", "chance": 100, "deduct": 1 }
+        ]
+    },
+    {
+        "id": "pickaxe_iron",
+        "type": "tool",
+        "tooltype": "pickaxe",
+        "iteminfo": "Use `stp equip tool 93` to equip",
+        "durability": 200,
+        "drop": {
+            "min": 3,
+            "max": 7
+        },
+        "pool": [
+            { "id": "ore-coal", "chance": 10, "deduct": 2 },
+            { "id": "ore-copper", "chance": 75, "deduct": 1 },
+            { "id": "ore-iron", "chance": 35, "deduct": 1 },
+            { "id": "ore-gold", "chance": 8, "deduct": 3 },
+            { "id": "stone1", "chance": 100, "deduct": 1 }
+        ]
+    },
+    {
+        "id": "pickaxe_gold",
+        "type": "tool",
+        "tooltype": "pickaxe",
+        "iteminfo": "Use `stp equip tool 94` to equip",
+        "durability": 275,
+        "drop": {
+            "min": 3,
+            "max": 7
+        },
+        "pool": [
+            { "id": "ore-coal", "chance": 10, "deduct": 2 },
+            { "id": "ore-copper", "chance": 90, "deduct": 1 },
+            { "id": "ore-iron", "chance": 75, "deduct": 1 },
+            { "id": "ore-gold", "chance": 30, "deduct": 1 },
+            { "id": "ore-amethyst", "chance": 8, "deduct": 3 },
+            { "id": "stone1", "chance": 100, "deduct": 1 }
+        ]
+    },
+    {
+        "id": "pickaxe_amethyst",
+        "type": "tool",
+        "tooltype": "pickaxe",
+        "iteminfo": "Use `stp equip tool 95` to equip",
+        "durability": 300,
+        "drop": {
+            "min": 4,
+            "max": 8
+        },
+        "pool": [
+            { "id": "ore-coal", "chance": 10, "deduct": 2 },
+            { "id": "ore-copper", "chance": 95, "deduct": 1 },
+            { "id": "ore-iron", "chance": 83, "deduct": 1 },
+            { "id": "ore-gold", "chance": 50, "deduct": 1 },
+            { "id": "ore-amethyst", "chance": 35, "deduct": 1 },
+            { "id": "stone1", "chance": 100, "deduct": 1 }
+        ]
+    },
+    {
+        "id": "transcendenceBow",
+        "type": "bow",
+        "iteminfo": "Can be equipped by the Ranged class. Use `stp equip weapon 102` to equip",
+        "atk": 80,
+        "dmg": {
+            "melee": 0,
+            "magic": 0,
+            "range": 2.25
+        },
+        "crit": {
+            "rate": 0.01,
+            "dmg": 2.65
+        }
+    },
+    {
+        "id": "transcendenceSword",
+        "type": "sword",
+        "iteminfo": "Can be equipped by the Melee class. Use `stp equip weapon 103` to equip",
+        "atk": 80,
+        "dmg": {
+            "melee": 2.25,
+            "magic": 0,
+            "range": 0
+        },
+        "crit": {
+            "rate": 0.01,
+            "dmg": 2.65
         }
     }
 ]

@@ -213,6 +213,14 @@ module.exports = {
         const userData = await getUser(uid);
         const gemBoostActive = checkGemBoost(userData.marriage);
 
+        let victory = 0;
+        if (monster.rarity == "epic") victory = 4;
+        else if (monster.rarity == "rare") victory = 3;
+        else if (monster.rarity == "uncommon") victory = 2;
+        else victory = 1;
+
+        await module.exports.victoryPoint(uid, message, victory);
+
         //Give gem rewards
         let amount = parseInt(rewards.money);
         let content = `You won ${iconizeMoney(amount)}!`
@@ -387,5 +395,85 @@ module.exports = {
             { maxHealth },
             { returnDocument: `after` }
         )
-    }
+    },
+    async harmonyPoint(uid, message, amount) {
+        const userPerks = await getUserPerks(uid);
+        let harmonyPoints = userPerks.harmonyPoints ?? 0;
+        harmonyPoints += parseInt(amount);
+
+        if (harmonyPoints >= 111) {
+            harmonyPoints = 0;
+            await addItemToInv(uid, "harmonyGem", 1);
+            const embed = createEmbedStandard()
+                .setDescription(`# ${iconizeItem('harmonyGem')} \`BEHOLD, THE GEM OF HARMONY\`\nThe universe acknowledges your practice over the bonds of togetherness. You received a ${iconizeItemWithName('harmonyGem')}`)
+                .setThumbnail(message.author.avatarURL());
+            await message.channel.send({ content: `<@${uid}>`, embeds: [embed] });
+        }
+
+        await Perks.findOneAndUpdate({ uid }, { harmonyPoints });
+    },
+    async insightPoint(uid, amount) {
+        const userPerks = await getUserPerks(uid);
+        let insightPoints = userPerks.insightPoints ?? 0;
+        insightPoints += parseInt(amount);
+
+        let gainGem = false;
+
+        if (insightPoints >= 7) {
+            insightPoints = 0;
+            await addItemToInv(uid, "insightGem", 1);
+            gainGem = true;
+        }
+
+        await Perks.findOneAndUpdate({ uid }, { insightPoints });
+        return gainGem;
+    },
+    async perseverancePoint(uid, message, amount) {
+        const userPerks = await getUserPerks(uid);
+        let perseverancePoints = userPerks.perseverancePoints ?? 0;
+        perseverancePoints += parseInt(amount);
+
+        if (perseverancePoints >= 111) {
+            perseverancePoints = 0;
+            await addItemToInv(uid, "perseveranceGem", 1);
+            const embed = createEmbedStandard()
+                .setDescription(`# ${iconizeItem('perseveranceGem')} \`BEHOLD, THE GEM OF PERSEVERANCE\`\nThe universe acknowledges your endurance over mountainous labor. You received a ${iconizeItemWithName('perseveranceGem')}`)
+                .setThumbnail(message.author.avatarURL());
+            await message.channel.send({ content: `<@${uid}>`, embeds: [embed] });
+        }
+
+        await Perks.findOneAndUpdate({ uid }, { perseverancePoints });
+    },
+    async proficiencyPoint(uid, message, amount) {
+        const userPerks = await getUserPerks(uid);
+        let proficiencyPoints = userPerks.proficiencyPoints ?? 0;
+        proficiencyPoints += parseInt(amount);
+
+        if (proficiencyPoints >= 111) {
+            proficiencyPoints = 0;
+            await addItemToInv(uid, "proficiencyGem", 1);
+            const embed = createEmbedStandard()
+                .setDescription(`# ${iconizeItem('proficiencyGem')} \`BEHOLD, THE GEM OF PROFICIENCY\`\nThe universe acknowledges your display of mastery over things you have learned. You received a ${iconizeItemWithName('proficiencyGem')}`)
+                .setThumbnail(message.author.avatarURL());
+            await message.channel.send({ content: `<@${uid}>`, embeds: [embed] });
+        }
+
+        await Perks.findOneAndUpdate({ uid }, { proficiencyPoints });
+    },
+    async victoryPoint(uid, message, amount) {
+        const userPerks = await getUserPerks(uid);
+        let victoryPoints = userPerks.victoryPoints ?? 0;
+        victoryPoints += parseInt(amount);
+
+        if (victoryPoints >= 111) {
+            victoryPoints = 0;
+            await addItemToInv(uid, "victoryGem", 1);
+            const embed = createEmbedStandard()
+                .setDescription(`# ${iconizeItem('victoryGem')} \`BEHOLD, THE GEM OF VICTORY\`\nThe universe acknowledges your declaration of victory over the Chief's realms and thanks you for it. You received a ${iconizeItemWithName('victoryGem')}`)
+                .setThumbnail(message.author.avatarURL());
+            await message.channel.send({ content: `<@${uid}>`, embeds: [embed] });
+        }
+
+        await Perks.findOneAndUpdate({ uid }, { victoryPoints });
+    },
 }

@@ -24,6 +24,15 @@ module.exports = {
                 { id: "creationGem", quantity: 1 },
                 { id: "libertyGem", quantity: 1 },
             ]
+        } else if (lb == "ashiGem2") {
+            amountToWin = 1;
+            winpool = [
+                { id: "harmonyGem", quantity: 1 },
+                { id: "insightGem", quantity: 1 },
+                { id: "perseveranceGem", quantity: 1 },
+                { id: "victoryGem", quantity: 1 },
+                { id: "proficiencyGem", quantity: 1 },
+            ]
         }
 
         let winnings = [];

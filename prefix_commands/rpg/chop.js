@@ -1,6 +1,7 @@
 const { checkToolTypeInTools, getRpgUser, getChopPool, randomInt, getToolFromToolbox, addItemToInv, depleteTool, iconizeItemWithName } = require("../../modules");
 const equipments = require(`../../data/equipment.json`);
 const Rpg = require("../../models/Rpg");
+const { perseverancePoint } = require("../../calculator");
 
 module.exports = {
     name: 'chop',
@@ -29,6 +30,8 @@ module.exports = {
             { uid },
             { tools }
         )
+
+        await perseverancePoint(uid, message, amount);
 
         return message.reply(`You chopped ${iconizeItemWithName(id)} x${amount}`);
     }

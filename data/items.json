@@ -817,5 +817,113 @@
         "name": "Platinum",
         "icon": "<:platinum:1549616410425298984>",
         "source": "Smelted from ore"
+    },
+    {
+        "id": "pickaxe_copper",
+        "category": "equipment",
+        "usableID": 92,
+        "description": "Pickaxe capable of mining better things",
+        "name": "Copper Pickaxe",
+        "icon": "<:pickaxe_copper:1552897003464433705>",
+        "source": "Crafted."
+    },
+    {
+        "id": "pickaxe_iron",
+        "category": "equipment",
+        "usableID": 93,
+        "description": "Pickaxe capable of mining better things",
+        "name": "Iron Pickaxe",
+        "icon": "<:pickaxe_iron:1552896950855139378>",
+        "source": "Crafted."
+    },
+    {
+        "id": "pickaxe_gold",
+        "category": "equipment",
+        "usableID": 94,
+        "description": "Pickaxe capable of mining better things",
+        "name": "Gold Pickaxe",
+        "icon": "<:pickaxe_gold:1552896948594286592>",
+        "source": "Crafted."
+    },
+    {
+        "id": "pickaxe_amethyst",
+        "category": "equipment",
+        "usableID": 95,
+        "description": "Pickaxe capable of mining better things",
+        "name": "Amethyst Pickaxe",
+        "icon": "<:pickaxe_amethyst:1552896924212924486>",
+        "source": "Crafted."
+    },
+    {
+        "id": "harmonyGem",
+        "category": "special",
+        "usableID": 96,
+        "description": "Granted to Passersby who practice the special magic of togetherness",
+        "name": "Gem of Harmony",
+        "icon": "<:harmonyGem:1552934273290473482>",
+        "source": "They say harmony arrives as a byproduct of endurance through another's aid"
+    },
+    {
+        "id": "insightGem",
+        "category": "special",
+        "usableID": 97,
+        "description": "Granted to Passersby who never lets wit get beaten by the flipping of hourglass",
+        "name": "Gem of Insight",
+        "icon": "<:insightGem:1552934275245150258>",
+        "source": "They say insight comes to those who outwits the day's passing"
+    },
+    {
+        "id": "perseveranceGem",
+        "category": "special",
+        "usableID": 98,
+        "description": "Granted to Passersby who endures",
+        "name": "Gem of Perseverance",
+        "icon": "<:perseveranceGem:1552934277555949628>",
+        "source": "They say perseverance is acquired through enduring the task of mountaineous labor"
+    },
+    {
+        "id": "victoryGem",
+        "category": "special",
+        "usableID": 99,
+        "description": "Granted to Passersby who declares victory over the Chief's realms",
+        "name": "Gem of Victory",
+        "icon": "<:victoryGem:1552934281985138810>",
+        "source": "They say victory is the sound of the flag's hoisting and the blowing of trumpets at the marking of a win"
+    },
+    {
+        "id": "proficiencyGem",
+        "category": "special",
+        "usableID": 100,
+        "description": "Granted to Passersby who have learned and have chosen to make use of their mastery",
+        "name": "Gem of Proficiency",
+        "icon": "<:proficiencyGem:1552934279552704512>",
+        "source": "They say proficiency is a child of creation and abundance"
+    },
+    {
+        "id": "lb-ashiGem2",
+        "category": "special",
+        "usableID": 101,
+        "description": "Transforms randomly into one of Ashi's Luxurious Gems of Harmony, Insight, Perseverance, Proficiency, and Victory",
+        "name": "Ashi's Luxurious Gem",
+        "icon": "<:ashiGem2:1552934271033810964>",
+        "source": "A gift granted by the Chief Passerby"
+    },
+    {
+        "id": "transcendenceBow",
+        "category": "equipment",
+        "usableID": 102,
+        "description": "The bow in folklores said to have usurped the will of the realm.",
+        "name": "Bow of Transcendence",
+        "icon": ":bow_and_arrow:",
+        "source": "Crafted using Ever-Mourning Wood and the Gems of Destiny, Abundance, Devotion, Liberty, and Creation"
+    },
+    {
+        "id": "transcendenceSword",
+        "category": "equipment",
+        "usableID": 103,
+        "description": "The sword in folklores said to have usurped the will of the realm.",
+        "name": "Sword of Transcendence",
+        "icon": ":dagger:",
+        "source": "Crafted using Ever-Mourning Wood and the Gems of Destiny, Abundance, Devotion, Liberty, and Creation"
     }
 ]

@@ -42,6 +42,7 @@ module.exports = {
         content += `\nMagic Resistance: ${parseInt(stat.magicRes * 100)}%`;
         content += `\nRange Resistance: ${parseInt(stat.rangeRes * 100)}%`;
 
+        content += `\n\nCrit Rate: ${parseInt(stat.critRate * 100)}% | Crit DMG: ${parseInt(stat.critDmg * 100)}%`;
         content += `\n\n-# Based on: Passerby Class, Level, Equipment`;
 
         embed.setDescription(content);

@@ -1,4 +1,4 @@
-const { checkIfNum, hasItem, getInv, getRpgUser, iconizeItemWithName, createEmbedStandard } = require("../../modules");
+const { checkIfNum, hasItem, getInv, getRpgUser, iconizeItemWithName, createEmbedStandard, checkToolTypeInTools, getToolFromToolbox } = require("../../modules");
 const items = require(`../../data/items.json`);
 const Rpg = require("../../models/Rpg");
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
@@ -15,7 +15,7 @@ module.exports = {
     async execute(client, message, args) {
         if (!args[0]) return message.reply(`Please use \`stp equip <weapon/armor> <itemID>\``);
         const equippingType = args.shift().toLowerCase();
-        if (!['weapon', 'armor'].includes(equippingType)) return message.reply(`Please indicate weapon or armor`);
+        if (!['weapon', 'armor', 'pickaxe', 'axe'].includes(equippingType)) return message.reply(`Please indicate weapon or armor`);
 
         const uid = message.author.id;
 
@@ -41,6 +41,18 @@ module.exports = {
                 content += `\`${rpgData.armor.enchantment}\``
             }
             buttonID += `armor`
+        } else if (equippingType == 'pickaxe') {
+            if (!checkToolTypeInTools(rpgData.tools, 'pickaxe')) return message.reply(`You don't have a pickaxe equipped`);
+            const toolID = getToolFromToolbox(rpgData.tools, 'pickaxe');
+
+            content += `\n\n${iconizeItemWithName(toolID)}\nTool will be broken and remaining durability will be lost when you unequip`
+            buttonID += `pickaxe`
+        } else if (equippingType == 'pickaxe') {
+            if (!checkToolTypeInTools(rpgData.tools, 'axe')) return message.reply(`You don't have an axe equipped`);
+            const toolID = getToolFromToolbox(rpgData.tools, 'axe');
+
+            content += `\n\n${iconizeItemWithName(toolID)}\nTool will be broken and remaining durability will be lost when you unequip`
+            buttonID += `axe`
         }
 
         const embed = createEmbedStandard()

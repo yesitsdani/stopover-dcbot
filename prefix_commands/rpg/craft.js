@@ -1,5 +1,6 @@
 const { checkIfNum, getInv, canCraft, takeMultipleItemsFromInv, addItemToInv, iconizeItemWithName } = require("../../modules");
 const recipes = require(`../../data/recipes.json`);
+const { proficiencyPoint } = require("../../calculator");
 
 module.exports = {
     name: 'craft',
@@ -28,6 +29,7 @@ module.exports = {
         if (craftable.canCraft) {
             await takeMultipleItemsFromInv(uid, itemRecipe.recipe);
             await addItemToInv(uid, itemRecipe.id, itemRecipe.quantityProduced);
+            await proficiencyPoint(uid, message, quantity);
             return message.reply(`Successfully crafted ${iconizeItemWithName(itemRecipe.id)}`);
         } else {
             return message.reply({ content: "Could not craft item", embeds: craftable.embeds });

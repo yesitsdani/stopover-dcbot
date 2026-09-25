@@ -1,5 +1,5 @@
 const { MessageFlags } = require("discord.js");
-const { createEmbedStandard, getRpgUser, addItemToInv } = require("../modules");
+const { createEmbedStandard, getRpgUser, addItemToInv, removeToolTypeFromTools } = require("../modules");
 const Rpg = require("../models/Rpg");
 
 module.exports = {
@@ -36,17 +36,25 @@ module.exports = {
                 }
             }
             addThis = rpgData.armor.id;
+        } else if (action == "pickaxe") {
+            const tools = removeToolTypeFromTools(rpgData.tools, 'pickaxe');
+            unequipThis = { tools };
+            addThis = false;
+        } else if (action == "axe") {
+            const tools = removeToolTypeFromTools(rpgData.tools, 'axe');
+            unequipThis = { tools };
+            addThis = false;
         }
 
-        await Rpg.findOneAndUpdate(
+        if (unequipThis) await Rpg.findOneAndUpdate(
             { uid },
             unequipThis
         )
 
-        await addItemToInv(uid, addThis, 1);
+        if (addThis) await addItemToInv(uid, addThis, 1);
 
         const embed = createEmbedStandard()
-        .setDescription(`# \`UNEQUIPPED ${action.toUpperCase()}\`\n> The unequipped ${action} is now in your inventory.`)
+        .setDescription(`# \`UNEQUIPPED ${action.toUpperCase()}\``)
         .setThumbnail(interaction.user.avatarURL())
 
         return await interaction.editReply({ components: [], embeds: [embed] });

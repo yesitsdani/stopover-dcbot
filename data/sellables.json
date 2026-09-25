@@ -72,6 +72,31 @@
     {
         "useableID": 71,
         "id": "farm-plotTitle",
-        "sell_price": 999999
+        "sell_price": 350000
+    },
+    {
+        "useableID": 83,
+        "id": "iron-bar",
+        "sell_price": 20000
+    },
+    {
+        "useableID": 85,
+        "id": "copper-bar",
+        "sell_price": 10000
+    },
+    {
+        "useableID": 87,
+        "id": "gold-bar",
+        "sell_price": 30000
+    },
+    {
+        "useableID": 89,
+        "id": "amethyst-bar",
+        "sell_price": 50000
+    },
+    {
+        "useableID": 81,
+        "id": "refined-coal",
+        "sell_price": 100000
     }
 ]

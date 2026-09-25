@@ -19,7 +19,8 @@ const userSchema = new mongoose.Schema({
     awards: [String],
     dailyStreak: Number,
     dailyStreakCap: Number,
-
+    referals: Number,
+    referrer: String
 });
 
 const User = mongoose.model("user", userSchema);

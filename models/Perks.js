@@ -13,7 +13,13 @@ const perksSchema = new mongoose.Schema({
     abundancePoints: Number,
     devotionPoints: Number,
     creationPoints: Number,
-    libertyPoints: Number
+    libertyPoints: Number,
+
+    harmonyPoints: Number,
+    insightPoints: Number,
+    perseverancePoints: Number,
+    proficiencyPoints: Number,
+    victoryPoints: Number
 });
 
 const Perks = mongoose.model("perks", perksSchema);
